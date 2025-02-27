@@ -72,17 +72,19 @@ const CarDetailPage = () => {
     {
       icon: ClockIcon,
       title: t('carDetail.highlights.transmission'),
-      value: car.specs.transmission
+      value: t(`catalog.car.specs.value.${car.specs.transmission.toLowerCase()}`)
     },
     {
       icon: CheckCircleIcon,
       title: t('carDetail.highlights.fuel'),
-      value: car.specs.fuel
+      value: t(`catalog.car.specs.value.${car.specs.fuel.toLowerCase()}`)
     },
     {
       icon: MapPinIcon,
       title: t('carDetail.highlights.consumption'),
-      value: car.specs.fuel === 'Electric' ? '0 L/100km' : `${car.specs.consumption} L/100km`
+      value: car.specs.fuel === 'Electric' 
+        ? t('catalog.car.specs.value.consumption_electric')
+        : t('catalog.car.specs.value.consumption', { value: car.specs.consumption })
     }
   ]
 
@@ -175,7 +177,7 @@ const CarDetailPage = () => {
               <div className="mt-6">
                 <h2 className="text-lg font-medium text-gray-900 dark:text-white">{t('carDetail.description')}</h2>
                 <p className="mt-2 text-gray-600 dark:text-gray-400">
-                  {t('car.defaultDescription', { name: car.name, category: t(`catalog.categories.${car.category.toLowerCase()}`) })}
+                  {t('catalog.car.defaultDescription', { name: car.name, category: t(`catalog.categories.${car.category.toLowerCase()}`) })}
                 </p>
               </div>
 
@@ -219,10 +221,18 @@ const CarDetailPage = () => {
               {Object.entries(car.specs).map(([key, value]) => (
                 <div key={key} className="bg-white dark:bg-gray-700 rounded-lg shadow p-6">
                   <h3 className="text-lg font-medium text-gray-900 dark:text-white mb-2">
-                    {t(`car.specs.${key}`)}
+                    {t(`catalog.car.specs.${key}`)}
                   </h3>
                   <p className="text-gray-600 dark:text-gray-300">
-                    {key === 'consumption' && value !== 0 ? `${value} L/100km` : value}
+                    {key === 'seats'
+                      ? t('catalog.car.specs.value.seats', { value })
+                      : key === 'consumption'
+                        ? (car.specs.fuel === 'Electric'
+                            ? t('catalog.car.specs.value.consumption_electric')
+                            : t('catalog.car.specs.value.consumption', { value }))
+                        : (key === 'transmission' || key === 'fuel'
+                            ? t(`catalog.car.specs.value.${value.toLowerCase()}`)
+                            : value)}
                   </p>
                 </div>
               ))}

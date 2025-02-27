@@ -103,7 +103,19 @@
       "category": "Categoría",
       "transmission": "Transmisión",
       "fuel": "Tipo de combustible",
-      "priceRange": "Rango de precio"
+      "priceRange": "Rango de precio",
+      "transmissions": {
+        "All": "Todas",
+        "Automatic": "Automática",
+        "Manual": "Manual"
+      },
+      "fuels": {
+        "All": "Todos",
+        "Petrol": "Gasolina",
+        "Diesel": "Diésel",
+        "Hybrid": "Híbrido",
+        "Electric": "Eléctrico"
+      }
     },
     "sort": {
       "price-asc": "Precio: menor a mayor",
@@ -131,16 +143,22 @@
       "notAvailable": "No disponible",
       "defaultDescription": "El {{name}} es un excelente vehículo {{category}} que combina comodidad, fiabilidad y estilo. La elección perfecta para tu viaje.",
       "specs": {
-        "year": "Año",
+        "seats": "Plazas",
         "transmission": "Transmisión",
         "fuel": "Tipo de combustible",
         "consumption": "Consumo",
-        "seats": "Plazas",
-        "doors": "Puertas",
-        "engine": "Motor",
-        "power": "Potencia",
-        "acceleration": "Aceleración 0-100 km/h",
-        "topSpeed": "Velocidad máxima"
+        "year": "Año",
+        "value": {
+          "manual": "Manual",
+          "automatic": "Automática",
+          "petrol": "Gasolina",
+          "diesel": "Diésel",
+          "hybrid": "Híbrido",
+          "electric": "Eléctrico",
+          "consumption": "{{value}} L/100km",
+          "consumption_electric": "0 L/100km",
+          "seats": "{{value}} plazas"
+        }
       },
       "similar": "Coches similares"
     },
@@ -241,7 +259,7 @@
       "title": "Redes sociales"
     },
     "payments": "Métodos de pago",
-    "copyright": "© {{year}} AutoFirst. Todos los derechos reservados."
+    "copyright": "© {{year}} Automoción. Todos los derechos reservados."
   },
   "features": {
     "leather_seats": "Asientos de cuero",
@@ -349,5 +367,10 @@
       "category": "SUV",
       "price": "85€ / día"
     }
+  },
+  "breadcrumbs": {
+    "home": "Inicio",
+    "catalog": "Catálogo",
+    "car": "Detalles del coche"
   }
 } 

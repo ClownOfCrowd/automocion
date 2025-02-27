@@ -190,7 +190,7 @@ const CatalogPage = () => {
                 >
                   {transmissions.map((transmission) => (
                     <option key={transmission} value={transmission}>
-                      {transmission}
+                      {t(`catalog.filters.transmissions.${transmission}`)}
                     </option>
                   ))}
                 </select>
@@ -208,7 +208,7 @@ const CatalogPage = () => {
                 >
                   {fuelTypes.map((fuel) => (
                     <option key={fuel} value={fuel}>
-                      {fuel}
+                      {t(`catalog.filters.fuels.${fuel}`)}
                     </option>
                   ))}
                 </select>
