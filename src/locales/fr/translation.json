@@ -1,0 +1,506 @@
+{
+  "nav": {
+    "home": "Accueil",
+    "catalog": "Catalogue",
+    "booking": "Réservation",
+    "contact": "Contact",
+    "cart": "Panier"
+  },
+  "common": {
+    "loading": "Chargement...",
+    "cancel": "Annuler",
+    "submit": "Soumettre",
+    "save": "Enregistrer",
+    "delete": "Supprimer",
+    "edit": "Modifier",
+    "back": "Retour",
+    "next": "Suivant",
+    "previous": "Précédent",
+    "search": "Rechercher",
+    "filter": "Filtrer",
+    "sort": "Trier",
+    "all": "Tous",
+    "more": "Plus",
+    "less": "Moins",
+    "show": "Afficher",
+    "hide": "Masquer",
+    "close": "Fermer",
+    "open": "Ouvrir",
+    "yes": "Oui",
+    "no": "Non",
+    "or": "ou",
+    "and": "et",
+    "lightMode": "Mode clair",
+    "darkMode": "Mode sombre"
+  },
+  "home": {
+    "hero": {
+      "title": "Location de voitures premium",
+      "subtitle": "à Vila-seca",
+      "description": "Découvrez notre flotte exclusive de véhicules et profitez d'un service personnalisé de première classe",
+      "cta": "Voir le catalogue"
+    },
+    "quickSearch": {
+      "title": "Recherche rapide",
+      "pickupDate": "Date de prise en charge",
+      "returnDate": "Date de retour",
+      "category": "Catégorie",
+      "priceRange": "Gamme de prix",
+      "button": "Rechercher"
+    },
+    "categories": {
+      "title": "Catégories de véhicules",
+      "description": "Trouvez le véhicule parfait pour vos besoins",
+      "economy": "Économique",
+      "compact": "Compact",
+      "premium": "Premium",
+      "suv": "SUV",
+      "luxury": "Luxe",
+      "electric": "Électrique"
+    },
+    "features": {
+      "title": "Pourquoi nous choisir",
+      "subtitle": "Tout ce dont vous avez besoin pour votre voyage parfait",
+      "fleet": {
+        "title": "Flotte premium",
+        "description": "Véhicules haut de gamme maintenus en parfait état pour assurer votre sécurité et votre confort"
+      },
+      "service": {
+        "title": "Assistance 24/7",
+        "description": "Notre équipe est à votre disposition 7j/7, 24h/24 tout au long de votre location"
+      },
+      "process": {
+        "title": "Processus simple",
+        "description": "Réservation facile et rapide, documentation minimale et pas de surprises sur le prix"
+      }
+    },
+    "reviews": {
+      "title": "Avis clients",
+      "description": "Ce que nos clients disent de nous",
+      "addButton": "Ajouter un avis",
+      "form": {
+        "title": "Partagez votre expérience",
+        "name": "Nom complet",
+        "car": "Modèle de voiture",
+        "rating": "Note",
+        "comment": "Commentaire",
+        "submit": "Soumettre"
+      },
+      "success": "Merci pour votre avis ! Il sera publié après modération."
+    },
+    "cta": {
+      "title": "Prêt à réserver ?",
+      "description": "Réservez maintenant et profitez de nos offres spéciales",
+      "button": "Réserver maintenant"
+    },
+    "contact": {
+      "title": "Des questions ?",
+      "subtitle": "Nous sommes là pour vous aider à choisir la voiture idéale",
+      "description": "Contactez-nous pour toute question ou demande",
+      "name": "Nom complet",
+      "email": "Email",
+      "phone": "Téléphone",
+      "message": "Message",
+      "button": "Envoyer",
+      "success": "Merci pour votre message ! Nous vous répondrons dans les plus brefs délais.",
+      "cta": "Nous contacter"
+    },
+    "popular": {
+      "title": "Véhicules populaires",
+      "subtitle": "Les meilleures offres pour votre voyage",
+      "description": "Découvrez notre sélection de véhicules les plus populaires",
+      "viewAll": "Voir tous les véhicules",
+      "details": "Voir les détails"
+    },
+    "process": {
+      "title": "Comment louer une voiture",
+      "description": "Processus de location en 4 étapes simples",
+      "step1": {
+        "title": "Choisir les dates",
+        "description": "Sélectionnez vos dates de prise en charge et de retour pour voir les véhicules disponibles"
+      },
+      "step2": {
+        "title": "Choisir le lieu",
+        "description": "Sélectionnez des lieux de prise en charge et de retour pratiques"
+      },
+      "step3": {
+        "title": "Choisir les options",
+        "description": "Ajoutez des services et équipements supplémentaires pour un voyage confortable"
+      },
+      "step4": {
+        "title": "Récupérer la voiture",
+        "description": "Récupérez votre voiture à l'endroit choisi et profitez de votre voyage"
+      }
+    }
+  },
+  "catalog": {
+    "title": "Catalogue de véhicules",
+    "subtitle": "Trouvez la voiture parfaite pour votre voyage",
+    "filters": {
+      "title": "Filtres",
+      "category": "Catégorie",
+      "price": "Prix",
+      "seats": "Sièges",
+      "transmission": "Transmission",
+      "fuel": "Carburant",
+      "features": "Caractéristiques",
+      "availability": "Disponibilité",
+      "apply": "Appliquer",
+      "reset": "Réinitialiser",
+      "sort": "Trier par",
+      "sortOptions": {
+        "priceAsc": "Prix (croissant)",
+        "priceDesc": "Prix (décroissant)",
+        "newest": "Plus récent",
+        "popularity": "Popularité"
+      }
+    },
+    "car": {
+      "price": "Prix",
+      "perDay": "€/jour",
+      "seats": "sièges",
+      "transmission": "Transmission",
+      "fuel": "Carburant",
+      "consumption": "Consommation",
+      "year": "Année",
+      "features": "Caractéristiques",
+      "available": "Disponible",
+      "unavailable": "Indisponible",
+      "viewDetails": "Voir les détails",
+      "addToCart": "Ajouter au panier",
+      "compare": "Comparer"
+    },
+    "categories": {
+      "all": "Tous",
+      "economy": "Économique",
+      "compact": "Compact",
+      "premium": "Premium",
+      "suv": "SUV",
+      "luxury": "Luxe",
+      "electric": "Électrique"
+    },
+    "compare": {
+      "title": "Comparer les véhicules",
+      "empty": "Aucun véhicule sélectionné pour la comparaison",
+      "add": "Ajouter à la comparaison",
+      "remove": "Retirer de la comparaison"
+    },
+    "noResults": "Aucun véhicule ne correspond à vos critères de recherche",
+    "showMore": "Afficher plus"
+  },
+  "booking": {
+    "title": "Réservation",
+    "subtitle": "Complétez les informations pour réserver votre véhicule",
+    "step1": "Dates et lieux",
+    "step2": "Informations personnelles",
+    "step3": "Options supplémentaires",
+    "step4": "Paiement",
+    "dates": {
+      "title": "Dates et lieux",
+      "pickupDate": "Date de prise en charge",
+      "pickupTime": "Heure de prise en charge",
+      "returnDate": "Date de retour",
+      "returnTime": "Heure de retour",
+      "pickupLocation": "Lieu de prise en charge",
+      "returnLocation": "Lieu de retour",
+      "sameLocation": "Retour au même endroit"
+    },
+    "personal": {
+      "title": "Informations personnelles",
+      "firstName": "Prénom",
+      "lastName": "Nom",
+      "email": "Email",
+      "phone": "Téléphone",
+      "address": "Adresse",
+      "city": "Ville",
+      "country": "Pays",
+      "postalCode": "Code postal",
+      "drivingLicense": "Numéro de permis de conduire"
+    },
+    "options": {
+      "title": "Options supplémentaires",
+      "insurance": "Assurance complète",
+      "insuranceDescription": "Couverture complète sans franchise",
+      "gps": "GPS",
+      "gpsDescription": "Système de navigation GPS",
+      "childSeat": "Siège enfant",
+      "childSeatDescription": "Siège pour enfant (0-3 ans)",
+      "additionalDriver": "Conducteur supplémentaire",
+      "additionalDriverDescription": "Ajoutez un conducteur supplémentaire",
+      "wifi": "Wi-Fi portable",
+      "wifiDescription": "Connexion Internet pendant votre voyage"
+    },
+    "payment": {
+      "title": "Paiement",
+      "cardNumber": "Numéro de carte",
+      "cardHolder": "Titulaire de la carte",
+      "expiryDate": "Date d'expiration",
+      "cvv": "CVV",
+      "saveCard": "Enregistrer cette carte pour les futures réservations",
+      "termsAgree": "J'accepte les conditions générales",
+      "payNow": "Payer maintenant",
+      "payLater": "Payer à la prise en charge"
+    },
+    "summary": {
+      "title": "Résumé de la réservation",
+      "car": "Véhicule",
+      "dates": "Dates",
+      "locations": "Lieux",
+      "duration": "Durée",
+      "days": "jours",
+      "options": "Options",
+      "subtotal": "Sous-total",
+      "tax": "TVA (21%)",
+      "total": "Total",
+      "deposit": "Acompte (30%)",
+      "remaining": "Reste à payer"
+    },
+    "success": {
+      "title": "Réservation confirmée !",
+      "reference": "Référence de réservation",
+      "confirmation": "Un email de confirmation a été envoyé à",
+      "instructions": "Instructions pour la prise en charge",
+      "contact": "Si vous avez des questions, n'hésitez pas à nous contacter",
+      "backToHome": "Retour à l'accueil"
+    },
+    "button": {
+      "continue": "Continuer",
+      "back": "Retour",
+      "submit": "Soumettre la réservation"
+    }
+  },
+  "contact": {
+    "title": "Contactez-nous",
+    "subtitle": "Nous sommes là pour vous aider. Contactez-nous pour toute question concernant nos services",
+    "info": {
+      "title": "Informations de contact",
+      "schedule": "Heures d'ouverture: 9:00-13:00 / 15:00-19:00",
+      "workdays": "Du lundi au vendredi",
+      "address": "Carrer del Mas de l'Abat 145F",
+      "location": "Vila-seca, Catalogne",
+      "postal": "43480"
+    },
+    "form": {
+      "title": "Envoyez-nous un message",
+      "name": "Nom complet",
+      "email": "Email",
+      "phone": "Téléphone",
+      "message": "Message",
+      "submit": "Envoyer le message"
+    },
+    "social": {
+      "title": "Suivez-nous",
+      "instagram": "Instagram",
+      "facebook": "Facebook",
+      "whatsapp": "WhatsApp"
+    },
+    "map": {
+      "title": "Notre emplacement"
+    },
+    "faq": {
+      "title": "Questions fréquentes",
+      "question1": "Comment puis-je réserver une voiture ?",
+      "answer1": "Vous pouvez réserver une voiture en ligne via notre site web, par téléphone ou en visitant notre agence.",
+      "question2": "Quels documents sont nécessaires pour louer une voiture ?",
+      "answer2": "Vous aurez besoin d'un permis de conduire valide, d'une carte d'identité ou d'un passeport, et d'une carte de crédit pour la caution.",
+      "question3": "Y a-t-il une caution à payer ?",
+      "answer3": "Oui, une caution est requise et sera remboursée à la fin de la location si le véhicule est rendu dans le même état.",
+      "question4": "Puis-je annuler ma réservation ?",
+      "answer4": "Oui, vous pouvez annuler votre réservation jusqu'à 48 heures avant la date de prise en charge sans frais."
+    },
+    "success": "Merci pour votre message ! Nous vous répondrons dans les plus brefs délais."
+  },
+  "checkout": {
+    "title": "Finaliser la commande",
+    "subtitle": "Complétez vos informations pour finaliser votre réservation",
+    "cart": {
+      "title": "Votre panier",
+      "empty": "Votre panier est vide",
+      "item": "Article",
+      "price": "Prix",
+      "quantity": "Quantité",
+      "total": "Total",
+      "remove": "Supprimer"
+    },
+    "customer": {
+      "title": "Informations client",
+      "firstName": "Prénom",
+      "lastName": "Nom",
+      "email": "Email",
+      "phone": "Téléphone",
+      "address": "Adresse",
+      "city": "Ville",
+      "country": "Pays",
+      "postalCode": "Code postal"
+    },
+    "payment": {
+      "title": "Informations de paiement",
+      "methods": "Méthodes de paiement",
+      "card": "Carte de crédit",
+      "paypal": "PayPal",
+      "applePay": "Apple Pay",
+      "googlePay": "Google Pay",
+      "cardNumber": "Numéro de carte",
+      "cardHolder": "Titulaire de la carte",
+      "expiryDate": "Date d'expiration",
+      "cvv": "CVV"
+    },
+    "summary": {
+      "title": "Résumé de la commande",
+      "subtotal": "Sous-total",
+      "tax": "TVA (21%)",
+      "total": "Total",
+      "terms": "En passant cette commande, vous acceptez nos conditions générales",
+      "button": "Confirmer la commande"
+    },
+    "success": {
+      "title": "Commande confirmée !",
+      "message": "Votre commande a été traitée avec succès. Un email de confirmation a été envoyé à votre adresse email.",
+      "reference": "Référence de commande",
+      "backToCatalog": "Retour au catalogue",
+      "backToHome": "Retour à l'accueil"
+    }
+  },
+  "footer": {
+    "company": {
+      "about": "Location de voitures à Vila-seca",
+      "description": "Service premium et attention personnalisée"
+    },
+    "contact": {
+      "title": "Contact"
+    },
+    "social": {
+      "title": "Réseaux sociaux"
+    },
+    "payments": "Moyens de paiement",
+    "copyright": "© {{year}} AutoFirst. Tous droits réservés."
+  },
+  "features": {
+    "leather_seats": "Sièges en cuir",
+    "navigation": "Navigation",
+    "parking_sensors": "Capteurs de stationnement",
+    "bluetooth": "Bluetooth",
+    "climate_control": "Climatisation automatique",
+    "led_lights": "Phares LED",
+    "air_conditioning": "Climatisation",
+    "usb": "USB",
+    "apple_carplay": "Apple CarPlay",
+    "android_auto": "Android Auto",
+    "backup_camera": "Caméra de recul",
+    "lane_assist": "Assistant de maintien de voie",
+    "adaptive_cruise": "Régulateur de vitesse adaptatif",
+    "premium_sound": "Système audio premium",
+    "panoramic_roof": "Toit panoramique",
+    "driver_assistance": "Assistance à la conduite",
+    "wireless_charging": "Chargement sans fil",
+    "electric_range": "Autonomie électrique",
+    "fast_charging": "Charge rapide",
+    "perfect_city": "Parfait pour la ville",
+    "easy_parking": "Stationnement facile",
+    "digital_cockpit": "Tableau de bord numérique",
+    "sport_mode": "Mode sport",
+    "dynamic_chassis": "Châssis dynamique",
+    "autopilot": "Pilote automatique"
+  },
+  "whatsapp": {
+    "message": "Contactez-nous sur WhatsApp",
+    "available": "Nous sommes en ligne, réponse rapide !"
+  },
+  "notifications": {
+    "booked": "a réservé {{car}} il y a {{time}} minutes"
+  },
+  "cart": {
+    "title": "Panier",
+    "empty": "Votre panier est vide",
+    "emptyMessage": "Ajoutez des voitures à votre panier pour continuer",
+    "continueShopping": "Continuer les achats",
+    "remove": "Supprimer",
+    "total": "Total",
+    "taxesIncluded": "TVA incluse",
+    "checkout": "Commander",
+    "or": "ou",
+    "dates": "Dates de location",
+    "location": "Lieu de prise en charge",
+    "inCart": "Dans le panier"
+  },
+  "checkout": {
+    "title": "Finaliser la commande",
+    "empty": "Votre panier est vide",
+    "emptyMessage": "Ajoutez des voitures à votre panier pour continuer",
+    "backToCatalog": "Retour au catalogue",
+    "personalInfo": "Informations personnelles",
+    "form": {
+      "firstName": "Prénom",
+      "lastName": "Nom",
+      "email": "Email",
+      "phone": "Téléphone",
+      "address": "Adresse",
+      "city": "Ville",
+      "country": "Pays",
+      "postalCode": "Code postal",
+      "comments": "Commentaires additionnels"
+    },
+    "orderSummary": "Résumé de la commande",
+    "rentalDates": "Dates de location",
+    "pickupLocation": "Lieu de prise en charge",
+    "returnLocation": "Lieu de retour",
+    "total": "Total",
+    "taxesIncluded": "TVA incluse",
+    "submit": "Confirmer la commande",
+    "success": {
+      "title": "Commande confirmée !",
+      "message": "Vous recevrez un email avec les détails de votre réservation.",
+      "backToCatalog": "Retour au catalogue",
+      "backToHome": "Retour à l'accueil"
+    }
+  },
+  "popularCars": {
+    "mercedes_c_class": {
+      "name": "Mercedes-Benz Classe C",
+      "description": "Berline de luxe premium alliant design élégant et technologie avancée pour un confort de conduite exceptionnel.",
+      "category": "Premium",
+      "price": "120€ / jour"
+    },
+    "volkswagen_golf": {
+      "name": "Volkswagen Golf",
+      "description": "Véhicule confortable et économique, parfait pour les trajets urbains et les longs voyages.",
+      "category": "Économique",
+      "price": "45€ / jour"
+    },
+    "toyota_rav4_hybrid": {
+      "name": "Toyota RAV4 Hybrid",
+      "description": "SUV hybride moderne avec intérieur spacieux et excellente efficacité pour des voyages en famille confortables.",
+      "category": "SUV",
+      "price": "85€ / jour"
+    }
+  },
+  "carDetail": {
+    "notFound": "Véhicule non trouvé",
+    "notFoundDescription": "Désolé, nous n'avons pas pu trouver le véhicule demandé",
+    "backToCatalog": "Retour au catalogue",
+    "description": "Description du véhicule",
+    "specifications": "Spécifications",
+    "similarCars": "Véhicules similaires",
+    "highlights": {
+      "year": "Année",
+      "transmission": "Transmission",
+      "fuel": "Type de carburant",
+      "consumption": "Consommation"
+    },
+    "features": "Caractéristiques",
+    "bookNow": "Réserver maintenant",
+    "notAvailable": "Non disponible",
+    "additionalInfo": {
+      "title": "Informations supplémentaires",
+      "description": "Informations importantes sur la location de ce véhicule",
+      "insurance": "Assurance complète incluse dans le prix",
+      "mileage": "Kilométrage illimité",
+      "deposit": "Caution remboursable requise",
+      "documents": "Permis de conduire et passeport requis"
+    },
+    "defaultDescription": "La {{name}} est un excellent véhicule {{category}} qui allie confort, fiabilité et style. Le choix parfait pour votre voyage."
+  },
+  "car": {
+    "defaultDescription": "La {{name}} est un excellent véhicule {{category}} qui allie confort, fiabilité et style. Le choix parfait pour votre voyage."
+  }
+} 

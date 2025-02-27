@@ -1,0 +1,392 @@
+{
+  "nav": {
+    "home": "Startseite",
+    "catalog": "Katalog",
+    "booking": "Buchung",
+    "contact": "Kontakt",
+    "cart": "Warenkorb"
+  },
+  "common": {
+    "cancel": "Abbrechen",
+    "lightMode": "Heller Modus",
+    "darkMode": "Dunkler Modus"
+  },
+  "home": {
+    "hero": {
+      "title": "Premium Autovermietung",
+      "subtitle": "in Vila-seca",
+      "description": "Entdecken Sie unsere exklusive Fahrzeugflotte und genießen Sie erstklassigen, persönlichen Service",
+      "cta": "Katalog ansehen"
+    },
+    "search": {
+      "button": "Auto finden"
+    },
+    "popular": {
+      "title": "Beliebte Fahrzeuge",
+      "subtitle": "Die besten Angebote für Ihre Reise",
+      "description": "Wählen Sie aus unseren beliebtesten Fahrzeugen",
+      "viewAll": "Alle Fahrzeuge ansehen",
+      "details": "Details anzeigen"
+    },
+    "features": {
+      "title": "Warum uns wählen?",
+      "subtitle": "Alles, was Sie für Ihre perfekte Reise brauchen",
+      "fleet": {
+        "title": "Premium Flotte",
+        "description": "Hochwertige Fahrzeuge in perfektem Zustand für Ihre Sicherheit und Komfort"
+      },
+      "service": {
+        "title": "24/7 Service",
+        "description": "Kundenservice rund um die Uhr für alle Anliegen während Ihrer Miete"
+      },
+      "process": {
+        "title": "Einfacher Prozess",
+        "description": "Einfache und schnelle Buchung, minimale Dokumentation und keine Überraschungen beim Preis"
+      }
+    },
+    "process": {
+      "title": "Wie man ein Auto mietet",
+      "description": "Einfacher 4-Schritte-Mietprozess",
+      "step1": {
+        "title": "Daten wählen",
+        "description": "Wählen Sie Abhol- und Rückgabedatum, um verfügbare Fahrzeuge zu sehen"
+      },
+      "step2": {
+        "title": "Standort wählen",
+        "description": "Wählen Sie bequeme Abhol- und Rückgabeorte"
+      },
+      "step3": {
+        "title": "Optionen wählen",
+        "description": "Fügen Sie zusätzliche Dienste und Ausrüstung für eine komfortable Fahrt hinzu"
+      },
+      "step4": {
+        "title": "Auto abholen",
+        "description": "Holen Sie Ihr Auto am gewählten Standort ab und genießen Sie die Fahrt"
+      }
+    },
+    "reviews": {
+      "title": "Kundenbewertungen",
+      "description": "Sehen Sie, was unsere Kunden über ihre Erfahrungen mit uns sagen",
+      "addButton": "Bewertung schreiben",
+      "form": {
+        "title": "Bewertung schreiben",
+        "name": "Ihr Name",
+        "car": "Gemietetes Auto",
+        "rating": "Bewertung",
+        "comment": "Ihr Kommentar",
+        "submit": "Bewertung senden"
+      },
+      "success": "Vielen Dank für Ihre Bewertung! Sie wird nach der Moderation auf der Website erscheinen."
+    },
+    "contact": {
+      "title": "Kontaktieren Sie uns",
+      "description": "Wir sind immer bereit, Ihre Fragen zu beantworten und Ihnen bei der Auswahl des richtigen Autos zu helfen",
+      "form": {
+        "title": "Nachricht senden",
+        "name": "Ihr Name",
+        "email": "E-Mail",
+        "phone": "Telefon",
+        "message": "Nachricht",
+        "submit": "Senden"
+      },
+      "success": "Vielen Dank für Ihre Nachricht! Wir werden uns in Kürze bei Ihnen melden."
+    },
+    "cta": {
+      "title": "Bereit zum Buchen?",
+      "description": "Buchen Sie jetzt und profitieren Sie von unseren Sonderangeboten",
+      "button": "Jetzt buchen"
+    }
+  },
+  "catalog": {
+    "title": "Unsere Fahrzeuge",
+    "filters": {
+      "category": "Kategorie",
+      "transmission": "Getriebe",
+      "fuel": "Kraftstoffart",
+      "priceRange": "Preisbereich"
+    },
+    "sort": {
+      "price-asc": "Preis: aufsteigend",
+      "price-desc": "Preis: absteigend",
+      "name-asc": "Name: A bis Z",
+      "name-desc": "Name: Z bis A"
+    },
+    "categories": {
+      "all": "Alle",
+      "premium": "Premium",
+      "suv": "SUV",
+      "economy": "Economy",
+      "electric": "Elektro"
+    },
+    "car": {
+      "seats": "Sitze",
+      "transmission": "Getriebe",
+      "fuel": "Kraftstoff",
+      "consumption": "Verbrauch",
+      "year": "Baujahr",
+      "price": "Preis",
+      "features": "Ausstattung",
+      "book": "Jetzt buchen",
+      "notAvailable": "Nicht verfügbar",
+      "perDay": "€/Tag"
+    },
+    "compare": {
+      "title": "Fahrzeuge vergleichen",
+      "button": "Vergleichen",
+      "add": "Zum Vergleich hinzufügen",
+      "remove": "Aus Vergleich entfernen",
+      "empty": "Keine Fahrzeuge zum Vergleichen"
+    },
+    "noResults": "Keine Fahrzeuge gefunden",
+    "tryOtherFilters": "Versuchen Sie die Filter anzupassen"
+  },
+  "carDetail": {
+    "notFound": "Fahrzeug nicht gefunden",
+    "notFoundDescription": "Leider konnten wir das gewünschte Fahrzeug nicht finden",
+    "backToCatalog": "Zurück zum Katalog",
+    "highlights": {
+      "year": "Baujahr",
+      "transmission": "Getriebe",
+      "fuel": "Kraftstoff",
+      "consumption": "Verbrauch"
+    },
+    "features": "Ausstattung",
+    "bookNow": "Jetzt buchen",
+    "notAvailable": "Nicht verfügbar",
+    "additionalInfo": {
+      "title": "Zusätzliche Informationen",
+      "description": "Wichtige Informationen zur Anmietung dieses Fahrzeugs",
+      "insurance": "Vollkasko-Versicherung im Preis enthalten",
+      "mileage": "Keine Kilometerbegrenzung",
+      "deposit": "Rückzahlbare Kaution erforderlich",
+      "documents": "Führerschein und Reisepass erforderlich"
+    },
+    "specifications": "Spezifikationen",
+    "similarCars": "Ähnliche Fahrzeuge",
+    "description": "Fahrzeugbeschreibung"
+  },
+  "booking": {
+    "title": "Fahrzeug buchen",
+    "subtitle": "Füllen Sie das Formular aus, um Ihr ausgewähltes Fahrzeug zu buchen",
+    "rental": {
+      "title": "Mietdetails",
+      "pickup": "Abholdatum",
+      "return": "Rückgabedatum",
+      "pickupLocation": "Abholort",
+      "returnLocation": "Rückgabeort"
+    },
+    "options": {
+      "title": "Zusätzliche Optionen",
+      "gps": "GPS Navigation",
+      "gpsDescription": "GPS-Navigationssystem für bequemes Reisen",
+      "childSeat": "Kindersitz",
+      "childSeatDescription": "Sicherer Kindersitz für junge Passagiere",
+      "insurance": "Zusatzversicherung",
+      "insuranceDescription": "Erweiterter Versicherungsschutz für Ihre Sicherheit",
+      "wifi": "Mobiles WLAN",
+      "wifiDescription": "Mobiler WLAN-Hotspot für Internetzugang während Ihrer Reise"
+    },
+    "continue": "Weiter",
+    "summary": {
+      "title": "Buchungsübersicht",
+      "days": "Tage",
+      "selectDates": "Mietdaten auswählen",
+      "selectLocation": "Abholort auswählen",
+      "price": "Preis",
+      "differentLocation": "Unterschiedliche Abhol- und Rückgabeorte",
+      "total": "Gesamt",
+      "noCar": "Kein Fahrzeug ausgewählt",
+      "selectCar": "Fahrzeug auswählen"
+    },
+    "help": {
+      "title": "Hilfe benötigt?",
+      "phone": "Telefon",
+      "email": "E-Mail",
+      "chat": "Live-Chat",
+      "chatDescription": "Unsere Spezialisten sind bereit, Ihre Fragen zu beantworten"
+    },
+    "personal": {
+      "title": "Persönliche Daten",
+      "firstName": "Vorname",
+      "lastName": "Nachname",
+      "email": "E-Mail",
+      "phone": "Telefon"
+    },
+    "extras": {
+      "title": "Zusätzliche Optionen",
+      "gps": "GPS Navigation",
+      "childSeat": "Kindersitz",
+      "insurance": "Zusatzversicherung",
+      "wifi": "Mobiles WLAN"
+    },
+    "submit": "Buchung bestätigen"
+  },
+  "contact": {
+    "title": "Kontakt",
+    "subtitle": "Wir sind für Sie da. Kontaktieren Sie uns bei Fragen zu unseren Dienstleistungen",
+    "info": {
+      "title": "Kontaktinformationen",
+      "schedule": "Öffnungszeiten: 9:00-13:00 / 15:00-19:00",
+      "workdays": "Montag bis Freitag",
+      "address": "Carrer del Mas de l'Abat 145F",
+      "location": "Vila-seca, Katalonien",
+      "postal": "43480"
+    },
+    "form": {
+      "name": "Vollständiger Name",
+      "email": "E-Mail",
+      "phone": "Telefon",
+      "message": "Nachricht",
+      "submit": "Nachricht senden"
+    },
+    "social": {
+      "title": "Soziale Medien",
+      "facebook": "Facebook",
+      "instagram": "Instagram",
+      "whatsapp": "WhatsApp"
+    }
+  },
+  "footer": {
+    "company": {
+      "about": "Autovermietung in Vila-seca",
+      "description": "Premium-Service und persönliche Betreuung"
+    },
+    "contact": {
+      "title": "Kontakt"
+    },
+    "social": {
+      "title": "Soziale Medien"
+    },
+    "payments": "Zahlungsmethoden",
+    "copyright": "© {{year}} AutoFirst. Alle Rechte vorbehalten."
+  },
+  "features": {
+    "leather_seats": "Ledersitze",
+    "navigation": "Navigation",
+    "parking_sensors": "Parksensoren",
+    "bluetooth": "Bluetooth",
+    "climate_control": "Klimaautomatik",
+    "led_lights": "LED-Scheinwerfer",
+    "air_conditioning": "Klimaanlage",
+    "usb": "USB",
+    "apple_carplay": "Apple CarPlay",
+    "android_auto": "Android Auto",
+    "backup_camera": "Rückfahrkamera",
+    "lane_assist": "Spurhalteassistent",
+    "adaptive_cruise": "Adaptiver Tempomat",
+    "premium_sound": "Premium-Soundsystem",
+    "panoramic_roof": "Panoramadach",
+    "driver_assistance": "Fahrerassistenz",
+    "wireless_charging": "Kabelloses Laden",
+    "electric_range": "Elektrische Reichweite",
+    "fast_charging": "Schnellladen",
+    "perfect_city": "Perfekt für die Stadt",
+    "easy_parking": "Einfaches Parken",
+    "digital_cockpit": "Digitales Cockpit",
+    "sport_mode": "Sport-Modus",
+    "dynamic_chassis": "Dynamisches Fahrwerk",
+    "autopilot": "Autopilot",
+    "premium_interior": "Premium-Innenausstattung",
+    "supercharging": "Supercharging",
+    "glass_roof": "Glasdach",
+    "luxury_interior": "Luxus-Innenausstattung",
+    "electric_doors": "Elektrische Schiebetüren",
+    "ambient_lighting": "Ambientebeleuchtung",
+    "rear_climate": "Klimaautomatik hinten",
+    "four_wheel_drive": "Allradantrieb"
+  },
+  "whatsapp": {
+    "message": "Schreiben Sie uns auf WhatsApp",
+    "available": "Wir sind online, schnelle Antwort!"
+  },
+  "notifications": {
+    "booked": "hat {{car}} vor {{time}} Minuten gebucht"
+  },
+  "cart": {
+    "title": "Warenkorb",
+    "empty": "Warenkorb ist leer",
+    "emptyMessage": "Fügen Sie Fahrzeuge zum Warenkorb hinzu, um fortzufahren",
+    "continueShopping": "Weiter einkaufen",
+    "remove": "Entfernen",
+    "total": "Gesamt",
+    "taxesIncluded": "Inkl. MwSt.",
+    "checkout": "Zur Kasse",
+    "or": "oder",
+    "dates": "Mietdauer",
+    "location": "Abholort",
+    "inCart": "Im Warenkorb"
+  },
+  "checkout": {
+    "title": "Bestellung abschließen",
+    "empty": "Warenkorb ist leer",
+    "emptyMessage": "Fügen Sie Fahrzeuge zum Warenkorb hinzu, um fortzufahren",
+    "backToCatalog": "Zurück zum Katalog",
+    "personalInfo": "Persönliche Daten",
+    "form": {
+      "firstName": "Vorname",
+      "lastName": "Nachname",
+      "email": "E-Mail",
+      "phone": "Telefon",
+      "address": "Adresse",
+      "city": "Stadt",
+      "country": "Land",
+      "postalCode": "Postleitzahl",
+      "comments": "Zusätzliche Kommentare"
+    },
+    "orderSummary": "Bestellübersicht",
+    "rentalDates": "Mietdauer",
+    "pickupLocation": "Abholort",
+    "returnLocation": "Rückgabeort",
+    "total": "Gesamt",
+    "taxesIncluded": "Inkl. MwSt.",
+    "submit": "Bestellung bestätigen",
+    "success": {
+      "title": "Bestellung bestätigt!",
+      "message": "Sie erhalten eine E-Mail mit den Buchungsdetails.",
+      "backToCatalog": "Zurück zum Katalog",
+      "backToHome": "Zur Startseite"
+    }
+  },
+  "car": {
+    "defaultDescription": "Der {{name}} ist ein ausgezeichnetes {{category}}-Fahrzeug, das Komfort, Zuverlässigkeit und Stil vereint. Die perfekte Wahl für Ihre Reise.",
+    "specs": {
+      "year": "Baujahr",
+      "transmission": "Getriebe",
+      "fuel": "Kraftstoffart",
+      "consumption": "Verbrauch",
+      "seats": "Sitze",
+      "doors": "Türen",
+      "engine": "Motor",
+      "power": "Leistung",
+      "acceleration": "Beschleunigung 0-100 km/h",
+      "topSpeed": "Höchstgeschwindigkeit"
+    },
+    "features": "Ausstattung",
+    "similar": "Ähnliche Fahrzeuge"
+  },
+  "popularCars": {
+    "mercedes_c_class": {
+      "name": "Mercedes-Benz C-Klasse",
+      "description": "Premium-Luxuslimousine, die elegantes Design und fortschrittliche Technologie für außergewöhnlichen Fahrkomfort vereint.",
+      "category": "Premium",
+      "price": "120€ / Tag"
+    },
+    "volkswagen_golf": {
+      "name": "Volkswagen Golf",
+      "description": "Komfortables und wirtschaftliches Fahrzeug, perfekt für Stadtfahrten und längere Reisen.",
+      "category": "Economy",
+      "price": "45€ / Tag"
+    },
+    "toyota_rav4_hybrid": {
+      "name": "Toyota RAV4 Hybrid",
+      "description": "Moderner Hybrid-SUV mit geräumigem Innenraum und ausgezeichneter Effizienz für komfortable Familienfahrten.",
+      "category": "SUV",
+      "price": "85€ / Tag"
+    }
+  },
+  "breadcrumbs": {
+    "home": "Startseite",
+    "catalog": "Katalog",
+    "car": "Fahrzeugdetails"
+  }
+} 

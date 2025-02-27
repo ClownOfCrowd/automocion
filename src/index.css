@@ -1,0 +1,89 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    font-family: 'Montserrat', system-ui, sans-serif;
+    height: 100%;
+    width: 100%;
+  }
+
+  body {
+    margin: 0;
+    min-height: 100%;
+    width: 100%;
+    position: relative;
+    overflow-x: hidden;
+    @apply bg-white dark:bg-gray-900 text-gray-900 dark:text-white transition-colors duration-300;
+  }
+
+  #root {
+    min-height: 100vh;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+  }
+}
+
+/* Улучшенные стили для интерактивных элементов */
+@layer components {
+  .btn-primary {
+    @apply inline-flex items-center justify-center px-6 py-3 border border-transparent text-base font-medium rounded-md text-white bg-indigo-600 hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500 transition-all duration-200;
+  }
+
+  .btn-secondary {
+    @apply inline-flex items-center justify-center px-6 py-3 border border-gray-300 dark:border-gray-600 text-base font-medium rounded-md text-gray-700 dark:text-gray-200 bg-white dark:bg-gray-800 hover:bg-gray-50 dark:hover:bg-gray-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500 transition-all duration-200;
+  }
+
+  .input-primary {
+    @apply block w-full rounded-md border-gray-300 dark:border-gray-600 shadow-sm focus:border-indigo-500 focus:ring-indigo-500 dark:bg-gray-800 dark:text-white sm:text-sm transition-all duration-200;
+  }
+
+  /* Карточки и контейнеры */
+  .card {
+    @apply bg-white dark:bg-gray-800 rounded-lg shadow-md transition-colors duration-300;
+  }
+
+  .container-light {
+    @apply bg-gray-50 dark:bg-gray-900 transition-colors duration-300;
+  }
+}
+
+/* Улучшенные анимации */
+@layer utilities {
+  .transition-smooth {
+    @apply transition-all duration-300 ease-in-out;
+  }
+}
+
+/* Оптимизация для мобильных устройств */
+@media (max-width: 640px) {
+  html {
+    font-size: 14px;
+  }
+}
+
+/* Улучшенная типография */
+h1, h2, h3, h4, h5, h6 {
+  @apply font-bold tracking-tight dark:text-white transition-colors duration-300;
+}
+
+/* Темная тема для скроллбара */
+@layer utilities {
+  .dark ::-webkit-scrollbar {
+    width: 12px;
+  }
+
+  .dark ::-webkit-scrollbar-track {
+    @apply bg-gray-800;
+  }
+
+  .dark ::-webkit-scrollbar-thumb {
+    @apply bg-gray-600 rounded-full border-2 border-gray-800;
+  }
+
+  .dark ::-webkit-scrollbar-thumb:hover {
+    @apply bg-gray-500;
+  }
+}

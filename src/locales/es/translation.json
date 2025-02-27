@@ -1,0 +1,353 @@
+{
+  "nav": {
+    "home": "Inicio",
+    "catalog": "Catálogo",
+    "booking": "Reserva",
+    "contact": "Contacto",
+    "cart": "Carrito"
+  },
+  "common": {
+    "cancel": "Cancelar",
+    "lightMode": "Modo claro",
+    "darkMode": "Modo oscuro"
+  },
+  "home": {
+    "hero": {
+      "title": "Alquiler de coches premium",
+      "subtitle": "en Vila-seca",
+      "description": "Descubre nuestra exclusiva flota de vehículos y disfruta de un servicio personalizado de primera clase",
+      "cta": "Ver catálogo"
+    },
+    "search": {
+      "button": "Encontrar coche"
+    },
+    "popular": {
+      "title": "Vehículos populares",
+      "subtitle": "Elija entre nuestros vehículos más solicitados",
+      "description": "Elija entre nuestros vehículos más populares",
+      "viewAll": "Ver todos los vehículos",
+      "details": "Ver detalles"
+    },
+    "features": {
+      "title": "¿Por qué elegirnos?",
+      "subtitle": "Todo lo que necesitas para tu viaje perfecto",
+      "fleet": {
+        "title": "Flota premium",
+        "description": "Vehículos de alta calidad en perfecto estado para tu seguridad y comodidad"
+      },
+      "service": {
+        "title": "Servicio 24/7",
+        "description": "Atención al cliente las 24 horas para cualquier necesidad durante tu alquiler"
+      },
+      "process": {
+        "title": "Proceso sencillo",
+        "description": "Reserva fácil y rápida, documentación mínima y sin sorpresas en el precio"
+      }
+    },
+    "process": {
+      "title": "Cómo alquilar un coche",
+      "description": "Proceso de alquiler en 4 sencillos pasos",
+      "step1": {
+        "title": "Elegir fechas",
+        "description": "Selecciona las fechas de recogida y devolución para ver los vehículos disponibles"
+      },
+      "step2": {
+        "title": "Elegir ubicación",
+        "description": "Selecciona lugares convenientes de recogida y devolución"
+      },
+      "step3": {
+        "title": "Elegir opciones",
+        "description": "Añade servicios y equipamiento adicional para un viaje cómodo"
+      },
+      "step4": {
+        "title": "Recoger el coche",
+        "description": "Recoge tu coche en la ubicación elegida y disfruta del viaje"
+      }
+    },
+    "reviews": {
+      "title": "Opiniones de clientes",
+      "description": "Mira lo que dicen nuestros clientes sobre su experiencia con nosotros",
+      "addButton": "Escribir opinión",
+      "form": {
+        "title": "Escribir opinión",
+        "name": "Tu nombre",
+        "car": "Coche alquilado",
+        "rating": "Valoración",
+        "comment": "Tu comentario",
+        "submit": "Enviar opinión"
+      },
+      "success": "¡Gracias por tu opinión! Aparecerá en la web después de la moderación."
+    },
+    "contact": {
+      "title": "Contáctanos",
+      "description": "Estamos siempre dispuestos a responder tus preguntas y ayudarte a elegir el coche adecuado",
+      "form": {
+        "title": "Enviar mensaje",
+        "name": "Tu nombre",
+        "email": "Email",
+        "phone": "Teléfono",
+        "message": "Mensaje",
+        "submit": "Enviar"
+      },
+      "success": "¡Gracias por tu mensaje! Nos pondremos en contacto contigo pronto."
+    },
+    "cta": {
+      "title": "¿Listo para reservar?",
+      "description": "Reserva ahora y aprovecha nuestras ofertas especiales",
+      "button": "Reservar ahora"
+    }
+  },
+  "catalog": {
+    "title": "Nuestros vehículos",
+    "filters": {
+      "category": "Categoría",
+      "transmission": "Transmisión",
+      "fuel": "Tipo de combustible",
+      "priceRange": "Rango de precio"
+    },
+    "sort": {
+      "price-asc": "Precio: menor a mayor",
+      "price-desc": "Precio: mayor a menor",
+      "name-asc": "Nombre: A a Z",
+      "name-desc": "Nombre: Z a A"
+    },
+    "categories": {
+      "all": "Todos",
+      "premium": "Premium",
+      "suv": "SUV",
+      "economy": "Económico",
+      "electric": "Eléctrico"
+    },
+    "car": {
+      "price": "Precio",
+      "perDay": "€/día",
+      "seats": "plazas",
+      "transmission": "Transmisión",
+      "fuel": "Combustible",
+      "consumption": "Consumo",
+      "year": "Año",
+      "features": "Características",
+      "book": "Reservar ahora",
+      "notAvailable": "No disponible",
+      "defaultDescription": "El {{name}} es un excelente vehículo {{category}} que combina comodidad, fiabilidad y estilo. La elección perfecta para tu viaje.",
+      "specs": {
+        "year": "Año",
+        "transmission": "Transmisión",
+        "fuel": "Tipo de combustible",
+        "consumption": "Consumo",
+        "seats": "Plazas",
+        "doors": "Puertas",
+        "engine": "Motor",
+        "power": "Potencia",
+        "acceleration": "Aceleración 0-100 km/h",
+        "topSpeed": "Velocidad máxima"
+      },
+      "similar": "Coches similares"
+    },
+    "compare": {
+      "title": "Comparar vehículos",
+      "button": "Comparar",
+      "add": "Añadir a comparación",
+      "remove": "Quitar de comparación",
+      "empty": "No hay vehículos para comparar"
+    },
+    "noResults": "No se encontraron vehículos",
+    "tryOtherFilters": "Intente ajustar los filtros"
+  },
+  "carDetail": {
+    "notFound": "Vehículo no encontrado",
+    "notFoundDescription": "Lo sentimos, no pudimos encontrar el vehículo solicitado",
+    "backToCatalog": "Volver al catálogo",
+    "highlights": {
+      "year": "Año",
+      "transmission": "Transmisión",
+      "fuel": "Combustible",
+      "consumption": "Consumo"
+    },
+    "features": "Características",
+    "bookNow": "Reservar ahora",
+    "notAvailable": "No disponible",
+    "additionalInfo": {
+      "title": "Información adicional",
+      "description": "Información importante sobre el alquiler de este vehículo",
+      "insurance": "Seguro completo incluido en el precio",
+      "mileage": "Sin límite de kilometraje",
+      "deposit": "Depósito reembolsable requerido",
+      "documents": "Carnet de conducir y pasaporte requeridos"
+    },
+    "specifications": "Especificaciones",
+    "similarCars": "Coches similares",
+    "description": "Descripción del coche"
+  },
+  "booking": {
+    "title": "Reserva tu vehículo",
+    "rental": {
+      "title": "Detalles del alquiler",
+      "pickup": "Fecha de recogida",
+      "return": "Fecha de devolución",
+      "pickupLocation": "Lugar de recogida",
+      "returnLocation": "Lugar de devolución"
+    },
+    "personal": {
+      "title": "Datos personales",
+      "firstName": "Nombre",
+      "lastName": "Apellidos",
+      "email": "Email",
+      "phone": "Teléfono"
+    },
+    "extras": {
+      "title": "Opciones adicionales",
+      "gps": "Navegador GPS",
+      "childSeat": "Silla infantil",
+      "insurance": "Seguro adicional",
+      "wifi": "WiFi móvil"
+    },
+    "submit": "Confirmar reserva"
+  },
+  "contact": {
+    "title": "Contacta con nosotros",
+    "subtitle": "Estamos aquí para ayudarte. Contáctanos para cualquier consulta sobre nuestros servicios",
+    "info": {
+      "title": "Información de contacto",
+      "schedule": "Horario: 9:00-13:00 / 15:00-19:00",
+      "workdays": "Lunes a viernes",
+      "address": "Carrer del Mas de l'Abat 145F",
+      "location": "Vila-seca, Cataluña",
+      "postal": "43480"
+    },
+    "form": {
+      "name": "Nombre completo",
+      "email": "Email",
+      "phone": "Teléfono",
+      "message": "Mensaje",
+      "submit": "Enviar mensaje"
+    },
+    "social": {
+      "title": "Redes sociales",
+      "facebook": "Facebook",
+      "instagram": "Instagram",
+      "whatsapp": "WhatsApp"
+    }
+  },
+  "footer": {
+    "company": {
+      "about": "Alquiler de coches en Vila-seca",
+      "description": "Servicio premium y atención personalizada"
+    },
+    "contact": {
+      "title": "Contacto"
+    },
+    "social": {
+      "title": "Redes sociales"
+    },
+    "payments": "Métodos de pago",
+    "copyright": "© {{year}} AutoFirst. Todos los derechos reservados."
+  },
+  "features": {
+    "leather_seats": "Asientos de cuero",
+    "navigation": "Navegación",
+    "parking_sensors": "Sensores de aparcamiento",
+    "bluetooth": "Bluetooth",
+    "climate_control": "Control de clima",
+    "led_lights": "Luces LED",
+    "air_conditioning": "Aire acondicionado",
+    "usb": "USB",
+    "apple_carplay": "Apple CarPlay",
+    "android_auto": "Android Auto",
+    "backup_camera": "Cámara trasera",
+    "lane_assist": "Asistente de carril",
+    "adaptive_cruise": "Control de crucero adaptativo",
+    "premium_sound": "Sistema de sonido premium",
+    "panoramic_roof": "Techo panorámico",
+    "driver_assistance": "Asistencia al conductor",
+    "wireless_charging": "Carga inalámbrica",
+    "electric_range": "Autonomía eléctrica",
+    "fast_charging": "Carga rápida",
+    "perfect_city": "Perfecto para ciudad",
+    "easy_parking": "Fácil aparcamiento",
+    "digital_cockpit": "Cuadro digital",
+    "sport_mode": "Modo deportivo",
+    "dynamic_chassis": "Chasis dinámico",
+    "autopilot": "Piloto automático",
+    "premium_interior": "Interior premium",
+    "supercharging": "Supercarga",
+    "glass_roof": "Techo de cristal",
+    "luxury_interior": "Interior de lujo",
+    "electric_doors": "Puertas eléctricas",
+    "ambient_lighting": "Iluminación ambiental",
+    "rear_climate": "Climatización trasera",
+    "four_wheel_drive": "Tracción 4x4"
+  },
+  "whatsapp": {
+    "message": "Escríbenos por WhatsApp",
+    "available": "¡Estamos en línea, respuesta rápida!"
+  },
+  "notifications": {
+    "booked": "ha reservado {{car}} hace {{time}} minutos"
+  },
+  "cart": {
+    "title": "Carrito",
+    "empty": "El carrito está vacío",
+    "emptyMessage": "Añade vehículos al carrito para continuar",
+    "continueShopping": "Seguir comprando",
+    "remove": "Eliminar",
+    "total": "Total",
+    "taxesIncluded": "IVA incluido",
+    "checkout": "Finalizar pedido",
+    "or": "o",
+    "dates": "Fechas de alquiler",
+    "location": "Lugar de recogida",
+    "inCart": "En el carrito"
+  },
+  "checkout": {
+    "title": "Finalizar pedido",
+    "empty": "El carrito está vacío",
+    "emptyMessage": "Añade vehículos al carrito para continuar",
+    "backToCatalog": "Volver al catálogo",
+    "personalInfo": "Datos personales",
+    "form": {
+      "firstName": "Nombre",
+      "lastName": "Apellidos",
+      "email": "Correo electrónico",
+      "phone": "Teléfono",
+      "address": "Dirección",
+      "city": "Ciudad",
+      "country": "País",
+      "postalCode": "Código postal",
+      "comments": "Comentarios adicionales"
+    },
+    "orderSummary": "Resumen del pedido",
+    "rentalDates": "Fechas de alquiler",
+    "pickupLocation": "Lugar de recogida",
+    "returnLocation": "Lugar de devolución",
+    "total": "Total",
+    "taxesIncluded": "IVA incluido",
+    "submit": "Confirmar pedido",
+    "success": {
+      "title": "¡Pedido confirmado!",
+      "message": "Recibirás un correo electrónico con los detalles de la reserva.",
+      "backToCatalog": "Volver al catálogo",
+      "backToHome": "Ir al inicio"
+    }
+  },
+  "popularCars": {
+    "mercedes_c_class": {
+      "name": "Mercedes-Benz Clase C",
+      "description": "Sedán de lujo premium que combina diseño elegante y tecnología avanzada para una comodidad de conducción excepcional.",
+      "category": "Premium",
+      "price": "120€ / día"
+    },
+    "volkswagen_golf": {
+      "name": "Volkswagen Golf",
+      "description": "Vehículo cómodo y económico, perfecto para viajes urbanos y trayectos largos.",
+      "category": "Económico",
+      "price": "45€ / día"
+    },
+    "toyota_rav4_hybrid": {
+      "name": "Toyota RAV4 Hybrid",
+      "description": "SUV híbrido moderno con interior espacioso y excelente eficiencia para viajes familiares cómodos.",
+      "category": "SUV",
+      "price": "85€ / día"
+    }
+  }
+} 

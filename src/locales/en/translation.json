@@ -1,0 +1,371 @@
+{
+  "nav": {
+    "home": "Home",
+    "catalog": "Catalog",
+    "booking": "Booking",
+    "contact": "Contact",
+    "cart": "Cart"
+  },
+  "breadcrumbs": {
+    "home": "Home",
+    "catalog": "Catalog",
+    "car": "Car Details"
+  },
+  "common": {
+    "cancel": "Cancel",
+    "lightMode": "Light Mode",
+    "darkMode": "Dark Mode"
+  },
+  "home": {
+    "hero": {
+      "title": "Premium Car Rental",
+      "subtitle": "in Vila-seca",
+      "description": "Discover our exclusive fleet of vehicles and enjoy first-class personalized service",
+      "cta": "View Catalog"
+    },
+    "search": {
+      "button": "Find a Car"
+    },
+    "popular": {
+      "title": "Popular Cars",
+      "description": "Choose from our most popular vehicles",
+      "subtitle": "Choose from our most popular vehicles",
+      "viewAll": "View All Cars",
+      "details": "View Details"
+    },
+    "features": {
+      "title": "Why Choose Us?",
+      "subtitle": "Everything you need for your perfect trip",
+      "fleet": {
+        "title": "Premium Fleet",
+        "description": "High-end vehicles maintained in perfect condition to ensure your safety and comfort"
+      },
+      "service": {
+        "title": "24/7 Service",
+        "description": "Customer support available 24 hours for any need during your rental"
+      },
+      "process": {
+        "title": "Simple Process",
+        "description": "Easy and quick booking, with minimal documentation and no price surprises"
+      }
+    },
+    "process": {
+      "title": "How to Rent a Car",
+      "description": "Simple 4-step rental process",
+      "step1": {
+        "title": "Choose Dates",
+        "description": "Select your pickup and return dates to see available vehicles"
+      },
+      "step2": {
+        "title": "Select Location",
+        "description": "Choose convenient pickup and return locations"
+      },
+      "step3": {
+        "title": "Select Options",
+        "description": "Add extra services and equipment for a comfortable trip"
+      },
+      "step4": {
+        "title": "Get Your Car",
+        "description": "Pick up your car at the chosen location and enjoy your ride"
+      }
+    },
+    "reviews": {
+      "title": "Customer Reviews",
+      "description": "See what our customers say about their experience with us",
+      "addButton": "Write a Review",
+      "form": {
+        "title": "Write a Review",
+        "name": "Your Name",
+        "car": "Rented Car",
+        "rating": "Rating",
+        "comment": "Your Review",
+        "submit": "Submit Review"
+      },
+      "success": "Thank you for your review! It will appear on the site after moderation."
+    },
+    "contact": {
+      "title": "Contact Us",
+      "subtitle": "We're always ready to answer your questions and help you choose the right car",
+      "cta": "Go to Contact Page",
+      "success": "Thank you for your message! We'll get back to you soon."
+    }
+  },
+  "catalog": {
+    "title": "Our Vehicles",
+    "filters": {
+      "category": "Category",
+      "transmission": "Transmission",
+      "fuel": "Fuel Type",
+      "priceRange": "Price Range"
+    },
+    "sort": {
+      "price-asc": "Price: Low to High",
+      "price-desc": "Price: High to Low",
+      "name-asc": "Name: A to Z",
+      "name-desc": "Name: Z to A"
+    },
+    "categories": {
+      "all": "All",
+      "premium": "Premium",
+      "suv": "SUV",
+      "economy": "Economy",
+      "electric": "Electric"
+    },
+    "car": {
+      "seats": "seats",
+      "transmission": "Transmission",
+      "fuel": "Fuel",
+      "consumption": "Consumption",
+      "year": "Year",
+      "price": "Price",
+      "features": "Features",
+      "book": "Book Now",
+      "notAvailable": "Not Available",
+      "perDay": "€/day",
+      "defaultDescription": "The {{name}} is an excellent {{category}} vehicle that combines comfort, reliability, and style. The perfect choice for your journey."
+    },
+    "compare": {
+      "title": "Compare Vehicles",
+      "button": "Compare",
+      "add": "Add to Compare",
+      "remove": "Remove from Compare",
+      "empty": "No vehicles to compare"
+    },
+    "noResults": "No vehicles found",
+    "tryOtherFilters": "Try adjusting your filters"
+  },
+  "carDetail": {
+    "notFound": "Vehicle Not Found",
+    "notFoundDescription": "Sorry, we couldn't find the requested vehicle",
+    "backToCatalog": "Back to Catalog",
+    "highlights": {
+      "year": "Year",
+      "transmission": "Transmission",
+      "fuel": "Fuel Type",
+      "consumption": "Consumption"
+    },
+    "features": "Features",
+    "bookNow": "Book Now",
+    "notAvailable": "Not Available",
+    "additionalInfo": {
+      "title": "Additional Information",
+      "description": "Important information about renting this vehicle",
+      "insurance": "Full insurance included in the price",
+      "mileage": "No mileage limit",
+      "deposit": "Refundable deposit required",
+      "documents": "Driver's license and passport required"
+    },
+    "specifications": "Specifications",
+    "similarCars": "Similar Cars",
+    "description": "Car Description"
+  },
+  "booking": {
+    "title": "Book Your Vehicle",
+    "subtitle": "Fill out the form below to book your selected vehicle",
+    "rental": {
+      "title": "Rental Details",
+      "pickup": "Pick-up Date",
+      "return": "Return Date",
+      "pickupLocation": "Pick-up Location",
+      "returnLocation": "Return Location",
+      "selectLocation": "Select location"
+    },
+    "personal": {
+      "title": "Personal Details",
+      "firstName": "First Name",
+      "lastName": "Last Name",
+      "email": "Email",
+      "phone": "Phone"
+    },
+    "options": {
+      "title": "Additional Options",
+      "gps": "GPS Navigation",
+      "gpsDescription": "GPS navigation system for convenient travel",
+      "childSeat": "Child Seat",
+      "childSeatDescription": "Safe child seat for young passengers",
+      "insurance": "Additional Insurance",
+      "insuranceDescription": "Extended insurance coverage for your peace of mind",
+      "wifi": "Mobile WiFi",
+      "wifiDescription": "Portable WiFi hotspot for internet access during your trip"
+    },
+    "continue": "Continue",
+    "submit": "Confirm Booking",
+    "summary": {
+      "title": "Order Summary",
+      "days": "days",
+      "selectDates": "Select rental dates",
+      "selectLocation": "Select pickup location",
+      "price": "Price",
+      "differentLocation": "Different pickup and return locations",
+      "total": "Total",
+      "noCar": "No car selected",
+      "selectCar": "Select a car"
+    },
+    "help": {
+      "title": "Need Help?",
+      "phone": "Phone",
+      "email": "Email",
+      "chat": "Live Chat",
+      "chatDescription": "Our specialists are ready to answer your questions"
+    }
+  },
+  "contact": {
+    "title": "Contact Us",
+    "subtitle": "We're here to help. Contact us for any questions about our services",
+    "info": {
+      "title": "Contact Information",
+      "schedule": "Working Hours: 9:00-13:00 / 15:00-19:00",
+      "workdays": "Monday to Friday",
+      "address": "Carrer del Mas de l'Abat 145F",
+      "location": "Vila-seca, Catalonia",
+      "postal": "43480"
+    },
+    "form": {
+      "name": "Full Name",
+      "email": "Email",
+      "phone": "Phone",
+      "message": "Message",
+      "submit": "Send Message"
+    },
+    "social": {
+      "title": "Social Media",
+      "facebook": "Facebook",
+      "instagram": "Instagram",
+      "whatsapp": "WhatsApp"
+    }
+  },
+  "footer": {
+    "company": {
+      "about": "Car rental in Vila-seca",
+      "description": "Premium service and personalized attention"
+    },
+    "contact": {
+      "title": "Contact"
+    },
+    "social": {
+      "title": "Social Media"
+    },
+    "payments": "Payment Methods",
+    "copyright": "© {{year}} Automoción. All rights reserved."
+  },
+  "features": {
+    "leather_seats": "Leather Seats",
+    "navigation": "Navigation",
+    "parking_sensors": "Parking Sensors",
+    "bluetooth": "Bluetooth",
+    "climate_control": "Climate Control",
+    "led_lights": "LED Lights",
+    "air_conditioning": "Air Conditioning",
+    "usb": "USB",
+    "apple_carplay": "Apple CarPlay",
+    "android_auto": "Android Auto",
+    "backup_camera": "Backup Camera",
+    "lane_assist": "Lane Assist",
+    "adaptive_cruise": "Adaptive Cruise Control",
+    "premium_sound": "Premium Sound System",
+    "panoramic_roof": "Panoramic Roof",
+    "driver_assistance": "Driver Assistance",
+    "wireless_charging": "Wireless Charging",
+    "electric_range": "Electric Range",
+    "fast_charging": "Fast Charging",
+    "perfect_city": "Perfect for City",
+    "easy_parking": "Easy Parking",
+    "digital_cockpit": "Digital Cockpit",
+    "sport_mode": "Sport Mode",
+    "dynamic_chassis": "Dynamic Chassis",
+    "autopilot": "Autopilot",
+    "premium_interior": "Premium Interior",
+    "supercharging": "Supercharging",
+    "glass_roof": "Glass Roof"
+  },
+  "whatsapp": {
+    "message": "Message us on WhatsApp",
+    "available": "We're online, quick response!"
+  },
+  "notifications": {
+    "booked": "booked {{car}} {{time}} minutes ago"
+  },
+  "cart": {
+    "title": "Shopping Cart",
+    "empty": "Your cart is empty",
+    "emptyMessage": "Add cars to your cart to continue",
+    "continueShopping": "Continue Shopping",
+    "remove": "Remove",
+    "total": "Total",
+    "taxesIncluded": "Including all taxes",
+    "checkout": "Checkout",
+    "or": "or",
+    "dates": "Rental Dates",
+    "location": "Pickup Location",
+    "inCart": "In Cart"
+  },
+  "checkout": {
+    "title": "Checkout",
+    "empty": "Your cart is empty",
+    "emptyMessage": "Add cars to your cart to continue",
+    "backToCatalog": "Back to Catalog",
+    "personalInfo": "Personal Information",
+    "form": {
+      "firstName": "First Name",
+      "lastName": "Last Name",
+      "email": "Email",
+      "phone": "Phone",
+      "address": "Address",
+      "city": "City",
+      "country": "Country",
+      "postalCode": "Postal Code",
+      "comments": "Additional Comments"
+    },
+    "orderSummary": "Order Summary",
+    "rentalDates": "Rental Dates",
+    "pickupLocation": "Pickup Location",
+    "returnLocation": "Return Location",
+    "total": "Total",
+    "taxesIncluded": "Taxes Included",
+    "submit": "Confirm Order",
+    "success": {
+      "title": "Order Confirmed!",
+      "message": "You will receive an email with your booking details.",
+      "backToCatalog": "Back to Catalog",
+      "backToHome": "Back to Home"
+    }
+  },
+  "car": {
+    "defaultDescription": "The {{name}} is an excellent {{category}} vehicle that combines comfort, reliability and style. The perfect choice for your journey.",
+    "specs": {
+      "year": "Year",
+      "transmission": "Transmission",
+      "fuel": "Fuel Type",
+      "consumption": "Consumption",
+      "seats": "Seats",
+      "doors": "Doors",
+      "engine": "Engine",
+      "power": "Power",
+      "acceleration": "Acceleration 0-100 km/h",
+      "topSpeed": "Top Speed"
+    },
+    "features": "Features",
+    "similar": "Similar Cars",
+    "perDay": "€/day"
+  },
+  "popularCars": {
+    "mercedes_c_class": {
+      "name": "Mercedes-Benz C-Class",
+      "description": "Premium luxury sedan combining elegant design and advanced technology for exceptional driving comfort.",
+      "category": "Premium",
+      "price": "120€ / day"
+    },
+    "volkswagen_golf": {
+      "name": "Volkswagen Golf",
+      "description": "Comfortable and economical vehicle, perfect for urban trips and long journeys.",
+      "category": "Economy",
+      "price": "45€ / day"
+    },
+    "toyota_rav4_hybrid": {
+      "name": "Toyota RAV4 Hybrid",
+      "description": "Modern hybrid SUV with spacious interior and excellent efficiency for comfortable family trips.",
+      "category": "SUV",
+      "price": "85€ / day"
+    }
+  }
+} 
