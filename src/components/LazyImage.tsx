@@ -4,7 +4,6 @@ interface LazyImageProps {
   src: string;
   alt: string;
   className?: string;
-  placeholderClassName?: string;
   width?: number;
   height?: number;
 }
@@ -13,7 +12,6 @@ const LazyImage = ({
   src, 
   alt, 
   className = '', 
-  placeholderClassName = 'bg-gray-200 dark:bg-gray-700 animate-pulse',
   width,
   height
 }: LazyImageProps) => {
@@ -52,20 +50,15 @@ const LazyImage = ({
       style={{ width: width ? `${width}px` : '100%', height: height ? `${height}px` : '100%' }}
     >
       {isInView && (
-        <>
-          <div 
-            className={`absolute inset-0 ${placeholderClassName} ${isLoaded ? 'opacity-0' : 'opacity-100'} transition-opacity duration-300`}
-          />
-          <img
-            src={src}
-            alt={alt}
-            className={`w-full h-full object-cover transition-opacity duration-300 ${isLoaded ? 'opacity-100' : 'opacity-0'}`}
-            onLoad={handleImageLoad}
-            loading="lazy"
-            width={width}
-            height={height}
-          />
-        </>
+        <img
+          src={src}
+          alt={alt}
+          className={`w-full h-full object-cover transition-opacity duration-300 ${isLoaded ? 'opacity-100' : 'opacity-0'}`}
+          onLoad={handleImageLoad}
+          loading="lazy"
+          width={width}
+          height={height}
+        />
       )}
     </div>
   );
