@@ -12,9 +12,20 @@ interface CartDrawerProps {
 }
 
 const CartDrawer = ({ isOpen, onClose }: CartDrawerProps) => {
-  const { t } = useTranslation()
+  const { t, i18n } = useTranslation()
   const navigate = useNavigate()
   const { items, removeFromCart } = useCart()
+
+  // Функция для форматирования цены в зависимости от языка
+  const formatPrice = (price: number) => {
+    // В испанском и некоторых других языках символ валюты ставится перед числом
+    const currentLanguage = i18n.language;
+    if (currentLanguage === 'es') {
+      return `€${price.toFixed(2)}`;
+    }
+    // Для остальных языков оставляем как есть (символ после числа)
+    return `${price.toFixed(2)}€`;
+  }
 
   const handleCheckout = () => {
     onClose()
@@ -101,7 +112,10 @@ const CartDrawer = ({ isOpen, onClose }: CartDrawerProps) => {
                                     <div>
                                       <div className="flex justify-between text-base font-medium text-gray-900 dark:text-white">
                                         <h3>{item.car.name}</h3>
-                                        <p className="ml-4">{item.car.price}€/day</p>
+                                        <div className="ml-4">
+                                          <span>{formatPrice(item.car.price)}</span>
+                                          <span className="text-gray-500 dark:text-gray-400">/{t('catalog.car.perDay')}</span>
+                                        </div>
                                       </div>
                                       <p className="mt-1 text-sm text-gray-500 dark:text-gray-400">
                                         {t('cart.dates')}: {item.startDate} - {item.endDate}
@@ -137,9 +151,10 @@ const CartDrawer = ({ isOpen, onClose }: CartDrawerProps) => {
                       <div className="border-t border-gray-200 dark:border-gray-700 px-4 py-6 sm:px-6">
                         <div className="flex justify-between text-base font-medium text-gray-900 dark:text-white">
                           <p>{t('cart.total')}</p>
-                          <p>
-                            {items.reduce((total, item) => total + item.car.price, 0)}€/day
-                          </p>
+                          <div>
+                            <span>{formatPrice(items.reduce((total, item) => total + item.car.price, 0))}</span>
+                            <span className="text-gray-500 dark:text-gray-400">/{t('catalog.car.perDay')}</span>
+                          </div>
                         </div>
                         <p className="mt-0.5 text-sm text-gray-500 dark:text-gray-400">
                           {t('cart.taxesIncluded')}

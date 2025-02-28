@@ -18,6 +18,17 @@ interface CheckoutForm {
   additionalOptions: string[]
 }
 
+interface FormErrors {
+  firstName?: string
+  lastName?: string
+  email?: string
+  phone?: string
+  address?: string
+  city?: string
+  country?: string
+  postalCode?: string
+}
+
 const additionalOptions = [
   { id: 'gps', name: 'gps', price: 5, description: 'GPS navigation system' },
   { id: 'childSeat', name: 'childSeat', price: 10, description: 'Child safety seat' },
@@ -26,9 +37,20 @@ const additionalOptions = [
 ]
 
 const CheckoutPage = () => {
-  const { t } = useTranslation()
+  const { t, i18n } = useTranslation()
   const navigate = useNavigate()
   const { items, clearCart } = useCart()
+  
+  // Функция для форматирования цены в зависимости от языка
+  const formatPrice = (price: number) => {
+    // В испанском и некоторых других языках символ валюты ставится перед числом
+    const currentLanguage = i18n.language;
+    if (currentLanguage === 'es') {
+      return `€${price.toFixed(2)}`;
+    }
+    // Для остальных языков оставляем как есть (символ после числа)
+    return `${price.toFixed(2)}€`;
+  }
   
   // Объединяем все дополнительные опции из элементов корзины
   const initialOptions = useMemo(() => {
@@ -54,6 +76,9 @@ const CheckoutPage = () => {
     additionalOptions: initialOptions
   })
 
+  const [errors, setErrors] = useState<FormErrors>({})
+  const [isSubmitting, setIsSubmitting] = useState(false)
+
   if (items.length === 0) {
     return (
       <PageTransition>
@@ -77,27 +102,115 @@ const CheckoutPage = () => {
     )
   }
 
+  const validateForm = (): boolean => {
+    const newErrors: FormErrors = {}
+    let isValid = true
+
+    // Валидация имени
+    if (!form.firstName.trim()) {
+      newErrors.firstName = t('validation.required')
+      isValid = false
+    }
+
+    // Валидация фамилии
+    if (!form.lastName.trim()) {
+      newErrors.lastName = t('validation.required')
+      isValid = false
+    }
+
+    // Валидация email
+    if (!form.email.trim()) {
+      newErrors.email = t('validation.required')
+      isValid = false
+    } else if (!/\S+@\S+\.\S+/.test(form.email)) {
+      newErrors.email = t('validation.invalidEmail')
+      isValid = false
+    }
+
+    // Валидация телефона
+    if (!form.phone.trim()) {
+      newErrors.phone = t('validation.required')
+      isValid = false
+    } else if (!/^\+?[0-9\s-()]{8,}$/.test(form.phone)) {
+      newErrors.phone = t('validation.invalidPhone')
+      isValid = false
+    }
+
+    // Валидация адреса
+    if (!form.address.trim()) {
+      newErrors.address = t('validation.required')
+      isValid = false
+    }
+
+    // Валидация города
+    if (!form.city.trim()) {
+      newErrors.city = t('validation.required')
+      isValid = false
+    }
+
+    // Валидация страны
+    if (!form.country.trim()) {
+      newErrors.country = t('validation.required')
+      isValid = false
+    }
+
+    // Валидация почтового индекса
+    if (!form.postalCode.trim()) {
+      newErrors.postalCode = t('validation.required')
+      isValid = false
+    } else if (!/^[0-9]{4,10}$/.test(form.postalCode.replace(/\s/g, ''))) {
+      newErrors.postalCode = t('validation.invalidPostalCode')
+      isValid = false
+    }
+
+    setErrors(newErrors)
+    return isValid
+  }
+
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault()
     
-    // Здесь будет логика отправки заказа
-    const order = {
-      items,
-      customerInfo: form,
-      orderDate: new Date().toISOString(),
-      totalAmount: calculateTotal()
+    setIsSubmitting(true)
+    
+    // Проверяем валидность формы
+    if (!validateForm()) {
+      setIsSubmitting(false)
+      // Прокручиваем к первой ошибке
+      const firstErrorField = document.querySelector('.error-message')
+      if (firstErrorField) {
+        firstErrorField.scrollIntoView({ behavior: 'smooth', block: 'center' })
+      }
+      return
     }
+    
+    try {
+      // Здесь будет логика отправки заказа
+      const order = {
+        items,
+        customerInfo: form,
+        orderDate: new Date().toISOString(),
+        totalAmount: calculateTotal()
+      }
 
-    // Временно: сохраняем в localStorage для демонстрации
-    const orders = JSON.parse(localStorage.getItem('orders') || '[]')
-    orders.push(order)
-    localStorage.setItem('orders', JSON.stringify(orders))
+      // Имитация задержки сети
+      await new Promise(resolve => setTimeout(resolve, 1000))
 
-    // Очищаем корзину
-    clearCart()
+      // Временно: сохраняем в localStorage для демонстрации
+      const orders = JSON.parse(localStorage.getItem('orders') || '[]')
+      orders.push(order)
+      localStorage.setItem('orders', JSON.stringify(orders))
 
-    // Перенаправляем на страницу успешного оформления
-    navigate('/checkout/success')
+      // Очищаем корзину
+      clearCart()
+
+      // Перенаправляем на страницу успешного оформления
+      navigate('/checkout/success')
+    } catch (error) {
+      console.error('Error submitting order:', error)
+      // Здесь можно добавить отображение ошибки для пользователя
+    } finally {
+      setIsSubmitting(false)
+    }
   }
 
   const handleOptionToggle = (optionId: string) => {
@@ -136,6 +249,43 @@ const CheckoutPage = () => {
     });
     
     return total;
+  }
+
+  const renderFormField = (
+    name: keyof FormErrors, 
+    label: string, 
+    type: string = 'text', 
+    placeholder: string = '', 
+    colSpan: number = 1
+  ) => {
+    return (
+      <div className={`${colSpan === 2 ? 'sm:col-span-2' : ''}`}>
+        <label htmlFor={name} className="block text-sm font-medium text-gray-700 dark:text-gray-300">
+          {label}
+        </label>
+        <div className="mt-1 relative">
+          <input
+            type={type}
+            id={name}
+            name={name}
+            placeholder={placeholder}
+            value={form[name as keyof CheckoutForm] as string}
+            onChange={e => setForm(prev => ({ ...prev, [name]: e.target.value }))}
+            className={`block w-full rounded-md shadow-sm focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm
+              ${errors[name] ? 'border-red-300 dark:border-red-500' : 'border-gray-300 dark:border-gray-600'} 
+              dark:bg-gray-800 dark:text-white`}
+            aria-invalid={errors[name] ? 'true' : 'false'}
+            aria-describedby={errors[name] ? `${name}-error` : undefined}
+            required
+          />
+          {errors[name] && (
+            <p className="mt-1 text-sm text-red-600 dark:text-red-400 error-message" id={`${name}-error`}>
+              {errors[name]}
+            </p>
+          )}
+        </div>
+      </div>
+    )
   }
 
   return (
@@ -302,7 +452,7 @@ const CheckoutPage = () => {
                         </div>
                         <div className="ml-3 text-sm">
                           <label htmlFor={option.id} className="font-medium text-gray-700 dark:text-gray-300">
-                            {t(`booking.options.${option.name}`)} (+{option.price}€)
+                            {t(`booking.options.${option.name}`)} (+{formatPrice(option.price)})
                           </label>
                           <p className="text-gray-500 dark:text-gray-400">{t(`booking.options.${option.name}Description`)}</p>
                         </div>
@@ -335,7 +485,10 @@ const CheckoutPage = () => {
                             <div>
                               <div className="flex justify-between text-base font-medium text-gray-900">
                                 <h3>{item.car.name}</h3>
-                                <p className="ml-4">{item.car.price}€/day</p>
+                                <div className="ml-4">
+                                  <span className="text-gray-900 dark:text-white">{formatPrice(item.car.price)}</span>
+                                  <span className="text-gray-500 dark:text-gray-400">/{t('catalog.car.perDay')}</span>
+                                </div>
                               </div>
                               <p className="mt-1 text-sm text-gray-500">
                                 {t('checkout.rentalDates')}: {item.startDate} - {item.endDate}
@@ -367,7 +520,7 @@ const CheckoutPage = () => {
                               {t(`booking.options.${option.name}`)}
                             </span>
                             <span className="text-gray-900 dark:text-white">
-                              {option.price}€
+                              {formatPrice(option.price)}
                             </span>
                           </div>
                         ) : null;
@@ -378,7 +531,7 @@ const CheckoutPage = () => {
                   <div className="border-t border-gray-200 dark:border-gray-700 pt-6 mt-6">
                     <div className="flex justify-between text-base font-medium text-gray-900 dark:text-white">
                       <p>{t('checkout.total')}</p>
-                      <p>{calculateTotal().toFixed(2)}€</p>
+                      <p>{formatPrice(calculateTotal())}</p>
                     </div>
                     <p className="mt-0.5 text-sm text-gray-500 dark:text-gray-400">
                       {t('checkout.taxesIncluded')}
@@ -405,4 +558,4 @@ const CheckoutPage = () => {
   )
 }
 
-export default CheckoutPage 
+export default CheckoutPage

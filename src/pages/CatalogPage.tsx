@@ -1,4 +1,4 @@
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
 import { motion } from 'framer-motion'
 import { useTranslation } from 'react-i18next'
 import { Link, useNavigate } from 'react-router-dom'
@@ -38,7 +38,7 @@ const sortOptions = [
 ]
 
 const CatalogPage = () => {
-  const { t } = useTranslation()
+  const { t, i18n } = useTranslation()
   const navigate = useNavigate()
   const [selectedCategory, setSelectedCategory] = useState('All')
   const [selectedTransmission, setSelectedTransmission] = useState('All')
@@ -122,6 +122,17 @@ const CatalogPage = () => {
       pickupLocation: 'Vila-seca',
       returnLocation: 'Vila-seca'
     })
+  }
+
+  // Функция для форматирования цены в зависимости от языка
+  const formatPrice = (price: number) => {
+    // В испанском и некоторых других языках символ валюты ставится перед числом
+    const currentLanguage = i18n.language;
+    if (currentLanguage === 'es') {
+      return `€${price.toFixed(2)}`;
+    }
+    // Для остальных языков оставляем как есть (символ после числа)
+    return `${price.toFixed(2)}€`;
   }
 
   return (
@@ -284,9 +295,10 @@ const CatalogPage = () => {
 
                 <div className="mt-3">
                   <div className="flex items-center justify-between">
-                    <p className="text-lg font-medium text-gray-900 dark:text-white">
-                      {car.price}€/día
-                    </p>
+                    <div className="text-lg font-medium">
+                      <span className="text-gray-900 dark:text-white">{formatPrice(car.price)}</span>
+                      <span className="text-gray-500 dark:text-gray-400">/{t('catalog.car.perDay')}</span>
+                    </div>
                     <button
                       onClick={(e) => {
                         e.stopPropagation()

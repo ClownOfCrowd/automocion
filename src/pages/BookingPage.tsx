@@ -1,5 +1,5 @@
 import { useState, useMemo, useEffect } from 'react'
-import { useSearchParams, Link, useNavigate } from 'react-router-dom'
+import { useSearchParams, Link, useNavigate, useParams } from 'react-router-dom'
 import { motion } from 'framer-motion'
 import { useTranslation } from 'react-i18next'
 import { 
@@ -40,9 +40,8 @@ const locations = [
 ]
 
 const BookingPage = () => {
-  const [searchParams] = useSearchParams()
-  const carId = searchParams.get('car')
-  const { t } = useTranslation()
+  const { t, i18n } = useTranslation()
+  const { carId } = useParams()
   const navigate = useNavigate()
   const { addToCart } = useCart()
 
@@ -143,6 +142,17 @@ const BookingPage = () => {
         ? prev.additionalOptions.filter(id => id !== optionId)
         : [...prev.additionalOptions, optionId]
     }))
+  }
+
+  // Функция для форматирования цены в зависимости от языка
+  const formatPrice = (price: number) => {
+    // В испанском и некоторых других языках символ валюты ставится перед числом
+    const currentLanguage = i18n.language;
+    if (currentLanguage === 'es') {
+      return `€${price.toFixed(2)}`;
+    }
+    // Для остальных языков оставляем как есть (символ после числа)
+    return `${price.toFixed(2)}€`;
   }
 
   return (
@@ -271,7 +281,7 @@ const BookingPage = () => {
                             </div>
                             <div className="ml-3 text-sm">
                               <label htmlFor={option.id} className="font-medium text-gray-700 dark:text-gray-300">
-                                {t(`booking.options.${option.name}`)} (+{option.price}€)
+                                {t(`booking.options.${option.name}`)} (+{formatPrice(option.price)})
                               </label>
                               <p className="text-gray-500 dark:text-gray-400">{t(`booking.options.${option.name}Description`)}</p>
                             </div>
@@ -417,7 +427,7 @@ const BookingPage = () => {
                               {selectedCar.name} x {rentalDays} {t('booking.summary.days')}
                             </span>
                             <span className="text-gray-900 dark:text-white font-medium">
-                              {(selectedCar.price * rentalDays).toFixed(2)}€
+                              {formatPrice(selectedCar.price * rentalDays)}
                             </span>
                           </div>
                           {form.additionalOptions.map((optionId) => {
@@ -428,7 +438,7 @@ const BookingPage = () => {
                                   {t(`booking.options.${option.name}`)}
                                 </span>
                                 <span className="text-gray-900 dark:text-white font-medium">
-                                  {option.price.toFixed(2)}€
+                                  {formatPrice(option.price)}
                                 </span>
                               </div>
                             ) : null
@@ -438,7 +448,9 @@ const BookingPage = () => {
                               <span className="text-gray-500 dark:text-gray-400">
                                 {t('booking.summary.differentLocation')}
                               </span>
-                              <span className="text-gray-900 dark:text-white font-medium">50.00€</span>
+                              <span className="text-gray-900 dark:text-white font-medium">
+                                {formatPrice(50)}
+                              </span>
                             </div>
                           )}
                         </div>
@@ -447,7 +459,7 @@ const BookingPage = () => {
                             {t('booking.summary.total')}
                           </span>
                           <span className="text-base font-medium text-gray-900 dark:text-white">
-                            {calculateTotal().toFixed(2)}€
+                            {formatPrice(calculateTotal())}
                           </span>
                         </div>
                       </div>
