@@ -367,5 +367,11 @@
       "category": "SUV",
       "price": "85€ / day"
     }
+  },
+  "validation": {
+    "required": "This field is required",
+    "invalidEmail": "Invalid email format",
+    "invalidPhone": "Invalid phone number format",
+    "invalidPostalCode": "Invalid postal code format"
   }
 } 

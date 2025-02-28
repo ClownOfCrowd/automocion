@@ -388,5 +388,11 @@
     "home": "Startseite",
     "catalog": "Katalog",
     "car": "Fahrzeugdetails"
+  },
+  "validation": {
+    "required": "Dieses Feld ist erforderlich",
+    "invalidEmail": "Ungültiges E-Mail-Format",
+    "invalidPhone": "Ungültiges Telefonformat",
+    "invalidPostalCode": "Ungültiges Postleitzahlformat"
   }
 } 

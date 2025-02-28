@@ -363,5 +363,11 @@
       "category": "Внедорожник",
       "price": "85€ / день"
     }
+  },
+  "validation": {
+    "required": "Обязательное поле",
+    "invalidEmail": "Неверный формат email",
+    "invalidPhone": "Неверный формат телефона",
+    "invalidPostalCode": "Неверный формат почтового индекса"
   }
 } 

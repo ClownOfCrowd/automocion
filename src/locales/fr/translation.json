@@ -503,5 +503,11 @@
   "car": {
     "defaultDescription": "La {{name}} est un excellent véhicule {{category}} qui allie confort, fiabilité et style. Le choix parfait pour votre voyage.",
     "perDay": "jour"
+  },
+  "validation": {
+    "required": "Ce champ est obligatoire",
+    "invalidEmail": "Format d'email invalide",
+    "invalidPhone": "Format de téléphone invalide",
+    "invalidPostalCode": "Format de code postal invalide"
   }
 } 

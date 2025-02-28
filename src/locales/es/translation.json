@@ -376,5 +376,11 @@
     "home": "Inicio",
     "catalog": "Catálogo",
     "car": "Detalles del coche"
+  },
+  "validation": {
+    "required": "Este campo es obligatorio",
+    "invalidEmail": "Formato de email inválido",
+    "invalidPhone": "Formato de teléfono inválido",
+    "invalidPostalCode": "Formato de código postal inválido"
   }
 } 
