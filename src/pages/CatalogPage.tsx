@@ -8,6 +8,7 @@ import CompareDrawer from '../components/CompareDrawer'
 import { ScaleIcon } from '@heroicons/react/24/outline'
 import { useLoadingManager } from '../hooks/useLoadingManager'
 import { useCart } from '../contexts/CartContext'
+import LazyImage from '../components/LazyImage'
 
 interface Car {
   id: number
@@ -250,10 +251,10 @@ const CatalogPage = () => {
                   className="relative w-full h-72 rounded-lg overflow-hidden cursor-pointer"
                   onClick={() => navigate(`/catalog/${car.id}`)}
                 >
-                  <img
+                  <LazyImage
                     src={car.image}
                     alt={car.name}
-                    className="w-full h-full object-center object-cover hover:scale-105 transition-transform duration-300"
+                    className="w-full h-full hover:scale-105 transition-transform duration-300"
                   />
                   <div className="absolute inset-0 bg-black bg-opacity-0 hover:bg-opacity-10 transition-opacity" />
                 </div>

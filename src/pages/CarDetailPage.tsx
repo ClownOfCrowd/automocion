@@ -1,5 +1,5 @@
 import { useState, useMemo } from 'react'
-import { useParams, useNavigate } from 'react-router-dom'
+import { useParams, useNavigate, Link } from 'react-router-dom'
 import { motion } from 'framer-motion'
 import { useTranslation } from 'react-i18next'
 import { 
@@ -11,8 +11,9 @@ import {
 import { cars } from '../data/cars'
 import PageTransition from '../components/PageTransition'
 import { useCart } from '../contexts/CartContext'
-import { Link } from 'react-router-dom'
 import { CheckIcon } from '@heroicons/react/24/outline'
+import ImageGallery from '../components/ImageGallery'
+import LazyImage from '../components/LazyImage'
 
 const CarDetailPage = () => {
   const { id } = useParams()
@@ -143,10 +144,10 @@ const CarDetailPage = () => {
                   animate={{ opacity: 1 }}
                   className="aspect-w-16 aspect-h-9 overflow-hidden rounded-lg"
                 >
-                  <img
+                  <LazyImage
                     src={images[selectedImageIndex]}
                     alt={car.name}
-                    className="h-full w-full object-cover object-center"
+                    className="h-full w-full"
                   />
                 </motion.div>
               </div>
@@ -160,10 +161,10 @@ const CarDetailPage = () => {
                       selectedImageIndex === index ? 'ring-2 ring-indigo-500' : ''
                     }`}
                   >
-                    <img
+                    <LazyImage
                       src={image}
                       alt={`${car.name} view ${index + 1}`}
-                      className="h-full w-full object-cover object-center"
+                      className="h-full w-full"
                     />
                   </button>
                 ))}

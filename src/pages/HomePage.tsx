@@ -18,6 +18,7 @@ import {
 } from '@heroicons/react/24/outline'
 import { cars } from '../data/cars'
 import ReviewsSection from '../components/ReviewsSection'
+import LazyImage from '../components/LazyImage'
 
 interface QuickSearchForm {
   pickupDate: string
@@ -192,7 +193,12 @@ const HomePage = () => {
                 className="flex flex-col overflow-hidden rounded-lg shadow-lg bg-white dark:bg-gray-800"
               >
                 <div className="flex-shrink-0">
-                  <img className="h-48 w-full object-cover" src={car.image} alt={car.name} />
+                  <LazyImage 
+                    src={car.image} 
+                    alt={car.name} 
+                    className="h-48 w-full" 
+                    placeholderClassName="bg-gray-200 dark:bg-gray-700 animate-pulse"
+                  />
                 </div>
                 <div className="flex flex-1 flex-col justify-between p-6">
                   <div className="flex-1">
