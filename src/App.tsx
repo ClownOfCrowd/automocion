@@ -1,4 +1,4 @@
-import { BrowserRouter as Router, Routes, Route, useLocation } from 'react-router-dom'
+import { BrowserRouter as Router, Routes, Route, useLocation, Navigate } from 'react-router-dom'
 import { QueryClient, QueryClientProvider } from '@tanstack/react-query'
 import { AnimatePresence } from 'framer-motion'
 import { Suspense } from 'react'
@@ -53,9 +53,7 @@ const AnimatedRoutes = () => {
               </Suspense>
             } />
             <Route path="booking" element={
-              <Suspense fallback={null}>
-                <BookingPage />
-              </Suspense>
+              <Navigate to="/catalog" replace />
             } />
             <Route path="contact" element={
               <Suspense fallback={null}>

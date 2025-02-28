@@ -27,7 +27,6 @@ export default function Navbar() {
   const navigation = [
     { name: t('nav.home'), href: '/', current: true },
     { name: t('nav.catalog'), href: '/catalog', current: false },
-    { name: t('nav.booking'), href: '/booking', current: false },
     { name: t('nav.contact'), href: '/contact', current: false },
   ]
 
