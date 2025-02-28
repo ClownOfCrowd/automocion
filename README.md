@@ -1,4 +1,4 @@
-# AutoFirst - Premium Car Rental Service
+# Automoción - Premium Car Rental Service
 
 Modern car rental service website built with React, TypeScript, and Tailwind CSS.
 
@@ -36,8 +36,8 @@ Modern car rental service website built with React, TypeScript, and Tailwind CSS
 
 1. Clone the repository
 ```bash
-git clone https://github.com/yourusername/autofirst.git
-cd autofirst
+git clone https://github.com/yourusername/automocion.git
+cd automocion
 ```
 
 2. Install dependencies
