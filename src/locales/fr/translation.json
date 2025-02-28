@@ -157,7 +157,7 @@
     },
     "car": {
       "price": "Prix",
-      "perDay": "jour",
+      "perDay": "/jour",
       "seats": "sièges",
       "transmission": "Transmission",
       "fuel": "Carburant",
@@ -502,6 +502,6 @@
   },
   "car": {
     "defaultDescription": "La {{name}} est un excellent véhicule {{category}} qui allie confort, fiabilité et style. Le choix parfait pour votre voyage.",
-    "perDay": "jour"
+    "perDay": "/jour"
   }
 } 

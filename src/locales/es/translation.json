@@ -132,7 +132,7 @@
     },
     "car": {
       "price": "Precio",
-      "perDay": "día",
+      "perDay": "/día",
       "seats": "plazas",
       "transmission": "Transmisión",
       "fuel": "Combustible",
@@ -213,12 +213,16 @@
       "email": "Email",
       "phone": "Teléfono"
     },
-    "extras": {
+    "options": {
       "title": "Opciones adicionales",
       "gps": "Navegador GPS",
+      "gpsDescription": "Sistema de navegación GPS para un viaje cómodo",
       "childSeat": "Silla infantil",
+      "childSeatDescription": "Silla infantil segura para los más pequeños",
       "insurance": "Seguro adicional",
-      "wifi": "WiFi móvil"
+      "insuranceDescription": "Cobertura de seguro ampliada para su tranquilidad",
+      "wifi": "WiFi móvil",
+      "wifiDescription": "Punto de acceso WiFi portátil para acceso a internet durante su viaje"
     },
     "submit": "Confirmar reserva"
   },

@@ -128,7 +128,7 @@
       "features": "Ausstattung",
       "book": "Jetzt buchen",
       "notAvailable": "Nicht verfügbar",
-      "perDay": "Tag"
+      "perDay": "/Tag"
     },
     "compare": {
       "title": "Fahrzeuge vergleichen",
