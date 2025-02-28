@@ -124,7 +124,7 @@
       "features": "Особенности",
       "book": "Забронировать",
       "notAvailable": "Недоступно",
-      "perDay": "/день"
+      "perDay": "день"
     },
     "compare": {
       "title": "Сравнение автомобилей",
@@ -342,7 +342,7 @@
     },
     "features": "Особенности",
     "similar": "Похожие автомобили",
-    "perDay": "/день"
+    "perDay": "день"
   },
   "popularCars": {
     "mercedes_c_class": {
