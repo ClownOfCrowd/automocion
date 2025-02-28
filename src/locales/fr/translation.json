@@ -157,7 +157,7 @@
     },
     "car": {
       "price": "Prix",
-      "perDay": "€/jour",
+      "perDay": "/jour",
       "seats": "sièges",
       "transmission": "Transmission",
       "fuel": "Carburant",

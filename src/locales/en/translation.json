@@ -121,7 +121,7 @@
       "features": "Features",
       "book": "Book Now",
       "notAvailable": "Not Available",
-      "perDay": "€/day",
+      "perDay": "/day",
       "defaultDescription": "The {{name}} is an excellent {{category}} vehicle that combines comfort, reliability, and style. The perfect choice for your journey."
     },
     "compare": {
@@ -346,7 +346,7 @@
     },
     "features": "Features",
     "similar": "Similar Cars",
-    "perDay": "€/day"
+    "perDay": "/day"
   },
   "popularCars": {
     "mercedes_c_class": {
