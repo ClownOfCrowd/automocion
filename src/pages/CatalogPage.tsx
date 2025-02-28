@@ -267,7 +267,6 @@ const CatalogPage = () => {
                     alt={car.name}
                     className="w-full h-full hover:scale-105 transition-transform duration-300"
                   />
-                  <div className="absolute inset-0 bg-black bg-opacity-0 hover:bg-opacity-10 transition-opacity" />
                 </div>
 
                 <div className="relative mt-4">
