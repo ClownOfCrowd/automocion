@@ -211,7 +211,7 @@ const HomePage = () => {
                   <div className="mt-6 flex items-center justify-between">
                     <div className="flex-shrink-0">
                       <p className="text-xl font-bold text-gray-900 dark:text-white">
-                        {car.price} €/día
+                        {car.price} €/{t('catalog.car.perDay')}
                       </p>
                     </div>
                     <div className="ml-4">
