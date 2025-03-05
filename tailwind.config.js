@@ -21,6 +21,12 @@ export default {
           900: '#111827',
           950: '#030712',
         },
+        premium: {
+          gold: '#D4AF37',
+          red: '#8B0000',
+          silver: '#C0C0C0',
+          black: '#1A1A1A',
+        }
       },
     },
   },

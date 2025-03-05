@@ -19,6 +19,7 @@ import {
 import { cars } from '../data/cars'
 import ReviewsSection from '../components/ReviewsSection'
 import LazyImage from '../components/LazyImage'
+import { DatePicker } from '@headlessui/react'
 
 interface QuickSearchForm {
   pickupDate: string
@@ -36,6 +37,8 @@ const HomePage = () => {
     category: 'All',
     priceRange: 200
   })
+  const [pickupDate, setPickupDate] = useState<Date | null>(null)
+  const [returnDate, setReturnDate] = useState<Date | null>(null)
 
   const features = [
     {
@@ -66,112 +69,134 @@ const HomePage = () => {
   const popularCars = cars.slice(0, 3)
 
   return (
-    <div className="bg-white dark:bg-gray-900">
-      {/* Hero section с формой быстрого поиска */}
-      <div className="relative h-screen bg-gradient-to-r from-gray-900 to-gray-800">
+    <div className="min-h-screen bg-white dark:bg-premium-black">
+      {/* Hero Section with Booking Form */}
+      <section className="relative h-[80vh] bg-gradient-to-r from-premium-black to-premium-black/90">
         <div className="absolute inset-0">
-          <img
+          <LazyImage
             src="/hero-bg.jpg"
-            alt={t('home.hero.title')}
-            className="h-full w-full object-cover opacity-40"
+            alt="Luxury cars"
+            className="w-full h-full object-cover opacity-50"
           />
         </div>
-        <div className="relative mx-auto max-w-7xl px-4 py-24 sm:px-6 lg:px-8 h-full flex flex-col justify-center">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            className="text-center mb-12"
-          >
-            <h1 className="text-4xl font-bold tracking-tight text-white sm:text-5xl md:text-6xl">
-              <span className="block">{t('home.hero.title')}</span>
-              <span className="block text-indigo-400">{t('home.hero.subtitle')}</span>
+        <div className="relative container mx-auto px-4 h-full flex flex-col justify-center">
+          <div className="max-w-3xl">
+            <h1 className="text-5xl md:text-6xl font-bold text-white mb-6">
+              <span className="text-premium-gold">O.V. Automoción</span>
+              <br />
+              {t('home.hero.title')}
             </h1>
-            <p className="mx-auto mt-6 max-w-lg text-xl text-gray-300 sm:max-w-3xl">
-              {t('home.hero.description')}
+            <p className="text-xl text-premium-silver mb-8">
+              {t('home.hero.subtitle')}
             </p>
-          </motion.div>
+          </div>
+          
+          {/* Booking Form */}
+          <div className="bg-white dark:bg-premium-black/90 p-6 rounded-lg shadow-xl max-w-4xl">
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
+              <div>
+                <label className="block text-sm font-medium text-gray-700 dark:text-premium-silver mb-1">
+                  {t('booking.pickupDate')}
+                </label>
+                <DatePicker
+                  selected={pickupDate}
+                  onChange={setPickupDate}
+                  className="w-full rounded-md border-gray-300 dark:border-gray-700"
+                />
+              </div>
+              <div>
+                <label className="block text-sm font-medium text-gray-700 dark:text-premium-silver mb-1">
+                  {t('booking.returnDate')}
+                </label>
+                <DatePicker
+                  selected={returnDate}
+                  onChange={setReturnDate}
+                  className="w-full rounded-md border-gray-300 dark:border-gray-700"
+                />
+              </div>
+              <button
+                className="bg-premium-gold hover:bg-premium-gold/90 text-white font-bold py-3 px-6 rounded-md transition-colors"
+              >
+                {t('booking.searchButton')}
+              </button>
+            </div>
+          </div>
+        </div>
+      </section>
 
-          {/* Форма быстрого поиска */}
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, delay: 0.2 }}
-            className="max-w-4xl mx-auto w-full"
-          >
-            <form onSubmit={handleQuickSearch} className="bg-white dark:bg-gray-800 rounded-lg shadow-xl p-6">
-              <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-4">
-                <div>
-                  <label className="block text-sm font-medium text-gray-700 dark:text-gray-300">
-                    {t('booking.rental.pickup')}
-                  </label>
-                  <input
-                    type="date"
-                    value={quickSearch.pickupDate}
-                    onChange={(e) => setQuickSearch({ ...quickSearch, pickupDate: e.target.value })}
-                    className="mt-1 block w-full rounded-md border-gray-300 dark:border-gray-600 dark:bg-gray-700 dark:text-white shadow-sm focus:border-indigo-500 focus:ring-indigo-500"
-                    required
+      {/* Features Section */}
+      <section className="py-16 bg-white dark:bg-premium-black">
+        <div className="container mx-auto px-4">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+            <div className="text-center">
+              <div className="w-16 h-16 mx-auto mb-4 text-premium-gold">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
+                </svg>
+              </div>
+              <h3 className="text-xl font-bold mb-2 dark:text-white">{t('home.features.support24.title')}</h3>
+              <p className="text-gray-600 dark:text-premium-silver">{t('home.features.support24.description')}</p>
+            </div>
+            <div className="text-center">
+              <div className="w-16 h-16 mx-auto mb-4 text-premium-gold">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 10V3L4 14h7v7l9-11h-7z" />
+                </svg>
+              </div>
+              <h3 className="text-xl font-bold mb-2 dark:text-white">{t('home.features.fastDelivery.title')}</h3>
+              <p className="text-gray-600 dark:text-premium-silver">{t('home.features.fastDelivery.description')}</p>
+            </div>
+            <div className="text-center">
+              <div className="w-16 h-16 mx-auto mb-4 text-premium-gold">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
+                </svg>
+              </div>
+              <h3 className="text-xl font-bold mb-2 dark:text-white">{t('home.features.insurance.title')}</h3>
+              <p className="text-gray-600 dark:text-premium-silver">{t('home.features.insurance.description')}</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Car Catalog Section */}
+      <section className="py-16 bg-gray-50 dark:bg-premium-black/50">
+        <div className="container mx-auto px-4">
+          <h2 className="text-3xl font-bold text-center mb-12 dark:text-white">
+            {t('home.catalog.title')}
+          </h2>
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {cars.map((car) => (
+              <motion.div
+                key={car.id}
+                className="bg-white dark:bg-premium-black rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition-shadow"
+                whileHover={{ y: -5 }}
+              >
+                <div className="relative h-48">
+                  <LazyImage
+                    src={car.image}
+                    alt={car.name}
+                    className="w-full h-full object-cover"
                   />
-                </div>
-                <div>
-                  <label className="block text-sm font-medium text-gray-700 dark:text-gray-300">
-                    {t('booking.rental.return')}
-                  </label>
-                  <input
-                    type="date"
-                    value={quickSearch.returnDate}
-                    onChange={(e) => setQuickSearch({ ...quickSearch, returnDate: e.target.value })}
-                    className="mt-1 block w-full rounded-md border-gray-300 dark:border-gray-600 dark:bg-gray-700 dark:text-white shadow-sm focus:border-indigo-500 focus:ring-indigo-500"
-                    required
-                  />
-                </div>
-                <div>
-                  <label className="block text-sm font-medium text-gray-700 dark:text-gray-300">
-                    {t('catalog.filters.category')}
-                  </label>
-                  <select
-                    value={quickSearch.category}
-                    onChange={(e) => setQuickSearch({ ...quickSearch, category: e.target.value })}
-                    className="mt-1 block w-full rounded-md border-gray-300 dark:border-gray-600 dark:bg-gray-700 dark:text-white shadow-sm focus:border-indigo-500 focus:ring-indigo-500"
-                  >
-                    <option value="All">{t('catalog.categories.all')}</option>
-                    <option value="Premium">{t('catalog.categories.premium')}</option>
-                    <option value="SUV">{t('catalog.categories.suv')}</option>
-                    <option value="Economy">{t('catalog.categories.economy')}</option>
-                    <option value="Electric">{t('catalog.categories.electric')}</option>
-                  </select>
-                </div>
-                <div>
-                  <label className="block text-sm font-medium text-gray-700 dark:text-gray-300">
-                    {t('catalog.filters.priceRange')}
-                  </label>
-                  <div className="mt-1 flex items-center space-x-2">
-                    <input
-                      type="range"
-                      min="0"
-                      max="200"
-                      value={quickSearch.priceRange}
-                      onChange={(e) => setQuickSearch({ ...quickSearch, priceRange: parseInt(e.target.value) })}
-                      className="w-full"
-                    />
-                    <span className="text-sm text-gray-500">
-                      {quickSearch.priceRange}€/day
-                    </span>
+                  <div className="absolute top-4 right-4 bg-premium-gold text-white px-4 py-1 rounded-full">
+                    {t('common.fromPrice', { price: car.price })}
                   </div>
                 </div>
-              </div>
-              <div className="mt-6">
-                <button
-                  type="submit"
-                  className="w-full btn-primary"
-                >
-                  {t('home.search.button')}
-                </button>
-              </div>
-            </form>
-          </motion.div>
+                <div className="p-6">
+                  <h3 className="text-xl font-bold mb-2 dark:text-white">{car.name}</h3>
+                  <p className="text-gray-600 dark:text-premium-silver mb-4">{car.description}</p>
+                  <button
+                    onClick={() => navigate(`/catalog/${car.id}`)}
+                    className="w-full bg-premium-black hover:bg-premium-black/90 text-white dark:bg-premium-gold dark:hover:bg-premium-gold/90 font-bold py-2 px-4 rounded-md transition-colors"
+                  >
+                    {t('common.bookNow')}
+                  </button>
+                </div>
+              </motion.div>
+            ))}
+          </div>
         </div>
-      </div>
+      </section>
 
       {/* Популярные автомобили */}
       <div className="py-24 bg-white dark:bg-gray-900">

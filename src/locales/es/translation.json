@@ -4,19 +4,20 @@
     "catalog": "Catálogo",
     "booking": "Reserva",
     "contact": "Contacto",
-    "cart": "Carrito"
+    "cart": "Carrito",
+    "terms": "Condiciones"
   },
   "common": {
     "cancel": "Cancelar",
     "lightMode": "Modo claro",
-    "darkMode": "Modo oscuro"
+    "darkMode": "Modo oscuro",
+    "fromPrice": "Desde {{price}}€/día",
+    "bookNow": "Reservar Ahora"
   },
   "home": {
     "hero": {
-      "title": "Alquiler de coches premium",
-      "subtitle": "en Vila-seca",
-      "description": "Descubre nuestra exclusiva flota de vehículos y disfruta de un servicio personalizado de primera clase",
-      "cta": "Ver catálogo"
+      "title": "Alquiler de Coches de Lujo",
+      "subtitle": "Experimenta el lujo y la elegancia en cada viaje"
     },
     "search": {
       "button": "Encontrar coche"
@@ -42,6 +43,18 @@
       "process": {
         "title": "Proceso sencillo",
         "description": "Reserva fácil y rápida, documentación mínima y sin sorpresas en el precio"
+      },
+      "support24": {
+        "title": "Soporte 24/7",
+        "description": "Asistencia profesional disponible las 24 horas del día"
+      },
+      "fastDelivery": {
+        "title": "Entrega Rápida",
+        "description": "Entrega y recogida en cualquier ubicación"
+      },
+      "insurance": {
+        "title": "Seguro Completo",
+        "description": "Cobertura total para tu tranquilidad"
       }
     },
     "process": {
@@ -95,6 +108,9 @@
       "title": "¿Listo para reservar?",
       "description": "Reserva ahora y aprovecha nuestras ofertas especiales",
       "button": "Reservar ahora"
+    },
+    "catalog": {
+      "title": "Nuestra Flota de Lujo"
     }
   },
   "catalog": {
@@ -224,7 +240,10 @@
       "wifi": "WiFi móvil",
       "wifiDescription": "Punto de acceso WiFi portátil para acceso a internet durante su viaje"
     },
-    "submit": "Confirmar reserva"
+    "submit": "Confirmar reserva",
+    "pickupDate": "Fecha de Recogida",
+    "returnDate": "Fecha de Devolución",
+    "searchButton": "Buscar Vehículos"
   },
   "contact": {
     "title": "Contacta con nosotros",
@@ -382,5 +401,37 @@
     "invalidEmail": "Formato de email inválido",
     "invalidPhone": "Formato de teléfono inválido",
     "invalidPostalCode": "Formato de código postal inválido"
+  },
+  "terms": {
+    "title": "Condiciones de Alquiler",
+    "requirements": {
+      "title": "Requisitos",
+      "age": "Edad mínima: 25 años",
+      "license": "Carnet de conducir con más de 2 años de antigüedad",
+      "credit": "Tarjeta de crédito a nombre del conductor",
+      "documents": "DNI o pasaporte en vigor"
+    },
+    "insurance": {
+      "title": "Seguros",
+      "basic": "Seguro a terceros incluido",
+      "full": "Seguro a todo riesgo disponible",
+      "theft": "Protección contra robo",
+      "assistance": "Asistencia en carretera 24/7"
+    },
+    "payment": {
+      "title": "Pagos",
+      "methods": "Aceptamos todas las tarjetas principales",
+      "deposit": "Depósito de seguridad requerido",
+      "cancellation": "Cancelación gratuita hasta 48h antes",
+      "refund": "Reembolso completo según condiciones"
+    },
+    "additional": {
+      "title": "Servicios Adicionales",
+      "fuel": "Política de combustible flexible",
+      "mileage": "Kilometraje ilimitado disponible",
+      "cleaning": "Servicio de limpieza incluido",
+      "delivery": "Entrega y recogida disponible"
+    },
+    "footer": "Para más información, no dude en contactar con nuestro equipo de atención al cliente."
   }
 } 

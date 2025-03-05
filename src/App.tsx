@@ -10,6 +10,7 @@ import BookingPage from './pages/BookingPage'
 import ContactPage from './pages/ContactPage'
 import CheckoutPage from './pages/CheckoutPage'
 import CheckoutSuccessPage from './pages/CheckoutSuccessPage'
+import RentalTermsPage from './pages/RentalTermsPage'
 import ScrollToTop from './components/ScrollToTop'
 import LoadingScreen from './components/LoadingScreen'
 import { LoadingProvider } from './contexts/LoadingContext'
@@ -68,6 +69,11 @@ const AnimatedRoutes = () => {
             <Route path="checkout/success" element={
               <Suspense fallback={null}>
                 <CheckoutSuccessPage />
+              </Suspense>
+            } />
+            <Route path="terms" element={
+              <Suspense fallback={null}>
+                <RentalTermsPage />
               </Suspense>
             } />
           </Route>
