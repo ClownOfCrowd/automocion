@@ -138,33 +138,33 @@ const CarDetailPage = () => {
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
             {/* Галерея изображений */}
             <div>
-              <div className="relative h-96 bg-gray-100 dark:bg-gray-800 rounded-lg overflow-hidden mb-4">
+              <div className="relative h-64 sm:h-96 bg-gray-100 dark:bg-gray-800 rounded-lg overflow-hidden mb-2 sm:mb-4">
                 <motion.div
                   initial={{ opacity: 0 }}
                   animate={{ opacity: 1 }}
-                  className="aspect-w-16 aspect-h-9 overflow-hidden rounded-lg"
+                  className="h-full w-full"
                 >
                   <LazyImage
                     src={images[selectedImageIndex]}
                     alt={car.name}
-                    className="h-full w-full"
+                    className="h-full w-full object-contain"
                   />
                 </motion.div>
               </div>
               
-              <div className="grid grid-cols-4 gap-4">
+              <div className="grid grid-cols-4 gap-2 sm:gap-4">
                 {images.map((image, index) => (
                   <button
                     key={index}
                     onClick={() => setSelectedImageIndex(index)}
-                    className={`h-20 bg-gray-100 dark:bg-gray-800 rounded-lg overflow-hidden ${
-                      selectedImageIndex === index ? 'ring-2 ring-indigo-500' : ''
+                    className={`h-16 sm:h-20 bg-gray-100 dark:bg-gray-800 rounded-lg overflow-hidden ${
+                      selectedImageIndex === index ? 'ring-2 ring-premium-gold' : ''
                     }`}
                   >
                     <LazyImage
                       src={image}
                       alt={`${car.name} view ${index + 1}`}
-                      className="h-full w-full"
+                      className="h-full w-full object-cover"
                     />
                   </button>
                 ))}
@@ -172,43 +172,46 @@ const CarDetailPage = () => {
             </div>
 
             {/* Информация о машине */}
-            <div>
-              <h1 className="text-3xl font-bold text-gray-900 dark:text-white">{car.name}</h1>
+            <div className="mt-6 lg:mt-0">
+              <h1 className="text-2xl sm:text-3xl font-bold text-gray-900 dark:text-white">{car.name}</h1>
 
-              <div className="mt-6">
+              <div className="mt-4 sm:mt-6">
                 <h2 className="text-lg font-medium text-gray-900 dark:text-white">{t('carDetail.description')}</h2>
-                <p className="mt-2 text-gray-600 dark:text-gray-400">
+                <p className="mt-2 text-sm sm:text-base text-gray-600 dark:text-gray-400">
                   {t('catalog.car.defaultDescription', { name: car.name, category: t(`catalog.categories.${car.category.toLowerCase()}`) })}
                 </p>
               </div>
 
-              <div className="mt-6">
+              <div className="mt-4 sm:mt-6">
                 <h2 className="text-lg font-medium text-gray-900 dark:text-white">{t('carDetail.features')}</h2>
                 <ul className="mt-2 grid grid-cols-1 sm:grid-cols-2 gap-x-4 gap-y-2">
                   {car.features.map((feature, index) => (
-                    <li key={index} className="flex items-center text-gray-600 dark:text-gray-400">
-                      <CheckIcon className="h-5 w-5 text-green-500 mr-2" />
+                    <motion.li
+                      key={index}
+                      initial={{ opacity: 0, x: -20 }}
+                      animate={{ opacity: 1, x: 0 }}
+                      transition={{ delay: index * 0.1 }}
+                      className="flex items-center text-sm sm:text-base text-gray-600 dark:text-gray-400"
+                    >
+                      <CheckIcon className="h-5 w-5 text-premium-gold mr-2" />
                       {t(`features.${feature}`)}
-                    </li>
+                    </motion.li>
                   ))}
                 </ul>
               </div>
 
-              <div className="mt-8 border-t border-gray-200 dark:border-gray-700 pt-8">
-                <div className="flex items-center justify-between">
-                  <div>
-                    <p className="text-sm text-gray-500 dark:text-gray-400">{t('catalog.car.price')}</p>
-                    <p className="text-3xl font-bold text-gray-900 dark:text-white">€{car.price} <span className="text-sm font-normal text-gray-500 dark:text-gray-400">/ {t('catalog.car.perDay')}</span></p>
-                  </div>
-                  <motion.button
-                    whileHover={{ scale: 1.05 }}
-                    whileTap={{ scale: 0.95 }}
-                    onClick={handleAddToCart}
-                    className="inline-flex items-center px-6 py-3 border border-transparent text-base font-medium rounded-md shadow-sm text-white bg-indigo-600 hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500"
-                  >
-                    {t('carDetail.bookNow')}
-                  </motion.button>
-                </div>
+              <div className="mt-6 sm:mt-8">
+                <button
+                  onClick={() => addToCart(car)}
+                  disabled={isInCart(car.id)}
+                  className={`w-full sm:w-auto px-6 py-3 text-base sm:text-lg font-medium rounded-md shadow-sm ${
+                    isInCart(car.id)
+                      ? 'bg-gray-400 cursor-not-allowed'
+                      : 'bg-premium-gold hover:bg-premium-gold/90 text-white'
+                  } transition-colors duration-200`}
+                >
+                  {isInCart(car.id) ? t('carDetail.inCart') : t('carDetail.addToCart')}
+                </button>
               </div>
             </div>
           </div>
@@ -242,25 +245,27 @@ const CarDetailPage = () => {
         </div>
 
         {/* Похожие автомобили */}
-        <div className="py-12 bg-white dark:bg-gray-900">
+        <div className="py-8 sm:py-12 bg-white dark:bg-gray-900">
           <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-            <h2 className="text-2xl font-bold text-gray-900 dark:text-white mb-8">{t('carDetail.similarCars')}</h2>
-            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+            <h2 className="text-xl sm:text-2xl font-bold text-gray-900 dark:text-white mb-6 sm:mb-8">{t('carDetail.similarCars')}</h2>
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-8">
               {similarCars.map((similarCar) => (
                 <motion.div
                   key={similarCar.id}
                   whileHover={{ y: -5 }}
                   className="bg-white dark:bg-gray-800 rounded-lg shadow overflow-hidden"
                 >
-                  <Link to={`/catalog/${similarCar.id}`} className="block h-full w-full">
-                    <img
-                      src={similarCar.image}
-                      alt={similarCar.name}
-                      className="h-full w-full object-cover object-center"
-                    />
+                  <Link to={`/catalog/${similarCar.id}`} className="block">
+                    <div className="relative h-48 sm:h-56">
+                      <img
+                        src={similarCar.image}
+                        alt={similarCar.name}
+                        className="h-full w-full object-cover"
+                      />
+                    </div>
                     <div className="p-4">
-                      <h3 className="text-lg font-medium text-gray-900 dark:text-white">{similarCar.name}</h3>
-                      <p className="text-sm text-gray-500 dark:text-gray-400">{t(`catalog.categories.${similarCar.category.toLowerCase()}`)}</p>
+                      <h3 className="text-base sm:text-lg font-medium text-gray-900 dark:text-white">{similarCar.name}</h3>
+                      <p className="mt-1 text-sm text-gray-500 dark:text-gray-400">{t(`catalog.categories.${similarCar.category.toLowerCase()}`)}</p>
                     </div>
                   </Link>
                 </motion.div>

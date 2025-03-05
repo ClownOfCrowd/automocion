@@ -4,7 +4,8 @@
     "catalog": "Catalog",
     "booking": "Booking",
     "contact": "Contact",
-    "cart": "Cart"
+    "cart": "Cart",
+    "terms": "Rental Terms"
   },
   "breadcrumbs": {
     "home": "Home",
@@ -246,7 +247,7 @@
       "title": "Social Media"
     },
     "payments": "Payment Methods",
-    "copyright": "© {{year}} Automoción. All rights reserved."
+    "copyright": "All rights reserved."
   },
   "features": {
     "leather_seats": "Leather Seats",
@@ -373,5 +374,38 @@
     "invalidEmail": "Invalid email format",
     "invalidPhone": "Invalid phone number format",
     "invalidPostalCode": "Invalid postal code format"
+  },
+  "terms": {
+    "title": "Rental Terms",
+    "subtitle": "Everything you need to know about renting our premium vehicles",
+    "requirements": {
+      "title": "Requirements",
+      "age": "Minimum age: 25 years",
+      "license": "Valid driving license for more than 2 years",
+      "credit": "Credit card in the driver's name",
+      "documents": "Valid ID or passport"
+    },
+    "insurance": {
+      "title": "Insurance",
+      "basic": "Third-party insurance included",
+      "full": "Full coverage insurance available",
+      "theft": "Theft protection",
+      "assistance": "24/7 roadside assistance"
+    },
+    "payment": {
+      "title": "Payment",
+      "methods": "All major credit cards accepted",
+      "deposit": "Security deposit required",
+      "cancellation": "Free cancellation up to 48h before",
+      "refund": "Full refund according to conditions"
+    },
+    "additional": {
+      "title": "Additional Services",
+      "fuel": "Flexible fuel policy",
+      "mileage": "Unlimited mileage available",
+      "cleaning": "Cleaning service included",
+      "delivery": "Delivery and collection available"
+    },
+    "footer": "For more information, please don't hesitate to contact our customer service team."
   }
 } 

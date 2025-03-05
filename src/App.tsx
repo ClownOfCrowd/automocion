@@ -4,7 +4,6 @@ import { AnimatePresence } from 'framer-motion'
 import { Suspense } from 'react'
 import MainLayout from './layouts/MainLayout'
 import HomePage from './pages/HomePage'
-import CatalogPage from './pages/CatalogPage'
 import CarDetailPage from './pages/CarDetailPage'
 import BookingPage from './pages/BookingPage'
 import ContactPage from './pages/ContactPage'
@@ -43,18 +42,8 @@ const AnimatedRoutes = () => {
                 <HomePage />
               </Suspense>
             } />
-            <Route path="catalog" element={
-              <Suspense fallback={null}>
-                <CatalogPage />
-              </Suspense>
-            } />
-            <Route path="catalog/:id" element={
-              <Suspense fallback={null}>
-                <CarDetailPage />
-              </Suspense>
-            } />
             <Route path="booking" element={
-              <Navigate to="/catalog" replace />
+              <Navigate to="/" replace />
             } />
             <Route path="contact" element={
               <Suspense fallback={null}>

@@ -7,6 +7,7 @@ import { useCart } from '../contexts/CartContext'
 import CartDrawer from './CartDrawer'
 import ThemeToggle from './ThemeToggle'
 import LanguageSwitcher from './LanguageSwitcher'
+import { motion } from 'framer-motion'
 
 const languages = [
   { code: 'es', name: 'Español' },
@@ -36,7 +37,7 @@ const Navbar = () => {
 
   const navigation = [
     { name: t('nav.home'), href: '/' },
-    { name: t('nav.catalog'), href: '/catalog' },
+    { name: t('nav.terms'), href: '/terms' },
     { name: t('nav.contact'), href: '/contact' },
   ]
 
@@ -77,17 +78,17 @@ const Navbar = () => {
               </div>
 
               {/* Right Section */}
-              <div className="flex items-center space-x-4">
+              <div className="flex items-center space-x-2 sm:space-x-4">
                 <ThemeToggle />
                 <LanguageSwitcher />
                 
                 {/* Mobile menu button */}
-                <Disclosure.Button className="md:hidden inline-flex items-center justify-center rounded-md p-2 text-gray-400 hover:bg-gray-100 hover:text-gray-500 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-premium-gold">
+                <Disclosure.Button className="md:hidden inline-flex items-center justify-center rounded-md p-3 text-gray-400 hover:bg-gray-100 hover:text-gray-500 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-premium-gold">
                   <span className="sr-only">Open main menu</span>
                   {open ? (
-                    <XMarkIcon className="block h-6 w-6" aria-hidden="true" />
+                    <XMarkIcon className="block h-7 w-7" aria-hidden="true" />
                   ) : (
-                    <Bars3Icon className="block h-6 w-6" aria-hidden="true" />
+                    <Bars3Icon className="block h-7 w-7" aria-hidden="true" />
                   )}
                 </Disclosure.Button>
               </div>
@@ -96,7 +97,13 @@ const Navbar = () => {
 
           {/* Mobile menu */}
           <Disclosure.Panel className="md:hidden">
-            <div className="space-y-1 px-2 pb-3 pt-2">
+            <motion.div
+              initial={{ opacity: 0, y: -10 }}
+              animate={{ opacity: 1, y: 0 }}
+              exit={{ opacity: 0, y: -10 }}
+              transition={{ duration: 0.2 }}
+              className="space-y-1 px-2 pb-3 pt-2 bg-white dark:bg-premium-black shadow-lg"
+            >
               {navigation.map((item) => (
                 <Disclosure.Button
                   key={item.name}
@@ -106,12 +113,12 @@ const Navbar = () => {
                     location.pathname === item.href
                       ? 'bg-premium-gold text-white'
                       : 'text-gray-900 dark:text-white hover:bg-premium-gold/10 hover:text-premium-gold'
-                  } block rounded-md px-3 py-2 text-base font-medium`}
+                  } block rounded-md px-4 py-3 text-base font-medium w-full text-left`}
                 >
                   {item.name}
                 </Disclosure.Button>
               ))}
-            </div>
+            </motion.div>
           </Disclosure.Panel>
         </>
       )}

@@ -4,7 +4,8 @@
     "catalog": "Katalog",
     "booking": "Buchung",
     "contact": "Kontakt",
-    "cart": "Warenkorb"
+    "cart": "Warenkorb",
+    "terms": "Mietbedingungen"
   },
   "common": {
     "cancel": "Abbrechen",
@@ -258,7 +259,7 @@
       "title": "Soziale Medien"
     },
     "payments": "Zahlungsmethoden",
-    "copyright": "© {{year}} Automoción. Alle Rechte vorbehalten."
+    "copyright": "Alle Rechte vorbehalten."
   },
   "features": {
     "leather_seats": "Ledersitze",
@@ -394,5 +395,38 @@
     "invalidEmail": "Ungültiges E-Mail-Format",
     "invalidPhone": "Ungültiges Telefonformat",
     "invalidPostalCode": "Ungültiges Postleitzahlformat"
+  },
+  "terms": {
+    "title": "Mietbedingungen",
+    "subtitle": "Alles, was Sie über die Anmietung unserer Premium-Fahrzeuge wissen müssen",
+    "requirements": {
+      "title": "Anforderungen",
+      "age": "Mindestalter: 25 Jahre",
+      "license": "Führerschein seit mehr als 2 Jahren",
+      "credit": "Kreditkarte auf den Namen des Fahrers",
+      "documents": "Gültiger Ausweis oder Reisepass"
+    },
+    "insurance": {
+      "title": "Versicherung",
+      "basic": "Haftpflichtversicherung inklusive",
+      "full": "Vollkaskoversicherung verfügbar",
+      "theft": "Diebstahlschutz",
+      "assistance": "24/7 Pannenhilfe"
+    },
+    "payment": {
+      "title": "Zahlung",
+      "methods": "Alle gängigen Kreditkarten akzeptiert",
+      "deposit": "Kaution erforderlich",
+      "cancellation": "Kostenlose Stornierung bis 48h vorher",
+      "refund": "Volle Rückerstattung gemäß Bedingungen"
+    },
+    "additional": {
+      "title": "Zusätzliche Leistungen",
+      "fuel": "Flexible Kraftstoffpolitik",
+      "mileage": "Unbegrenzte Kilometer verfügbar",
+      "cleaning": "Reinigungsservice inklusive",
+      "delivery": "Lieferung und Abholung möglich"
+    },
+    "footer": "Für weitere Informationen kontaktieren Sie bitte unseren Kundenservice."
   }
 } 

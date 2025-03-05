@@ -46,12 +46,30 @@ const RentalTermsPage = () => {
 
   return (
     <PageTransition>
-      <div className="min-h-screen bg-white dark:bg-premium-black py-16">
-        <div className="container mx-auto px-4">
-          <h1 className="text-4xl font-bold text-center mb-12 dark:text-white">
-            {t('terms.title')}
-          </h1>
+      {/* Hero Section */}
+      <section className="relative h-[40vh] bg-gradient-to-r from-premium-black to-premium-black/90">
+        <div className="absolute inset-0">
+          <img
+            src="/terms-bg.jpg"
+            alt="Luxury cars"
+            className="w-full h-full object-cover opacity-50"
+          />
+        </div>
+        <div className="relative container mx-auto px-4 h-full flex flex-col justify-center">
+          <div className="max-w-3xl">
+            <h1 className="text-5xl md:text-6xl font-bold text-white mb-6">
+              <span className="text-premium-gold">{t('terms.title')}</span>
+            </h1>
+            <p className="text-xl text-premium-silver">
+              {t('terms.subtitle')}
+            </p>
+          </div>
+        </div>
+      </section>
 
+      {/* Terms Content */}
+      <div className="bg-white dark:bg-premium-black py-16">
+        <div className="container mx-auto px-4">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
             {sections.map((section, index) => (
               <motion.div
@@ -59,7 +77,7 @@ const RentalTermsPage = () => {
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ delay: index * 0.1 }}
-                className="bg-gray-50 dark:bg-premium-black/50 p-6 rounded-lg shadow-lg"
+                className="bg-gray-50 dark:bg-premium-black/50 p-8 rounded-lg shadow-lg border border-premium-gold/10"
               >
                 <h2 className="text-2xl font-bold mb-6 text-premium-gold">
                   {section.title}

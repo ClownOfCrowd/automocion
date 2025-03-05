@@ -22,6 +22,9 @@ const ReviewsSection = () => {
   })
   const [showSuccess, setShowSuccess] = useState(false)
   const [currentSlide, setCurrentSlide] = useState(0)
+  const [isDragging, setIsDragging] = useState(false)
+  const [dragStart, setDragStart] = useState(0)
+  const [dragOffset, setDragOffset] = useState(0)
 
   // Определяем количество отзывов на слайд в зависимости от ширины экрана
   const [reviewsPerSlide, setReviewsPerSlide] = useState(3)
@@ -42,18 +45,19 @@ const ReviewsSection = () => {
     return () => window.removeEventListener('resize', handleResize)
   }, [])
 
-  // Автоматическая прокрутка
+  // Автоматическая прокрутка (только если не перетаскивают)
   useEffect(() => {
-    const interval = setInterval(() => {
-      nextSlide()
-    }, 10000) // Смена каждые 10 секунд
+    if (!isDragging) {
+      const interval = setInterval(() => {
+        nextSlide()
+      }, 5000) // Смена каждые 5 секунд
 
-    return () => clearInterval(interval)
-  }, [currentSlide])
+      return () => clearInterval(interval)
+    }
+  }, [currentSlide, isDragging])
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault()
-    // Здесь будет логика отправки отзыва на бэкенд
     setShowForm(false)
     setShowSuccess(true)
     setTimeout(() => setShowSuccess(false), 3000)
@@ -70,14 +74,42 @@ const ReviewsSection = () => {
     setCurrentSlide((prev) => (prev - 1 + totalSlides) % totalSlides)
   }
 
+  const handleDragStart = (e: React.MouseEvent | React.TouchEvent) => {
+    setIsDragging(true)
+    const clientX = 'touches' in e ? e.touches[0].clientX : e.clientX
+    setDragStart(clientX)
+  }
+
+  const handleDragMove = (e: React.MouseEvent | React.TouchEvent) => {
+    if (!isDragging) return
+    const clientX = 'touches' in e ? e.touches[0].clientX : e.clientX
+    const delta = clientX - dragStart
+    setDragOffset(delta)
+  }
+
+  const handleDragEnd = () => {
+    if (Math.abs(dragOffset) > 100) {
+      if (dragOffset > 0) {
+        prevSlide()
+      } else {
+        nextSlide()
+      }
+    }
+    setIsDragging(false)
+    setDragOffset(0)
+  }
+
   return (
-    <div className="py-24 bg-gray-50 dark:bg-gray-800">
-      <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-        <div className="text-center">
-          <h2 className="text-3xl font-bold tracking-tight text-gray-900 dark:text-white">
-            {t('home.reviews.title')}
+    <section className="relative py-24 bg-gradient-to-r from-premium-black to-premium-black/90">
+      <div className="absolute inset-0">
+        <div className="bg-premium-black/50 w-full h-full"></div>
+      </div>
+      <div className="relative container mx-auto px-4">
+        <div className="text-center mb-16">
+          <h2 className="text-4xl font-bold text-white mb-4">
+            <span className="text-premium-gold">{t('home.reviews.title')}</span>
           </h2>
-          <p className="mt-4 text-lg text-gray-500 dark:text-gray-400">
+          <p className="text-xl text-premium-silver">
             {t('home.reviews.description')}
           </p>
         </div>
@@ -85,9 +117,24 @@ const ReviewsSection = () => {
         <div className="mt-16 relative">
           <div className="overflow-hidden">
             <motion.div
-              animate={{ x: `-${currentSlide * 100}%` }}
-              transition={{ type: 'spring', stiffness: 300, damping: 30 }}
-              className="flex"
+              animate={{ 
+                x: `-${currentSlide * 100}%`,
+                x: isDragging ? `calc(-${currentSlide * 100}% + ${dragOffset}px)` : `-${currentSlide * 100}%`
+              }}
+              transition={{ 
+                type: "spring", 
+                stiffness: 100, 
+                damping: 20,
+                mass: 0.5
+              }}
+              className="flex touch-pan-y"
+              onMouseDown={handleDragStart}
+              onMouseMove={handleDragMove}
+              onMouseUp={handleDragEnd}
+              onMouseLeave={handleDragEnd}
+              onTouchStart={handleDragStart}
+              onTouchMove={handleDragMove}
+              onTouchEnd={handleDragEnd}
             >
               {approvedReviews.map((review) => (
                 <motion.div
@@ -100,16 +147,22 @@ const ReviewsSection = () => {
                   whileInView={{ opacity: 1, y: 0 }}
                   viewport={{ once: true }}
                 >
-                  <div className="bg-white dark:bg-gray-700 p-6 rounded-lg shadow-lg h-full">
+                  <motion.div 
+                    className="bg-white/5 backdrop-blur-lg p-6 rounded-lg border border-premium-gold/10 h-full"
+                    whileHover={{ y: -5 }}
+                    transition={{ type: "spring", stiffness: 300 }}
+                  >
                     <div className="flex items-center mb-4">
-                      <img
-                        src={review.avatar}
-                        alt={review.name}
-                        className="h-12 w-12 rounded-full object-cover"
-                      />
+                      <div className="h-12 w-12 rounded-full overflow-hidden border-2 border-premium-gold/20">
+                        <img
+                          src={review.avatar}
+                          alt={review.name}
+                          className="h-full w-full object-cover"
+                        />
+                      </div>
                       <div className="ml-4">
-                        <h3 className="text-lg font-semibold text-gray-900 dark:text-white">{review.name}</h3>
-                        <p className="text-sm text-gray-500 dark:text-gray-400">{review.car}</p>
+                        <h3 className="text-lg font-semibold text-white">{review.name}</h3>
+                        <p className="text-sm text-premium-silver">{review.car}</p>
                       </div>
                     </div>
                     <div className="flex mb-2">
@@ -117,42 +170,51 @@ const ReviewsSection = () => {
                         <StarIcon
                           key={i}
                           className={`h-5 w-5 ${
-                            i < review.rating ? 'text-yellow-400' : 'text-gray-300 dark:text-gray-600'
+                            i < review.rating ? 'text-premium-gold' : 'text-gray-600'
                           }`}
                         />
                       ))}
                     </div>
-                    <p className="text-gray-600 dark:text-gray-300">{review.comment}</p>
-                    <p className="mt-2 text-sm text-gray-500 dark:text-gray-400">
+                    <p className="text-premium-silver leading-relaxed">{review.comment}</p>
+                    <p className="mt-4 text-sm text-premium-silver/60">
                       {new Date(review.date).toLocaleDateString(review.language)}
                     </p>
-                  </div>
+                  </motion.div>
                 </motion.div>
               ))}
             </motion.div>
           </div>
           
-          <button
-            onClick={prevSlide}
-            className="absolute left-0 top-1/2 -translate-y-1/2 bg-white dark:bg-gray-700 p-2 rounded-full shadow-lg hover:bg-gray-50 dark:hover:bg-gray-600 z-10 text-gray-800 dark:text-white"
-          >
-            ←
-          </button>
-          <button
-            onClick={nextSlide}
-            className="absolute right-0 top-1/2 -translate-y-1/2 bg-white dark:bg-gray-700 p-2 rounded-full shadow-lg hover:bg-gray-50 dark:hover:bg-gray-600 z-10 text-gray-800 dark:text-white"
-          >
-            →
-          </button>
+          {/* Навигация для десктопа */}
+          <div className="hidden md:block">
+            <button
+              onClick={prevSlide}
+              className="absolute left-0 top-1/2 -translate-y-1/2 bg-premium-gold/10 hover:bg-premium-gold/20 p-3 rounded-full backdrop-blur-sm transition-colors z-10"
+            >
+              <svg className="h-6 w-6 text-premium-gold" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" />
+              </svg>
+            </button>
+            <button
+              onClick={nextSlide}
+              className="absolute right-0 top-1/2 -translate-y-1/2 bg-premium-gold/10 hover:bg-premium-gold/20 p-3 rounded-full backdrop-blur-sm transition-colors z-10"
+            >
+              <svg className="h-6 w-6 text-premium-gold" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+              </svg>
+            </button>
+          </div>
 
           {/* Индикаторы слайдов */}
-          <div className="flex justify-center mt-6 space-x-2">
+          <div className="flex justify-center mt-8 space-x-2">
             {[...Array(totalSlides)].map((_, index) => (
               <button
                 key={index}
                 onClick={() => setCurrentSlide(index)}
-                className={`w-2 h-2 rounded-full transition-colors ${
-                  currentSlide === index ? 'bg-indigo-600' : 'bg-gray-300 dark:bg-gray-600'
+                className={`w-2 h-2 rounded-full transition-all duration-300 ${
+                  currentSlide === index 
+                    ? 'w-8 bg-premium-gold' 
+                    : 'bg-premium-gold/30 hover:bg-premium-gold/50'
                 }`}
               />
             ))}
@@ -160,12 +222,14 @@ const ReviewsSection = () => {
         </div>
 
         <div className="mt-12 text-center">
-          <button
+          <motion.button
+            whileHover={{ scale: 1.05 }}
+            whileTap={{ scale: 0.95 }}
             onClick={() => setShowForm(true)}
-            className="inline-flex items-center px-4 py-2 border border-transparent text-base font-medium rounded-md shadow-sm text-white bg-indigo-600 hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500"
+            className="inline-flex items-center px-8 py-4 border border-premium-gold text-base font-medium rounded-md text-white bg-premium-gold hover:bg-premium-gold/90 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-premium-gold shadow-lg transition-colors"
           >
             {t('home.reviews.addButton')}
-          </button>
+          </motion.button>
         </div>
 
         <AnimatePresence>
@@ -174,83 +238,81 @@ const ReviewsSection = () => {
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
               exit={{ opacity: 0 }}
-              className="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center p-4 z-50"
+              className="fixed inset-0 bg-black bg-opacity-75 backdrop-blur-sm flex items-center justify-center p-4 z-50"
             >
               <motion.div
-                initial={{ scale: 0.9 }}
-                animate={{ scale: 1 }}
-                exit={{ scale: 0.9 }}
-                className="bg-white dark:bg-gray-800 rounded-lg p-6 max-w-md w-full"
+                initial={{ scale: 0.9, opacity: 0 }}
+                animate={{ scale: 1, opacity: 1 }}
+                exit={{ scale: 0.9, opacity: 0 }}
+                className="bg-premium-black/90 backdrop-blur-lg rounded-lg p-6 max-w-md w-full border border-premium-gold/10"
               >
-                <h3 className="text-xl font-semibold mb-4 text-gray-900 dark:text-white">
+                <h3 className="text-xl font-semibold mb-4 text-white">
                   {t('home.reviews.form.title')}
                 </h3>
-                <form onSubmit={handleSubmit}>
-                  <div className="space-y-4">
-                    <div>
-                      <label className="block text-sm font-medium text-gray-700 dark:text-gray-300">
-                        {t('home.reviews.form.name')}
-                      </label>
-                      <input
-                        type="text"
-                        required
-                        value={formData.name}
-                        onChange={(e) => setFormData({ ...formData, name: e.target.value })}
-                        className="mt-1 block w-full rounded-md border-gray-300 dark:border-gray-600 dark:bg-gray-700 dark:text-white shadow-sm focus:border-indigo-500 focus:ring-indigo-500"
-                      />
-                    </div>
-                    <div>
-                      <label className="block text-sm font-medium text-gray-700 dark:text-gray-300">
-                        {t('home.reviews.form.car')}
-                      </label>
-                      <input
-                        type="text"
-                        required
-                        value={formData.car}
-                        onChange={(e) => setFormData({ ...formData, car: e.target.value })}
-                        className="mt-1 block w-full rounded-md border-gray-300 dark:border-gray-600 dark:bg-gray-700 dark:text-white shadow-sm focus:border-indigo-500 focus:ring-indigo-500"
-                      />
-                    </div>
-                    <div>
-                      <label className="block text-sm font-medium text-gray-700 dark:text-gray-300">
-                        {t('home.reviews.form.rating')}
-                      </label>
-                      <div className="flex mt-1">
-                        {[1, 2, 3, 4, 5].map((rating) => (
-                          <StarIcon
-                            key={rating}
-                            className={`h-6 w-6 cursor-pointer ${
-                              rating <= formData.rating ? 'text-yellow-400' : 'text-gray-300 dark:text-gray-600'
-                            }`}
-                            onClick={() => setFormData({ ...formData, rating })}
-                          />
-                        ))}
-                      </div>
-                    </div>
-                    <div>
-                      <label className="block text-sm font-medium text-gray-700 dark:text-gray-300">
-                        {t('home.reviews.form.comment')}
-                      </label>
-                      <textarea
-                        required
-                        value={formData.comment}
-                        onChange={(e) => setFormData({ ...formData, comment: e.target.value })}
-                        rows={4}
-                        className="mt-1 block w-full rounded-md border-gray-300 dark:border-gray-600 dark:bg-gray-700 dark:text-white shadow-sm focus:border-indigo-500 focus:ring-indigo-500"
-                      />
+                <form onSubmit={handleSubmit} className="space-y-4">
+                  <div>
+                    <label className="block text-sm font-medium text-premium-silver mb-1">
+                      {t('home.reviews.form.name')}
+                    </label>
+                    <input
+                      type="text"
+                      required
+                      value={formData.name}
+                      onChange={(e) => setFormData({ ...formData, name: e.target.value })}
+                      className="w-full rounded-md bg-white/5 border-premium-gold/20 text-white focus:border-premium-gold focus:ring-premium-gold"
+                    />
+                  </div>
+                  <div>
+                    <label className="block text-sm font-medium text-premium-silver mb-1">
+                      {t('home.reviews.form.car')}
+                    </label>
+                    <input
+                      type="text"
+                      required
+                      value={formData.car}
+                      onChange={(e) => setFormData({ ...formData, car: e.target.value })}
+                      className="w-full rounded-md bg-white/5 border-premium-gold/20 text-white focus:border-premium-gold focus:ring-premium-gold"
+                    />
+                  </div>
+                  <div>
+                    <label className="block text-sm font-medium text-premium-silver mb-1">
+                      {t('home.reviews.form.rating')}
+                    </label>
+                    <div className="flex mt-1">
+                      {[1, 2, 3, 4, 5].map((rating) => (
+                        <StarIcon
+                          key={rating}
+                          className={`h-6 w-6 cursor-pointer transition-colors ${
+                            rating <= formData.rating ? 'text-premium-gold' : 'text-gray-600'
+                          }`}
+                          onClick={() => setFormData({ ...formData, rating })}
+                        />
+                      ))}
                     </div>
                   </div>
-                  <div className="mt-6 flex justify-end space-x-3">
+                  <div>
+                    <label className="block text-sm font-medium text-premium-silver mb-1">
+                      {t('home.reviews.form.comment')}
+                    </label>
+                    <textarea
+                      required
+                      value={formData.comment}
+                      onChange={(e) => setFormData({ ...formData, comment: e.target.value })}
+                      rows={4}
+                      className="w-full rounded-md bg-white/5 border-premium-gold/20 text-white focus:border-premium-gold focus:ring-premium-gold"
+                    />
+                  </div>
+                  <div className="flex justify-end space-x-3">
                     <button
                       type="button"
                       onClick={() => setShowForm(false)}
-                      className="py-2 px-4 border border-gray-300 dark:border-gray-600 rounded-md shadow-sm text-sm font-medium text-gray-700 dark:text-gray-300 bg-white dark:bg-gray-700 hover:bg-gray-50 dark:hover:bg-gray-600 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500"
+                      className="px-4 py-2 border border-premium-gold/20 rounded-md text-premium-silver hover:bg-premium-gold/10 transition-colors"
                     >
                       {t('common.cancel')}
                     </button>
                     <button
                       type="submit"
-                      className="py-2 px-4 border border-transparent rounded-md shadow-sm text-sm font-medium text-white bg-indigo-600 hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500"
+                      className="px-4 py-2 bg-premium-gold text-white rounded-md hover:bg-premium-gold/90 transition-colors"
                     >
                       {t('home.reviews.form.submit')}
                     </button>
@@ -267,15 +329,15 @@ const ReviewsSection = () => {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               exit={{ opacity: 0, y: -20 }}
-              className="fixed bottom-4 right-4 bg-green-100 dark:bg-green-800 border border-green-400 dark:border-green-700 text-green-700 dark:text-green-200 px-4 py-3 rounded z-50"
+              className="fixed bottom-4 right-4 bg-premium-gold/20 backdrop-blur-sm border border-premium-gold/30 text-white px-6 py-4 rounded-lg z-50"
             >
               <p>{t('home.reviews.success')}</p>
             </motion.div>
           )}
         </AnimatePresence>
       </div>
-    </div>
+    </section>
   )
 }
 
-export default ReviewsSection 
+export default ReviewsSection
