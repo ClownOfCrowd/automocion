@@ -5,69 +5,92 @@
     "booking": "Booking",
     "contact": "Contact",
     "cart": "Cart",
-    "terms": "Rental Terms"
+    "terms": "Terms"
   },
   "breadcrumbs": {
     "home": "Home",
     "catalog": "Catalog",
-    "car": "Car Details"
+    "booking": "Booking",
+    "contact": "Contact"
   },
   "common": {
     "cancel": "Cancel",
     "lightMode": "Light Mode",
-    "darkMode": "Dark Mode"
+    "darkMode": "Dark Mode",
+    "fromPrice": "From {{price}}€/day",
+    "day": "day",
+    "bookNow": "Book Now",
+    "viewDetails": "View Details"
   },
   "home": {
     "hero": {
       "title": "Premium Car Rental",
       "subtitle": "in Vila-seca",
-      "description": "Discover our exclusive fleet of vehicles and enjoy first-class personalized service",
-      "cta": "View Catalog"
+      "description": "Discover our exclusive fleet and enjoy first-class personalized service"
     },
     "search": {
-      "button": "Find a Car"
+      "button": "Search",
+      "category": "Category",
+      "priceRange": "Maximum Price",
+      "location": {
+        "pickup": "Pickup Location",
+        "return": "Return Location",
+        "placeholder": "Select a location"
+      }
     },
     "popular": {
-      "title": "Popular Cars",
-      "description": "Choose from our most popular vehicles",
-      "subtitle": "Choose from our most popular vehicles",
-      "viewAll": "View All Cars",
-      "details": "View Details"
+      "title": "Popular Vehicles",
+      "subtitle": "Best deals for your journey",
+      "description": "Discover our selection of most popular vehicles",
+      "viewAll": "View all vehicles",
+      "details": "View details"
     },
     "features": {
-      "title": "Why Choose Us?",
+      "title": "Why Choose Us",
       "subtitle": "Everything you need for your perfect trip",
       "fleet": {
         "title": "Premium Fleet",
-        "description": "High-end vehicles maintained in perfect condition to ensure your safety and comfort"
+        "description": "High-quality vehicles in perfect condition for your safety and comfort"
       },
       "service": {
         "title": "24/7 Service",
-        "description": "Customer support available 24 hours for any need during your rental"
+        "description": "Professional service available 24/7"
       },
       "process": {
         "title": "Simple Process",
-        "description": "Easy and quick booking, with minimal documentation and no price surprises"
+        "description": "Quick booking, minimal documentation, and no hidden fees"
+      },
+      "support24": {
+        "title": "24/7 Support",
+        "description": "Professional assistance available 24/7"
+      },
+      "fastDelivery": {
+        "title": "Fast Delivery",
+        "description": "Delivery and pickup at your chosen location"
+      },
+      "insurance": {
+        "title": "Full Insurance",
+        "description": "Complete coverage for your peace of mind"
       }
     },
     "process": {
       "title": "How to Rent a Car",
-      "description": "Simple 4-step rental process",
+      "description": "Rental process in 4 simple steps",
       "step1": {
         "title": "Choose Dates",
-        "description": "Select your pickup and return dates to see available vehicles"
+        "description": "Select your pickup and return dates"
       },
       "step2": {
-        "title": "Select Location",
-        "description": "Choose convenient pickup and return locations"
+        "title": "Choose Location",
+        "description": "Select convenient pickup and return locations"
       },
       "step3": {
-        "title": "Select Options",
-        "description": "Add extra services and equipment for a comfortable trip"
+        "title": "Choose Options",
+        "description": "Add additional services and equipment"
       },
       "step4": {
-        "title": "Get Your Car",
-        "description": "Pick up your car at the chosen location and enjoy your ride"
+        "title": "Pick Up Car",
+        "description": "Pick up your car and enjoy your trip"
       }
     },
     "reviews": {
@@ -89,6 +112,9 @@
       "subtitle": "We're always ready to answer your questions and help you choose the right car",
       "cta": "Go to Contact Page",
       "success": "Thank you for your message! We'll get back to you soon."
+    },
+    "catalog": {
+      "title": "Our Luxury Fleet"
     }
   },
   "catalog": {
@@ -139,13 +165,19 @@
     "notFound": "Vehicle Not Found",
     "notFoundDescription": "Sorry, we couldn't find the requested vehicle",
     "backToCatalog": "Back to Catalog",
+    "description": "Description",
+    "features": "Features",
+    "booking": "Booking",
+    "similarCars": "Similar Vehicles",
     "highlights": {
       "year": "Year",
       "transmission": "Transmission",
-      "fuel": "Fuel Type",
+      "fuel": "Fuel",
+      "seats": "Seats",
+      "luggage": "Luggage",
+      "power": "Power",
       "consumption": "Consumption"
     },
-    "features": "Features",
     "bookNow": "Book Now",
     "notAvailable": "Not Available",
     "additionalInfo": {
@@ -156,9 +188,13 @@
       "deposit": "Refundable deposit required",
       "documents": "Driver's license and passport required"
     },
-    "specifications": "Specifications",
-    "similarCars": "Similar Cars",
-    "description": "Car Description"
+    "specifications": {
+      "title": "Specifications",
+      "engine": "Engine",
+      "power": "Power",
+      "acceleration": "Acceleration 0-100 km/h",
+      "topSpeed": "Top Speed"
+    }
   },
   "booking": {
     "title": "Book Your Vehicle",
@@ -208,6 +244,23 @@
       "email": "Email",
       "chat": "Live Chat",
       "chatDescription": "Our specialists are ready to answer your questions"
+    },
+    "pickupDate": "Pickup Date",
+    "returnDate": "Return Date",
+    "searchButton": "Search Vehicles",
+    "totalPrice": "Total Price",
+    "addToCart": "Add to Cart",
+    "alreadyInCart": "Already in Cart",
+    "reserve": "Reserve",
+    "location": {
+      "pickup": "Pickup Location",
+      "return": "Return Location",
+      "placeholder": "Select a location",
+      "options": {
+        "Vila-seca": "Vila-seca",
+        "Tarragona": "Tarragona",
+        "Reus": "Reus"
+      }
     }
   },
   "contact": {
@@ -257,7 +310,7 @@
     "climate_control": "Climate Control",
     "led_lights": "LED Lights",
     "air_conditioning": "Air Conditioning",
-    "usb": "USB",
+    "usb": "USB Port",
     "apple_carplay": "Apple CarPlay",
     "android_auto": "Android Auto",
     "backup_camera": "Backup Camera",
@@ -277,7 +330,18 @@
     "autopilot": "Autopilot",
     "premium_interior": "Premium Interior",
     "supercharging": "Supercharging",
-    "glass_roof": "Glass Roof"
+    "glass_roof": "Glass Roof",
+    "GPS": "GPS Navigation",
+    "Sensores de aparcamiento": "Parking Sensors",
+    "Asientos deportivos": "Sport Seats",
+    "Techo panorámico": "Panoramic Roof",
+    "Airbags": "Airbags",
+    "ABS": "ABS",
+    "ESP": "ESP",
+    "Start/Stop": "Start/Stop",
+    "Cruise Control": "Cruise Control",
+    "Parking Camera": "Parking Camera",
+    "Keyless Entry": "Keyless Entry"
   },
   "whatsapp": {
     "message": "Message us on WhatsApp",
@@ -407,5 +471,12 @@
       "delivery": "Delivery and collection available"
     },
     "footer": "For more information, please don't hesitate to contact our customer service team."
+  },
+  "categories": {
+    "all": "All",
+    "premium": "Premium",
+    "suv": "SUV",
+    "economy": "Economy",
+    "electric": "Electric"
   }
 } 

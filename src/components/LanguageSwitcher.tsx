@@ -22,7 +22,7 @@ const LanguageSwitcher = () => {
 
   return (
     <Menu as="div" className="relative">
-      <Menu.Button className="flex items-center space-x-1 px-3 py-2 text-sm font-medium text-gray-900 dark:text-white hover:text-premium-gold transition-colors">
+      <Menu.Button className="flex items-center space-x-1 px-3 py-2 text-sm font-medium text-gray-900 dark:text-premium-silver hover:text-premium-gold dark:hover:text-premium-gold transition-colors">
         <span>{languages.find(lang => lang.code === currentLang)?.name}</span>
         <ChevronDownIcon className="h-4 w-4" />
       </Menu.Button>

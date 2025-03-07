@@ -15,7 +15,11 @@
   "common": {
     "cancel": "Отмена",
     "lightMode": "Светлая тема",
-    "darkMode": "Тёмная тема"
+    "darkMode": "Тёмная тема",
+    "fromPrice": "от {{price}}€",
+    "day": "день",
+    "bookNow": "Забронировать",
+    "viewDetails": "Подробнее"
   },
   "notifications": {
     "booked": "забронировал(а) {{car}} {{time}} минут назад"
@@ -185,7 +189,15 @@
       "email": "Email",
       "chat": "Онлайн-чат",
       "chatDescription": "Наши специалисты готовы ответить на ваши вопросы"
-    }
+    },
+    "pickupDate": "Дата получения",
+    "returnDate": "Дата возврата",
+    "searchButton": "Поиск",
+    "addToCart": "Добавить в корзину",
+    "alreadyInCart": "Уже в корзине",
+    "selectDates": "Пожалуйста, выберите даты аренды",
+    "addedToCart": "Автомобиль добавлен в корзину",
+    "totalPrice": "Итого"
   },
   "contact": {
     "title": "Свяжитесь с нами",
@@ -228,19 +240,21 @@
   },
   "carDetail": {
     "notFound": "Автомобиль не найден",
-    "notFoundDescription": "К сожалению, запрошенный автомобиль не найден",
+    "notFoundDescription": "К сожалению, запрашиваемый автомобиль не найден",
     "backToCatalog": "Вернуться в каталог",
-    "description": "Описание автомобиля",
+    "description": "Описание",
     "specifications": "Характеристики",
     "similarCars": "Похожие автомобили",
     "highlights": {
-      "year": "Год выпуска",
-      "transmission": "Коробка передач",
-      "fuel": "Тип топлива",
-      "consumption": "Расход"
+      "year": "Год",
+      "transmission": "Коробка",
+      "fuel": "Топливо",
+      "seats": "Мест",
+      "luggage": "Багаж",
+      "power": "Мощность"
     },
     "features": "Особенности",
-    "bookNow": "Забронировать",
+    "booking": "Бронирование",
     "notAvailable": "Недоступно",
     "additionalInfo": {
       "title": "Дополнительная информация",
@@ -276,7 +290,13 @@
     "digital_cockpit": "Цифровая приборная панель",
     "sport_mode": "Спортивный режим",
     "dynamic_chassis": "Динамическая подвеска",
-    "autopilot": "Автопилот"
+    "autopilot": "Автопилот",
+    "GPS": "GPS навигация",
+    "Climatizador": "Климат-контроль",
+    "USB": "USB разъем",
+    "Sensores de aparcamiento": "Парктроники",
+    "Asientos deportivos": "Спортивные сиденья",
+    "Techo panorámico": "Панорамная крыша"
   },
   "whatsapp": {
     "message": "Напишите нам в WhatsApp",

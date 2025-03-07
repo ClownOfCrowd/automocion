@@ -8,7 +8,7 @@ const ThemeToggle = () => {
   return (
     <button
       onClick={toggleTheme}
-      className="p-2 text-gray-900 dark:text-white hover:text-premium-gold dark:hover:text-premium-gold transition-colors"
+      className="p-2 text-gray-900 dark:text-premium-silver hover:text-premium-gold dark:hover:text-premium-gold transition-colors"
       aria-label="Toggle theme"
     >
       {theme === 'dark' ? (

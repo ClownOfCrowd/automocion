@@ -11,91 +11,93 @@ export interface Car {
   seats: number;
   luggage: number;
   power: number;
+  specs?: {
+    year: number;
+    transmission: string;
+    fuel: string;
+    consumption: number;
+    doors: number;
+    ac: boolean;
+    gps: boolean;
+    bluetooth: boolean;
+    usb: boolean;
+  };
 }
 
 export const cars: Car[] = [
   {
-    id: 'mercedes-c-class',
-    name: 'Mercedes-Benz Clase C',
-    description: 'Elegancia y rendimiento en perfecta armonía',
-    category: 'Premium',
-    price: 150,
-    image: '/cars/mercedes-c-class.jpg',
-    features: ['GPS', 'Bluetooth', 'Climatizador', 'Asientos de cuero'],
-    transmission: 'Automático',
-    fuel: 'Diesel',
-    seats: 5,
-    luggage: 3,
-    power: 194
-  },
-  {
-    id: 'bmw-5-series',
-    name: 'BMW Serie 5',
-    description: 'La combinación perfecta de deportividad y confort',
-    category: 'Premium',
-    price: 180,
-    image: '/cars/bmw-5-series.jpg',
-    features: ['GPS', 'Bluetooth', 'Climatizador', 'Asientos deportivos'],
-    transmission: 'Automático',
+    id: 'peugeot-208',
+    name: 'Peugeot 208',
+    description: 'Компактный и экономичный городской автомобиль',
+    category: 'Compact',
+    price: 45,
+    image: '/cars/peugeot-208.jpg',
+    features: ['GPS', 'Bluetooth', 'Climatizador', 'USB'],
+    transmission: 'Manual',
     fuel: 'Gasolina',
     seats: 5,
-    luggage: 3,
-    power: 252
+    luggage: 2,
+    power: 100,
+    specs: {
+      year: 2022,
+      transmission: 'Manual',
+      fuel: 'Gasolina',
+      consumption: 4.5,
+      doors: 5,
+      ac: true,
+      gps: true,
+      bluetooth: true,
+      usb: true
+    }
   },
   {
-    id: 'audi-q7',
-    name: 'Audi Q7',
-    description: 'SUV de lujo con espacio y prestaciones excepcionales',
-    category: 'SUV',
-    price: 220,
-    image: '/cars/audi-q7.jpg',
-    features: ['GPS', 'Bluetooth', 'Climatizador', '7 plazas'],
-    transmission: 'Automático',
-    fuel: 'Diesel',
-    seats: 7,
-    luggage: 4,
-    power: 286
-  },
-  {
-    id: 'porsche-cayenne',
-    name: 'Porsche Cayenne',
-    description: 'Deportividad y lujo en formato SUV',
-    category: 'SUV',
-    price: 250,
-    image: '/cars/porsche-cayenne.jpg',
-    features: ['GPS', 'Bluetooth', 'Climatizador', 'Techo panorámico'],
-    transmission: 'Automático',
-    fuel: 'Gasolina',
-    seats: 5,
-    luggage: 3,
-    power: 340
-  },
-  {
-    id: 'range-rover-sport',
-    name: 'Range Rover Sport',
-    description: 'Lujo británico y capacidad todoterreno',
-    category: 'SUV',
-    price: 240,
-    image: '/cars/range-rover-sport.jpg',
-    features: ['GPS', 'Bluetooth', 'Climatizador', 'Tracción integral'],
-    transmission: 'Automático',
+    id: 'citroen-c3',
+    name: 'Citroen C3',
+    description: 'Стильный и комфортный городской автомобиль',
+    category: 'Compact',
+    price: 50,
+    image: '/cars/citroen-c3.jpg',
+    features: ['GPS', 'Bluetooth', 'Climatizador', 'Sensores de aparcamiento'],
+    transmission: 'Manual',
     fuel: 'Diesel',
     seats: 5,
-    luggage: 4,
-    power: 300
+    luggage: 2,
+    power: 110,
+    specs: {
+      year: 2021,
+      transmission: 'Manual',
+      fuel: 'Diesel',
+      consumption: 4.2,
+      doors: 5,
+      ac: true,
+      gps: true,
+      bluetooth: true,
+      usb: true
+    }
   },
   {
-    id: 'mercedes-s-class',
-    name: 'Mercedes-Benz Clase S',
-    description: 'La máxima expresión del lujo sobre ruedas',
+    id: 'mini-cooper-s',
+    name: 'MINI Cooper S',
+    description: 'Deportivo y elegante con un rendimiento excepcional',
     category: 'Premium',
-    price: 300,
-    image: '/cars/mercedes-s-class.jpg',
-    features: ['GPS', 'Bluetooth', 'Climatizador', 'Masaje en asientos'],
+    price: 85,
+    image: '/cars/mini-cooper-s.jpg',
+    features: ['GPS', 'Bluetooth', 'Climatizador', 'Asientos deportivos', 'Techo panorámico'],
     transmission: 'Automático',
     fuel: 'Gasolina',
-    seats: 5,
-    luggage: 3,
-    power: 435
+    seats: 4,
+    luggage: 1,
+    power: 178,
+    specs: {
+      year: 2022,
+      transmission: 'Automático',
+      fuel: 'Gasolina',
+      consumption: 6.2,
+      doors: 3,
+      ac: true,
+      gps: true,
+      bluetooth: true,
+      usb: true
+    }
   }
 ]; 

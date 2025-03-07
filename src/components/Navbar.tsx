@@ -68,7 +68,7 @@ const Navbar = () => {
                       location.pathname === item.href
                         ? 'text-premium-gold'
                         : isScrolled
-                          ? 'text-gray-900 dark:text-white hover:text-premium-gold'
+                          ? 'text-gray-900 dark:text-premium-silver hover:text-premium-gold'
                           : 'text-white hover:text-premium-gold'
                     } transition-colors duration-300`}
                   >

@@ -42,6 +42,11 @@ const AnimatedRoutes = () => {
                 <HomePage />
               </Suspense>
             } />
+            <Route path="catalog/:id" element={
+              <Suspense fallback={null}>
+                <CarDetailPage />
+              </Suspense>
+            } />
             <Route path="booking" element={
               <Navigate to="/" replace />
             } />

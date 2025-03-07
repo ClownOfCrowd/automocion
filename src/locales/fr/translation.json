@@ -5,7 +5,13 @@
     "booking": "Réservation",
     "contact": "Contact",
     "cart": "Panier",
-    "terms": "Conditions de location"
+    "terms": "Conditions"
+  },
+  "breadcrumbs": {
+    "home": "Accueil",
+    "catalog": "Catalogue",
+    "booking": "Réservation",
+    "contact": "Contact"
   },
   "common": {
     "loading": "Chargement...",
@@ -32,21 +38,24 @@
     "or": "ou",
     "and": "et",
     "lightMode": "Mode clair",
-    "darkMode": "Mode sombre"
+    "darkMode": "Mode sombre",
+    "fromPrice": "À partir de {{price}}€/jour",
+    "day": "jour",
+    "bookNow": "Réserver maintenant",
+    "viewDetails": "Voir les détails"
   },
   "home": {
     "hero": {
       "title": "Location de voitures premium",
       "subtitle": "à Vila-seca",
-      "description": "Découvrez notre flotte exclusive de véhicules et profitez d'un service personnalisé de première classe",
-      "cta": "Voir le catalogue"
+      "description": "Découvrez notre flotte exclusive et profitez d'un service personnalisé de première classe"
     },
     "quickSearch": {
       "title": "Recherche rapide",
       "pickupDate": "Date de prise en charge",
       "returnDate": "Date de retour",
       "category": "Catégorie",
-      "priceRange": "Gamme de prix",
+      "priceRange": "Prix maximum",
       "button": "Rechercher"
     },
     "categories": {
@@ -64,15 +73,27 @@
       "subtitle": "Tout ce dont vous avez besoin pour votre voyage parfait",
       "fleet": {
         "title": "Flotte premium",
-        "description": "Véhicules haut de gamme maintenus en parfait état pour assurer votre sécurité et votre confort"
+        "description": "Véhicules haut de gamme en parfait état pour votre sécurité et votre confort"
       },
       "service": {
-        "title": "Assistance 24/7",
-        "description": "Notre équipe est à votre disposition 7j/7, 24h/24 tout au long de votre location"
+        "title": "Service 24/7",
+        "description": "Service professionnel disponible 24h/24"
       },
       "process": {
         "title": "Processus simple",
-        "description": "Réservation facile et rapide, documentation minimale et pas de surprises sur le prix"
+        "description": "Réservation rapide, documentation minimale et pas de frais cachés"
+      },
+      "support24": {
+        "title": "Support 24/7",
+        "description": "Assistance professionnelle disponible 24h/24"
+      },
+      "fastDelivery": {
+        "title": "Livraison rapide",
+        "description": "Livraison et récupération à l'endroit de votre choix"
+      },
+      "insurance": {
+        "title": "Assurance complète",
+        "description": "Couverture totale pour votre tranquillité"
       }
     },
     "reviews": {
@@ -118,7 +139,7 @@
       "description": "Processus de location en 4 étapes simples",
       "step1": {
         "title": "Choisir les dates",
-        "description": "Sélectionnez vos dates de prise en charge et de retour pour voir les véhicules disponibles"
+        "description": "Sélectionnez vos dates de prise en charge et de retour"
       },
       "step2": {
         "title": "Choisir le lieu",
@@ -126,12 +147,15 @@
       },
       "step3": {
         "title": "Choisir les options",
-        "description": "Ajoutez des services et équipements supplémentaires pour un voyage confortable"
+        "description": "Ajoutez des services et équipements supplémentaires"
       },
       "step4": {
         "title": "Récupérer la voiture",
-        "description": "Récupérez votre voiture à l'endroit choisi et profitez de votre voyage"
+        "description": "Récupérez votre voiture et profitez de votre voyage"
       }
+    },
+    "catalog": {
+      "title": "Notre flotte de luxe"
     }
   },
   "catalog": {
@@ -172,7 +196,7 @@
       "compare": "Comparer"
     },
     "categories": {
-      "all": "Tous",
+      "all": "Toutes",
       "economy": "Économique",
       "compact": "Compact",
       "premium": "Premium",
@@ -268,6 +292,23 @@
       "continue": "Continuer",
       "back": "Retour",
       "submit": "Soumettre la réservation"
+    },
+    "pickupDate": "Date de prise en charge",
+    "returnDate": "Date de retour",
+    "pickupLocation": "Lieu de prise en charge",
+    "returnLocation": "Lieu de retour",
+    "searchButton": "Rechercher des véhicules",
+    "totalPrice": "Prix total",
+    "reserve": "Réserver",
+    "location": {
+      "pickup": "Lieu de prise en charge",
+      "return": "Lieu de retour",
+      "placeholder": "Sélectionnez un lieu",
+      "options": {
+        "Vila-seca": "Vila-seca",
+        "Tarragona": "Tarragone",
+        "Reus": "Reus"
+      }
     }
   },
   "contact": {
@@ -401,7 +442,20 @@
     "digital_cockpit": "Tableau de bord numérique",
     "sport_mode": "Mode sport",
     "dynamic_chassis": "Châssis dynamique",
-    "autopilot": "Pilote automatique"
+    "autopilot": "Pilote automatique",
+    "GPS": "Navigation GPS",
+    "Climatizador": "Climatisation",
+    "Sensores de aparcamiento": "Capteurs de stationnement",
+    "Asientos deportivos": "Sièges sport",
+    "Techo panorámico": "Toit panoramique",
+    "Airbags": "Airbags",
+    "ABS": "ABS",
+    "ESP": "ESP",
+    "Start/Stop": "Start/Stop",
+    "Cruise Control": "Régulateur de vitesse",
+    "Parking Camera": "Caméra de recul",
+    "LED Lights": "Feux LED",
+    "Keyless Entry": "Accès sans clé"
   },
   "whatsapp": {
     "message": "Contactez-nous sur WhatsApp",
@@ -477,19 +531,28 @@
   },
   "carDetail": {
     "notFound": "Véhicule non trouvé",
-    "notFoundDescription": "Désolé, nous n'avons pas pu trouver le véhicule demandé",
+    "notFoundDescription": "Désolé, nous n'avons pas trouvé le véhicule demandé",
     "backToCatalog": "Retour au catalogue",
-    "description": "Description du véhicule",
-    "specifications": "Spécifications",
+    "description": "Description",
+    "specifications": {
+      "title": "Spécifications",
+      "engine": "Moteur",
+      "power": "Puissance",
+      "acceleration": "Accélération 0-100 km/h",
+      "topSpeed": "Vitesse maximale"
+    },
     "similarCars": "Véhicules similaires",
     "highlights": {
       "year": "Année",
       "transmission": "Transmission",
-      "fuel": "Type de carburant",
+      "fuel": "Carburant",
+      "seats": "Places",
+      "luggage": "Bagages",
+      "power": "Puissance",
       "consumption": "Consommation"
     },
     "features": "Caractéristiques",
-    "bookNow": "Réserver maintenant",
+    "booking": "Réservation",
     "notAvailable": "Non disponible",
     "additionalInfo": {
       "title": "Informations supplémentaires",
@@ -543,5 +606,12 @@
       "delivery": "Livraison et collecte disponibles"
     },
     "footer": "Pour plus d'informations, n'hésitez pas à contacter notre service client."
+  },
+  "categories": {
+    "all": "Toutes",
+    "premium": "Premium",
+    "suv": "SUV",
+    "economy": "Économique",
+    "electric": "Électrique"
   }
 } 
