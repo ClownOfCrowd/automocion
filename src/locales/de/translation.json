@@ -10,13 +10,17 @@
   "common": {
     "cancel": "Abbrechen",
     "lightMode": "Heller Modus",
-    "darkMode": "Dunkler Modus"
+    "darkMode": "Dunkler Modus",
+    "fromPrice": "Ab {{price}}€",
+    "day": "Tag",
+    "bookNow": "Jetzt buchen",
+    "viewDetails": "Details anzeigen"
   },
   "home": {
     "hero": {
       "title": "Premium Autovermietung",
       "subtitle": "in Vila-seca",
-      "description": "Entdecken Sie unsere exklusive Fahrzeugflotte und genießen Sie erstklassigen, persönlichen Service",
+      "description": "Entdecken Sie unsere exklusive Flotte und genießen Sie erstklassigen persönlichen Service",
       "cta": "Katalog ansehen"
     },
     "search": {
@@ -25,12 +29,12 @@
     "popular": {
       "title": "Beliebte Fahrzeuge",
       "subtitle": "Die besten Angebote für Ihre Reise",
-      "description": "Wählen Sie aus unseren beliebtesten Fahrzeugen",
+      "description": "Entdecken Sie unsere beliebtesten Fahrzeuge",
       "viewAll": "Alle Fahrzeuge ansehen",
       "details": "Details anzeigen"
     },
     "features": {
-      "title": "Warum uns wählen?",
+      "title": "Warum uns wählen",
       "subtitle": "Alles, was Sie für Ihre perfekte Reise brauchen",
       "fleet": {
         "title": "Premium Flotte",
@@ -38,11 +42,23 @@
       },
       "service": {
         "title": "24/7 Service",
-        "description": "Kundenservice rund um die Uhr für alle Anliegen während Ihrer Miete"
+        "description": "Professioneller Service rund um die Uhr verfügbar"
       },
       "process": {
         "title": "Einfacher Prozess",
-        "description": "Einfache und schnelle Buchung, minimale Dokumentation und keine Überraschungen beim Preis"
+        "description": "Schnelle Buchung, minimale Dokumentation und keine versteckten Gebühren"
+      },
+      "support24": {
+        "title": "24/7 Support",
+        "description": "Professionelle Unterstützung rund um die Uhr verfügbar"
+      },
+      "fastDelivery": {
+        "title": "Schnelle Lieferung",
+        "description": "Lieferung und Abholung an jedem gewünschten Ort"
+      },
+      "insurance": {
+        "title": "Vollversicherung",
+        "description": "Volle Deckung für Ihre Sicherheit"
       }
     },
     "process": {

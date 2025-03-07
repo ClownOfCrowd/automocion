@@ -11,49 +11,53 @@
     "cancel": "Cancelar",
     "lightMode": "Modo claro",
     "darkMode": "Modo oscuro",
-    "fromPrice": "Desde {{price}}€/día",
-    "bookNow": "Reservar Ahora"
+    "fromPrice": "Desde {{price}}€",
+    "day": "día",
+    "bookNow": "Reservar",
+    "viewDetails": "Ver detalles"
   },
   "home": {
     "hero": {
-      "title": "Alquiler de Coches de Lujo",
-      "subtitle": "Experimenta el lujo y la elegancia en cada viaje"
+      "title": "Alquiler de coches premium",
+      "subtitle": "en Vila-seca",
+      "description": "Descubre nuestra flota exclusiva y disfruta de un servicio personalizado de primera clase",
+      "cta": "Ver catálogo"
     },
     "search": {
-      "button": "Encontrar coche"
+      "button": "Buscar coche"
     },
     "popular": {
       "title": "Vehículos populares",
-      "subtitle": "Elija entre nuestros vehículos más solicitados",
-      "description": "Elija entre nuestros vehículos más populares",
+      "subtitle": "Las mejores ofertas para tu viaje",
+      "description": "Descubre nuestros vehículos más solicitados",
       "viewAll": "Ver todos los vehículos",
       "details": "Ver detalles"
     },
     "features": {
-      "title": "¿Por qué elegirnos?",
+      "title": "Por qué elegirnos",
       "subtitle": "Todo lo que necesitas para tu viaje perfecto",
       "fleet": {
         "title": "Flota premium",
-        "description": "Vehículos de alta calidad en perfecto estado para tu seguridad y comodidad"
+        "description": "Vehículos de alta gama en perfecto estado para tu seguridad y confort"
       },
       "service": {
         "title": "Servicio 24/7",
-        "description": "Atención al cliente las 24 horas para cualquier necesidad durante tu alquiler"
+        "description": "Servicio profesional disponible las 24 horas"
       },
       "process": {
-        "title": "Proceso sencillo",
-        "description": "Reserva fácil y rápida, documentación mínima y sin sorpresas en el precio"
+        "title": "Proceso simple",
+        "description": "Reserva rápida, documentación mínima y sin costes ocultos"
       },
       "support24": {
         "title": "Soporte 24/7",
-        "description": "Asistencia profesional disponible las 24 horas del día"
+        "description": "Asistencia profesional disponible las 24 horas"
       },
       "fastDelivery": {
-        "title": "Entrega Rápida",
-        "description": "Entrega y recogida en cualquier ubicación"
+        "title": "Entrega rápida",
+        "description": "Entrega y recogida en el lugar de tu elección"
       },
       "insurance": {
-        "title": "Seguro Completo",
+        "title": "Seguro completo",
         "description": "Cobertura total para tu tranquilidad"
       }
     },

@@ -3,8 +3,6 @@ import { Link, useLocation } from 'react-router-dom'
 import { Disclosure } from '@headlessui/react'
 import { Bars3Icon, XMarkIcon } from '@heroicons/react/24/outline'
 import { useTranslation } from 'react-i18next'
-import { useCart } from '../contexts/CartContext'
-import CartDrawer from './CartDrawer'
 import ThemeToggle from './ThemeToggle'
 import LanguageSwitcher from './LanguageSwitcher'
 import { motion } from 'framer-motion'
@@ -25,7 +23,6 @@ const Navbar = () => {
   const { t } = useTranslation()
   const location = useLocation()
   const [isScrolled, setIsScrolled] = useState(false)
-  const { items, isCartOpen, openCart, closeCart } = useCart()
 
   useEffect(() => {
     const handleScroll = () => {
@@ -48,36 +45,30 @@ const Navbar = () => {
       {({ open }) => (
         <>
           <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-            <div className="flex h-20 justify-between items-center">
-              {/* Logo */}
-              <Link to="/" className="flex items-center">
-                <span className={`text-2xl font-bold ${
-                  isScrolled ? 'text-premium-black dark:text-white' : 'text-white'
-                }`}>
-                  <span className="text-premium-gold">O.V.</span> Automoción
-                </span>
-              </Link>
-
-              {/* Desktop Navigation */}
-              <div className="hidden md:flex md:items-center md:space-x-8">
-                {navigation.map((item) => (
-                  <Link
-                    key={item.name}
-                    to={item.href}
-                    className={`${
-                      location.pathname === item.href
-                        ? 'text-premium-gold'
-                        : isScrolled
-                          ? 'text-gray-900 dark:text-premium-silver hover:text-premium-gold'
-                          : 'text-white hover:text-premium-gold'
-                    } transition-colors duration-300`}
-                  >
-                    {item.name}
+            <div className="flex h-16 justify-between">
+              <div className="flex">
+                <div className="flex flex-shrink-0 items-center">
+                  <Link to="/" className="text-2xl font-bold text-gray-900 dark:text-white">
+                    O.V. <span className="text-premium-gold">Automoción</span>
                   </Link>
-                ))}
+                </div>
+                <div className="hidden md:ml-6 md:flex md:space-x-8">
+                  {navigation.map((item) => (
+                    <Link
+                      key={item.name}
+                      to={item.href}
+                      className={`inline-flex items-center px-1 pt-1 text-sm font-medium ${
+                        location.pathname === item.href
+                          ? 'text-premium-gold border-b-2 border-premium-gold'
+                          : 'text-gray-900 dark:text-white hover:text-premium-gold border-b-2 border-transparent hover:border-premium-gold'
+                      }`}
+                    >
+                      {item.name}
+                    </Link>
+                  ))}
+                </div>
               </div>
 
-              {/* Right Section */}
               <div className="flex items-center space-x-2 sm:space-x-4">
                 <ThemeToggle />
                 <LanguageSwitcher />

@@ -5,7 +5,6 @@ import { Suspense } from 'react'
 import MainLayout from './layouts/MainLayout'
 import HomePage from './pages/HomePage'
 import CarDetailPage from './pages/CarDetailPage'
-import BookingPage from './pages/BookingPage'
 import ContactPage from './pages/ContactPage'
 import CheckoutPage from './pages/CheckoutPage'
 import CheckoutSuccessPage from './pages/CheckoutSuccessPage'
@@ -13,7 +12,6 @@ import RentalTermsPage from './pages/RentalTermsPage'
 import ScrollToTop from './components/ScrollToTop'
 import LoadingScreen from './components/LoadingScreen'
 import { LoadingProvider } from './contexts/LoadingContext'
-import { CartProvider } from './contexts/CartContext'
 import { ThemeProvider } from './contexts/ThemeContext'
 import { useLoadingManager } from './hooks/useLoadingManager'
 
@@ -22,7 +20,7 @@ const queryClient = new QueryClient({
     queries: {
       staleTime: 1000 * 60 * 5, // 5 minutes
       cacheTime: 1000 * 60 * 30, // 30 minutes
-      suspense: true, // Включаем поддержку Suspense
+      suspense: true,
     },
   },
 })
@@ -46,9 +44,6 @@ const AnimatedRoutes = () => {
               <Suspense fallback={null}>
                 <CarDetailPage />
               </Suspense>
-            } />
-            <Route path="booking" element={
-              <Navigate to="/" replace />
             } />
             <Route path="contact" element={
               <Suspense fallback={null}>
@@ -82,12 +77,10 @@ function App() {
     <QueryClientProvider client={queryClient}>
       <ThemeProvider>
         <LoadingProvider>
-          <CartProvider>
-            <Router>
-              <ScrollToTop />
-              <AnimatedRoutes />
-            </Router>
-          </CartProvider>
+          <Router>
+            <ScrollToTop />
+            <AnimatedRoutes />
+          </Router>
         </LoadingProvider>
       </ThemeProvider>
     </QueryClientProvider>

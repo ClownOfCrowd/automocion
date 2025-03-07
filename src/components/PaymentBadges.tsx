@@ -10,12 +10,12 @@ const PaymentBadges = ({ className = '', variant = 'default' }: PaymentBadgesPro
     {
       name: 'Visa',
       icon: '/payments/visa.svg',
-      color: 'bg-blue-50 dark:bg-blue-900'
+      color: 'bg-premium-gold/10 dark:bg-premium-gold/20'
     },
     {
       name: 'Mastercard',
       icon: '/payments/mastercard.svg',
-      color: 'bg-red-50 dark:bg-red-900'
+      color: 'bg-premium-gold/10 dark:bg-premium-gold/20'
     },
     {
       name: 'PayPal',

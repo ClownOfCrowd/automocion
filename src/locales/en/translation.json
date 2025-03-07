@@ -17,7 +17,7 @@
     "cancel": "Cancel",
     "lightMode": "Light Mode",
     "darkMode": "Dark Mode",
-    "fromPrice": "From {{price}}€/day",
+    "fromPrice": "From {{price}}€",
     "day": "day",
     "bookNow": "Book Now",
     "viewDetails": "View Details"
@@ -26,10 +26,11 @@
     "hero": {
       "title": "Premium Car Rental",
       "subtitle": "in Vila-seca",
-      "description": "Discover our exclusive fleet and enjoy first-class personalized service"
+      "description": "Discover our exclusive fleet and enjoy first-class personalized service",
+      "cta": "View Catalog"
     },
     "search": {
-      "button": "Search",
+      "button": "Find a Car",
       "category": "Category",
       "priceRange": "Maximum Price",
       "location": {
@@ -41,20 +42,20 @@
     "popular": {
       "title": "Popular Vehicles",
       "subtitle": "Best deals for your journey",
-      "description": "Discover our selection of most popular vehicles",
-      "viewAll": "View all vehicles",
-      "details": "View details"
+      "description": "Discover our most requested vehicles",
+      "viewAll": "View All Vehicles",
+      "details": "View Details"
     },
     "features": {
       "title": "Why Choose Us",
       "subtitle": "Everything you need for your perfect trip",
       "fleet": {
         "title": "Premium Fleet",
-        "description": "High-quality vehicles in perfect condition for your safety and comfort"
+        "description": "High-end vehicles in perfect condition for your safety and comfort"
       },
       "service": {
         "title": "24/7 Service",
-        "description": "Professional service available 24/7"
+        "description": "Professional service available around the clock"
       },
       "process": {
         "title": "Simple Process",
@@ -62,11 +63,11 @@
       },
       "support24": {
         "title": "24/7 Support",
-        "description": "Professional assistance available 24/7"
+        "description": "Professional assistance available around the clock"
       },
       "fastDelivery": {
         "title": "Fast Delivery",
-        "description": "Delivery and pickup at your chosen location"
+        "description": "Delivery and pickup at your preferred location"
       },
       "insurance": {
         "title": "Full Insurance",

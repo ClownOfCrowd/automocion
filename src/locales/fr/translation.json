@@ -39,16 +39,17 @@
     "and": "et",
     "lightMode": "Mode clair",
     "darkMode": "Mode sombre",
-    "fromPrice": "À partir de {{price}}€/jour",
+    "fromPrice": "À partir de {{price}}€",
     "day": "jour",
-    "bookNow": "Réserver maintenant",
+    "bookNow": "Réserver",
     "viewDetails": "Voir les détails"
   },
   "home": {
     "hero": {
       "title": "Location de voitures premium",
       "subtitle": "à Vila-seca",
-      "description": "Découvrez notre flotte exclusive et profitez d'un service personnalisé de première classe"
+      "description": "Découvrez notre flotte exclusive et profitez d'un service personnalisé de première classe",
+      "cta": "Voir le catalogue"
     },
     "quickSearch": {
       "title": "Recherche rapide",
@@ -77,7 +78,7 @@
       },
       "service": {
         "title": "Service 24/7",
-        "description": "Service professionnel disponible 24h/24"
+        "description": "Service professionnel disponible 24h/24 et 7j/7"
       },
       "process": {
         "title": "Processus simple",
@@ -85,7 +86,7 @@
       },
       "support24": {
         "title": "Support 24/7",
-        "description": "Assistance professionnelle disponible 24h/24"
+        "description": "Assistance professionnelle disponible 24h/24 et 7j/7"
       },
       "fastDelivery": {
         "title": "Livraison rapide",
@@ -93,7 +94,7 @@
       },
       "insurance": {
         "title": "Assurance complète",
-        "description": "Couverture totale pour votre tranquillité"
+        "description": "Couverture totale pour votre tranquillité d'esprit"
       }
     },
     "reviews": {
@@ -130,7 +131,7 @@
     "popular": {
       "title": "Véhicules populaires",
       "subtitle": "Les meilleures offres pour votre voyage",
-      "description": "Découvrez notre sélection de véhicules les plus populaires",
+      "description": "Découvrez nos véhicules les plus demandés",
       "viewAll": "Voir tous les véhicules",
       "details": "Voir les détails"
     },
