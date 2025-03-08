@@ -127,20 +127,15 @@ const BookingNotifications = () => {
       randomCar = carsToChooseFrom[Math.floor(Math.random() * carsToChooseFrom.length)];
     }
     
-    // Более реалистичное распределение времени бронирования
-    // Большинство бронирований будут показаны как произошедшие в последние 30 минут,
-    // но некоторые могут быть и более давними (до 2 часов)
+    // Модифицируем распределение времени бронирования
     let timeAgo;
     const rand = Math.random();
     if (rand < 0.7) {
       // 70% бронирований в последние 30 минут
       timeAgo = Math.floor(Math.random() * 25) + 5; // от 5 до 30 минут
-    } else if (rand < 0.9) {
-      // 20% бронирований от 30 минут до 1 часа
-      timeAgo = Math.floor(Math.random() * 30) + 30; // от 30 до 60 минут
     } else {
-      // 10% бронирований от 1 до 2 часов
-      timeAgo = Math.floor(Math.random() * 60) + 60; // от 60 до 120 минут
+      // 30% бронирований от 30 до 60 минут
+      timeAgo = Math.floor(Math.random() * 30) + 30; // от 30 до 60 минут
     }
 
     return {
@@ -178,6 +173,11 @@ const BookingNotifications = () => {
       setNotification(newNotification);
       setIsVisible(true);
       
+      // Скрываем уведомление через 7 секунд
+      setTimeout(() => {
+        setIsVisible(false);
+      }, 7000);
+      
       setNotificationState(prev => ({
         ...prev,
         lastShownTimestamp: Date.now(),
@@ -185,8 +185,23 @@ const BookingNotifications = () => {
       }));
     }, getAdaptiveInterval());
 
-    return () => clearInterval(showInterval);
+    return () => {
+      clearInterval(showInterval);
+    };
   }, [notificationState]);
+
+  const formatTimeAgo = (minutes: number) => {
+    if (minutes < 60) {
+      return {
+        value: minutes,
+        isHour: false
+      };
+    }
+    return {
+      value: Math.floor(minutes / 60),
+      isHour: true
+    };
+  };
 
   if (!notification) return null;
 
@@ -194,6 +209,7 @@ const BookingNotifications = () => {
   if (!car) return null;
 
   const isDarkMode = theme === 'dark';
+  const timeFormatted = formatTimeAgo(notification.timeAgo);
 
   return (
     <AnimatePresence>
@@ -229,32 +245,52 @@ const BookingNotifications = () => {
               <p className="text-sm font-medium" style={{ color: isDarkMode ? '#e9be6c' : '#b78628' }}>
                 {i18n.language === 'fr' && (
                   <>
-                    a réservé <span className="font-semibold">{car.name}</span> il y a <span className="font-semibold">{notification.timeAgo}</span> minutes
+                    a réservé <span className="font-semibold">{car.name}</span> {timeFormatted.isHour ? (
+                      <>il y a <span className="font-semibold">{timeFormatted.value}</span> {timeFormatted.value === 1 ? 'heure' : 'heures'}</>
+                    ) : (
+                      <>il y a <span className="font-semibold">{timeFormatted.value}</span> minutes</>
+                    )}
                   </>
                 )}
                 {i18n.language === 'es' && (
                   <>
-                    ha reservado <span className="font-semibold">{car.name}</span> hace <span className="font-semibold">{notification.timeAgo}</span> minutos
+                    ha reservado <span className="font-semibold">{car.name}</span> hace <span className="font-semibold">{timeFormatted.value}</span> {timeFormatted.isHour ? (
+                      timeFormatted.value === 1 ? 'hora' : 'horas'
+                    ) : 'minutos'}
                   </>
                 )}
                 {i18n.language === 'en' && (
                   <>
-                    booked <span className="font-semibold">{car.name}</span> <span className="font-semibold">{notification.timeAgo}</span> minutes ago
+                    booked <span className="font-semibold">{car.name}</span> <span className="font-semibold">{timeFormatted.value}</span> {timeFormatted.isHour ? (
+                      timeFormatted.value === 1 ? 'hour' : 'hours'
+                    ) : 'minutes'} ago
                   </>
                 )}
                 {i18n.language === 'de' && (
                   <>
-                    hat <span className="font-semibold">{car.name}</span> vor <span className="font-semibold">{notification.timeAgo}</span> Minuten gebucht
+                    hat <span className="font-semibold">{car.name}</span> vor <span className="font-semibold">{timeFormatted.value}</span> {timeFormatted.isHour ? (
+                      timeFormatted.value === 1 ? 'Stunde' : 'Stunden'
+                    ) : 'Minuten'} gebucht
                   </>
                 )}
                 {i18n.language === 'ru' && (
                   <>
-                    забронировал(а) <span className="font-semibold">{car.name}</span> <span className="font-semibold">{notification.timeAgo}</span> минут назад
+                    забронировал(а) <span className="font-semibold">{car.name}</span> <span className="font-semibold">{timeFormatted.value}</span> {timeFormatted.isHour ? (
+                      timeFormatted.value === 1 ? 'час' : (timeFormatted.value < 5 ? 'часа' : 'часов')
+                    ) : (
+                      timeFormatted.value === 1 ? 'минуту' : (
+                        timeFormatted.value < 5 ? 'минуты' : (
+                          timeFormatted.value > 20 && timeFormatted.value % 10 === 1 ? 'минуту' : (
+                            timeFormatted.value > 20 && timeFormatted.value % 10 < 5 ? 'минуты' : 'минут'
+                          )
+                        )
+                      )
+                    )} назад
                   </>
                 )}
                 {!['fr', 'es', 'en', 'de', 'ru'].includes(i18n.language) && (
                   <>
-                    {t('notifications.booked', { car: car.name, time: notification.timeAgo })}
+                    {t('notifications.booked', { car: car.name, time: timeFormatted.value, unit: timeFormatted.isHour ? t('time.hours') : t('time.minutes') })}
                   </>
                 )}
               </p>
