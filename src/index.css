@@ -15,7 +15,7 @@
     width: 100%;
     position: relative;
     overflow-x: hidden;
-    @apply bg-gray-50 dark:bg-premium-black text-gray-800 dark:text-white transition-colors duration-300;
+    @apply bg-premium-silver-light dark:bg-premium-black text-gray-700 dark:text-white transition-colors duration-300;
   }
 
   #root {
@@ -27,7 +27,7 @@
   
   /* Улучшенные стили для ссылок */
   a {
-    @apply text-gray-800 dark:text-white hover:text-premium-gold dark:hover:text-premium-gold transition-colors duration-200;
+    @apply text-gray-700 dark:text-white hover:text-premium-gold dark:hover:text-premium-gold transition-colors duration-200;
   }
 }
 
@@ -38,45 +38,45 @@
   }
 
   .btn-secondary {
-    @apply inline-flex items-center justify-center px-4 py-2 border border-gray-300 dark:border-gray-600 text-base font-medium rounded-md text-gray-800 dark:text-white bg-white dark:bg-premium-black hover:bg-gray-50 dark:hover:bg-premium-black-charcoal focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-premium-gold transition-all duration-200;
+    @apply inline-flex items-center justify-center px-4 py-2 border border-gray-300 dark:border-gray-600 text-base font-medium rounded-md text-gray-700 dark:text-white bg-white dark:bg-premium-black hover:bg-premium-silver-light dark:hover:bg-premium-black-charcoal focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-premium-gold transition-all duration-200;
   }
 
   .input-primary {
-    @apply block w-full rounded-md border-gray-300 dark:border-gray-600 shadow-sm focus:border-premium-gold focus:ring-premium-gold dark:bg-premium-black/80 dark:text-white bg-white text-gray-800 sm:text-sm transition-all duration-200;
+    @apply block w-full rounded-md border-gray-300 dark:border-gray-600 shadow-sm focus:border-premium-gold focus:ring-premium-gold dark:bg-premium-black/80 dark:text-white bg-white text-gray-700 sm:text-sm transition-all duration-200;
   }
 
   /* Карточки и контейнеры */
   .card {
-    @apply bg-white dark:bg-premium-gradient-1 rounded-lg shadow-md dark:shadow-lg transition-colors duration-300;
+    @apply bg-silver-gradient-1 dark:bg-premium-gradient-1 rounded-lg shadow-md dark:shadow-lg transition-colors duration-300;
   }
 
   .container-light {
-    @apply bg-gray-100 dark:bg-premium-black-elegant transition-colors duration-300;
+    @apply bg-premium-silver-light dark:bg-premium-black-elegant transition-colors duration-300;
   }
   
   /* Премиальные контейнеры с градиентами */
   .premium-container-1 {
-    @apply bg-white dark:bg-premium-gradient-1 rounded-lg shadow-md;
+    @apply bg-silver-gradient-1 dark:bg-premium-gradient-1 rounded-lg shadow-md;
   }
   
   .premium-container-2 {
-    @apply bg-white dark:bg-premium-gradient-2 rounded-lg shadow-md;
+    @apply bg-silver-gradient-2 dark:bg-premium-gradient-2 rounded-lg shadow-md;
   }
   
   .premium-container-3 {
-    @apply bg-white dark:bg-premium-gradient-3 rounded-lg shadow-md;
+    @apply bg-silver-gradient-3 dark:bg-premium-gradient-3 rounded-lg shadow-md;
   }
   
   .premium-container-4 {
-    @apply bg-white dark:bg-premium-gradient-4 rounded-lg shadow-md;
+    @apply bg-silver-gradient-4 dark:bg-premium-gradient-4 rounded-lg shadow-md;
   }
   
   .premium-container-gold {
-    @apply bg-white dark:bg-premium-gradient-gold rounded-lg shadow-md;
+    @apply bg-silver-gradient-gold dark:bg-premium-gradient-gold rounded-lg shadow-md;
   }
   
   .premium-container-radial {
-    @apply bg-white dark:bg-premium-radial rounded-lg shadow-md;
+    @apply bg-silver-radial dark:bg-premium-radial rounded-lg shadow-md;
   }
 }
 
@@ -88,7 +88,7 @@
   
   /* Премиальные эффекты */
   .premium-border {
-    @apply border border-gray-200 dark:border-premium-black-onyx;
+    @apply border border-premium-silver-medium dark:border-premium-black-onyx;
   }
   
   .premium-shadow {
@@ -114,11 +114,11 @@
 
 /* Улучшенная типография */
 h1, h2, h3, h4, h5, h6 {
-  @apply font-bold tracking-tight text-gray-800 dark:text-white transition-colors duration-300;
+  @apply font-bold tracking-tight text-gray-700 dark:text-white transition-colors duration-300;
 }
 
 p {
-  @apply text-gray-700 dark:text-white/90 transition-colors duration-300;
+  @apply text-gray-600 dark:text-white/90 transition-colors duration-300;
 }
 
 /* Стили для скроллбара */
@@ -129,15 +129,15 @@ p {
   }
 
   ::-webkit-scrollbar-track {
-    @apply bg-gray-100;
+    @apply bg-premium-silver-light;
   }
 
   ::-webkit-scrollbar-thumb {
-    @apply bg-gray-300 rounded-full border-2 border-gray-100;
+    @apply bg-premium-silver-dark rounded-full border-2 border-premium-silver-light;
   }
 
   ::-webkit-scrollbar-thumb:hover {
-    @apply bg-gray-400;
+    @apply bg-premium-silver;
   }
 
   /* Темная тема для скроллбара */

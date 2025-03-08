@@ -3,6 +3,7 @@ import { motion, AnimatePresence } from 'framer-motion'
 import { StarIcon } from '@heroicons/react/24/solid'
 import { useTranslation } from 'react-i18next'
 import { reviews, Review } from '../data/reviews'
+import { useTheme } from '../contexts/ThemeContext'
 
 interface ReviewFormData {
   name: string
@@ -13,6 +14,7 @@ interface ReviewFormData {
 
 const ReviewsSection = () => {
   const { t, i18n } = useTranslation()
+  const { theme } = useTheme()
   const [showForm, setShowForm] = useState(false)
   const [formData, setFormData] = useState<ReviewFormData>({
     name: '',
@@ -100,16 +102,16 @@ const ReviewsSection = () => {
   }
 
   return (
-    <section className="relative py-24 bg-premium-radial">
+    <section className="relative py-24 bg-silver-radial dark:bg-premium-radial">
       <div className="absolute inset-0">
-        <div className="bg-premium-black-deep/20 w-full h-full"></div>
+        <div className="bg-premium-silver-medium/20 dark:bg-premium-black-deep/20 w-full h-full"></div>
       </div>
       <div className="relative container mx-auto px-4">
         <div className="text-center mb-16">
-          <h2 className="text-4xl font-bold text-white mb-4">
+          <h2 className="text-4xl font-bold text-gray-800 dark:text-white mb-4">
             <span className="text-premium-gold premium-text-shadow">{t('home.reviews.title')}</span>
           </h2>
-          <p className="text-xl text-premium-silver">
+          <p className="text-xl text-gray-700 dark:text-premium-silver">
             {t('home.reviews.description')}
           </p>
         </div>
@@ -147,7 +149,7 @@ const ReviewsSection = () => {
                   viewport={{ once: true }}
                 >
                   <motion.div 
-                    className="bg-premium-gradient-1 p-6 rounded-lg border border-premium-gold/20 h-full premium-shadow"
+                    className="bg-silver-gradient-2 dark:bg-premium-gradient-1 p-6 rounded-lg border border-premium-silver-medium dark:border-premium-gold/20 h-full premium-shadow"
                     whileHover={{ y: -5 }}
                     transition={{ type: "spring", stiffness: 300 }}
                   >
@@ -160,8 +162,8 @@ const ReviewsSection = () => {
                         />
                       </div>
                       <div className="ml-4">
-                        <h3 className="text-lg font-semibold text-white">{review.name}</h3>
-                        <p className="text-sm text-premium-silver">{review.car}</p>
+                        <h3 className="text-lg font-semibold text-gray-800 dark:text-white">{review.name}</h3>
+                        <p className="text-sm text-gray-700 dark:text-premium-silver">{review.car}</p>
                       </div>
                     </div>
                     <div className="flex mb-2">
@@ -169,13 +171,13 @@ const ReviewsSection = () => {
                         <StarIcon
                           key={i}
                           className={`h-5 w-5 ${
-                            i < review.rating ? 'text-premium-gold' : 'text-gray-600'
+                            i < review.rating ? 'text-premium-gold' : (theme === 'dark' ? 'text-gray-600' : 'text-gray-400')
                           }`}
                         />
                       ))}
                     </div>
-                    <p className="text-premium-silver leading-relaxed">{review.comment}</p>
-                    <p className="mt-4 text-sm text-premium-silver/60">
+                    <p className="text-gray-700 dark:text-premium-silver leading-relaxed">{review.comment}</p>
+                    <p className="mt-4 text-sm text-gray-500 dark:text-premium-silver/60">
                       {new Date(review.date).toLocaleDateString(review.language)}
                     </p>
                   </motion.div>
@@ -188,7 +190,7 @@ const ReviewsSection = () => {
           <div className="hidden md:block">
             <button
               onClick={prevSlide}
-              className="absolute left-0 top-1/2 -translate-y-1/2 bg-premium-black-elegant hover:bg-premium-gold/30 p-3 rounded-full backdrop-blur-sm transition-colors z-10 premium-shadow"
+              className="absolute left-0 top-1/2 -translate-y-1/2 bg-premium-silver-medium dark:bg-premium-black-elegant hover:bg-premium-gold/30 p-3 rounded-full backdrop-blur-sm transition-colors z-10 premium-shadow"
             >
               <svg className="h-6 w-6 text-premium-gold" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" />
@@ -196,7 +198,7 @@ const ReviewsSection = () => {
             </button>
             <button
               onClick={nextSlide}
-              className="absolute right-0 top-1/2 -translate-y-1/2 bg-premium-black-elegant hover:bg-premium-gold/30 p-3 rounded-full backdrop-blur-sm transition-colors z-10 premium-shadow"
+              className="absolute right-0 top-1/2 -translate-y-1/2 bg-premium-silver-medium dark:bg-premium-black-elegant hover:bg-premium-gold/30 p-3 rounded-full backdrop-blur-sm transition-colors z-10 premium-shadow"
             >
               <svg className="h-6 w-6 text-premium-gold" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
@@ -243,14 +245,14 @@ const ReviewsSection = () => {
                 initial={{ scale: 0.9, opacity: 0 }}
                 animate={{ scale: 1, opacity: 1 }}
                 exit={{ scale: 0.9, opacity: 0 }}
-                className="bg-premium-black/90 backdrop-blur-lg rounded-lg p-6 max-w-md w-full border border-premium-gold/10"
+                className={`${theme === 'dark' ? 'bg-premium-black/90' : 'bg-silver-gradient-2'} backdrop-blur-lg rounded-lg p-6 max-w-md w-full border ${theme === 'dark' ? 'border-premium-gold/10' : 'border-premium-silver-medium'}`}
               >
-                <h3 className="text-xl font-semibold mb-4 text-white">
+                <h3 className={`text-xl font-semibold mb-4 ${theme === 'dark' ? 'text-white' : 'text-gray-800'}`}>
                   {t('home.reviews.form.title')}
                 </h3>
                 <form onSubmit={handleSubmit} className="space-y-4">
                   <div>
-                    <label className="block text-sm font-medium text-premium-silver mb-1">
+                    <label className={`block text-sm font-medium ${theme === 'dark' ? 'text-premium-silver' : 'text-gray-700'} mb-1`}>
                       {t('home.reviews.form.name')}
                     </label>
                     <input
@@ -258,11 +260,11 @@ const ReviewsSection = () => {
                       required
                       value={formData.name}
                       onChange={(e) => setFormData({ ...formData, name: e.target.value })}
-                      className="w-full rounded-md bg-white/5 border-premium-gold/20 text-white focus:border-premium-gold focus:ring-premium-gold"
+                      className={`w-full rounded-md ${theme === 'dark' ? 'bg-white/5 border-premium-gold/20 text-white' : 'bg-white border-gray-300 text-gray-800'} focus:border-premium-gold focus:ring-premium-gold`}
                     />
                   </div>
                   <div>
-                    <label className="block text-sm font-medium text-premium-silver mb-1">
+                    <label className={`block text-sm font-medium ${theme === 'dark' ? 'text-premium-silver' : 'text-gray-700'} mb-1`}>
                       {t('home.reviews.form.car')}
                     </label>
                     <input
@@ -270,11 +272,11 @@ const ReviewsSection = () => {
                       required
                       value={formData.car}
                       onChange={(e) => setFormData({ ...formData, car: e.target.value })}
-                      className="w-full rounded-md bg-white/5 border-premium-gold/20 text-white focus:border-premium-gold focus:ring-premium-gold"
+                      className={`w-full rounded-md ${theme === 'dark' ? 'bg-white/5 border-premium-gold/20 text-white' : 'bg-white border-gray-300 text-gray-800'} focus:border-premium-gold focus:ring-premium-gold`}
                     />
                   </div>
                   <div>
-                    <label className="block text-sm font-medium text-premium-silver mb-1">
+                    <label className={`block text-sm font-medium ${theme === 'dark' ? 'text-premium-silver' : 'text-gray-700'} mb-1`}>
                       {t('home.reviews.form.rating')}
                     </label>
                     <div className="flex mt-1">
@@ -282,7 +284,7 @@ const ReviewsSection = () => {
                         <StarIcon
                           key={rating}
                           className={`h-6 w-6 cursor-pointer transition-colors ${
-                            rating <= formData.rating ? 'text-premium-gold' : 'text-gray-600'
+                            rating <= formData.rating ? 'text-premium-gold' : (theme === 'dark' ? 'text-gray-600' : 'text-gray-400')
                           }`}
                           onClick={() => setFormData({ ...formData, rating })}
                         />
@@ -290,7 +292,7 @@ const ReviewsSection = () => {
                     </div>
                   </div>
                   <div>
-                    <label className="block text-sm font-medium text-premium-silver mb-1">
+                    <label className={`block text-sm font-medium ${theme === 'dark' ? 'text-premium-silver' : 'text-gray-700'} mb-1`}>
                       {t('home.reviews.form.comment')}
                     </label>
                     <textarea
@@ -298,14 +300,14 @@ const ReviewsSection = () => {
                       value={formData.comment}
                       onChange={(e) => setFormData({ ...formData, comment: e.target.value })}
                       rows={4}
-                      className="w-full rounded-md bg-white/5 border-premium-gold/20 text-white focus:border-premium-gold focus:ring-premium-gold"
+                      className={`w-full rounded-md ${theme === 'dark' ? 'bg-white/5 border-premium-gold/20 text-white' : 'bg-white border-gray-300 text-gray-800'} focus:border-premium-gold focus:ring-premium-gold`}
                     />
                   </div>
                   <div className="flex justify-end space-x-3">
                     <button
                       type="button"
                       onClick={() => setShowForm(false)}
-                      className="px-4 py-2 border border-premium-gold/20 rounded-md text-premium-silver hover:bg-premium-gold/10 transition-colors"
+                      className={`px-4 py-2 border ${theme === 'dark' ? 'border-premium-gold/20 text-premium-silver hover:bg-premium-gold/10' : 'border-gray-300 text-gray-700 hover:bg-gray-100'} rounded-md transition-colors`}
                     >
                       {t('common.cancel')}
                     </button>
@@ -328,7 +330,7 @@ const ReviewsSection = () => {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               exit={{ opacity: 0, y: -20 }}
-              className="fixed bottom-4 right-4 bg-premium-gold/20 backdrop-blur-sm border border-premium-gold/30 text-white px-6 py-4 rounded-lg z-50"
+              className={`fixed bottom-4 right-4 ${theme === 'dark' ? 'bg-premium-gold/20 border-premium-gold/30 text-white' : 'bg-premium-gold/10 border-premium-gold/20 text-gray-800'} backdrop-blur-sm border px-6 py-4 rounded-lg z-50`}
             >
               <p>{t('home.reviews.success')}</p>
             </motion.div>

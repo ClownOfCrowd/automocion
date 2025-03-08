@@ -41,8 +41,8 @@ const Navbar = () => {
   return (
     <Disclosure as="nav" className={`fixed w-full z-50 transition-all duration-300 ${
       isScrolled 
-        ? 'bg-gray-50 dark:bg-premium-gradient-1 shadow-md' 
-        : 'bg-gray-50/90 backdrop-blur-md dark:bg-premium-black/90 dark:backdrop-blur-md'
+        ? 'bg-silver-gradient-1 dark:bg-premium-gradient-1 shadow-md' 
+        : 'bg-premium-silver-light/90 backdrop-blur-md dark:bg-premium-black/90 dark:backdrop-blur-md'
     }`}>
       {({ open }) => (
         <>
