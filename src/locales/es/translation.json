@@ -260,22 +260,31 @@
     }
   },
   "contact": {
-    "title": "Contacta con nosotros",
-    "subtitle": "Estamos aquí para ayudarte. Contáctanos para cualquier consulta sobre nuestros servicios",
-    "info": {
-      "title": "Información de contacto",
-      "schedule": "Horario: 9:00-13:00 / 15:00-19:00",
-      "workdays": "Lunes a viernes",
-      "address": "Carrer del Mas de l'Abat 145F",
-      "location": "Vila-seca, Cataluña",
-      "postal": "43480"
-    },
+    "title": "Contacto",
+    "subtitle": "Estamos aquí para ayudarte",
+    "description": "¿Tienes preguntas sobre nuestros servicios o necesitas ayuda con tu reserva? Nuestro equipo está listo para ayudarte.",
     "form": {
-      "name": "Nombre completo",
-      "email": "Email",
-      "phone": "Teléfono",
+      "title": "Envíanos un mensaje",
+      "name": "Tu Nombre",
+      "email": "Tu Email",
+      "phone": "Número de Teléfono",
       "message": "Mensaje",
-      "submit": "Enviar mensaje"
+      "submit": "Enviar Mensaje",
+      "success": "Tu mensaje ha sido enviado con éxito. Nos pondremos en contacto contigo pronto.",
+      "error": "Hubo un error al enviar tu mensaje. Por favor, inténtalo de nuevo."
+    },
+    "info": {
+      "title": "Información de Contacto",
+      "address": "Carrer del Mas de l'Abat 145F",
+      "address_mobile": "Calle Principal 123",
+      "location": "Vila-seca, Cataluña",
+      "location_mobile": "Vila-seca, Tarragona",
+      "postal": "43480",
+      "postal_mobile": "43480, Spain",
+      "schedule": "Horario: 9:00-13:00 / 15:00-19:00",
+      "schedule_mobile": "Working hours:",
+      "workdays": "Lunes a viernes",
+      "workdays_mobile": "Mon-Sat: 9:00 - 20:00"
     },
     "social": {
       "title": "Redes sociales",
@@ -287,15 +296,20 @@
   "footer": {
     "company": {
       "about": "Alquiler de coches en Vila-seca",
-      "description": "Servicio premium y atención personalizada"
-    },
-    "contact": {
-      "title": "Contacto"
-    },
-    "social": {
-      "title": "Redes sociales"
+      "about_mobile": "O.V. Automoción - Premium car rental service in Vila-seca",
+      "description": "Servicio premium y atención personalizada",
+      "description_mobile": "We offer a wide range of luxury and premium vehicles for your comfort and enjoyment"
     },
     "payments": "Métodos de pago",
+    "payments_mobile": "PAYMENT METHODS",
+    "contact": {
+      "title": "Contacto",
+      "title_mobile": "CONTACT US"
+    },
+    "social": {
+      "title": "Redes sociales",
+      "title_mobile": "FOLLOW US"
+    },
     "copyright": "Todos los derechos reservados."
   },
   "features": {
@@ -418,33 +432,70 @@
   },
   "terms": {
     "title": "Condiciones de Alquiler",
+    "subtitle": "Por favor, lea atentamente estas condiciones antes de alquilar un vehículo",
     "requirements": {
       "title": "Requisitos",
       "age": "Edad mínima: 25 años",
       "license": "Carnet de conducir con más de 2 años de antigüedad",
       "credit": "Tarjeta de crédito a nombre del conductor",
-      "documents": "DNI o pasaporte en vigor"
+      "documents": "DNI o pasaporte en vigor",
+      "details": "Al retirar el vehículo, tanto el conductor principal como los conductores adicionales deberán presentar su permiso de conducir. Todos los conductores deberán poseer un permiso de conducir con una antigüedad mínima de 24 meses. La edad mínima para conducir es de 21 años y la máxima de 80 años."
     },
     "insurance": {
       "title": "Seguros",
       "basic": "Seguro a terceros incluido",
       "full": "Seguro a todo riesgo disponible",
       "theft": "Protección contra robo",
-      "assistance": "Asistencia en carretera 24/7"
+      "assistance": "Asistencia en carretera 24/7",
+      "details": "Todos los alquileres incluyen cobertura básica de seguro. Esto cubre daños al vehículo con una franquicia de 500€. Hay opciones de seguro adicionales disponibles para reducir o eliminar la franquicia."
     },
     "payment": {
       "title": "Pagos",
       "methods": "Aceptamos todas las tarjetas principales",
       "deposit": "Depósito de seguridad requerido",
       "cancellation": "Cancelación gratuita hasta 48h antes",
-      "refund": "Reembolso completo según condiciones"
+      "refund": "Reembolso completo según condiciones",
+      "details": "La compañía de alquiler necesitará un depósito de 200€ al recoger el vehículo. El depósito será desbloqueado al finalizar el alquiler, siempre y cuando el vehículo sea devuelto en las condiciones acordadas."
     },
     "additional": {
       "title": "Servicios Adicionales",
       "fuel": "Política de combustible flexible",
       "mileage": "Kilometraje ilimitado disponible",
       "cleaning": "Servicio de limpieza incluido",
-      "delivery": "Entrega y recogida disponible"
+      "delivery": "Entrega y recogida disponible",
+      "details": "Ofrecemos servicios adicionales como GPS, sillas infantiles, WiFi móvil y seguros adicionales. Todos los servicios adicionales están sujetos a los impuestos locales e impuestos sobre ventas."
+    },
+    "coverage": {
+      "title": "Coberturas y Exenciones",
+      "cdw": "Cobertura parcial por colisión (CDW)",
+      "tpl": "Seguro de responsabilidad civil (TPL)",
+      "tp": "Cobertura en caso de robo (TP)",
+      "pai": "Seguro personal de accidentes (PAI)",
+      "details": "En caso de que la carrocería resultase dañada durante el alquiler, la cantidad máxima que podría tener que abonar sería la llamada 'franquicia por daños'. La cobertura sólo será válida en caso de cumplirse los términos del contrato de alquiler."
+    },
+    "included": {
+      "title": "Incluido en el Precio",
+      "contract": "Cargo de contrato",
+      "facilities": "Cargo por uso de las instalaciones",
+      "roadside": "Asistencia en carretera",
+      "taxes": "Impuestos locales",
+      "details": "Sin coste adicional: cargo por servicios de consolidación, cargo de contrato, cargo por uso de las instalaciones, seguro del permiso de circulación, asistencia en carretera, cargo medioambiental, impuestos locales y tasas."
+    },
+    "mileage": {
+      "title": "Kilometraje",
+      "limit1": "300km/día alquilando de 1 a 2 días",
+      "limit2": "250km/día alquilando de 3 a 7 días",
+      "limit3": "200km/día alquilando de 7 a 30 días",
+      "additional": "Kilometraje adicional: 0,15€ por km",
+      "details": "El kilometraje se limita según la duración del alquiler. El kilometraje adicional tendrá un precio de 0,15€, incluidos impuestos, por cada kilómetro adicional."
+    },
+    "notIncluded": {
+      "title": "No Incluido en el Precio",
+      "cleaning": "Cargo por limpieza excesiva",
+      "fines": "Multas, peajes y tasas",
+      "fuel": "Cargo por repostaje si devuelve con menos combustible",
+      "extras": "Servicios adicionales opcionales",
+      "details": "Los clientes se responsabilizarán de todos los peajes, tasas de congestión, multas por velocidad, aparcamiento y/o de tráfico, así como de todos los gastos administrativos asociados."
     },
     "footer": "Para más información, no dude en contactar con nuestro equipo de atención al cliente."
   }

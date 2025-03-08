@@ -272,23 +272,30 @@
   },
   "contact": {
     "title": "Contact Us",
-    "subtitle": "We're here to help and answer any question you might have",
-    "info": {
-      "title": "Contact Information",
-      "address": "Calle Principal 123",
-      "location": "Vila-seca, Tarragona",
-      "postal": "43480, Spain",
-      "schedule": "Working hours:",
-      "workdays": "Mon-Sat: 9:00 - 20:00"
-    },
+    "subtitle": "We're here to help",
+    "description": "Have questions about our services or need assistance with your booking? Our team is ready to help you.",
     "form": {
       "title": "Send us a message",
       "name": "Your Name",
       "email": "Your Email",
-      "phone": "Your Phone",
-      "subject": "Subject",
-      "message": "Your Message",
-      "submit": "Send Message"
+      "phone": "Phone Number",
+      "message": "Message",
+      "submit": "Send Message",
+      "success": "Your message has been sent successfully. We'll get back to you soon.",
+      "error": "There was an error sending your message. Please try again."
+    },
+    "info": {
+      "title": "Contact Information",
+      "address": "Carrer del Mas de l'Abat 145F",
+      "address_mobile": "Calle Principal 123",
+      "location": "Vila-seca, Cataluña",
+      "location_mobile": "Vila-seca, Tarragona",
+      "postal": "43480",
+      "postal_mobile": "43480, Spain",
+      "schedule": "Horario: 9:00-13:00 / 15:00-19:00",
+      "schedule_mobile": "Working hours:",
+      "workdays": "Lunes a viernes",
+      "workdays_mobile": "Mon-Sat: 9:00 - 20:00"
     },
     "social": {
       "title": "Follow Us",
@@ -303,17 +310,22 @@
   },
   "footer": {
     "company": {
-      "about": "O.V. Automoción - Premium car rental service in Vila-seca",
-      "description": "We offer a wide range of luxury and premium vehicles for your comfort and enjoyment"
-    },
-    "contact": {
-      "title": "Contact Us"
-    },
-    "social": {
-      "title": "Follow Us"
+      "about": "Car rental in Vila-seca",
+      "about_mobile": "O.V. Automoción - Premium car rental service in Vila-seca",
+      "description": "Premium service and personalized attention",
+      "description_mobile": "We offer a wide range of luxury and premium vehicles for your comfort and enjoyment"
     },
     "payments": "Payment Methods",
-    "copyright": "All rights reserved"
+    "payments_mobile": "PAYMENT METHODS",
+    "contact": {
+      "title": "Contact",
+      "title_mobile": "CONTACT US"
+    },
+    "social": {
+      "title": "Social Networks",
+      "title_mobile": "FOLLOW US"
+    },
+    "copyright": "All rights reserved."
   },
   "terms": {
     "title": "Rental Terms and Conditions",
@@ -359,7 +371,72 @@
         "title": "Usage Restrictions",
         "content": "Vehicles may not be taken outside of Spain without prior written consent. Off-road driving is strictly prohibited. Smoking and pets are not allowed in the vehicles."
       }
-    }
+    },
+    "requirements": {
+      "title": "Driver Requirements",
+      "age": "Minimum age: 25 years",
+      "license": "Driver's license held for at least 2 years",
+      "credit": "Credit card in the driver's name",
+      "documents": "Valid ID or passport",
+      "details": "When picking up the vehicle, both the main driver and additional drivers must present their driver's license. All drivers must have a driver's license with a minimum age of 24 months. The minimum age to drive is 21 years and the maximum is 80 years."
+    },
+    "insurance": {
+      "title": "Insurance and Coverage",
+      "basic": "Third-party insurance included",
+      "full": "Full coverage insurance available",
+      "theft": "Theft protection",
+      "assistance": "24/7 roadside assistance",
+      "details": "All rentals include basic insurance coverage. This covers damage to the vehicle with a deductible of €500. Additional insurance options are available to reduce or eliminate the deductible."
+    },
+    "payment": {
+      "title": "Payments",
+      "methods": "All major cards accepted",
+      "deposit": "Security deposit required",
+      "cancellation": "Free cancellation up to 48h before",
+      "refund": "Full refund according to conditions",
+      "details": "The rental company will require a deposit of €200 when picking up the vehicle. The deposit will be unblocked at the end of the rental, provided the vehicle is returned in the agreed conditions."
+    },
+    "additional": {
+      "title": "Additional Services",
+      "fuel": "Flexible fuel policy",
+      "mileage": "Unlimited mileage available",
+      "cleaning": "Cleaning service included",
+      "delivery": "Delivery and pickup available",
+      "details": "We offer additional services such as GPS, child seats, mobile WiFi and additional insurance. All additional services are subject to local taxes and sales taxes."
+    },
+    "coverage": {
+      "title": "Coverage and Exemptions",
+      "cdw": "Collision Damage Waiver (CDW)",
+      "tpl": "Third Party Liability (TPL)",
+      "tp": "Theft Protection (TP)",
+      "pai": "Personal Accident Insurance (PAI)",
+      "details": "In the event that the bodywork is damaged during the rental, the maximum amount you may have to pay would be the so-called 'damage deductible'. Coverage will only be valid if the terms of the rental agreement are met."
+    },
+    "included": {
+      "title": "Included in the Price",
+      "contract": "Contract fee",
+      "facilities": "Facilities usage fee",
+      "roadside": "Roadside assistance",
+      "taxes": "Local taxes",
+      "details": "At no additional cost: consolidation service charge, contract charge, facilities usage charge, circulation permit insurance, roadside assistance, environmental charge, local taxes and fees."
+    },
+    "mileage": {
+      "title": "Mileage",
+      "limit1": "300km/day renting for 1-2 days",
+      "limit2": "250km/day renting for 3-7 days",
+      "limit3": "200km/day renting for 7-30 days",
+      "additional": "Additional mileage: €0.15 per km",
+      "details": "Mileage is limited according to the duration of the rental. Additional mileage will cost €0.15, including taxes, for each additional kilometer."
+    },
+    "notIncluded": {
+      "title": "Not Included in the Price",
+      "cleaning": "Charge for excessive cleaning",
+      "fines": "Fines, tolls and fees",
+      "fuel": "Refueling charge if returned with less fuel",
+      "extras": "Optional additional services",
+      "details": "Customers will be responsible for all tolls, congestion charges, speeding fines, parking and/or traffic fines, as well as all associated administrative expenses."
+    },
+    "footer": "For more information, please do not hesitate to contact our customer service team."
   },
   "validation": {
     "required": "This field is required",

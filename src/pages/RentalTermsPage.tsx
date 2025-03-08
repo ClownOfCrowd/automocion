@@ -13,7 +13,8 @@ const RentalTermsPage = () => {
         t('terms.requirements.license'),
         t('terms.requirements.credit'),
         t('terms.requirements.documents')
-      ]
+      ],
+      details: t('terms.requirements.details')
     },
     {
       title: t('terms.insurance.title'),
@@ -22,7 +23,8 @@ const RentalTermsPage = () => {
         t('terms.insurance.full'),
         t('terms.insurance.theft'),
         t('terms.insurance.assistance')
-      ]
+      ],
+      details: t('terms.insurance.details')
     },
     {
       title: t('terms.payment.title'),
@@ -31,7 +33,8 @@ const RentalTermsPage = () => {
         t('terms.payment.deposit'),
         t('terms.payment.cancellation'),
         t('terms.payment.refund')
-      ]
+      ],
+      details: t('terms.payment.details')
     },
     {
       title: t('terms.additional.title'),
@@ -40,7 +43,48 @@ const RentalTermsPage = () => {
         t('terms.additional.mileage'),
         t('terms.additional.cleaning'),
         t('terms.additional.delivery')
-      ]
+      ],
+      details: t('terms.additional.details')
+    },
+    {
+      title: t('terms.coverage.title'),
+      items: [
+        t('terms.coverage.cdw'),
+        t('terms.coverage.tpl'),
+        t('terms.coverage.tp'),
+        t('terms.coverage.pai')
+      ],
+      details: t('terms.coverage.details')
+    },
+    {
+      title: t('terms.included.title'),
+      items: [
+        t('terms.included.contract'),
+        t('terms.included.facilities'),
+        t('terms.included.roadside'),
+        t('terms.included.taxes')
+      ],
+      details: t('terms.included.details')
+    },
+    {
+      title: t('terms.mileage.title'),
+      items: [
+        t('terms.mileage.limit1'),
+        t('terms.mileage.limit2'),
+        t('terms.mileage.limit3'),
+        t('terms.mileage.additional')
+      ],
+      details: t('terms.mileage.details')
+    },
+    {
+      title: t('terms.notIncluded.title'),
+      items: [
+        t('terms.notIncluded.cleaning'),
+        t('terms.notIncluded.fines'),
+        t('terms.notIncluded.fuel'),
+        t('terms.notIncluded.extras')
+      ],
+      details: t('terms.notIncluded.details')
     }
   ];
 
@@ -82,7 +126,7 @@ const RentalTermsPage = () => {
                 <h2 className="text-2xl font-bold mb-6 text-premium-gold">
                   {section.title}
                 </h2>
-                <ul className="space-y-4">
+                <ul className="space-y-4 mb-6">
                   {section.items.map((item, itemIndex) => (
                     <motion.li
                       key={itemIndex}
@@ -110,6 +154,13 @@ const RentalTermsPage = () => {
                     </motion.li>
                   ))}
                 </ul>
+                {section.details && (
+                  <div className="mt-4 p-4 bg-premium-gold/5 rounded-lg border border-premium-gold/10">
+                    <p className="text-sm text-gray-600 dark:text-premium-silver/80">
+                      {section.details}
+                    </p>
+                  </div>
+                )}
               </motion.div>
             ))}
           </div>
