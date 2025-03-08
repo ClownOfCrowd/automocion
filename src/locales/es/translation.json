@@ -219,18 +219,33 @@
   },
   "booking": {
     "title": "Reserva tu vehículo",
+    "subtitle": "Completa el formulario para reservar tu vehículo seleccionado",
+    "location": "Ubicaciones",
+    "pickupDetails": "Detalles de recogida",
+    "returnDetails": "Detalles de devolución",
+    "pickupLocation": "Lugar de recogida",
+    "returnLocation": "Lugar de devolución",
+    "pickupDate": "Fecha de recogida",
+    "returnDate": "Fecha de devolución",
+    "pickupTime": "Hora de recogida",
+    "returnTime": "Hora de devolución",
+    "selectDate": "Seleccionar fecha",
+    "selectLocation": "Seleccionar ubicación",
+    "sameReturnLocation": "Devolver en la misma ubicación",
+    "searchButton": "Buscar vehículos",
     "rental": {
       "title": "Detalles del alquiler",
       "pickup": "Fecha de recogida",
       "return": "Fecha de devolución",
       "pickupLocation": "Lugar de recogida",
-      "returnLocation": "Lugar de devolución"
+      "returnLocation": "Lugar de devolución",
+      "selectLocation": "Seleccionar ubicación"
     },
     "personal": {
       "title": "Datos personales",
       "firstName": "Nombre",
       "lastName": "Apellidos",
-      "email": "Email",
+      "email": "Correo electrónico",
       "phone": "Teléfono"
     },
     "options": {
@@ -240,14 +255,30 @@
       "childSeat": "Silla infantil",
       "childSeatDescription": "Silla infantil segura para los más pequeños",
       "insurance": "Seguro adicional",
-      "insuranceDescription": "Cobertura de seguro ampliada para su tranquilidad",
+      "insuranceDescription": "Cobertura de seguro ampliada para tu tranquilidad",
       "wifi": "WiFi móvil",
-      "wifiDescription": "Punto de acceso WiFi portátil para acceso a internet durante su viaje"
+      "wifiDescription": "Punto de acceso WiFi portátil para acceso a internet durante tu viaje"
     },
+    "continue": "Continuar",
     "submit": "Confirmar reserva",
-    "pickupDate": "Fecha de Recogida",
-    "returnDate": "Fecha de Devolución",
-    "searchButton": "Buscar Vehículos"
+    "summary": {
+      "title": "Resumen del pedido",
+      "days": "días",
+      "selectDates": "Selecciona fechas de alquiler",
+      "selectLocation": "Selecciona lugar de recogida",
+      "price": "Precio",
+      "differentLocation": "Diferentes lugares de recogida y devolución",
+      "total": "Total",
+      "noCar": "Ningún coche seleccionado",
+      "selectCar": "Selecciona un coche"
+    },
+    "help": {
+      "title": "¿Necesitas ayuda?",
+      "phone": "Teléfono",
+      "email": "Correo electrónico",
+      "chat": "Chat en vivo",
+      "chatDescription": "Nuestros especialistas están listos para responder tus preguntas"
+    }
   },
   "contact": {
     "title": "Contacta con nosotros",

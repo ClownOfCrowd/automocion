@@ -21,25 +21,47 @@ import {
 import { cars } from '../data/cars'
 import ReviewsSection from '../components/ReviewsSection'
 import LazyImage from '../components/LazyImage'
+import TimeSelector from '../components/TimeSelector'
+import LocationSelector from '../components/LocationSelector'
 
-interface QuickSearchForm {
-  pickupDate: string
-  returnDate: string
-  category: string
-  priceRange: number
+interface BookingForm {
+  pickupLocation: string;
+  returnLocation: string;
+  pickupDate: Date | null;
+  returnDate: Date | null;
+  pickupTime: string;
+  returnTime: string;
 }
 
 const HomePage = () => {
   const { t } = useTranslation()
   const navigate = useNavigate()
-  const [quickSearch, setQuickSearch] = useState<QuickSearchForm>({
-    pickupDate: '',
-    returnDate: '',
-    category: 'All',
-    priceRange: 200
+  
+  const [bookingForm, setBookingForm] = useState<BookingForm>({
+    pickupLocation: '',
+    returnLocation: '',
+    pickupDate: null,
+    returnDate: null,
+    pickupTime: '',
+    returnTime: ''
   })
-  const [pickupDate, setPickupDate] = useState<Date | null>(null)
-  const [returnDate, setReturnDate] = useState<Date | null>(null)
+  
+  const [sameReturnLocation, setSameReturnLocation] = useState(true)
+
+  const handleBookingSubmit = (e: React.FormEvent) => {
+    e.preventDefault()
+    
+    // Если выбрано "то же место возврата", используем место получения
+    const formData = {
+      ...bookingForm,
+      returnLocation: sameReturnLocation ? bookingForm.pickupLocation : bookingForm.returnLocation
+    }
+    
+    // Перенаправляем на страницу каталога с параметрами бронирования
+    navigate('/catalog', {
+      state: { booking: formData }
+    })
+  }
 
   const features = [
     {
@@ -59,18 +81,10 @@ const HomePage = () => {
     },
   ]
 
-  const handleQuickSearch = (e: React.FormEvent) => {
-    e.preventDefault()
-    navigate('/catalog', {
-      state: { filters: quickSearch },
-      search: `?category=${quickSearch.category}&priceRange=${quickSearch.priceRange}`
-    })
-  }
-
   return (
     <div className="min-h-screen bg-white dark:bg-premium-black">
       {/* Hero Section with Booking Form */}
-      <section className="relative h-[80vh] bg-gradient-to-r from-premium-black to-premium-black/90">
+      <section className="relative h-[90vh] bg-gradient-to-r from-premium-black to-premium-black/90">
         <div className="absolute inset-0">
           <LazyImage
             src="/hero-bg.jpg"
@@ -79,7 +93,7 @@ const HomePage = () => {
           />
         </div>
         <div className="relative container mx-auto px-4 h-full flex flex-col justify-center">
-          <div className="max-w-3xl">
+          <div className="max-w-3xl mb-12">
             <h1 className="text-5xl md:text-6xl font-bold text-white mb-6">
               <span className="text-premium-gold">O.V. Automoción</span>
               <br />
@@ -90,43 +104,114 @@ const HomePage = () => {
             </p>
           </div>
           
-          {/* Booking Form */}
-          <div className="bg-white dark:bg-premium-black/90 p-4 sm:p-6 rounded-lg shadow-xl max-w-4xl mx-auto">
-            <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
-              <div className="space-y-2">
-                <label className="block text-sm font-medium text-gray-700 dark:text-premium-silver mb-1">
-                  {t('booking.pickupDate')}
-                </label>
-                <DatePicker
-                  selected={pickupDate}
-                  onChange={(date) => setPickupDate(date)}
-                  className="w-full rounded-md border border-gray-300 dark:border-gray-700 dark:bg-premium-black dark:text-white shadow-sm py-3 px-4 text-base"
-                  dateFormat="dd/MM/yyyy"
-                  minDate={new Date()}
-                  placeholderText={t('booking.pickupDate')}
-                />
+          {/* Enhanced Booking Form */}
+          <div className="bg-white dark:bg-premium-black/90 p-6 rounded-lg shadow-xl max-w-5xl mx-auto">
+            <form onSubmit={handleBookingSubmit}>
+              <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+                <div className="space-y-4">
+                  <h3 className="text-lg font-semibold text-premium-black dark:text-white border-b border-premium-gold pb-2">
+                    {t('booking.location')}
+                  </h3>
+                  
+                  <LocationSelector
+                    label={t('booking.pickupLocation')}
+                    value={bookingForm.pickupLocation}
+                    onChange={(value) => setBookingForm({...bookingForm, pickupLocation: value})}
+                    placeholder={t('booking.selectLocation')}
+                  />
+                  
+                  <div className="flex items-center">
+                    <input
+                      type="checkbox"
+                      id="sameLocation"
+                      checked={sameReturnLocation}
+                      onChange={() => setSameReturnLocation(!sameReturnLocation)}
+                      className="h-4 w-4 text-premium-gold focus:ring-premium-gold border-gray-300 rounded"
+                    />
+                    <label htmlFor="sameLocation" className="ml-2 block text-sm text-gray-700 dark:text-premium-silver">
+                      {t('booking.sameReturnLocation')}
+                    </label>
+                  </div>
+                  
+                  {!sameReturnLocation && (
+                    <LocationSelector
+                      label={t('booking.returnLocation')}
+                      value={bookingForm.returnLocation}
+                      onChange={(value) => setBookingForm({...bookingForm, returnLocation: value})}
+                      placeholder={t('booking.selectLocation')}
+                    />
+                  )}
+                </div>
+                
+                <div className="space-y-4">
+                  <h3 className="text-lg font-semibold text-premium-black dark:text-white border-b border-premium-gold pb-2">
+                    {t('booking.pickupDetails')}
+                  </h3>
+                  
+                  <div>
+                    <label className="block text-sm font-medium text-gray-700 dark:text-premium-silver mb-1">
+                      {t('booking.pickupDate')}
+                    </label>
+                    <DatePicker
+                      selected={bookingForm.pickupDate}
+                      onChange={(date) => {
+                        setBookingForm({
+                          ...bookingForm, 
+                          pickupDate: date,
+                          // Если дата возврата раньше новой даты получения, обновляем её
+                          returnDate: bookingForm.returnDate && date && bookingForm.returnDate < date 
+                            ? date 
+                            : bookingForm.returnDate
+                        })
+                      }}
+                      className="w-full rounded-md border border-gray-300 dark:border-gray-700 dark:bg-premium-black dark:text-white shadow-sm py-3 px-4 text-base"
+                      dateFormat="dd/MM/yyyy"
+                      minDate={new Date()}
+                      placeholderText={t('booking.selectDate')}
+                    />
+                  </div>
+                  
+                  <TimeSelector
+                    label={t('booking.pickupTime')}
+                    value={bookingForm.pickupTime}
+                    onChange={(value) => setBookingForm({...bookingForm, pickupTime: value})}
+                  />
+                </div>
+                
+                <div className="space-y-4">
+                  <h3 className="text-lg font-semibold text-premium-black dark:text-white border-b border-premium-gold pb-2">
+                    {t('booking.returnDetails')}
+                  </h3>
+                  
+                  <div>
+                    <label className="block text-sm font-medium text-gray-700 dark:text-premium-silver mb-1">
+                      {t('booking.returnDate')}
+                    </label>
+                    <DatePicker
+                      selected={bookingForm.returnDate}
+                      onChange={(date) => setBookingForm({...bookingForm, returnDate: date})}
+                      className="w-full rounded-md border border-gray-300 dark:border-gray-700 dark:bg-premium-black dark:text-white shadow-sm py-3 px-4 text-base"
+                      dateFormat="dd/MM/yyyy"
+                      minDate={bookingForm.pickupDate || new Date()}
+                      placeholderText={t('booking.selectDate')}
+                    />
+                  </div>
+                  
+                  <TimeSelector
+                    label={t('booking.returnTime')}
+                    value={bookingForm.returnTime}
+                    onChange={(value) => setBookingForm({...bookingForm, returnTime: value})}
+                  />
+                  
+                  <button
+                    type="submit"
+                    className="w-full bg-premium-gold hover:bg-premium-gold/90 text-white font-bold py-3 px-6 rounded-md transition-colors text-base shadow-md mt-2"
+                  >
+                    {t('booking.searchButton')}
+                  </button>
+                </div>
               </div>
-              <div className="space-y-2">
-                <label className="block text-sm font-medium text-gray-700 dark:text-premium-silver mb-1">
-                  {t('booking.returnDate')}
-                </label>
-                <DatePicker
-                  selected={returnDate}
-                  onChange={(date) => setReturnDate(date)}
-                  className="w-full rounded-md border border-gray-300 dark:border-gray-700 dark:bg-premium-black dark:text-white shadow-sm py-3 px-4 text-base"
-                  dateFormat="dd/MM/yyyy"
-                  minDate={pickupDate || new Date()}
-                  placeholderText={t('booking.returnDate')}
-                />
-              </div>
-              <div className="flex items-end">
-                <button
-                  className="w-full bg-premium-gold hover:bg-premium-gold/90 text-white font-bold py-3 px-6 rounded-md transition-colors h-[50px] text-base shadow-sm"
-                >
-                  {t('booking.searchButton')}
-                </button>
-              </div>
-            </div>
+            </form>
           </div>
         </div>
       </section>
@@ -247,58 +332,57 @@ const HomePage = () => {
                 description: t('home.process.step4.description'),
               },
             ].map((step, index) => (
-              <motion.div
-                key={index}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ duration: 0.5, delay: index * 0.1 }}
-                className="relative text-center p-6 bg-gray-50 dark:bg-premium-black/50 rounded-lg border border-premium-gold/10"
-              >
-                <div className="flex items-center justify-center mb-4">
-                  <span className="rounded-full bg-premium-gold/10 p-3">
-                    <step.icon className="h-6 w-6 text-premium-gold" />
-                  </span>
+              <div key={index} className="bg-white dark:bg-premium-black/50 p-6 rounded-lg shadow-md">
+                <div className="w-12 h-12 bg-premium-gold/10 rounded-full flex items-center justify-center mb-4">
+                  <step.icon className="h-6 w-6 text-premium-gold" />
                 </div>
-                <h3 className="text-xl font-semibold text-premium-black dark:text-white mb-2">
-                  {step.title}
-                </h3>
-                <p className="text-gray-600 dark:text-premium-silver">
-                  {step.description}
-                </p>
-              </motion.div>
+                <h3 className="text-xl font-bold mb-2 dark:text-white">{step.title}</h3>
+                <p className="text-gray-600 dark:text-premium-silver">{step.description}</p>
+              </div>
             ))}
           </div>
         </div>
       </section>
 
-      {/* Отзывы */}
+      {/* Reviews Section */}
       <ReviewsSection />
 
       {/* Contact Section */}
-      <section className="relative py-24 bg-gradient-to-r from-premium-black to-premium-black/90">
-        <div className="absolute inset-0">
-          <div className="bg-premium-black/50 w-full h-full"></div>
-        </div>
-        <div className="relative container mx-auto px-4">
-          <div className="max-w-3xl mx-auto text-center">
-            <h2 className="text-4xl font-bold text-white mb-4">
-              <span className="text-premium-gold">{t('contact.title')}</span>
+      <section className="py-12 sm:py-24 bg-gray-50 dark:bg-premium-black/50">
+        <div className="container mx-auto px-4">
+          <div className="max-w-4xl mx-auto text-center mb-12">
+            <h2 className="text-3xl sm:text-4xl font-bold text-premium-black dark:text-white mb-4">
+              {t('contact.title')}
             </h2>
-            <p className="text-xl text-premium-silver mb-8">
+            <p className="text-lg text-gray-600 dark:text-premium-silver">
               {t('contact.subtitle')}
             </p>
-            <motion.button
-              whileHover={{ scale: 1.05 }}
-              whileTap={{ scale: 0.95 }}
-              onClick={() => navigate('/contact')}
-              className="inline-flex items-center px-8 py-4 border border-premium-gold text-base font-medium rounded-md text-white bg-premium-gold hover:bg-premium-gold/90 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-premium-gold shadow-lg"
-            >
-              {t('contact.form.submit')}
-              <svg className="ml-2 -mr-1 w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
-                <path fillRule="evenodd" d="M10.293 5.293a1 1 0 011.414 0l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414-1.414L12.586 11H5a1 1 0 110-2h7.586l-2.293-2.293a1 1 0 010-1.414z" clipRule="evenodd"></path>
-              </svg>
-            </motion.button>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+            <div className="bg-white dark:bg-premium-black p-6 rounded-lg shadow-md text-center">
+              <div className="w-12 h-12 bg-premium-gold/10 rounded-full flex items-center justify-center mx-auto mb-4">
+                <PhoneIcon className="h-6 w-6 text-premium-gold" />
+              </div>
+              <h3 className="text-xl font-bold mb-2 dark:text-white">{t('contact.phone')}</h3>
+              <p className="text-gray-600 dark:text-premium-silver">+34 600 000 000</p>
+            </div>
+
+            <div className="bg-white dark:bg-premium-black p-6 rounded-lg shadow-md text-center">
+              <div className="w-12 h-12 bg-premium-gold/10 rounded-full flex items-center justify-center mx-auto mb-4">
+                <EnvelopeIcon className="h-6 w-6 text-premium-gold" />
+              </div>
+              <h3 className="text-xl font-bold mb-2 dark:text-white">{t('contact.email')}</h3>
+              <p className="text-gray-600 dark:text-premium-silver">info@automocion.es</p>
+            </div>
+
+            <div className="bg-white dark:bg-premium-black p-6 rounded-lg shadow-md text-center">
+              <div className="w-12 h-12 bg-premium-gold/10 rounded-full flex items-center justify-center mx-auto mb-4">
+                <ChatBubbleLeftRightIcon className="h-6 w-6 text-premium-gold" />
+              </div>
+              <h3 className="text-xl font-bold mb-2 dark:text-white">{t('contact.whatsapp')}</h3>
+              <p className="text-gray-600 dark:text-premium-silver">+34 600 000 000</p>
+            </div>
           </div>
         </div>
       </section>

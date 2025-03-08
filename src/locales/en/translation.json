@@ -200,6 +200,19 @@
   "booking": {
     "title": "Book Your Vehicle",
     "subtitle": "Fill out the form below to book your selected vehicle",
+    "location": "Locations",
+    "pickupDetails": "Pickup Details",
+    "returnDetails": "Return Details",
+    "pickupLocation": "Pickup Location",
+    "returnLocation": "Return Location",
+    "pickupDate": "Pickup Date",
+    "returnDate": "Return Date",
+    "pickupTime": "Pickup Time",
+    "returnTime": "Return Time",
+    "selectDate": "Select date",
+    "selectLocation": "Select location",
+    "sameReturnLocation": "Return to the same location",
+    "searchButton": "Search Vehicles",
     "rental": {
       "title": "Rental Details",
       "pickup": "Pick-up Date",
@@ -245,130 +258,130 @@
       "email": "Email",
       "chat": "Live Chat",
       "chatDescription": "Our specialists are ready to answer your questions"
-    },
-    "pickupDate": "Pickup Date",
-    "returnDate": "Return Date",
-    "searchButton": "Search Vehicles",
-    "totalPrice": "Total Price",
-    "addToCart": "Add to Cart",
-    "alreadyInCart": "Already in Cart",
-    "reserve": "Reserve",
-    "location": {
-      "pickup": "Pickup Location",
-      "return": "Return Location",
-      "placeholder": "Select a location",
-      "options": {
-        "Vila-seca": "Vila-seca",
-        "Tarragona": "Tarragona",
-        "Reus": "Reus"
-      }
     }
   },
   "contact": {
     "title": "Contact Us",
-    "subtitle": "We're here to help. Contact us for any questions about our services",
+    "subtitle": "We're here to help and answer any question you might have",
     "info": {
       "title": "Contact Information",
-      "schedule": "Working Hours: 9:00-13:00 / 15:00-19:00",
-      "workdays": "Monday to Friday",
-      "address": "Carrer del Mas de l'Abat 145F",
-      "location": "Vila-seca, Catalonia",
-      "postal": "43480"
+      "address": "Calle Principal 123",
+      "location": "Vila-seca, Tarragona",
+      "postal": "43480, Spain",
+      "schedule": "Working hours:",
+      "workdays": "Mon-Sat: 9:00 - 20:00"
     },
     "form": {
-      "name": "Full Name",
-      "email": "Email",
-      "phone": "Phone",
-      "message": "Message",
+      "title": "Send us a message",
+      "name": "Your Name",
+      "email": "Your Email",
+      "phone": "Your Phone",
+      "subject": "Subject",
+      "message": "Your Message",
       "submit": "Send Message"
     },
     "social": {
-      "title": "Social Media",
-      "facebook": "Facebook",
+      "title": "Follow Us",
       "instagram": "Instagram",
+      "facebook": "Facebook",
       "whatsapp": "WhatsApp"
-    }
+    },
+    "success": "Thank you for your message! We'll get back to you soon.",
+    "phone": "Phone",
+    "email": "Email",
+    "whatsapp": "WhatsApp"
   },
   "footer": {
     "company": {
-      "about": "Car rental in Vila-seca",
-      "description": "Premium service and personalized attention"
+      "about": "O.V. Automoción - Premium car rental service in Vila-seca",
+      "description": "We offer a wide range of luxury and premium vehicles for your comfort and enjoyment"
     },
     "contact": {
-      "title": "Contact"
+      "title": "Contact Us"
     },
     "social": {
-      "title": "Social Media"
+      "title": "Follow Us"
     },
     "payments": "Payment Methods",
-    "copyright": "All rights reserved."
+    "copyright": "All rights reserved"
   },
-  "features": {
-    "leather_seats": "Leather Seats",
-    "navigation": "Navigation",
-    "parking_sensors": "Parking Sensors",
-    "bluetooth": "Bluetooth",
-    "climate_control": "Climate Control",
-    "led_lights": "LED Lights",
-    "air_conditioning": "Air Conditioning",
-    "usb": "USB Port",
-    "apple_carplay": "Apple CarPlay",
-    "android_auto": "Android Auto",
-    "backup_camera": "Backup Camera",
-    "lane_assist": "Lane Assist",
-    "adaptive_cruise": "Adaptive Cruise Control",
-    "premium_sound": "Premium Sound System",
-    "panoramic_roof": "Panoramic Roof",
-    "driver_assistance": "Driver Assistance",
-    "wireless_charging": "Wireless Charging",
-    "electric_range": "Electric Range",
-    "fast_charging": "Fast Charging",
-    "perfect_city": "Perfect for City",
-    "easy_parking": "Easy Parking",
-    "digital_cockpit": "Digital Cockpit",
-    "sport_mode": "Sport Mode",
-    "dynamic_chassis": "Dynamic Chassis",
-    "autopilot": "Autopilot",
-    "premium_interior": "Premium Interior",
-    "supercharging": "Supercharging",
-    "glass_roof": "Glass Roof",
-    "GPS": "GPS Navigation",
-    "Sensores de aparcamiento": "Parking Sensors",
-    "Asientos deportivos": "Sport Seats",
-    "Techo panorámico": "Panoramic Roof",
-    "Airbags": "Airbags",
-    "ABS": "ABS",
-    "ESP": "ESP",
-    "Start/Stop": "Start/Stop",
-    "Cruise Control": "Cruise Control",
-    "Parking Camera": "Parking Camera",
-    "Keyless Entry": "Keyless Entry"
+  "terms": {
+    "title": "Rental Terms and Conditions",
+    "subtitle": "Please read these terms carefully before renting a vehicle",
+    "sections": {
+      "requirements": {
+        "title": "Driver Requirements",
+        "content": "To rent a vehicle, you must be at least 21 years old and have held a valid driver's license for at least 2 years. For premium vehicles, the minimum age is 25 years. You must present a valid ID or passport and a credit card in your name."
+      },
+      "insurance": {
+        "title": "Insurance and Coverage",
+        "content": "All rentals include basic insurance coverage. This covers damage to the vehicle with a deductible of €500. Additional insurance options are available to reduce or eliminate the deductible."
+      },
+      "fuel": {
+        "title": "Fuel Policy",
+        "content": "Vehicles are provided with a full tank of fuel and should be returned with a full tank. If the vehicle is not returned with a full tank, a refueling fee will be charged."
+      },
+      "mileage": {
+        "title": "Mileage Policy",
+        "content": "All rentals include unlimited mileage unless otherwise specified in the rental agreement."
+      },
+      "cancellation": {
+        "title": "Cancellation Policy",
+        "content": "Free cancellation up to 48 hours before the scheduled pickup time. Cancellations made less than 48 hours before pickup will incur a fee of 50% of the total rental cost."
+      },
+      "damage": {
+        "title": "Damage and Loss",
+        "content": "You are responsible for any damage to the vehicle during the rental period that is not covered by insurance. You are also responsible for any loss of or damage to vehicle keys, documents, or accessories."
+      },
+      "fines": {
+        "title": "Traffic Violations and Fines",
+        "content": "You are responsible for all traffic violations, fines, and penalties incurred during the rental period. An administrative fee will be charged for processing each fine or penalty."
+      },
+      "extensions": {
+        "title": "Rental Extensions",
+        "content": "If you wish to extend the rental period, you must notify us at least 24 hours before the scheduled return time. Extensions are subject to availability and may result in a change of rate."
+      },
+      "returns": {
+        "title": "Late Returns",
+        "content": "Late returns without prior notification will incur an additional day's rental fee plus a late return fee."
+      },
+      "restrictions": {
+        "title": "Usage Restrictions",
+        "content": "Vehicles may not be taken outside of Spain without prior written consent. Off-road driving is strictly prohibited. Smoking and pets are not allowed in the vehicles."
+      }
+    }
+  },
+  "validation": {
+    "required": "This field is required",
+    "invalidEmail": "Please enter a valid email address",
+    "invalidPhone": "Please enter a valid phone number",
+    "invalidPostalCode": "Please enter a valid postal code"
   },
   "whatsapp": {
-    "message": "Message us on WhatsApp",
-    "available": "We're online, quick response!"
+    "message": "Need help? Chat with us!",
+    "available": "We're available 24/7"
   },
   "notifications": {
     "booked": "booked {{car}} {{time}} minutes ago"
   },
   "cart": {
-    "title": "Shopping Cart",
+    "title": "Your Cart",
     "empty": "Your cart is empty",
-    "emptyMessage": "Add cars to your cart to continue",
+    "emptyMessage": "You haven't added any vehicles to your cart yet",
     "continueShopping": "Continue Shopping",
+    "checkout": "Proceed to Checkout",
     "remove": "Remove",
     "total": "Total",
-    "taxesIncluded": "Including all taxes",
-    "checkout": "Checkout",
-    "or": "or",
-    "dates": "Rental Dates",
-    "location": "Pickup Location",
-    "inCart": "In Cart"
+    "days": "days",
+    "pickupDate": "Pickup Date",
+    "returnDate": "Return Date",
+    "pickupLocation": "Pickup Location",
+    "returnLocation": "Return Location"
   },
   "checkout": {
     "title": "Checkout",
     "empty": "Your cart is empty",
-    "emptyMessage": "Add cars to your cart to continue",
+    "emptyMessage": "You haven't added any vehicles to your cart yet",
     "backToCatalog": "Back to Catalog",
     "personalInfo": "Personal Information",
     "form": {
@@ -380,21 +393,42 @@
       "city": "City",
       "country": "Country",
       "postalCode": "Postal Code",
-      "comments": "Additional Comments"
+      "comments": "Comments"
     },
     "orderSummary": "Order Summary",
     "rentalDates": "Rental Dates",
     "pickupLocation": "Pickup Location",
     "returnLocation": "Return Location",
     "total": "Total",
-    "taxesIncluded": "Taxes Included",
-    "submit": "Confirm Order",
-    "success": {
-      "title": "Order Confirmed!",
-      "message": "You will receive an email with your booking details.",
-      "backToCatalog": "Back to Catalog",
-      "backToHome": "Back to Home"
+    "taxesIncluded": "Taxes and fees included",
+    "submit": "Complete Order",
+    "contact": {
+      "title": "Contact Information",
+      "firstName": "First Name",
+      "lastName": "Last Name",
+      "email": "Email",
+      "phone": "Phone"
+    },
+    "address": {
+      "title": "Address",
+      "street": "Street Address",
+      "city": "City",
+      "country": "Country"
+    },
+    "payment": {
+      "title": "Payment Information",
+      "cardNumber": "Card Number",
+      "expiry": "Expiry Date (MM/YY)",
+      "cvc": "CVC"
     }
+  },
+  "checkoutSuccess": {
+    "title": "Order Confirmed!",
+    "subtitle": "Thank you for your order",
+    "message": "Your booking has been confirmed. You will receive a confirmation email shortly.",
+    "orderNumber": "Order Number",
+    "backToCatalog": "Back to Catalog",
+    "backToHome": "Back to Home"
   },
   "car": {
     "defaultDescription": "The {{name}} is an excellent {{category}} vehicle that combines comfort, reliability and style. The perfect choice for your journey.",
@@ -433,45 +467,6 @@
       "category": "SUV",
       "price": "85€ / day"
     }
-  },
-  "validation": {
-    "required": "This field is required",
-    "invalidEmail": "Invalid email format",
-    "invalidPhone": "Invalid phone number format",
-    "invalidPostalCode": "Invalid postal code format"
-  },
-  "terms": {
-    "title": "Rental Terms",
-    "subtitle": "Everything you need to know about renting our premium vehicles",
-    "requirements": {
-      "title": "Requirements",
-      "age": "Minimum age: 25 years",
-      "license": "Valid driving license for more than 2 years",
-      "credit": "Credit card in the driver's name",
-      "documents": "Valid ID or passport"
-    },
-    "insurance": {
-      "title": "Insurance",
-      "basic": "Third-party insurance included",
-      "full": "Full coverage insurance available",
-      "theft": "Theft protection",
-      "assistance": "24/7 roadside assistance"
-    },
-    "payment": {
-      "title": "Payment",
-      "methods": "All major credit cards accepted",
-      "deposit": "Security deposit required",
-      "cancellation": "Free cancellation up to 48h before",
-      "refund": "Full refund according to conditions"
-    },
-    "additional": {
-      "title": "Additional Services",
-      "fuel": "Flexible fuel policy",
-      "mileage": "Unlimited mileage available",
-      "cleaning": "Cleaning service included",
-      "delivery": "Delivery and collection available"
-    },
-    "footer": "For more information, please don't hesitate to contact our customer service team."
   },
   "categories": {
     "all": "All",
