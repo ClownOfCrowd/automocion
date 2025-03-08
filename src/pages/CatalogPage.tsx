@@ -109,7 +109,7 @@ const CatalogPage = () => {
         <section className="relative py-16 bg-gradient-to-r from-premium-black to-premium-black/90">
           <div className="absolute inset-0">
             <img
-              src="/catalog-bg.jpg"
+              src="/images/hero/catalog-hero.jpg"
               alt="Luxury cars"
               className="w-full h-full object-cover opacity-30"
             />

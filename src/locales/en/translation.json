@@ -44,16 +44,16 @@
       "returnTime": "Return Time",
       "selectDate": "Select Date",
       "selectLocation": "Select Location",
-      "searchOptions": "Search Options",
-      "searchButton": "Search Vehicles",
+      "searchOptions": "Search options",
+      "searchButton": "Search vehicles",
       "viewAllCars": "View All Cars →"
     },
     "popular": {
       "title": "Popular Vehicles",
-      "subtitle": "Best deals for your journey",
+      "subtitle": "Best deals for your trip",
       "description": "Discover our most requested vehicles",
-      "viewAll": "View All Vehicles",
-      "details": "View Details"
+      "viewAll": "View all vehicles",
+      "details": "View details"
     },
     "viewAllCars": "View All Cars",
     "features": {
@@ -218,7 +218,7 @@
     "title": "Booking",
     "location": "Location",
     "pickupLocation": "Pickup Location",
-    "returnLocation": "Return Location",
+      "returnLocation": "Return Location",
     "sameReturnLocation": "Return to same location",
     "pickupDetails": "Pickup Details",
     "returnDetails": "Return Details",
@@ -231,14 +231,12 @@
     "searchOptions": "Search Options",
     "searchButton": "Search Vehicles",
     "totalPrice": "Total Price",
-    "location": {
-      "options": {
-        "Vila-seca": "Vila-seca",
-        "Tarragona": "Tarragona",
-        "Reus": "Reus",
-        "Salou": "Salou",
-        "Barcelona": "Barcelona"
-      }
+    "locationOptions": {
+      "Vila-seca": "Vila-seca",
+      "Tarragona": "Tarragona",
+      "Reus": "Reus",
+      "Salou": "Salou",
+      "Barcelona": "Barcelona"
     }
   },
   "contact": {
@@ -471,12 +469,12 @@
     }
   },
   "checkoutSuccess": {
-    "title": "Order Confirmed!",
+      "title": "Order Confirmed!",
     "subtitle": "Thank you for your order",
     "message": "Your booking has been confirmed. You will receive a confirmation email shortly.",
     "orderNumber": "Order Number",
-    "backToCatalog": "Back to Catalog",
-    "backToHome": "Back to Home"
+      "backToCatalog": "Back to Catalog",
+      "backToHome": "Back to Home"
   },
   "car": {
     "defaultDescription": "The {{name}} is an excellent {{category}} vehicle that combines comfort, reliability and style. The perfect choice for your journey.",

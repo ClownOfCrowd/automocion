@@ -46,7 +46,7 @@
       "selectDate": "Выбрать дату",
       "selectLocation": "Выбрать местоположение",
       "searchOptions": "Параметры поиска",
-      "searchButton": "Искать автомобили",
+      "searchButton": "Найти автомобили",
       "viewAllCars": "Посмотреть все автомобили →"
     },
     "popular": {
@@ -186,18 +186,14 @@
     "selectDate": "Выбрать дату",
     "selectLocation": "Выбрать местоположение",
     "searchOptions": "Параметры поиска",
-    "searchButton": "Искать автомобили",
-    "continue": "Продолжить",
-    "submit": "Подтвердить бронирование",
+    "searchButton": "Найти автомобили",
     "totalPrice": "Итоговая цена",
-    "location": {
-      "options": {
-        "Vila-seca": "Вила-сека",
-        "Tarragona": "Таррагона",
-        "Reus": "Реус",
-        "Salou": "Салоу",
-        "Barcelona": "Барселона"
-      }
+    "locationOptions": {
+      "Vila-seca": "Вила-сека",
+      "Tarragona": "Таррагона",
+      "Reus": "Реус",
+      "Salou": "Салоу",
+      "Barcelona": "Барселона"
     },
     "summary": {
       "title": "Детали заказа",

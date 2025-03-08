@@ -39,7 +39,7 @@
       "selectLocation": "Standort auswählen",
       "searchOptions": "Suchoptionen",
       "searchButton": "Fahrzeuge suchen",
-      "viewAllCars": "Alle Autos anzeigen →"
+      "viewAllCars": "Alle Fahrzeuge anzeigen →"
     },
     "popular": {
       "title": "Beliebte Fahrzeuge",
@@ -211,8 +211,7 @@
     }
   },
   "booking": {
-    "title": "Fahrzeug buchen",
-    "subtitle": "Füllen Sie das Formular aus, um Ihr ausgewähltes Fahrzeug zu buchen",
+    "title": "Buchung",
     "location": "Standort",
     "pickupLocation": "Abholort",
     "returnLocation": "Rückgabeort",
@@ -228,14 +227,12 @@
     "searchOptions": "Suchoptionen",
     "searchButton": "Fahrzeuge suchen",
     "totalPrice": "Gesamtpreis",
-    "location": {
-      "options": {
-        "Vila-seca": "Vila-seca",
-        "Tarragona": "Tarragona",
-        "Reus": "Reus",
-        "Salou": "Salou",
-        "Barcelona": "Barcelona"
-      }
+    "locationOptions": {
+      "Vila-seca": "Vila-seca",
+      "Tarragona": "Tarragona",
+      "Reus": "Reus",
+      "Salou": "Salou",
+      "Barcelona": "Barcelona"
     },
     "rental": {
       "title": "Mietdetails",

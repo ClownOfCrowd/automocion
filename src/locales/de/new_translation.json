@@ -1,0 +1,22 @@
+{
+  "home": {
+    "search": {
+      "button": "Auto finden",
+      "location": "Standort",
+      "pickupLocation": "Abholort",
+      "returnLocation": "Rückgabeort",
+      "sameReturnLocation": "Rückgabe am gleichen Ort",
+      "pickupDetails": "Abholdetails",
+      "returnDetails": "Rückgabedetails",
+      "pickupDate": "Abholdatum",
+      "returnDate": "Rückgabedatum",
+      "pickupTime": "Abholzeit",
+      "returnTime": "Rückgabezeit",
+      "selectDate": "Datum auswählen",
+      "selectLocation": "Standort auswählen",
+      "searchOptions": "Suchoptionen",
+      "searchButton": "Fahrzeuge suchen",
+      "viewAllCars": "Alle Fahrzeuge anzeigen →"
+    }
+  }
+} 

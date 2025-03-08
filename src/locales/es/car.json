@@ -1,0 +1,13 @@
+{
+  "car": {
+    "peugeot_208": {
+      "description": "Compacto y económico coche urbano"
+    },
+    "citroen_c3": {
+      "description": "Coche urbano elegante y cómodo"
+    },
+    "mini_cooper_s": {
+      "description": "Deportivo y elegante con rendimiento excepcional"
+    }
+  }
+} 

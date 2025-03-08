@@ -76,8 +76,8 @@
       "pickupLocation": "Lieu de prise en charge",
       "returnLocation": "Lieu de retour",
       "sameReturnLocation": "Retour au même endroit",
-      "pickupDetails": "Détails de prise en charge",
-      "returnDetails": "Détails de retour",
+      "pickupDetails": "Détails de la prise en charge",
+      "returnDetails": "Détails du retour",
       "pickupDate": "Date de prise en charge",
       "returnDate": "Date de retour",
       "pickupTime": "Heure de prise en charge",
@@ -86,7 +86,7 @@
       "selectLocation": "Sélectionner un lieu",
       "searchOptions": "Options de recherche",
       "searchButton": "Rechercher des véhicules",
-      "viewAllCars": "Voir toutes les voitures →"
+      "viewAllCars": "Voir toutes les voitures"
     },
     "quickSearch": {
       "title": "Recherche rapide",
@@ -151,10 +151,13 @@
       "cta": "Nous contacter"
     },
     "popular": {
-      "title": "Voitures populaires",
-      "subtitle": "Découvrez nos voitures les plus demandées",
-      "viewAll": "Voir tout"
+      "title": "Véhicules populaires",
+      "subtitle": "Les meilleures offres pour votre voyage",
+      "description": "Découvrez nos véhicules les plus demandés",
+      "viewAll": "Voir tous les véhicules",
+      "details": "Voir les détails"
     },
+    "viewAllCars": "Voir toutes les voitures",
     "process": {
       "title": "Comment ça marche",
       "description": "Processus de location en 4 étapes simples",
@@ -224,7 +227,7 @@
   },
   "booking": {
     "title": "Réservation",
-    "location": "Emplacement",
+    "location": "Lieu",
     "pickupLocation": "Lieu de prise en charge",
     "returnLocation": "Lieu de retour",
     "sameReturnLocation": "Retour au même endroit",
@@ -239,14 +242,12 @@
     "searchOptions": "Options de recherche",
     "searchButton": "Rechercher des véhicules",
     "totalPrice": "Prix total",
-    "location": {
-      "options": {
-        "Vila-seca": "Vila-seca",
-        "Tarragona": "Tarragone",
-        "Reus": "Reus",
-        "Salou": "Salou",
-        "Barcelona": "Barcelone"
-      }
+    "locationOptions": {
+      "Vila-seca": "Vila-seca",
+      "Tarragona": "Tarragone",
+      "Reus": "Reus",
+      "Salou": "Salou",
+      "Barcelona": "Barcelone"
     }
   },
   "contact": {
@@ -535,13 +536,13 @@
       "viewAll": "Voir tout"
     },
     "peugeot_208": {
-      "description": "La Peugeot 208 est une citadine élégante et économique, parfaite pour la conduite en ville. Avec son design moderne et ses technologies avancées, elle offre une expérience de conduite agréable et confortable."
+      "description": "Citadine élégante et économique, parfaite pour la conduite en ville."
     },
     "citroen_c3": {
-      "description": "La Citroën C3 est une voiture compacte polyvalente avec un style distinctif et un intérieur spacieux. Idéale pour les trajets urbains et les excursions, elle combine confort, efficacité et praticité."
+      "description": "Compacte polyvalente au style distinctif et à l'intérieur spacieux."
     },
     "mini_cooper_s": {
-      "description": "La MINI Cooper S est une voiture sportive et élégante avec un caractère unique. Son moteur puissant et sa tenue de route exceptionnelle offrent une expérience de conduite dynamique et exaltante."
+      "description": "Sportive élégante offrant une conduite dynamique et exaltante."
     }
   },
   "validation": {
