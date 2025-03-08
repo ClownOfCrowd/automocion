@@ -89,9 +89,9 @@ const HomePage = () => {
           <LazyImage
             src="/hero-bg.jpg"
             alt="Luxury cars"
-            className="w-full h-full object-cover dark:opacity-40"
+            className="w-full h-full object-cover opacity-75 dark:opacity-40"
           />
-          <div className="absolute inset-0 dark:bg-gradient-to-b dark:from-premium-black-deep/50 dark:to-premium-black/90"></div>
+          <div className="absolute inset-0 bg-black/20 dark:bg-gradient-to-b dark:from-premium-black-deep/50 dark:to-premium-black/90"></div>
         </div>
         <div className="relative container mx-auto px-4 h-full flex flex-col justify-center">
           <div className="max-w-3xl mx-auto text-center mb-12">
