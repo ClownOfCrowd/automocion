@@ -296,19 +296,14 @@
   "footer": {
     "company": {
       "about": "Alquiler de coches en Vila-seca",
-      "about_mobile": "O.V. Automoción - Premium car rental service in Vila-seca",
-      "description": "Servicio premium y atención personalizada",
-      "description_mobile": "We offer a wide range of luxury and premium vehicles for your comfort and enjoyment"
+      "description": "Servicio premium y atención personalizada"
     },
     "payments": "Métodos de pago",
-    "payments_mobile": "PAYMENT METHODS",
     "contact": {
-      "title": "Contacto",
-      "title_mobile": "CONTACT US"
+      "title": "Contacto"
     },
     "social": {
-      "title": "Redes sociales",
-      "title_mobile": "FOLLOW US"
+      "title": "Redes sociales"
     },
     "copyright": "Todos los derechos reservados."
   },

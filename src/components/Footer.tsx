@@ -14,21 +14,17 @@ const Footer = () => {
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
           <div>
             <h3 className="text-sm font-semibold text-premium-gold tracking-wider uppercase">
-              <span className="md:hidden">O.V. AUTOMOCIÓN</span>
-              <span className="hidden md:inline">O.V. Automoción</span>
+              O.V. Automoción
             </h3>
             <p className="mt-4 text-base text-premium-silver">
-              <span className="md:hidden">{t('footer.company.about_mobile')}</span>
-              <span className="hidden md:inline">{t('footer.company.about')}</span>
+              {t('footer.company.about')}
               <br />
-              <span className="md:hidden">{t('footer.company.description_mobile')}</span>
-              <span className="hidden md:inline">{t('footer.company.description')}</span>
+              {t('footer.company.description')}
             </p>
             {/* Платежные методы */}
             <div className="mt-6">
               <h4 className="text-sm font-semibold text-premium-gold tracking-wider uppercase mb-4">
-                <span className="md:hidden">{t('footer.payments_mobile')}</span>
-                <span className="hidden md:inline">{t('footer.payments')}</span>
+                {t('footer.payments')}
               </h4>
               <PaymentBadges variant="compact" />
             </div>
@@ -36,8 +32,7 @@ const Footer = () => {
           
           <div>
             <h3 className="text-sm font-semibold text-premium-gold tracking-wider uppercase">
-              <span className="md:hidden">{t('footer.contact.title_mobile')}</span>
-              <span className="hidden md:inline">{t('footer.contact.title')}</span>
+              {t('footer.contact.title')}
             </h3>
             <ul className="mt-4 space-y-4">
               <li>
@@ -52,23 +47,18 @@ const Footer = () => {
               </li>
               <li>
                 <span className="text-base text-premium-silver">
-                  <span className="md:hidden">{t('contact.info.address_mobile')}</span>
-                  <span className="hidden md:inline">{t('contact.info.address')}</span>
+                  {t('contact.info.address')}
                   <br />
-                  <span className="md:hidden">{t('contact.info.location_mobile')}</span>
-                  <span className="hidden md:inline">{t('contact.info.location')}</span>
+                  {t('contact.info.location')}
                   <br />
-                  <span className="md:hidden">{t('contact.info.postal_mobile')}</span>
-                  <span className="hidden md:inline">{t('contact.info.postal')}</span>
+                  {t('contact.info.postal')}
                 </span>
               </li>
               <li>
                 <span className="text-base text-premium-silver">
-                  <span className="md:hidden">{t('contact.info.schedule_mobile')}</span>
-                  <span className="hidden md:inline">{t('contact.info.schedule')}</span>
+                  {t('contact.info.schedule')}
                   <br />
-                  <span className="md:hidden">{t('contact.info.workdays_mobile')}</span>
-                  <span className="hidden md:inline">{t('contact.info.workdays')}</span>
+                  {t('contact.info.workdays')}
                 </span>
               </li>
             </ul>
@@ -76,8 +66,7 @@ const Footer = () => {
           
           <div>
             <h3 className="text-sm font-semibold text-premium-gold tracking-wider uppercase">
-              <span className="md:hidden">{t('footer.social.title_mobile')}</span>
-              <span className="hidden md:inline">{t('footer.social.title')}</span>
+              {t('footer.social.title')}
             </h3>
             <ul className="mt-4 space-y-4">
               <li>
