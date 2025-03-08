@@ -14,7 +14,8 @@
     "fromPrice": "Desde {{price}}€",
     "day": "día",
     "bookNow": "Reservar",
-    "viewDetails": "Ver detalles"
+    "viewDetails": "Ver detalles",
+    "reset": "Restablecer"
   },
   "home": {
     "hero": {
@@ -33,6 +34,7 @@
       "viewAll": "Ver todos los vehículos",
       "details": "Ver detalles"
     },
+    "viewAllCars": "Ver todos los coches",
     "features": {
       "title": "Por qué elegirnos",
       "subtitle": "Todo lo que necesitas para tu viaje perfecto",
@@ -120,22 +122,11 @@
   "catalog": {
     "title": "Nuestros vehículos",
     "filters": {
+      "title": "Filtros",
       "category": "Categoría",
       "transmission": "Transmisión",
       "fuel": "Tipo de combustible",
-      "priceRange": "Rango de precio",
-      "transmissions": {
-        "All": "Todas",
-        "Automatic": "Automática",
-        "Manual": "Manual"
-      },
-      "fuels": {
-        "All": "Todos",
-        "Petrol": "Gasolina",
-        "Diesel": "Diésel",
-        "Hybrid": "Híbrido",
-        "Electric": "Eléctrico"
-      }
+      "priceRange": "Rango de precio"
     },
     "sort": {
       "price-asc": "Precio: menor a mayor",
@@ -143,10 +134,15 @@
       "name-asc": "Nombre: A a Z",
       "name-desc": "Nombre: Z a A"
     },
+    "sortBy": "Ordenar por",
+    "showing": "Mostrando",
+    "vehicles": "vehículos",
+    "showAll": "Mostrar todos los vehículos",
     "categories": {
       "all": "Todos",
       "premium": "Premium",
       "suv": "SUV",
+      "compact": "Compacto",
       "economy": "Económico",
       "electric": "Eléctrico"
     },
@@ -161,27 +157,9 @@
       "features": "Características",
       "book": "Reservar ahora",
       "notAvailable": "No disponible",
-      "defaultDescription": "El {{name}} es un excelente vehículo {{category}} que combina comodidad, fiabilidad y estilo. La elección perfecta para tu viaje.",
-      "specs": {
-        "seats": "Plazas",
-        "transmission": "Transmisión",
-        "fuel": "Tipo de combustible",
-        "consumption": "Consumo",
-        "year": "Año",
-        "value": {
-          "manual": "Manual",
-          "automatic": "Automática",
-          "petrol": "Gasolina",
-          "diesel": "Diésel",
-          "hybrid": "Híbrido",
-          "electric": "Eléctrico",
-          "consumption": "{{value}} L/100km",
-          "consumption_electric": "0 L/100km",
-          "seats": "{{value}} plazas"
-        }
-      },
-      "similar": "Coches similares"
+      "defaultDescription": "El {{name}} es un excelente vehículo {{category}} que combina comodidad, fiabilidad y estilo. La elección perfecta para tu viaje."
     },
+    "luggage": "equipaje",
     "compare": {
       "title": "Comparar vehículos",
       "button": "Comparar",

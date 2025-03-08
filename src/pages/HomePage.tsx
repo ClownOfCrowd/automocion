@@ -212,6 +212,16 @@ const HomePage = () => {
                 </div>
               </div>
             </form>
+            
+            {/* View All Cars Link */}
+            <div className="mt-4 text-center">
+              <button
+                onClick={() => navigate('/catalog?all=1')}
+                className="text-premium-gold hover:text-premium-gold/80 font-medium transition-colors"
+              >
+                {t('home.viewAllCars')} →
+              </button>
+            </div>
           </div>
         </div>
       </section>
@@ -348,41 +358,29 @@ const HomePage = () => {
       <ReviewsSection />
 
       {/* Contact Section */}
-      <section className="py-12 sm:py-24 bg-gray-50 dark:bg-premium-black/50">
-        <div className="container mx-auto px-4">
-          <div className="max-w-4xl mx-auto text-center mb-12">
-            <h2 className="text-3xl sm:text-4xl font-bold text-premium-black dark:text-white mb-4">
-              {t('contact.title')}
+      <section className="relative py-24 bg-gradient-to-r from-premium-black to-premium-black/90">
+        <div className="absolute inset-0">
+          <div className="bg-premium-black/50 w-full h-full"></div>
+        </div>
+        <div className="relative container mx-auto px-4">
+          <div className="max-w-3xl mx-auto text-center">
+            <h2 className="text-4xl font-bold text-white mb-4">
+              <span className="text-premium-gold">{t('contact.title')}</span>
             </h2>
-            <p className="text-lg text-gray-600 dark:text-premium-silver">
+            <p className="text-xl text-premium-silver mb-8">
               {t('contact.subtitle')}
             </p>
-          </div>
-
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            <div className="bg-white dark:bg-premium-black p-6 rounded-lg shadow-md text-center">
-              <div className="w-12 h-12 bg-premium-gold/10 rounded-full flex items-center justify-center mx-auto mb-4">
-                <PhoneIcon className="h-6 w-6 text-premium-gold" />
-              </div>
-              <h3 className="text-xl font-bold mb-2 dark:text-white">{t('contact.phone')}</h3>
-              <p className="text-gray-600 dark:text-premium-silver">+34 600 000 000</p>
-            </div>
-
-            <div className="bg-white dark:bg-premium-black p-6 rounded-lg shadow-md text-center">
-              <div className="w-12 h-12 bg-premium-gold/10 rounded-full flex items-center justify-center mx-auto mb-4">
-                <EnvelopeIcon className="h-6 w-6 text-premium-gold" />
-              </div>
-              <h3 className="text-xl font-bold mb-2 dark:text-white">{t('contact.email')}</h3>
-              <p className="text-gray-600 dark:text-premium-silver">info@automocion.es</p>
-            </div>
-
-            <div className="bg-white dark:bg-premium-black p-6 rounded-lg shadow-md text-center">
-              <div className="w-12 h-12 bg-premium-gold/10 rounded-full flex items-center justify-center mx-auto mb-4">
-                <ChatBubbleLeftRightIcon className="h-6 w-6 text-premium-gold" />
-              </div>
-              <h3 className="text-xl font-bold mb-2 dark:text-white">{t('contact.whatsapp')}</h3>
-              <p className="text-gray-600 dark:text-premium-silver">+34 600 000 000</p>
-            </div>
+            <motion.button
+              whileHover={{ scale: 1.05 }}
+              whileTap={{ scale: 0.95 }}
+              onClick={() => navigate('/contact')}
+              className="inline-flex items-center px-8 py-4 border border-premium-gold text-base font-medium rounded-md text-white bg-premium-gold hover:bg-premium-gold/90 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-premium-gold shadow-lg"
+            >
+              {t('contact.form.submit')}
+              <svg className="ml-2 -mr-1 w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
+                <path fillRule="evenodd" d="M10.293 5.293a1 1 0 011.414 0l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414-1.414L12.586 11H5a1 1 0 110-2h7.586l-2.293-2.293a1 1 0 010-1.414z" clipRule="evenodd"></path>
+              </svg>
+            </motion.button>
           </div>
         </div>
       </section>

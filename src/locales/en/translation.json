@@ -20,7 +20,8 @@
     "fromPrice": "From {{price}}€",
     "day": "day",
     "bookNow": "Book Now",
-    "viewDetails": "View Details"
+    "viewDetails": "View Details",
+    "reset": "Reset"
   },
   "home": {
     "hero": {
@@ -46,6 +47,7 @@
       "viewAll": "View All Vehicles",
       "details": "View Details"
     },
+    "viewAllCars": "View All Cars",
     "features": {
       "title": "Why Choose Us",
       "subtitle": "Everything you need for your perfect trip",
@@ -121,6 +123,7 @@
   "catalog": {
     "title": "Our Vehicles",
     "filters": {
+      "title": "Filters",
       "category": "Category",
       "transmission": "Transmission",
       "fuel": "Fuel Type",
@@ -132,10 +135,15 @@
       "name-asc": "Name: A to Z",
       "name-desc": "Name: Z to A"
     },
+    "sortBy": "Sort by",
+    "showing": "Showing",
+    "vehicles": "vehicles",
+    "showAll": "Show All Vehicles",
     "categories": {
       "all": "All",
       "premium": "Premium",
       "suv": "SUV",
+      "compact": "Compact",
       "economy": "Economy",
       "electric": "Electric"
     },
@@ -152,6 +160,7 @@
       "perDay": "day",
       "defaultDescription": "The {{name}} is an excellent {{category}} vehicle that combines comfort, reliability, and style. The perfect choice for your journey."
     },
+    "luggage": "luggage",
     "compare": {
       "title": "Compare Vehicles",
       "button": "Compare",

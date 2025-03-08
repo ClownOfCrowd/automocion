@@ -9,6 +9,7 @@ import ContactPage from './pages/ContactPage'
 import CheckoutPage from './pages/CheckoutPage'
 import CheckoutSuccessPage from './pages/CheckoutSuccessPage'
 import RentalTermsPage from './pages/RentalTermsPage'
+import CatalogPage from './pages/CatalogPage'
 import ScrollToTop from './components/ScrollToTop'
 import LoadingScreen from './components/LoadingScreen'
 import { LoadingProvider } from './contexts/LoadingContext'
@@ -38,6 +39,11 @@ const AnimatedRoutes = () => {
             <Route index element={
               <Suspense fallback={null}>
                 <HomePage />
+              </Suspense>
+            } />
+            <Route path="catalog" element={
+              <Suspense fallback={null}>
+                <CatalogPage />
               </Suspense>
             } />
             <Route path="catalog/:id" element={
