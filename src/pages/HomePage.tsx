@@ -105,11 +105,17 @@ const HomePage = () => {
           </div>
           
           {/* Enhanced Booking Form */}
-          <div className="bg-white dark:bg-premium-black/90 p-6 rounded-lg shadow-xl max-w-5xl mx-auto">
+          <div className="bg-white dark:bg-premium-black/90 p-4 sm:p-6 rounded-lg shadow-xl max-w-5xl mx-auto">
             <form onSubmit={handleBookingSubmit}>
-              <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-                <div className="space-y-4">
-                  <h3 className="text-lg font-semibold text-premium-black dark:text-white border-b border-premium-gold pb-2">
+              {/* Заголовок формы - только для мобильных */}
+              <h3 className="md:hidden text-xl font-semibold text-premium-black dark:text-white text-center mb-4 border-b border-premium-gold pb-2">
+                {t('booking.title')}
+              </h3>
+              
+              <div className="grid grid-cols-1 md:grid-cols-3 gap-4 sm:gap-6">
+                {/* Локации */}
+                <div className="space-y-3">
+                  <h3 className="hidden md:block text-lg font-semibold text-premium-black dark:text-white border-b border-premium-gold pb-2">
                     {t('booking.location')}
                   </h3>
                   
@@ -120,7 +126,7 @@ const HomePage = () => {
                     placeholder={t('booking.selectLocation')}
                   />
                   
-                  <div className="flex items-center">
+                  <div className="flex items-center mt-2">
                     <input
                       type="checkbox"
                       id="sameLocation"
@@ -143,85 +149,101 @@ const HomePage = () => {
                   )}
                 </div>
                 
-                <div className="space-y-4">
-                  <h3 className="text-lg font-semibold text-premium-black dark:text-white border-b border-premium-gold pb-2">
+                {/* Даты и время */}
+                <div className="space-y-3">
+                  <h3 className="hidden md:block text-lg font-semibold text-premium-black dark:text-white border-b border-premium-gold pb-2">
                     {t('booking.pickupDetails')}
                   </h3>
                   
-                  <div>
-                    <label className="block text-sm font-medium text-gray-700 dark:text-premium-silver mb-1">
-                      {t('booking.pickupDate')}
-                    </label>
-                    <DatePicker
-                      selected={bookingForm.pickupDate}
-                      onChange={(date) => {
-                        setBookingForm({
-                          ...bookingForm, 
-                          pickupDate: date,
-                          // Если дата возврата раньше новой даты получения, обновляем её
-                          returnDate: bookingForm.returnDate && date && bookingForm.returnDate < date 
-                            ? date 
-                            : bookingForm.returnDate
-                        })
-                      }}
-                      className="w-full rounded-md border border-gray-300 dark:border-gray-700 dark:bg-premium-black dark:text-white shadow-sm py-3 px-4 text-base"
-                      dateFormat="dd/MM/yyyy"
-                      minDate={new Date()}
-                      placeholderText={t('booking.selectDate')}
-                    />
+                  <div className="grid grid-cols-2 gap-2">
+                    <div>
+                      <label className="block text-sm font-medium text-gray-700 dark:text-premium-silver mb-1">
+                        {t('booking.pickupDate')}
+                      </label>
+                      <DatePicker
+                        selected={bookingForm.pickupDate}
+                        onChange={(date) => {
+                          setBookingForm({
+                            ...bookingForm, 
+                            pickupDate: date,
+                            // Если дата возврата раньше новой даты получения, обновляем её
+                            returnDate: bookingForm.returnDate && date && bookingForm.returnDate < date 
+                              ? date 
+                              : bookingForm.returnDate
+                          })
+                        }}
+                        className="w-full rounded-md border border-gray-300 dark:border-gray-700 dark:bg-premium-black dark:text-white shadow-sm py-2 sm:py-3 px-2 sm:px-4 text-sm sm:text-base"
+                        dateFormat="dd/MM/yyyy"
+                        minDate={new Date()}
+                        placeholderText={t('booking.selectDate')}
+                      />
+                    </div>
+                    
+                    <div>
+                      <TimeSelector
+                        label={t('booking.pickupTime')}
+                        value={bookingForm.pickupTime}
+                        onChange={(value) => setBookingForm({...bookingForm, pickupTime: value})}
+                      />
+                    </div>
                   </div>
                   
-                  <TimeSelector
-                    label={t('booking.pickupTime')}
-                    value={bookingForm.pickupTime}
-                    onChange={(value) => setBookingForm({...bookingForm, pickupTime: value})}
-                  />
+                  <div className="grid grid-cols-2 gap-2">
+                    <div>
+                      <label className="block text-sm font-medium text-gray-700 dark:text-premium-silver mb-1">
+                        {t('booking.returnDate')}
+                      </label>
+                      <DatePicker
+                        selected={bookingForm.returnDate}
+                        onChange={(date) => setBookingForm({...bookingForm, returnDate: date})}
+                        className="w-full rounded-md border border-gray-300 dark:border-gray-700 dark:bg-premium-black dark:text-white shadow-sm py-2 sm:py-3 px-2 sm:px-4 text-sm sm:text-base"
+                        dateFormat="dd/MM/yyyy"
+                        minDate={bookingForm.pickupDate || new Date()}
+                        placeholderText={t('booking.selectDate')}
+                      />
+                    </div>
+                    
+                    <div>
+                      <TimeSelector
+                        label={t('booking.returnTime')}
+                        value={bookingForm.returnTime}
+                        onChange={(value) => setBookingForm({...bookingForm, returnTime: value})}
+                      />
+                    </div>
+                  </div>
                 </div>
                 
-                <div className="space-y-4">
-                  <h3 className="text-lg font-semibold text-premium-black dark:text-white border-b border-premium-gold pb-2">
-                    {t('booking.returnDetails')}
+                {/* Кнопка поиска и дополнительные опции */}
+                <div className="space-y-3 flex flex-col justify-between">
+                  <h3 className="hidden md:block text-lg font-semibold text-premium-black dark:text-white border-b border-premium-gold pb-2">
+                    {t('booking.searchOptions')}
                   </h3>
                   
-                  <div>
-                    <label className="block text-sm font-medium text-gray-700 dark:text-premium-silver mb-1">
-                      {t('booking.returnDate')}
-                    </label>
-                    <DatePicker
-                      selected={bookingForm.returnDate}
-                      onChange={(date) => setBookingForm({...bookingForm, returnDate: date})}
-                      className="w-full rounded-md border border-gray-300 dark:border-gray-700 dark:bg-premium-black dark:text-white shadow-sm py-3 px-4 text-base"
-                      dateFormat="dd/MM/yyyy"
-                      minDate={bookingForm.pickupDate || new Date()}
-                      placeholderText={t('booking.selectDate')}
-                    />
+                  <div className="flex-grow">
+                    {/* Здесь можно добавить дополнительные опции в будущем */}
                   </div>
                   
-                  <TimeSelector
-                    label={t('booking.returnTime')}
-                    value={bookingForm.returnTime}
-                    onChange={(value) => setBookingForm({...bookingForm, returnTime: value})}
-                  />
-                  
-                  <button
-                    type="submit"
-                    className="w-full bg-premium-gold hover:bg-premium-gold/90 text-white font-bold py-3 px-6 rounded-md transition-colors text-base shadow-md mt-2"
-                  >
-                    {t('booking.searchButton')}
-                  </button>
+                  <div>
+                    <button
+                      type="submit"
+                      className="w-full bg-premium-gold hover:bg-premium-gold/90 text-white font-bold py-3 px-6 rounded-md transition-colors text-base shadow-md"
+                    >
+                      {t('booking.searchButton')}
+                    </button>
+                    
+                    {/* View All Cars Link */}
+                    <div className="mt-3 text-center">
+                      <button
+                        onClick={() => navigate('/catalog?all=1')}
+                        className="text-premium-gold hover:text-premium-gold/80 font-medium transition-colors text-sm"
+                      >
+                        {t('home.viewAllCars')} →
+                      </button>
+                    </div>
+                  </div>
                 </div>
               </div>
             </form>
-            
-            {/* View All Cars Link */}
-            <div className="mt-4 text-center">
-              <button
-                onClick={() => navigate('/catalog?all=1')}
-                className="text-premium-gold hover:text-premium-gold/80 font-medium transition-colors"
-              >
-                {t('home.viewAllCars')} →
-              </button>
-            </div>
           </div>
         </div>
       </section>

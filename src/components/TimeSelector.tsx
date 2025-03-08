@@ -33,7 +33,7 @@ const TimeSelector: React.FC<TimeSelectorProps> = ({ value, onChange, className 
       <select
         value={value}
         onChange={(e) => onChange(e.target.value)}
-        className={`w-full rounded-md border border-gray-300 dark:border-gray-700 dark:bg-premium-black dark:text-white shadow-sm py-3 px-4 text-base ${className}`}
+        className={`w-full rounded-md border border-gray-300 dark:border-gray-700 dark:bg-premium-black dark:text-white shadow-sm py-2 sm:py-3 px-2 sm:px-4 text-sm sm:text-base ${className}`}
       >
         <option value="">Seleccionar hora</option>
         {timeOptions.map((time) => (
