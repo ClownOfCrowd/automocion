@@ -287,15 +287,10 @@
     "info": {
       "title": "Contact Information",
       "address": "Carrer del Mas de l'Abat 145F",
-      "address_mobile": "Calle Principal 123",
-      "location": "Vila-seca, Cataluña",
-      "location_mobile": "Vila-seca, Tarragona",
+      "location": "Vila-seca, Catalonia",
       "postal": "43480",
-      "postal_mobile": "43480, Spain",
-      "schedule": "Horario: 9:00-13:00 / 15:00-19:00",
-      "schedule_mobile": "Working hours:",
-      "workdays": "Lunes a viernes",
-      "workdays_mobile": "Mon-Sat: 9:00 - 20:00"
+      "schedule": "Hours: 9:00-13:00 / 15:00-19:00",
+      "workdays": "Monday to Friday"
     },
     "social": {
       "title": "Follow Us",
