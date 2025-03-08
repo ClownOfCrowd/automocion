@@ -1,6 +1,5 @@
 import i18n from 'i18next'
 import { initReactI18next } from 'react-i18next'
-import LanguageDetector from 'i18next-browser-languagedetector'
 
 // Импортируем переводы
 import translationES from './locales/es/translation.json'
@@ -28,10 +27,10 @@ const resources = {
 }
 
 i18n
-  .use(LanguageDetector)
   .use(initReactI18next)
   .init({
     resources,
+    lng: 'es', // Устанавливаем испанский как язык по умолчанию
     fallbackLng: 'es',
     interpolation: {
       escapeValue: false,
