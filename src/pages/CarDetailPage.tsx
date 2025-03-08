@@ -116,9 +116,9 @@ const CarDetailPage = () => {
 
   return (
     <PageTransition>
-      <div className="bg-white dark:bg-gray-900">
+      <div className="bg-white dark:bg-premium-black">
         {/* Хлебные крошки */}
-        <nav className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-4 mt-20">
+        <nav className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-4 mt-4">
           <ol className="flex items-center space-x-2 text-sm text-gray-500 dark:text-gray-400">
             <li>
               <Link to="/" className="hover:text-gray-700 dark:hover:text-gray-300">
@@ -138,7 +138,7 @@ const CarDetailPage = () => {
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
             {/* Изображение автомобиля */}
             <div>
-              <div className="relative h-64 sm:h-96 bg-gray-100 dark:bg-gray-800 rounded-lg overflow-hidden">
+              <div className="relative h-64 sm:h-96 bg-gray-100 dark:bg-premium-black rounded-lg overflow-hidden">
                 <motion.div
                   initial={{ opacity: 0 }}
                   animate={{ opacity: 1 }}
@@ -175,7 +175,7 @@ const CarDetailPage = () => {
                     initial={{ opacity: 0, y: 20 }}
                     animate={{ opacity: 1, y: 0 }}
                     transition={{ delay: index * 0.1 }}
-                    className="flex flex-col items-center p-3 bg-gray-50 dark:bg-gray-800 rounded-lg"
+                    className="flex flex-col items-center p-3 bg-gray-50 dark:bg-premium-black rounded-lg"
                   >
                     <item.icon className="h-6 w-6 text-premium-gold mb-2" />
                     <span className="text-xs text-gray-500 dark:text-gray-400">{item.title}</span>
@@ -185,7 +185,7 @@ const CarDetailPage = () => {
               </div>
 
               {/* Форма бронирования */}
-              <div className="mt-8 bg-gray-50 dark:bg-gray-800 p-4 sm:p-6 rounded-lg">
+              <div className="mt-8 bg-gray-50 dark:bg-premium-black p-4 sm:p-6 rounded-lg">
                 <h2 className="text-lg font-medium text-gray-900 dark:text-white mb-4">{t('carDetail.booking')}</h2>
                 
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-4">
@@ -196,7 +196,7 @@ const CarDetailPage = () => {
                     <DatePicker
                       selected={pickupDate}
                       onChange={(date) => setPickupDate(date)}
-                      className="w-full rounded-md border border-gray-300 dark:border-gray-700 dark:bg-gray-900 dark:text-white py-2 px-3"
+                      className="w-full rounded-md border border-gray-300 dark:border-gray-700 dark:bg-premium-black dark:text-white py-2 px-3"
                       dateFormat="dd/MM/yyyy"
                       minDate={new Date()}
                       placeholderText={t('booking.pickupDate')}
@@ -209,7 +209,7 @@ const CarDetailPage = () => {
                     <DatePicker
                       selected={returnDate}
                       onChange={(date) => setReturnDate(date)}
-                      className="w-full rounded-md border border-gray-300 dark:border-gray-700 dark:bg-gray-900 dark:text-white py-2 px-3"
+                      className="w-full rounded-md border border-gray-300 dark:border-gray-700 dark:bg-premium-black dark:text-white py-2 px-3"
                       dateFormat="dd/MM/yyyy"
                       minDate={pickupDate || new Date()}
                       placeholderText={t('booking.returnDate')}
@@ -225,7 +225,7 @@ const CarDetailPage = () => {
                     <select
                       value={pickupLocation}
                       onChange={(e) => setPickupLocation(e.target.value)}
-                      className="w-full rounded-md border border-gray-300 dark:border-gray-700 dark:bg-gray-900 dark:text-white py-2 px-3"
+                      className="w-full rounded-md border border-gray-300 dark:border-gray-700 dark:bg-premium-black dark:text-white py-2 px-3"
                     >
                       <option value="Vila-seca">{t('booking.location.options.Vila-seca')}</option>
                       <option value="Tarragona">{t('booking.location.options.Tarragona')}</option>
@@ -239,7 +239,7 @@ const CarDetailPage = () => {
                     <select
                       value={returnLocation}
                       onChange={(e) => setReturnLocation(e.target.value)}
-                      className="w-full rounded-md border border-gray-300 dark:border-gray-700 dark:bg-gray-900 dark:text-white py-2 px-3"
+                      className="w-full rounded-md border border-gray-300 dark:border-gray-700 dark:bg-premium-black dark:text-white py-2 px-3"
                     >
                       <option value="Vila-seca">{t('booking.location.options.Vila-seca')}</option>
                       <option value="Tarragona">{t('booking.location.options.Tarragona')}</option>
@@ -276,7 +276,7 @@ const CarDetailPage = () => {
                   initial={{ opacity: 0, x: -20 }}
                   animate={{ opacity: 1, x: 0 }}
                   transition={{ delay: index * 0.1 }}
-                  className="flex items-start p-4 bg-gray-50 dark:bg-gray-800 rounded-lg"
+                  className="flex items-start p-4 bg-gray-50 dark:bg-premium-black rounded-lg"
                 >
                   <CheckIcon className="h-5 w-5 text-premium-gold mr-3 mt-0.5" />
                   <div>
@@ -295,7 +295,7 @@ const CarDetailPage = () => {
                 {similarCars.map((similarCar) => (
                   <motion.div
                     key={similarCar.id}
-                    className="bg-white dark:bg-gray-800 rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition-shadow"
+                    className="bg-white dark:bg-premium-black rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition-shadow"
                     whileHover={{ y: -5 }}
                   >
                     <div className="relative h-40">

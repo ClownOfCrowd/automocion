@@ -108,13 +108,13 @@ const HomePage = () => {
           <div className="bg-white dark:bg-premium-black/90 p-4 sm:p-6 rounded-lg shadow-xl max-w-5xl mx-auto">
             <form onSubmit={handleBookingSubmit}>
               {/* Заголовок формы - только для мобильных */}
-              <h3 className="md:hidden text-xl font-semibold text-premium-black dark:text-white text-center mb-4 border-b border-premium-gold pb-2">
+              <h3 className="md:hidden text-xl font-semibold text-premium-black dark:text-white text-center mb-3 border-b border-premium-gold pb-2">
                 {t('booking.title')}
               </h3>
               
-              <div className="grid grid-cols-1 md:grid-cols-3 gap-4 sm:gap-6">
+              <div className="grid grid-cols-1 md:grid-cols-3 gap-3 sm:gap-4">
                 {/* Локации */}
-                <div className="space-y-3">
+                <div className="space-y-2 sm:space-y-3">
                   <h3 className="hidden md:block text-lg font-semibold text-premium-black dark:text-white border-b border-premium-gold pb-2">
                     {t('booking.location')}
                   </h3>
@@ -126,7 +126,7 @@ const HomePage = () => {
                     placeholder={t('booking.selectLocation')}
                   />
                   
-                  <div className="flex items-center mt-2">
+                  <div className="flex items-center">
                     <input
                       type="checkbox"
                       id="sameLocation"
@@ -134,7 +134,7 @@ const HomePage = () => {
                       onChange={() => setSameReturnLocation(!sameReturnLocation)}
                       className="h-4 w-4 text-premium-gold focus:ring-premium-gold border-gray-300 rounded"
                     />
-                    <label htmlFor="sameLocation" className="ml-2 block text-sm text-gray-700 dark:text-premium-silver">
+                    <label htmlFor="sameLocation" className="ml-2 block text-xs sm:text-sm text-gray-700 dark:text-premium-silver">
                       {t('booking.sameReturnLocation')}
                     </label>
                   </div>
@@ -150,14 +150,14 @@ const HomePage = () => {
                 </div>
                 
                 {/* Даты и время */}
-                <div className="space-y-3">
+                <div className="space-y-2 sm:space-y-3">
                   <h3 className="hidden md:block text-lg font-semibold text-premium-black dark:text-white border-b border-premium-gold pb-2">
                     {t('booking.pickupDetails')}
                   </h3>
                   
                   <div className="grid grid-cols-2 gap-2">
                     <div>
-                      <label className="block text-sm font-medium text-gray-700 dark:text-premium-silver mb-1">
+                      <label className="block text-xs sm:text-sm font-medium text-gray-700 dark:text-premium-silver mb-1">
                         {t('booking.pickupDate')}
                       </label>
                       <DatePicker
@@ -172,7 +172,7 @@ const HomePage = () => {
                               : bookingForm.returnDate
                           })
                         }}
-                        className="w-full rounded-md border border-gray-300 dark:border-gray-700 dark:bg-premium-black dark:text-white shadow-sm py-2 sm:py-3 px-2 sm:px-4 text-sm sm:text-base"
+                        className="w-full rounded-md border border-gray-300 dark:border-gray-700 dark:bg-premium-black dark:text-white shadow-sm py-1.5 sm:py-2 px-2 sm:px-3 text-xs sm:text-sm"
                         dateFormat="dd/MM/yyyy"
                         minDate={new Date()}
                         placeholderText={t('booking.selectDate')}
@@ -190,13 +190,13 @@ const HomePage = () => {
                   
                   <div className="grid grid-cols-2 gap-2">
                     <div>
-                      <label className="block text-sm font-medium text-gray-700 dark:text-premium-silver mb-1">
+                      <label className="block text-xs sm:text-sm font-medium text-gray-700 dark:text-premium-silver mb-1">
                         {t('booking.returnDate')}
                       </label>
                       <DatePicker
                         selected={bookingForm.returnDate}
                         onChange={(date) => setBookingForm({...bookingForm, returnDate: date})}
-                        className="w-full rounded-md border border-gray-300 dark:border-gray-700 dark:bg-premium-black dark:text-white shadow-sm py-2 sm:py-3 px-2 sm:px-4 text-sm sm:text-base"
+                        className="w-full rounded-md border border-gray-300 dark:border-gray-700 dark:bg-premium-black dark:text-white shadow-sm py-1.5 sm:py-2 px-2 sm:px-3 text-xs sm:text-sm"
                         dateFormat="dd/MM/yyyy"
                         minDate={bookingForm.pickupDate || new Date()}
                         placeholderText={t('booking.selectDate')}
@@ -214,7 +214,7 @@ const HomePage = () => {
                 </div>
                 
                 {/* Кнопка поиска и дополнительные опции */}
-                <div className="space-y-3 flex flex-col justify-between">
+                <div className="space-y-2 sm:space-y-3 flex flex-col justify-between">
                   <h3 className="hidden md:block text-lg font-semibold text-premium-black dark:text-white border-b border-premium-gold pb-2">
                     {t('booking.searchOptions')}
                   </h3>
@@ -226,16 +226,16 @@ const HomePage = () => {
                   <div>
                     <button
                       type="submit"
-                      className="w-full bg-premium-gold hover:bg-premium-gold/90 text-white font-bold py-3 px-6 rounded-md transition-colors text-base shadow-md"
+                      className="w-full bg-premium-gold hover:bg-premium-gold/90 text-white font-bold py-2 sm:py-3 px-4 sm:px-6 rounded-md transition-colors text-sm sm:text-base shadow-md"
                     >
                       {t('booking.searchButton')}
                     </button>
                     
                     {/* View All Cars Link */}
-                    <div className="mt-3 text-center">
+                    <div className="mt-2 text-center">
                       <button
                         onClick={() => navigate('/catalog?all=1')}
-                        className="text-premium-gold hover:text-premium-gold/80 font-medium transition-colors text-sm"
+                        className="text-premium-gold hover:text-premium-gold/80 font-medium transition-colors text-xs sm:text-sm"
                       >
                         {t('home.viewAllCars')} →
                       </button>

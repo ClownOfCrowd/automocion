@@ -27,7 +27,7 @@ const ContactPage = () => {
 
   return (
     <PageTransition>
-      <div className="bg-white dark:bg-gray-900">
+      <div className="bg-white dark:bg-premium-black">
         {/* Hero Section */}
         <div className="relative h-[300px] sm:h-[400px] lg:h-[500px] bg-gradient-to-r from-premium-black to-premium-black/90">
           <div className="absolute inset-0">
