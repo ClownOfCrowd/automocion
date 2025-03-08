@@ -45,7 +45,7 @@ const CheckoutPage = () => {
   return (
     <PageTransition>
       <div className="min-h-screen bg-gray-50 dark:bg-premium-black">
-        <div className="max-w-7xl mx-auto py-12 px-4 sm:px-6 lg:px-8">
+        <div className="max-w-7xl mx-auto py-12 px-4 sm:px-6 lg:px-8 pt-16">
           <div className="max-w-3xl mx-auto">
             <form onSubmit={handleSubmit} className="space-y-8">
               {/* Контактная информация */}

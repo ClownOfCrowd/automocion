@@ -84,7 +84,7 @@ const HomePage = () => {
   return (
     <div className="min-h-screen bg-white dark:bg-premium-black">
       {/* Hero Section with Booking Form */}
-      <section className="relative h-[calc(100vh-5rem)] bg-gradient-to-r from-premium-black to-premium-black/90">
+      <section className="relative h-screen bg-gradient-to-r from-premium-black to-premium-black/90">
         <div className="absolute inset-0">
           <LazyImage
             src="/hero-bg.jpg"

@@ -118,7 +118,7 @@ const CarDetailPage = () => {
     <PageTransition>
       <div className="bg-white dark:bg-premium-black">
         {/* Хлебные крошки */}
-        <nav className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-4 mt-4">
+        <nav className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-4 pt-16">
           <ol className="flex items-center space-x-2 text-sm text-gray-500 dark:text-gray-400">
             <li>
               <Link to="/" className="hover:text-gray-700 dark:hover:text-gray-300">

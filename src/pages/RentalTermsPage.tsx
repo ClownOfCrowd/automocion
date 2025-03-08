@@ -47,7 +47,7 @@ const RentalTermsPage = () => {
   return (
     <PageTransition>
       {/* Hero Section */}
-      <section className="relative h-[40vh] bg-gradient-to-r from-premium-black to-premium-black/90">
+      <section className="relative h-[50vh] bg-gradient-to-r from-premium-black to-premium-black/90">
         <div className="absolute inset-0">
           <img
             src="/terms-bg.jpg"
