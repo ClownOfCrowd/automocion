@@ -334,12 +334,18 @@ const HomePage = () => {
       {/* Process Section */}
       <section className="relative py-12 sm:py-24 bg-white dark:bg-premium-black">
         <div className="container mx-auto px-4">
-          <div className="text-center mb-8 sm:mb-16">
+          <motion.div 
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.6 }}
+            className="text-center mb-8 sm:mb-16"
+          >
             <h2 className="text-2xl sm:text-4xl font-bold text-premium-black dark:text-white mb-2 sm:mb-4">
               <span className="text-premium-gold">{t('home.process.title')}</span>
             </h2>
             <p className="text-base sm:text-xl text-gray-600 dark:text-premium-silver">{t('home.process.description')}</p>
-          </div>
+          </motion.div>
 
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-8">
             {[
@@ -364,13 +370,20 @@ const HomePage = () => {
                 description: t('home.process.step4.description'),
               },
             ].map((step, index) => (
-              <div key={index} className="bg-white dark:bg-premium-black/50 p-6 rounded-lg shadow-md">
+              <motion.div 
+                key={index} 
+                initial={{ opacity: 0, y: 30 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.5, delay: index * 0.2 }}
+                className="bg-white dark:bg-premium-black/50 p-6 rounded-lg shadow-md"
+              >
                 <div className="w-12 h-12 bg-premium-gold/10 rounded-full flex items-center justify-center mb-4">
                   <step.icon className="h-6 w-6 text-premium-gold" />
                 </div>
                 <h3 className="text-xl font-bold mb-2 dark:text-white">{step.title}</h3>
                 <p className="text-gray-600 dark:text-premium-silver">{step.description}</p>
-              </div>
+              </motion.div>
             ))}
           </div>
         </div>
