@@ -3,6 +3,7 @@ import { motion, AnimatePresence } from 'framer-motion'
 import { useTranslation } from 'react-i18next'
 import { cars } from '../data/cars'
 import { useTheme } from '../contexts/ThemeContext'
+import axios from 'axios'
 
 // Расширенные списки имен для каждого языка
 const namesByLang = {
@@ -35,7 +36,24 @@ const namesByLang = {
     'Chloé', 'Julien', 'Manon', 'Antoine', 'Inès', 'Louis', 'Jade', 'Maxime',
     'Clara', 'Pierre', 'Juliette', 'Alexandre', 'Alice', 'Gabriel', 'Louise',
     'Théo', 'Sarah', 'Paul', 'Charlotte', 'Arthur', 'Zoé', 'Victor'
+  ],
+  // Международные имена, которые могут появляться в любом языке
+  international: [
+    'Alex', 'Max', 'Anna', 'Maria', 'Daniel', 'Eva', 'Adam', 'Sofia', 'Leo', 'Nina',
+    'Tom', 'Lara', 'Martin', 'Diana', 'Oliver', 'Julia', 'Oscar', 'Emma', 'Lucas', 'Mia'
   ]
+}
+
+// Ключ для localStorage
+const NOTIFICATION_STORAGE_KEY = 'booking_notifications_state';
+const IP_LAST_SEEN_KEY = 'booking_notifications_ip_last_seen';
+
+// Интерфейс для состояния оповещений
+interface NotificationState {
+  lastShownTimestamp: number;
+  shownCount: number;
+  ipAddress: string | null;
+  pauseUntil: number;
 }
 
 const BookingNotifications = () => {
@@ -43,11 +61,107 @@ const BookingNotifications = () => {
   const { theme } = useTheme()
   const [notification, setNotification] = useState<{ name: string; carId: string; timeAgo: number } | null>(null)
   const [isVisible, setIsVisible] = useState(false)
+  const [notificationState, setNotificationState] = useState<NotificationState>({
+    lastShownTimestamp: 0,
+    shownCount: 0,
+    ipAddress: null,
+    pauseUntil: 0
+  });
+  const [userIp, setUserIp] = useState<string | null>(null);
 
-  // Функция для генерации случайного уведомления
+  // Загружаем состояние из localStorage при монтировании
+  useEffect(() => {
+    const savedState = localStorage.getItem(NOTIFICATION_STORAGE_KEY);
+    if (savedState) {
+      try {
+        const parsedState = JSON.parse(savedState) as NotificationState;
+        setNotificationState(parsedState);
+      } catch (e) {
+        console.error('Failed to parse notification state from localStorage', e);
+      }
+    }
+
+    // Получаем IP пользователя
+    const fetchIp = async () => {
+      try {
+        // Используем бесплатный API для получения IP
+        const response = await axios.get('https://api.ipify.org?format=json');
+        const ip = response.data.ip;
+        setUserIp(ip);
+        
+        // Проверяем, видел ли этот IP уже оповещения
+        const ipLastSeen = localStorage.getItem(IP_LAST_SEEN_KEY);
+        if (ipLastSeen) {
+          try {
+            const ipData = JSON.parse(ipLastSeen);
+            if (ipData[ip]) {
+              // Если этот IP уже видел оповещения, увеличиваем паузу
+              const lastSeen = ipData[ip];
+              const hoursSinceLastSeen = (Date.now() - lastSeen) / (1000 * 60 * 60);
+              
+              // Если прошло меньше 4 часов, увеличиваем паузу
+              if (hoursSinceLastSeen < 4) {
+                setNotificationState(prev => ({
+                  ...prev,
+                  shownCount: Math.min(prev.shownCount + 2, 5), // Увеличиваем счетчик, но не более 5
+                  pauseUntil: Date.now() + 120000 // Добавляем паузу в 2 минуты
+                }));
+              }
+            }
+          } catch (e) {
+            console.error('Failed to parse IP last seen data', e);
+          }
+        }
+      } catch (e) {
+        console.error('Failed to fetch IP address', e);
+      }
+    };
+
+    fetchIp();
+  }, []);
+
+  // Сохраняем состояние в localStorage при изменении
+  useEffect(() => {
+    localStorage.setItem(NOTIFICATION_STORAGE_KEY, JSON.stringify(notificationState));
+    
+    // Если у нас есть IP, обновляем время последнего посещения
+    if (userIp) {
+      const ipLastSeen = localStorage.getItem(IP_LAST_SEEN_KEY) || '{}';
+      try {
+        const ipData = JSON.parse(ipLastSeen);
+        ipData[userIp] = Date.now();
+        localStorage.setItem(IP_LAST_SEEN_KEY, JSON.stringify(ipData));
+      } catch (e) {
+        console.error('Failed to update IP last seen data', e);
+      }
+    }
+  }, [notificationState, userIp]);
+
+  // Функция для генерации случайного уведомления с учетом языка и международных имен
   const generateRandomNotification = () => {
-    const names = namesByLang[i18n.language as keyof typeof namesByLang] || namesByLang.es
-    const randomName = names[Math.floor(Math.random() * names.length)]
+    // Выбираем имя с учетом текущего языка, но с шансом на международное имя
+    let names;
+    const useInternationalName = Math.random() < 0.3; // 30% шанс на международное имя
+    
+    if (useInternationalName) {
+      names = namesByLang.international;
+    } else {
+      // Выбираем имя из текущего языка с 70% вероятностью
+      // или из другого языка с 30% вероятностью
+      const currentLangNames = namesByLang[i18n.language as keyof typeof namesByLang];
+      if (currentLangNames && Math.random() < 0.7) {
+        names = currentLangNames;
+      } else {
+        // Выбираем случайный язык, отличный от текущего
+        const availableLangs = Object.keys(namesByLang).filter(
+          lang => lang !== i18n.language && lang !== 'international'
+        );
+        const randomLang = availableLangs[Math.floor(Math.random() * availableLangs.length)];
+        names = namesByLang[randomLang as keyof typeof namesByLang] || namesByLang.en;
+      }
+    }
+    
+    const randomName = names[Math.floor(Math.random() * names.length)];
     
     // Более реалистичное распределение автомобилей
     // Некоторые модели более популярны и должны появляться чаще
@@ -93,43 +207,93 @@ const BookingNotifications = () => {
   }
 
   useEffect(() => {
-    // Показываем уведомление каждые 90-120 секунд (случайный интервал)
-    // Это создает ощущение активности на сайте, но не перегружает пользователя
-    const getRandomInterval = () => Math.floor(Math.random() * 30000) + 90000 // от 90 до 120 секунд
+    // Адаптивный интервал показа оповещений в зависимости от количества уже показанных
+    const getAdaptiveInterval = () => {
+      const { shownCount } = notificationState;
+      
+      // Чем больше оповещений показано, тем реже они будут появляться
+      if (shownCount === 0) return Math.floor(Math.random() * 30000) + 60000; // 60-90 сек для первого
+      if (shownCount === 1) return Math.floor(Math.random() * 30000) + 90000; // 90-120 сек для второго
+      if (shownCount === 2) return Math.floor(Math.random() * 30000) + 120000; // 120-150 сек для третьего
+      if (shownCount === 3) return Math.floor(Math.random() * 30000) + 150000; // 150-180 сек для четвертого
+      return Math.floor(Math.random() * 30000) + 180000; // 180-210 сек для пятого и далее
+    };
 
+    // Проверяем, нужно ли показывать оповещения
+    const shouldShowNotifications = () => {
+      const { pauseUntil, shownCount } = notificationState;
+      
+      // Если установлена пауза и она еще не истекла, не показываем оповещения
+      if (pauseUntil > Date.now()) return false;
+      
+      // Если показано уже 5 оповещений, показываем с вероятностью 50%
+      if (shownCount >= 5) return Math.random() < 0.5;
+      
+      return true;
+    };
+
+    // Показываем уведомление с адаптивным интервалом
     const showInterval = setInterval(() => {
-      const newNotification = generateRandomNotification()
-      setNotification(newNotification)
-      setIsVisible(true)
+      // Проверяем, нужно ли показывать оповещение
+      if (!shouldShowNotifications()) return;
+      
+      const newNotification = generateRandomNotification();
+      setNotification(newNotification);
+      setIsVisible(true);
+      
+      // Обновляем состояние оповещений
+      setNotificationState(prev => ({
+        ...prev,
+        lastShownTimestamp: Date.now(),
+        shownCount: prev.shownCount + 1,
+        ipAddress: userIp || prev.ipAddress
+      }));
 
       // Скрываем уведомление через 7 секунд
-      // Этого достаточно, чтобы пользователь заметил уведомление, но не слишком долго, чтобы оно мешало
       setTimeout(() => {
-        setIsVisible(false)
-      }, 7000)
-    }, getRandomInterval())
+        setIsVisible(false);
+      }, 7000);
+    }, getAdaptiveInterval());
 
-    // Показываем первое уведомление через 8 секунд после загрузки
-    // Это дает пользователю время освоиться на странице, прежде чем показывать уведомления
+    // Показываем первое уведомление через 8-15 секунд после загрузки,
+    // но только если это первый визит или прошло достаточно времени
     const initialTimeout = setTimeout(() => {
-      const initialNotification = generateRandomNotification()
-      setNotification(initialNotification)
-      setIsVisible(true)
-      setTimeout(() => setIsVisible(false), 7000)
-    }, 8000)
+      const { lastShownTimestamp, pauseUntil } = notificationState;
+      const hoursSinceLastShown = (Date.now() - lastShownTimestamp) / (1000 * 60 * 60);
+      
+      // Показываем первое оповещение только если:
+      // 1. Это первый визит (lastShownTimestamp === 0)
+      // 2. Прошло более 2 часов с последнего показа
+      // 3. Нет активной паузы
+      if ((lastShownTimestamp === 0 || hoursSinceLastShown > 2) && pauseUntil <= Date.now()) {
+        const initialNotification = generateRandomNotification();
+        setNotification(initialNotification);
+        setIsVisible(true);
+        
+        // Обновляем состояние оповещений
+        setNotificationState(prev => ({
+          ...prev,
+          lastShownTimestamp: Date.now(),
+          shownCount: prev.shownCount + 1,
+          ipAddress: userIp || prev.ipAddress
+        }));
+        
+        setTimeout(() => setIsVisible(false), 7000);
+      }
+    }, Math.floor(Math.random() * 7000) + 8000); // от 8 до 15 секунд
 
     return () => {
-      clearInterval(showInterval)
-      clearTimeout(initialTimeout)
+      clearInterval(showInterval);
+      clearTimeout(initialTimeout);
     }
-  }, [i18n.language])
+  }, [i18n.language, notificationState, userIp]);
 
-  if (!notification) return null
+  if (!notification) return null;
 
-  const car = cars.find(c => c.id === notification.carId)
-  if (!car) return null
+  const car = cars.find(c => c.id === notification.carId);
+  if (!car) return null;
 
-  const isDarkMode = theme === 'dark'
+  const isDarkMode = theme === 'dark';
 
   return (
     <AnimatePresence>
