@@ -19,13 +19,28 @@
   },
   "home": {
     "hero": {
-      "title": "Alquiler de coches premium",
+      "title": "Alquiler de Coches Premium",
       "subtitle": "en Vila-seca",
       "description": "Descubre nuestra flota exclusiva y disfruta de un servicio personalizado de primera clase",
-      "cta": "Ver catálogo"
+      "cta": "Ver Catálogo"
     },
     "search": {
-      "button": "Buscar coche"
+      "button": "Encontrar un coche",
+      "location": "Ubicación",
+      "pickupLocation": "Lugar de recogida",
+      "returnLocation": "Lugar de devolución",
+      "sameReturnLocation": "Devolver en el mismo lugar",
+      "pickupDetails": "Detalles de recogida",
+      "returnDetails": "Detalles de devolución",
+      "pickupDate": "Fecha de recogida",
+      "returnDate": "Fecha de devolución",
+      "pickupTime": "Hora de recogida",
+      "returnTime": "Hora de devolución",
+      "selectDate": "Seleccionar fecha",
+      "selectLocation": "Seleccionar ubicación",
+      "searchOptions": "Opciones de búsqueda",
+      "searchButton": "Buscar vehículos",
+      "viewAllCars": "Ver todos los coches →"
     },
     "popular": {
       "title": "Vehículos populares",
@@ -163,7 +178,7 @@
         "transmission": "Transmisión",
         "fuel": "Tipo de combustible",
         "consumption": "Consumo",
-        "seats": "Asientos",
+        "seats": "Plazas",
         "doors": "Puertas",
         "engine": "Motor",
         "power": "Potencia",
@@ -175,10 +190,10 @@
         "description": "Compacto y económico coche urbano"
       },
       "citroen_c3": {
-        "description": "Elegante y cómodo coche urbano"
+        "description": "Coche urbano elegante y cómodo"
       },
       "mini_cooper_s": {
-        "description": "Deportivo y elegante con un rendimiento excepcional"
+        "description": "Deportivo y elegante con rendimiento excepcional"
       }
     },
     "luggage": "equipaje",
@@ -196,13 +211,19 @@
     "notFound": "Vehículo no encontrado",
     "notFoundDescription": "Lo sentimos, no pudimos encontrar el vehículo solicitado",
     "backToCatalog": "Volver al catálogo",
+    "description": "Descripción",
+    "features": "Características",
+    "booking": "Reserva",
+    "similarCars": "Vehículos similares",
     "highlights": {
       "year": "Año",
       "transmission": "Transmisión",
       "fuel": "Combustible",
+      "seats": "Plazas",
+      "luggage": "Equipaje",
+      "power": "Potencia",
       "consumption": "Consumo"
     },
-    "features": "Características",
     "bookNow": "Reservar ahora",
     "notAvailable": "No disponible",
     "additionalInfo": {
@@ -211,74 +232,41 @@
       "insurance": "Seguro completo incluido en el precio",
       "mileage": "Sin límite de kilometraje",
       "deposit": "Depósito reembolsable requerido",
-      "documents": "Carnet de conducir y pasaporte requeridos"
+      "documents": "Licencia de conducir y pasaporte requeridos"
     },
-    "specifications": "Especificaciones",
-    "similarCars": "Coches similares",
-    "description": "Descripción del coche"
+    "specifications": {
+      "title": "Especificaciones",
+      "engine": "Motor",
+      "power": "Potencia",
+      "acceleration": "Aceleración 0-100 km/h",
+      "topSpeed": "Velocidad máxima"
+    }
   },
   "booking": {
-    "title": "Reserva tu vehículo",
-    "subtitle": "Completa el formulario para reservar tu vehículo seleccionado",
-    "location": "Ubicaciones",
-    "pickupDetails": "Detalles de recogida",
-    "returnDetails": "Detalles de devolución",
-    "searchOptions": "Opciones de búsqueda",
+    "title": "Reserva",
+    "location": "Ubicación",
     "pickupLocation": "Lugar de recogida",
     "returnLocation": "Lugar de devolución",
+    "sameReturnLocation": "Devolver en el mismo lugar",
+    "pickupDetails": "Detalles de recogida",
+    "returnDetails": "Detalles de devolución",
     "pickupDate": "Fecha de recogida",
     "returnDate": "Fecha de devolución",
     "pickupTime": "Hora de recogida",
     "returnTime": "Hora de devolución",
     "selectDate": "Seleccionar fecha",
     "selectLocation": "Seleccionar ubicación",
-    "sameReturnLocation": "Devolver en la misma ubicación",
+    "searchOptions": "Opciones de búsqueda",
     "searchButton": "Buscar vehículos",
-    "rental": {
-      "title": "Detalles del alquiler",
-      "pickup": "Fecha de recogida",
-      "return": "Fecha de devolución",
-      "pickupLocation": "Lugar de recogida",
-      "returnLocation": "Lugar de devolución",
-      "selectLocation": "Seleccionar ubicación"
-    },
-    "personal": {
-      "title": "Datos personales",
-      "firstName": "Nombre",
-      "lastName": "Apellidos",
-      "email": "Correo electrónico",
-      "phone": "Teléfono"
-    },
-    "options": {
-      "title": "Opciones adicionales",
-      "gps": "Navegador GPS",
-      "gpsDescription": "Sistema de navegación GPS para un viaje cómodo",
-      "childSeat": "Silla infantil",
-      "childSeatDescription": "Silla infantil segura para los más pequeños",
-      "insurance": "Seguro adicional",
-      "insuranceDescription": "Cobertura de seguro ampliada para tu tranquilidad",
-      "wifi": "WiFi móvil",
-      "wifiDescription": "Punto de acceso WiFi portátil para acceso a internet durante tu viaje"
-    },
-    "continue": "Continuar",
-    "submit": "Confirmar reserva",
-    "summary": {
-      "title": "Resumen del pedido",
-      "days": "días",
-      "selectDates": "Selecciona fechas de alquiler",
-      "selectLocation": "Selecciona lugar de recogida",
-      "price": "Precio",
-      "differentLocation": "Diferentes lugares de recogida y devolución",
-      "total": "Total",
-      "noCar": "Ningún coche seleccionado",
-      "selectCar": "Selecciona un coche"
-    },
-    "help": {
-      "title": "¿Necesitas ayuda?",
-      "phone": "Teléfono",
-      "email": "Correo electrónico",
-      "chat": "Chat en vivo",
-      "chatDescription": "Nuestros especialistas están listos para responder tus preguntas"
+    "totalPrice": "Precio total",
+    "location": {
+      "options": {
+        "Vila-seca": "Vila-seca",
+        "Tarragona": "Tarragona",
+        "Reus": "Reus",
+        "Salou": "Salou",
+        "Barcelona": "Barcelona"
+      }
     }
   },
   "contact": {
@@ -350,14 +338,13 @@
     "sport_mode": "Modo deportivo",
     "dynamic_chassis": "Chasis dinámico",
     "autopilot": "Piloto automático",
-    "premium_interior": "Interior premium",
-    "supercharging": "Supercarga",
-    "glass_roof": "Techo de cristal",
-    "luxury_interior": "Interior de lujo",
-    "electric_doors": "Puertas eléctricas",
-    "ambient_lighting": "Iluminación ambiental",
-    "rear_climate": "Climatización trasera",
-    "four_wheel_drive": "Tracción 4x4"
+    "GPS": "GPS",
+    "Bluetooth": "Bluetooth",
+    "Climatizador": "Climatizador",
+    "USB": "USB",
+    "Sensores de aparcamiento": "Sensores de aparcamiento",
+    "Asientos deportivos": "Asientos deportivos",
+    "Techo panorámico": "Techo panorámico"
   },
   "whatsapp": {
     "message": "Escríbenos por WhatsApp",

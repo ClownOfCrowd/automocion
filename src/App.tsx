@@ -15,6 +15,7 @@ import LoadingScreen from './components/LoadingScreen'
 import { LoadingProvider } from './contexts/LoadingContext'
 import { ThemeProvider } from './contexts/ThemeContext'
 import { useLoadingManager } from './hooks/useLoadingManager'
+import BookingNotifications from './components/BookingNotifications'
 
 const queryClient = new QueryClient({
   defaultOptions: {
@@ -74,6 +75,7 @@ const AnimatedRoutes = () => {
           </Route>
         </Routes>
       </AnimatePresence>
+      <BookingNotifications />
     </>
   )
 }

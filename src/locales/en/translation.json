@@ -32,13 +32,21 @@
     },
     "search": {
       "button": "Find a Car",
-      "category": "Category",
-      "priceRange": "Maximum Price",
-      "location": {
-        "pickup": "Pickup Location",
-        "return": "Return Location",
-        "placeholder": "Select a location"
-      }
+      "location": "Location",
+      "pickupLocation": "Pickup Location",
+      "returnLocation": "Return Location",
+      "sameReturnLocation": "Return to same location",
+      "pickupDetails": "Pickup Details",
+      "returnDetails": "Return Details",
+      "pickupDate": "Pickup Date",
+      "returnDate": "Return Date",
+      "pickupTime": "Pickup Time",
+      "returnTime": "Return Time",
+      "selectDate": "Select Date",
+      "selectLocation": "Select Location",
+      "searchOptions": "Search Options",
+      "searchButton": "Search Vehicles",
+      "viewAllCars": "View All Cars →"
     },
     "popular": {
       "title": "Popular Vehicles",
@@ -207,67 +215,30 @@
     }
   },
   "booking": {
-    "title": "Book Your Vehicle",
-    "subtitle": "Fill out the form below to book your selected vehicle",
-    "location": "Locations",
-    "pickupDetails": "Pickup Details",
-    "returnDetails": "Return Details",
-    "searchOptions": "Search Options",
+    "title": "Booking",
+    "location": "Location",
     "pickupLocation": "Pickup Location",
     "returnLocation": "Return Location",
+    "sameReturnLocation": "Return to same location",
+    "pickupDetails": "Pickup Details",
+    "returnDetails": "Return Details",
     "pickupDate": "Pickup Date",
     "returnDate": "Return Date",
     "pickupTime": "Pickup Time",
     "returnTime": "Return Time",
-    "selectDate": "Select date",
-    "selectLocation": "Select location",
-    "sameReturnLocation": "Return to the same location",
+    "selectDate": "Select Date",
+    "selectLocation": "Select Location",
+    "searchOptions": "Search Options",
     "searchButton": "Search Vehicles",
-    "rental": {
-      "title": "Rental Details",
-      "pickup": "Pick-up Date",
-      "return": "Return Date",
-      "pickupLocation": "Pick-up Location",
-      "returnLocation": "Return Location",
-      "selectLocation": "Select location"
-    },
-    "personal": {
-      "title": "Personal Details",
-      "firstName": "First Name",
-      "lastName": "Last Name",
-      "email": "Email",
-      "phone": "Phone"
-    },
-    "options": {
-      "title": "Additional Options",
-      "gps": "GPS Navigation",
-      "gpsDescription": "GPS navigation system for convenient travel",
-      "childSeat": "Child Seat",
-      "childSeatDescription": "Safe child seat for young passengers",
-      "insurance": "Additional Insurance",
-      "insuranceDescription": "Extended insurance coverage for your peace of mind",
-      "wifi": "Mobile WiFi",
-      "wifiDescription": "Portable WiFi hotspot for internet access during your trip"
-    },
-    "continue": "Continue",
-    "submit": "Confirm Booking",
-    "summary": {
-      "title": "Order Summary",
-      "days": "days",
-      "selectDates": "Select rental dates",
-      "selectLocation": "Select pickup location",
-      "price": "Price",
-      "differentLocation": "Different pickup and return locations",
-      "total": "Total",
-      "noCar": "No car selected",
-      "selectCar": "Select a car"
-    },
-    "help": {
-      "title": "Need Help?",
-      "phone": "Phone",
-      "email": "Email",
-      "chat": "Live Chat",
-      "chatDescription": "Our specialists are ready to answer your questions"
+    "totalPrice": "Total Price",
+    "location": {
+      "options": {
+        "Vila-seca": "Vila-seca",
+        "Tarragona": "Tarragona",
+        "Reus": "Reus",
+        "Salou": "Salou",
+        "Barcelona": "Barcelona"
+      }
     }
   },
   "contact": {
@@ -560,5 +531,39 @@
     "suv": "SUV",
     "economy": "Economy",
     "electric": "Electric"
+  },
+  "features": {
+    "leather_seats": "Leather Seats",
+    "navigation": "Navigation",
+    "parking_sensors": "Parking Sensors",
+    "bluetooth": "Bluetooth",
+    "climate_control": "Climate Control",
+    "led_lights": "LED Lights",
+    "air_conditioning": "Air Conditioning",
+    "usb": "USB",
+    "apple_carplay": "Apple CarPlay",
+    "android_auto": "Android Auto",
+    "backup_camera": "Backup Camera",
+    "lane_assist": "Lane Assist",
+    "adaptive_cruise": "Adaptive Cruise Control",
+    "premium_sound": "Premium Sound System",
+    "panoramic_roof": "Panoramic Roof",
+    "driver_assistance": "Driver Assistance",
+    "wireless_charging": "Wireless Charging",
+    "electric_range": "Electric Range",
+    "fast_charging": "Fast Charging",
+    "perfect_city": "Perfect for City",
+    "easy_parking": "Easy Parking",
+    "digital_cockpit": "Digital Cockpit",
+    "sport_mode": "Sport Mode",
+    "dynamic_chassis": "Dynamic Chassis",
+    "autopilot": "Autopilot",
+    "GPS": "GPS",
+    "Bluetooth": "Bluetooth",
+    "Climatizador": "Climate Control",
+    "USB": "USB",
+    "Sensores de aparcamiento": "Parking Sensors",
+    "Asientos deportivos": "Sport Seats",
+    "Techo panorámico": "Panoramic Roof"
   }
 } 

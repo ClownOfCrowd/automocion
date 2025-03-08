@@ -20,11 +20,26 @@
     "hero": {
       "title": "Premium Autovermietung",
       "subtitle": "in Vila-seca",
-      "description": "Entdecken Sie unsere exklusive Flotte und genießen Sie erstklassigen persönlichen Service",
+      "description": "Entdecken Sie unsere exklusive Flotte und genießen Sie erstklassigen, personalisierten Service",
       "cta": "Katalog ansehen"
     },
     "search": {
-      "button": "Auto finden"
+      "button": "Auto finden",
+      "location": "Standort",
+      "pickupLocation": "Abholort",
+      "returnLocation": "Rückgabeort",
+      "sameReturnLocation": "Rückgabe am gleichen Ort",
+      "pickupDetails": "Abholdetails",
+      "returnDetails": "Rückgabedetails",
+      "pickupDate": "Abholdatum",
+      "returnDate": "Rückgabedatum",
+      "pickupTime": "Abholzeit",
+      "returnTime": "Rückgabezeit",
+      "selectDate": "Datum auswählen",
+      "selectLocation": "Standort auswählen",
+      "searchOptions": "Suchoptionen",
+      "searchButton": "Fahrzeuge suchen",
+      "viewAllCars": "Alle Autos anzeigen →"
     },
     "popular": {
       "title": "Beliebte Fahrzeuge",
@@ -112,6 +127,9 @@
       "title": "Bereit zum Buchen?",
       "description": "Buchen Sie jetzt und profitieren Sie von unseren Sonderangeboten",
       "button": "Jetzt buchen"
+    },
+    "catalog": {
+      "title": "Unsere Luxusflotte"
     }
   },
   "catalog": {
@@ -161,13 +179,19 @@
     "notFound": "Fahrzeug nicht gefunden",
     "notFoundDescription": "Leider konnten wir das gewünschte Fahrzeug nicht finden",
     "backToCatalog": "Zurück zum Katalog",
+    "description": "Fahrzeugbeschreibung",
+    "features": "Ausstattung",
+    "booking": "Buchung",
+    "similarCars": "Ähnliche Fahrzeuge",
     "highlights": {
       "year": "Baujahr",
       "transmission": "Getriebe",
       "fuel": "Kraftstoff",
+      "seats": "Sitze",
+      "luggage": "Gepäck",
+      "power": "Leistung",
       "consumption": "Verbrauch"
     },
-    "features": "Ausstattung",
     "bookNow": "Jetzt buchen",
     "notAvailable": "Nicht verfügbar",
     "additionalInfo": {
@@ -178,13 +202,41 @@
       "deposit": "Rückzahlbare Kaution erforderlich",
       "documents": "Führerschein und Reisepass erforderlich"
     },
-    "specifications": "Spezifikationen",
-    "similarCars": "Ähnliche Fahrzeuge",
-    "description": "Fahrzeugbeschreibung"
+    "specifications": {
+      "title": "Spezifikationen",
+      "engine": "Motor",
+      "power": "Leistung",
+      "acceleration": "Beschleunigung 0-100 km/h",
+      "topSpeed": "Höchstgeschwindigkeit"
+    }
   },
   "booking": {
     "title": "Fahrzeug buchen",
     "subtitle": "Füllen Sie das Formular aus, um Ihr ausgewähltes Fahrzeug zu buchen",
+    "location": "Standort",
+    "pickupLocation": "Abholort",
+    "returnLocation": "Rückgabeort",
+    "sameReturnLocation": "Rückgabe am gleichen Ort",
+    "pickupDetails": "Abholdetails",
+    "returnDetails": "Rückgabedetails",
+    "pickupDate": "Abholdatum",
+    "returnDate": "Rückgabedatum",
+    "pickupTime": "Abholzeit",
+    "returnTime": "Rückgabezeit",
+    "selectDate": "Datum auswählen",
+    "selectLocation": "Standort auswählen",
+    "searchOptions": "Suchoptionen",
+    "searchButton": "Fahrzeuge suchen",
+    "totalPrice": "Gesamtpreis",
+    "location": {
+      "options": {
+        "Vila-seca": "Vila-seca",
+        "Tarragona": "Tarragona",
+        "Reus": "Reus",
+        "Salou": "Salou",
+        "Barcelona": "Barcelona"
+      }
+    },
     "rental": {
       "title": "Mietdetails",
       "pickup": "Abholdatum",
@@ -304,14 +356,13 @@
     "sport_mode": "Sport-Modus",
     "dynamic_chassis": "Dynamisches Fahrwerk",
     "autopilot": "Autopilot",
-    "premium_interior": "Premium-Innenausstattung",
-    "supercharging": "Supercharging",
-    "glass_roof": "Glasdach",
-    "luxury_interior": "Luxus-Innenausstattung",
-    "electric_doors": "Elektrische Schiebetüren",
-    "ambient_lighting": "Ambientebeleuchtung",
-    "rear_climate": "Klimaautomatik hinten",
-    "four_wheel_drive": "Allradantrieb"
+    "GPS": "GPS",
+    "Bluetooth": "Bluetooth",
+    "Climatizador": "Klimaanlage",
+    "USB": "USB",
+    "Sensores de aparcamiento": "Parksensoren",
+    "Asientos deportivos": "Sportsitze",
+    "Techo panorámico": "Panoramadach"
   },
   "whatsapp": {
     "message": "Schreiben Sie uns auf WhatsApp",

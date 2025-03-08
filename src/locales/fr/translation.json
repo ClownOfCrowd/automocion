@@ -14,49 +14,83 @@
     "contact": "Contact"
   },
   "common": {
-    "loading": "Chargement...",
-    "cancel": "Annuler",
-    "submit": "Soumettre",
-    "save": "Enregistrer",
-    "delete": "Supprimer",
-    "edit": "Modifier",
-    "back": "Retour",
-    "next": "Suivant",
-    "previous": "Précédent",
+    "language": "Français",
+    "booking": "Réservation",
+    "catalog": "Catalogue",
+    "contact": "Contact",
+    "about": "À propos",
+    "terms": "Conditions",
+    "faq": "FAQ",
+    "login": "Connexion",
+    "register": "S'inscrire",
+    "logout": "Déconnexion",
+    "profile": "Profil",
     "search": "Rechercher",
     "filter": "Filtrer",
     "sort": "Trier",
+    "price": "Prix",
+    "fromPrice": "À partir de {{price}}€/jour",
+    "bookNow": "Réserver maintenant",
+    "viewDetails": "Voir les détails",
+    "back": "Retour",
+    "next": "Suivant",
+    "previous": "Précédent",
+    "submit": "Soumettre",
+    "cancel": "Annuler",
+    "confirm": "Confirmer",
+    "edit": "Modifier",
+    "delete": "Supprimer",
+    "save": "Enregistrer",
+    "close": "Fermer",
+    "yes": "Oui",
+    "no": "Non",
     "all": "Tous",
     "more": "Plus",
     "less": "Moins",
-    "show": "Afficher",
-    "hide": "Masquer",
-    "close": "Fermer",
-    "open": "Ouvrir",
-    "yes": "Oui",
-    "no": "Non",
-    "or": "ou",
-    "and": "et",
-    "lightMode": "Mode clair",
-    "darkMode": "Mode sombre",
-    "fromPrice": "À partir de {{price}}€",
-    "day": "jour",
-    "bookNow": "Réserver",
-    "viewDetails": "Voir les détails"
+    "loading": "Chargement...",
+    "error": "Erreur",
+    "success": "Succès",
+    "warning": "Avertissement",
+    "info": "Information",
+    "required": "Requis",
+    "optional": "Optionnel",
+    "day": "Jour",
+    "days": "Jours",
+    "week": "Semaine",
+    "weeks": "Semaines",
+    "month": "Mois",
+    "months": "Mois",
+    "year": "Année",
+    "years": "Années"
   },
   "home": {
     "hero": {
-      "title": "Location de voitures premium",
+      "title": "Location de Voitures Premium",
       "subtitle": "à Vila-seca",
       "description": "Découvrez notre flotte exclusive et profitez d'un service personnalisé de première classe",
-      "cta": "Voir le catalogue"
+      "cta": "Voir le Catalogue"
+    },
+    "search": {
+      "button": "Trouver une voiture",
+      "location": "Lieu",
+      "pickupLocation": "Lieu de prise en charge",
+      "returnLocation": "Lieu de retour",
+      "sameReturnLocation": "Retour au même endroit",
+      "pickupDetails": "Détails de prise en charge",
+      "returnDetails": "Détails de retour",
+      "pickupDate": "Date de prise en charge",
+      "returnDate": "Date de retour",
+      "pickupTime": "Heure de prise en charge",
+      "returnTime": "Heure de retour",
+      "selectDate": "Sélectionner une date",
+      "selectLocation": "Sélectionner un lieu",
+      "searchOptions": "Options de recherche",
+      "searchButton": "Rechercher des véhicules",
+      "viewAllCars": "Voir toutes les voitures →"
     },
     "quickSearch": {
       "title": "Recherche rapide",
-      "pickupDate": "Date de prise en charge",
-      "returnDate": "Date de retour",
-      "category": "Catégorie",
-      "priceRange": "Prix maximum",
+      "subtitle": "Trouvez votre voiture idéale en quelques clics",
       "button": "Rechercher"
     },
     "categories": {
@@ -71,30 +105,18 @@
     },
     "features": {
       "title": "Pourquoi nous choisir",
-      "subtitle": "Tout ce dont vous avez besoin pour votre voyage parfait",
-      "fleet": {
-        "title": "Flotte premium",
-        "description": "Véhicules haut de gamme en parfait état pour votre sécurité et votre confort"
-      },
-      "service": {
-        "title": "Service 24/7",
-        "description": "Service professionnel disponible 24h/24 et 7j/7"
-      },
-      "process": {
-        "title": "Processus simple",
-        "description": "Réservation rapide, documentation minimale et pas de frais cachés"
-      },
+      "subtitle": "Nous offrons le meilleur service de location de voitures",
       "support24": {
         "title": "Support 24/7",
-        "description": "Assistance professionnelle disponible 24h/24 et 7j/7"
+        "description": "Notre équipe est disponible 24h/24 et 7j/7 pour vous aider"
       },
       "fastDelivery": {
         "title": "Livraison rapide",
-        "description": "Livraison et récupération à l'endroit de votre choix"
+        "description": "Nous livrons votre voiture à l'heure et à l'endroit convenus"
       },
       "insurance": {
         "title": "Assurance complète",
-        "description": "Couverture totale pour votre tranquillité d'esprit"
+        "description": "Tous nos véhicules sont entièrement assurés pour votre tranquillité d'esprit"
       }
     },
     "reviews": {
@@ -112,8 +134,8 @@
       "success": "Merci pour votre avis ! Il sera publié après modération."
     },
     "cta": {
-      "title": "Prêt à réserver ?",
-      "description": "Réservez maintenant et profitez de nos offres spéciales",
+      "title": "Prêt à réserver votre voiture?",
+      "subtitle": "Réservez maintenant et profitez de notre service premium",
       "button": "Réserver maintenant"
     },
     "contact": {
@@ -129,186 +151,101 @@
       "cta": "Nous contacter"
     },
     "popular": {
-      "title": "Véhicules populaires",
-      "subtitle": "Les meilleures offres pour votre voyage",
-      "description": "Découvrez nos véhicules les plus demandés",
-      "viewAll": "Voir tous les véhicules",
-      "details": "Voir les détails"
+      "title": "Voitures populaires",
+      "subtitle": "Découvrez nos voitures les plus demandées",
+      "viewAll": "Voir tout"
     },
     "process": {
-      "title": "Comment louer une voiture",
+      "title": "Comment ça marche",
       "description": "Processus de location en 4 étapes simples",
       "step1": {
-        "title": "Choisir les dates",
-        "description": "Sélectionnez vos dates de prise en charge et de retour"
+        "title": "Choisissez votre voiture",
+        "description": "Parcourez notre catalogue et sélectionnez la voiture qui vous convient"
       },
       "step2": {
-        "title": "Choisir le lieu",
-        "description": "Sélectionnez des lieux de prise en charge et de retour pratiques"
+        "title": "Réservez en ligne",
+        "description": "Remplissez le formulaire de réservation et confirmez votre réservation"
       },
       "step3": {
-        "title": "Choisir les options",
-        "description": "Ajoutez des services et équipements supplémentaires"
+        "title": "Récupérez votre voiture",
+        "description": "Récupérez votre voiture à l'heure et à l'endroit convenus"
       },
       "step4": {
-        "title": "Récupérer la voiture",
-        "description": "Récupérez votre voiture et profitez de votre voyage"
+        "title": "Profitez de votre voyage",
+        "description": "Profitez de votre voyage et retournez la voiture à la fin de votre location"
       }
     },
     "catalog": {
-      "title": "Notre flotte de luxe"
+      "title": "Notre Flotte de Luxe",
+      "subtitle": "Découvrez notre sélection de voitures premium",
+      "viewAll": "Voir tout"
+    },
+    "testimonials": {
+      "title": "Ce que disent nos clients",
+      "subtitle": "Découvrez ce que nos clients pensent de notre service",
+      "viewAll": "Voir tout"
     }
   },
   "catalog": {
-    "title": "Catalogue de véhicules",
-    "subtitle": "Trouvez la voiture parfaite pour votre voyage",
-    "filters": {
+    "title": "Catalogue",
+    "subtitle": "Découvrez notre sélection de voitures premium",
+    "filter": {
       "title": "Filtres",
       "category": "Catégorie",
       "price": "Prix",
-      "seats": "Sièges",
-      "transmission": "Transmission",
-      "fuel": "Carburant",
-      "features": "Caractéristiques",
-      "availability": "Disponibilité",
-      "apply": "Appliquer",
-      "reset": "Réinitialiser",
-      "sort": "Trier par",
-      "sortOptions": {
-        "priceAsc": "Prix (croissant)",
-        "priceDesc": "Prix (décroissant)",
-        "newest": "Plus récent",
-        "popularity": "Popularité"
-      }
-    },
-    "car": {
-      "price": "Prix",
-      "perDay": "jour",
-      "seats": "sièges",
-      "transmission": "Transmission",
-      "fuel": "Carburant",
-      "consumption": "Consommation",
+      "brand": "Marque",
+      "model": "Modèle",
       "year": "Année",
+      "transmission": "Transmission",
+      "fuel": "Carburant",
+      "seats": "Sièges",
+      "doors": "Portes",
+      "color": "Couleur",
       "features": "Caractéristiques",
-      "available": "Disponible",
-      "unavailable": "Indisponible",
-      "viewDetails": "Voir les détails",
-      "addToCart": "Ajouter au panier",
-      "compare": "Comparer"
+      "apply": "Appliquer",
+      "reset": "Réinitialiser"
     },
-    "categories": {
-      "all": "Toutes",
-      "economy": "Économique",
-      "compact": "Compact",
-      "premium": "Premium",
-      "suv": "SUV",
-      "luxury": "Luxe",
-      "electric": "Électrique"
+    "sort": {
+      "title": "Trier par",
+      "priceAsc": "Prix (croissant)",
+      "priceDesc": "Prix (décroissant)",
+      "nameAsc": "Nom (A-Z)",
+      "nameDesc": "Nom (Z-A)",
+      "newest": "Plus récent",
+      "oldest": "Plus ancien",
+      "popularity": "Popularité"
     },
-    "compare": {
-      "title": "Comparer les véhicules",
-      "empty": "Aucun véhicule sélectionné pour la comparaison",
-      "add": "Ajouter à la comparaison",
-      "remove": "Retirer de la comparaison"
+    "search": {
+      "placeholder": "Rechercher une voiture",
+      "button": "Rechercher"
     },
-    "noResults": "Aucun véhicule ne correspond à vos critères de recherche",
+    "noResults": "Aucun résultat trouvé",
     "showMore": "Afficher plus"
   },
   "booking": {
     "title": "Réservation",
-    "subtitle": "Complétez les informations pour réserver votre véhicule",
-    "step1": "Dates et lieux",
-    "step2": "Informations personnelles",
-    "step3": "Options supplémentaires",
-    "step4": "Paiement",
-    "dates": {
-      "title": "Dates et lieux",
-      "pickupDate": "Date de prise en charge",
-      "pickupTime": "Heure de prise en charge",
-      "returnDate": "Date de retour",
-      "returnTime": "Heure de retour",
-      "pickupLocation": "Lieu de prise en charge",
-      "returnLocation": "Lieu de retour",
-      "sameLocation": "Retour au même endroit"
-    },
-    "personal": {
-      "title": "Informations personnelles",
-      "firstName": "Prénom",
-      "lastName": "Nom",
-      "email": "Email",
-      "phone": "Téléphone",
-      "address": "Adresse",
-      "city": "Ville",
-      "country": "Pays",
-      "postalCode": "Code postal",
-      "drivingLicense": "Numéro de permis de conduire"
-    },
-    "options": {
-      "title": "Options supplémentaires",
-      "insurance": "Assurance complète",
-      "insuranceDescription": "Couverture complète sans franchise",
-      "gps": "GPS",
-      "gpsDescription": "Système de navigation GPS",
-      "childSeat": "Siège enfant",
-      "childSeatDescription": "Siège pour enfant (0-3 ans)",
-      "additionalDriver": "Conducteur supplémentaire",
-      "additionalDriverDescription": "Ajoutez un conducteur supplémentaire",
-      "wifi": "Wi-Fi portable",
-      "wifiDescription": "Connexion Internet pendant votre voyage"
-    },
-    "payment": {
-      "title": "Paiement",
-      "cardNumber": "Numéro de carte",
-      "cardHolder": "Titulaire de la carte",
-      "expiryDate": "Date d'expiration",
-      "cvv": "CVV",
-      "saveCard": "Enregistrer cette carte pour les futures réservations",
-      "termsAgree": "J'accepte les conditions générales",
-      "payNow": "Payer maintenant",
-      "payLater": "Payer à la prise en charge"
-    },
-    "summary": {
-      "title": "Résumé de la réservation",
-      "car": "Véhicule",
-      "dates": "Dates",
-      "locations": "Lieux",
-      "duration": "Durée",
-      "days": "jours",
-      "options": "Options",
-      "subtotal": "Sous-total",
-      "tax": "TVA (21%)",
-      "total": "Total",
-      "deposit": "Acompte (30%)",
-      "remaining": "Reste à payer"
-    },
-    "success": {
-      "title": "Réservation confirmée !",
-      "reference": "Référence de réservation",
-      "confirmation": "Un email de confirmation a été envoyé à",
-      "instructions": "Instructions pour la prise en charge",
-      "contact": "Si vous avez des questions, n'hésitez pas à nous contacter",
-      "backToHome": "Retour à l'accueil"
-    },
-    "button": {
-      "continue": "Continuer",
-      "back": "Retour",
-      "submit": "Soumettre la réservation"
-    },
-    "pickupDate": "Date de prise en charge",
-    "returnDate": "Date de retour",
+    "location": "Emplacement",
     "pickupLocation": "Lieu de prise en charge",
     "returnLocation": "Lieu de retour",
+    "sameReturnLocation": "Retour au même endroit",
+    "pickupDetails": "Détails de la prise en charge",
+    "returnDetails": "Détails du retour",
+    "pickupDate": "Date de prise en charge",
+    "returnDate": "Date de retour",
+    "pickupTime": "Heure de prise en charge",
+    "returnTime": "Heure de retour",
+    "selectDate": "Sélectionner une date",
+    "selectLocation": "Sélectionner un emplacement",
+    "searchOptions": "Options de recherche",
     "searchButton": "Rechercher des véhicules",
     "totalPrice": "Prix total",
-    "reserve": "Réserver",
     "location": {
-      "pickup": "Lieu de prise en charge",
-      "return": "Lieu de retour",
-      "placeholder": "Sélectionnez un lieu",
       "options": {
         "Vila-seca": "Vila-seca",
         "Tarragona": "Tarragone",
-        "Reus": "Reus"
+        "Reus": "Reus",
+        "Salou": "Salou",
+        "Barcelona": "Barcelone"
       }
     }
   },
@@ -342,15 +279,9 @@
       "title": "Notre emplacement"
     },
     "faq": {
-      "title": "Questions fréquentes",
-      "question1": "Comment puis-je réserver une voiture ?",
-      "answer1": "Vous pouvez réserver une voiture en ligne via notre site web, par téléphone ou en visitant notre agence.",
-      "question2": "Quels documents sont nécessaires pour louer une voiture ?",
-      "answer2": "Vous aurez besoin d'un permis de conduire valide, d'une carte d'identité ou d'un passeport, et d'une carte de crédit pour la caution.",
-      "question3": "Y a-t-il une caution à payer ?",
-      "answer3": "Oui, une caution est requise et sera remboursée à la fin de la location si le véhicule est rendu dans le même état.",
-      "question4": "Puis-je annuler ma réservation ?",
-      "answer4": "Oui, vous pouvez annuler votre réservation jusqu'à 48 heures avant la date de prise en charge sans frais."
+      "title": "Questions fréquemment posées",
+      "subtitle": "Trouvez des réponses à vos questions",
+      "viewAll": "Voir tout"
     },
     "success": "Merci pour votre message ! Nous vous répondrons dans les plus brefs délais."
   },
@@ -431,33 +362,27 @@
     "apple_carplay": "Apple CarPlay",
     "android_auto": "Android Auto",
     "backup_camera": "Caméra de recul",
-    "lane_assist": "Assistant de maintien de voie",
+    "lane_assist": "Assistant de voie",
     "adaptive_cruise": "Régulateur de vitesse adaptatif",
     "premium_sound": "Système audio premium",
     "panoramic_roof": "Toit panoramique",
-    "driver_assistance": "Assistance à la conduite",
+    "driver_assistance": "Assistance au conducteur",
     "wireless_charging": "Chargement sans fil",
     "electric_range": "Autonomie électrique",
     "fast_charging": "Charge rapide",
     "perfect_city": "Parfait pour la ville",
     "easy_parking": "Stationnement facile",
-    "digital_cockpit": "Tableau de bord numérique",
+    "digital_cockpit": "Cockpit numérique",
     "sport_mode": "Mode sport",
     "dynamic_chassis": "Châssis dynamique",
     "autopilot": "Pilote automatique",
-    "GPS": "Navigation GPS",
+    "GPS": "GPS",
+    "Bluetooth": "Bluetooth",
     "Climatizador": "Climatisation",
+    "USB": "USB",
     "Sensores de aparcamiento": "Capteurs de stationnement",
     "Asientos deportivos": "Sièges sport",
-    "Techo panorámico": "Toit panoramique",
-    "Airbags": "Airbags",
-    "ABS": "ABS",
-    "ESP": "ESP",
-    "Start/Stop": "Start/Stop",
-    "Cruise Control": "Régulateur de vitesse",
-    "Parking Camera": "Caméra de recul",
-    "LED Lights": "Feux LED",
-    "Keyless Entry": "Accès sans clé"
+    "Techo panorámico": "Toit panoramique"
   },
   "whatsapp": {
     "message": "Contactez-nous sur WhatsApp",
@@ -533,16 +458,11 @@
   },
   "carDetail": {
     "notFound": "Véhicule non trouvé",
-    "notFoundDescription": "Désolé, nous n'avons pas trouvé le véhicule demandé",
+    "notFoundDescription": "Désolé, nous n'avons pas pu trouver le véhicule demandé",
     "backToCatalog": "Retour au catalogue",
     "description": "Description",
-    "specifications": {
-      "title": "Spécifications",
-      "engine": "Moteur",
-      "power": "Puissance",
-      "acceleration": "Accélération 0-100 km/h",
-      "topSpeed": "Vitesse maximale"
-    },
+    "features": "Caractéristiques",
+    "booking": "Réservation",
     "similarCars": "Véhicules similaires",
     "highlights": {
       "year": "Année",
@@ -553,8 +473,7 @@
       "power": "Puissance",
       "consumption": "Consommation"
     },
-    "features": "Caractéristiques",
-    "booking": "Réservation",
+    "bookNow": "Réserver maintenant",
     "notAvailable": "Non disponible",
     "additionalInfo": {
       "title": "Informations supplémentaires",
@@ -564,19 +483,65 @@
       "deposit": "Caution remboursable requise",
       "documents": "Permis de conduire et passeport requis"
     },
-    "defaultDescription": "La {{name}} est un excellent véhicule {{category}} qui allie confort, fiabilité et style. Le choix parfait pour votre voyage."
+    "specifications": {
+      "title": "Spécifications",
+      "engine": "Moteur",
+      "power": "Puissance",
+      "acceleration": "Accélération 0-100 km/h",
+      "topSpeed": "Vitesse maximale"
+    }
   },
   "car": {
-    "defaultDescription": "La {{name}} est un excellent véhicule {{category}} qui allie confort, fiabilité et style. Le choix parfait pour votre voyage.",
-    "perDay": "jour",
+    "details": {
+      "title": "Détails de la voiture",
+      "description": "Description",
+      "features": "Caractéristiques",
+      "specifications": "Spécifications",
+      "price": "Prix",
+      "availability": "Disponibilité",
+      "book": "Réserver maintenant"
+    },
+    "features": {
+      "airConditioning": "Climatisation",
+      "bluetooth": "Bluetooth",
+      "cruiseControl": "Régulateur de vitesse",
+      "navigation": "Navigation",
+      "parkingSensors": "Capteurs de stationnement",
+      "reverseCam": "Caméra de recul",
+      "usb": "Port USB",
+      "wifi": "Wi-Fi"
+    },
+    "specifications": {
+      "brand": "Marque",
+      "model": "Modèle",
+      "year": "Année",
+      "transmission": "Transmission",
+      "fuel": "Carburant",
+      "engine": "Moteur",
+      "power": "Puissance",
+      "seats": "Sièges",
+      "doors": "Portes",
+      "color": "Couleur",
+      "luggage": "Bagages"
+    },
+    "availability": {
+      "available": "Disponible",
+      "unavailable": "Indisponible",
+      "checkDates": "Vérifier les dates"
+    },
+    "similar": {
+      "title": "Voitures similaires",
+      "subtitle": "Vous pourriez aussi aimer ces voitures",
+      "viewAll": "Voir tout"
+    },
     "peugeot_208": {
-      "description": "Voiture de ville compacte et économique"
+      "description": "La Peugeot 208 est une citadine élégante et économique, parfaite pour la conduite en ville. Avec son design moderne et ses technologies avancées, elle offre une expérience de conduite agréable et confortable."
     },
     "citroen_c3": {
-      "description": "Voiture de ville élégante et confortable"
+      "description": "La Citroën C3 est une voiture compacte polyvalente avec un style distinctif et un intérieur spacieux. Idéale pour les trajets urbains et les excursions, elle combine confort, efficacité et praticité."
     },
     "mini_cooper_s": {
-      "description": "Sportive et élégante avec des performances exceptionnelles"
+      "description": "La MINI Cooper S est une voiture sportive et élégante avec un caractère unique. Son moteur puissant et sa tenue de route exceptionnelle offrent une expérience de conduite dynamique et exaltante."
     }
   },
   "validation": {
@@ -587,70 +552,68 @@
   },
   "terms": {
     "title": "Conditions de Location",
-    "subtitle": "Veuillez lire attentivement ces conditions avant de louer un véhicule",
+    "subtitle": "Veuillez lire attentivement ces conditions avant de louer un véhicule.",
     "requirements": {
-      "title": "Exigences du Conducteur",
-      "age": "Âge minimum : 21 ans",
-      "license": "Permis de conduire détenu depuis au moins 2 ans",
-      "credit": "Carte de crédit au nom du conducteur",
-      "documents": "Pièce d'identité ou passeport valide",
-      "details": "Lors de la prise en charge du véhicule, le conducteur principal et les conducteurs supplémentaires doivent présenter leur permis de conduire. Tous les conducteurs doivent avoir un permis de conduire d'une ancienneté minimale de 24 mois. L'âge minimum pour conduire est de 21 ans et l'âge maximum est de 80 ans."
+      "title": "Exigences",
+      "age": "Âge minimum: 21 ans (25 ans pour certains véhicules premium)",
+      "license": "Permis de conduire valide depuis au moins 2 ans",
+      "credit": "Carte de crédit valide au nom du conducteur principal",
+      "documents": "Passeport ou carte d'identité valide"
     },
     "insurance": {
-      "title": "Assurance et Couverture",
-      "basic": "Assurance responsabilité civile incluse",
-      "full": "Assurance tous risques disponible",
-      "theft": "Protection contre le vol",
-      "assistance": "Assistance routière 24/7",
-      "details": "Toutes les locations comprennent une couverture d'assurance de base. Celle-ci couvre les dommages au véhicule avec une franchise de 500 €. Des options d'assurance supplémentaires sont disponibles pour réduire ou éliminer la franchise."
+      "title": "Assurance",
+      "basic": "Assurance de base incluse dans tous les tarifs",
+      "coverage": "Couverture de base avec franchise de 1000€",
+      "full": "Option d'assurance complète disponible pour réduire la franchise à 0€",
+      "theft": "Protection contre le vol incluse dans l'assurance complète",
+      "assistance": "Assistance routière 24/7 incluse"
     },
     "payment": {
-      "title": "Paiements",
-      "methods": "Toutes les principales cartes acceptées",
-      "deposit": "Caution de sécurité requise",
-      "cancellation": "Annulation gratuite jusqu'à 48h avant",
-      "refund": "Remboursement complet selon les conditions",
-      "details": "La société de location exigera un dépôt de 200 € lors de la prise en charge du véhicule. Le dépôt sera débloqué à la fin de la location, à condition que le véhicule soit rendu dans les conditions convenues."
+      "title": "Paiement",
+      "deposit": "Dépôt de garantie requis (bloqué sur la carte de crédit)",
+      "methods": "Acceptons les cartes Visa, Mastercard et American Express",
+      "timing": "Paiement complet requis lors de la prise du véhicule",
+      "cancellation": "Annulation gratuite jusqu'à 48h avant la prise en charge",
+      "refund": "Remboursement partiel pour les annulations tardives"
     },
-    "additional": {
-      "title": "Services Supplémentaires",
-      "fuel": "Politique de carburant flexible",
-      "mileage": "Kilométrage illimité disponible",
-      "cleaning": "Service de nettoyage inclus",
-      "delivery": "Livraison et récupération disponibles",
-      "details": "Nous proposons des services supplémentaires tels que GPS, sièges enfants, WiFi mobile et assurances complémentaires. Tous les services supplémentaires sont soumis aux taxes locales et aux taxes de vente."
+    "additionalServices": {
+      "title": "Services additionnels",
+      "gps": "GPS: 5€/jour",
+      "childSeat": "Siège enfant: 7€/jour",
+      "additionalDriver": "Conducteur supplémentaire: 10€/jour",
+      "wifi": "Hotspot Wi-Fi: 8€/jour",
+      "delivery": "Livraison/récupération: à partir de 30€"
     },
     "coverage": {
-      "title": "Couverture et Exemptions",
-      "cdw": "Assurance collision partielle (CDW)",
-      "tpl": "Assurance responsabilité civile (TPL)",
-      "tp": "Protection contre le vol (TP)",
-      "pai": "Assurance accidents personnels (PAI)",
-      "details": "En cas de dommages à la carrosserie pendant la location, le montant maximum que vous pourriez avoir à payer serait la 'franchise dommages'. La couverture ne sera valable que si les conditions du contrat de location sont respectées."
+      "title": "Couverture",
+      "cdw": "CDW (Collision Damage Waiver): Couverture des dommages en cas de collision",
+      "tpl": "TPL (Third Party Liability): Responsabilité civile",
+      "tp": "TP (Theft Protection): Protection contre le vol",
+      "pai": "PAI (Personal Accident Insurance): Assurance accident personnelle"
     },
     "included": {
-      "title": "Inclus dans le Prix",
-      "contract": "Frais de contrat",
-      "facilities": "Frais d'utilisation des installations",
+      "title": "Inclus dans le prix",
+      "vat": "TVA",
+      "basic": "Assurance de base",
+      "mileage": "Kilométrage limité (voir politique de kilométrage)",
+      "maintenance": "Entretien du véhicule",
       "roadside": "Assistance routière",
-      "taxes": "Taxes locales",
-      "details": "Sans frais supplémentaires : frais de service de consolidation, frais de contrat, frais d'utilisation des installations, assurance du permis de circulation, assistance routière, frais environnementaux, taxes locales et frais."
+      "contract": "Frais de contrat"
     },
     "mileage": {
       "title": "Kilométrage",
-      "limit1": "300km/jour pour une location de 1 à 2 jours",
-      "limit2": "250km/jour pour une location de 3 à 7 jours",
-      "limit3": "200km/jour pour une location de 7 à 30 jours",
-      "additional": "Kilométrage supplémentaire : 0,15 € par km",
-      "details": "Le kilométrage est limité selon la durée de la location. Le kilométrage supplémentaire coûtera 0,15 €, taxes comprises, pour chaque kilomètre supplémentaire."
+      "limit": "150 km/jour inclus",
+      "weekly": "1500 km/semaine inclus",
+      "monthly": "3000 km/mois inclus",
+      "additional": "Kilométrage supplémentaire: 0,25€/km"
     },
     "notIncluded": {
-      "title": "Non Inclus dans le Prix",
-      "cleaning": "Frais pour nettoyage excessif",
-      "fines": "Amendes, péages et frais",
-      "fuel": "Frais de carburant si retourné avec moins de carburant",
-      "extras": "Services supplémentaires optionnels",
-      "details": "Les clients seront responsables de tous les péages, frais de congestion, amendes pour excès de vitesse, stationnement et/ou infractions au code de la route, ainsi que de tous les frais administratifs associés."
+      "title": "Non inclus dans le prix",
+      "fuel": "Carburant (politique plein-plein)",
+      "fines": "Amendes et infractions au code de la route",
+      "tolls": "Péages et frais de stationnement",
+      "cleaning": "Frais de nettoyage spécial (si nécessaire)",
+      "damage": "Dommages non couverts par l'assurance"
     },
     "footer": "Pour plus d'informations, n'hésitez pas à contacter notre équipe de service client."
   },
@@ -660,5 +623,105 @@
     "suv": "SUV",
     "economy": "Économique",
     "electric": "Électrique"
+  },
+  "auth": {
+    "login": {
+      "title": "Connexion",
+      "subtitle": "Connectez-vous à votre compte",
+      "email": "Email",
+      "password": "Mot de passe",
+      "rememberMe": "Se souvenir de moi",
+      "forgotPassword": "Mot de passe oublié?",
+      "submit": "Se connecter",
+      "noAccount": "Vous n'avez pas de compte?",
+      "register": "S'inscrire",
+      "success": "Connexion réussie",
+      "error": "Email ou mot de passe incorrect"
+    },
+    "register": {
+      "title": "S'inscrire",
+      "subtitle": "Créez votre compte",
+      "name": "Nom",
+      "email": "Email",
+      "password": "Mot de passe",
+      "confirmPassword": "Confirmer le mot de passe",
+      "terms": "J'accepte les conditions d'utilisation",
+      "submit": "S'inscrire",
+      "haveAccount": "Vous avez déjà un compte?",
+      "login": "Se connecter",
+      "success": "Inscription réussie",
+      "error": "Une erreur s'est produite. Veuillez réessayer."
+    },
+    "forgotPassword": {
+      "title": "Mot de passe oublié",
+      "subtitle": "Réinitialisez votre mot de passe",
+      "email": "Email",
+      "submit": "Envoyer",
+      "back": "Retour à la connexion",
+      "success": "Email de réinitialisation envoyé",
+      "error": "Email non trouvé"
+    },
+    "resetPassword": {
+      "title": "Réinitialiser le mot de passe",
+      "subtitle": "Créez un nouveau mot de passe",
+      "password": "Nouveau mot de passe",
+      "confirmPassword": "Confirmer le mot de passe",
+      "submit": "Réinitialiser",
+      "success": "Mot de passe réinitialisé avec succès",
+      "error": "Une erreur s'est produite. Veuillez réessayer."
+    },
+    "profile": {
+      "title": "Profil",
+      "subtitle": "Gérez votre profil",
+      "personalInfo": {
+        "title": "Informations personnelles",
+        "name": "Nom",
+        "email": "Email",
+        "phone": "Téléphone",
+        "address": "Adresse",
+        "city": "Ville",
+        "country": "Pays",
+        "postalCode": "Code postal",
+        "save": "Enregistrer",
+        "success": "Profil mis à jour avec succès",
+        "error": "Une erreur s'est produite. Veuillez réessayer."
+      },
+      "password": {
+        "title": "Changer le mot de passe",
+        "current": "Mot de passe actuel",
+        "new": "Nouveau mot de passe",
+        "confirm": "Confirmer le mot de passe",
+        "save": "Enregistrer",
+        "success": "Mot de passe mis à jour avec succès",
+        "error": "Mot de passe actuel incorrect"
+      },
+      "bookings": {
+        "title": "Mes réservations",
+        "subtitle": "Gérez vos réservations",
+        "viewAll": "Voir tout",
+        "noBookings": "Vous n'avez pas de réservations"
+      },
+      "preferences": {
+        "title": "Préférences",
+        "language": "Langue",
+        "currency": "Devise",
+        "notifications": "Notifications",
+        "save": "Enregistrer",
+        "success": "Préférences mises à jour avec succès",
+        "error": "Une erreur s'est produite. Veuillez réessayer."
+      }
+    }
+  },
+  "error": {
+    "404": {
+      "title": "Page non trouvée",
+      "description": "La page que vous recherchez n'existe pas ou a été déplacée.",
+      "button": "Retour à l'accueil"
+    },
+    "500": {
+      "title": "Erreur serveur",
+      "description": "Une erreur s'est produite sur le serveur. Veuillez réessayer plus tard.",
+      "button": "Retour à l'accueil"
+    }
   }
 } 
