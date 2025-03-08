@@ -314,7 +314,8 @@
   },
   "contact": {
     "title": "Contactez-nous",
-    "subtitle": "Nous sommes là pour vous aider. Contactez-nous pour toute question concernant nos services",
+    "subtitle": "Nous sommes là pour vous aider",
+    "description": "Vous avez des questions sur nos services ou besoin d'aide pour votre réservation? Notre équipe est prête à vous aider avec toutes vos demandes concernant nos véhicules, nos services ou le processus de réservation. Contactez-nous et nous vous répondrons dans les plus brefs délais.",
     "info": {
       "title": "Informations de contact",
       "schedule": "Heures d'ouverture: 9:00-13:00 / 15:00-19:00",
