@@ -568,7 +568,16 @@
   },
   "car": {
     "defaultDescription": "La {{name}} est un excellent véhicule {{category}} qui allie confort, fiabilité et style. Le choix parfait pour votre voyage.",
-    "perDay": "jour"
+    "perDay": "jour",
+    "peugeot_208": {
+      "description": "Voiture de ville compacte et économique"
+    },
+    "citroen_c3": {
+      "description": "Voiture de ville élégante et confortable"
+    },
+    "mini_cooper_s": {
+      "description": "Sportive et élégante avec des performances exceptionnelles"
+    }
   },
   "validation": {
     "required": "Ce champ est obligatoire",

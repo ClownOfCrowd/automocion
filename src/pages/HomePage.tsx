@@ -315,8 +315,8 @@ const HomePage = () => {
                   </div>
                 </div>
                 <div className="p-4 sm:p-6">
-                  <h3 className="text-lg sm:text-xl font-bold mb-2 dark:text-white">{car.name}</h3>
-                  <p className="text-sm sm:text-base text-gray-600 dark:text-premium-silver mb-4">{car.description}</p>
+                  <h3 className="text-lg font-medium text-gray-900 dark:text-white mb-1">{car.name}</h3>
+                  <p className="text-sm sm:text-base text-gray-600 dark:text-premium-silver mb-4">{t(car.description)}</p>
                   <button
                     onClick={() => navigate(`/catalog/${car.id}`)}
                     className="w-full bg-premium-black hover:bg-premium-black/90 text-white dark:bg-premium-gold dark:hover:bg-premium-gold/90 font-bold py-2 sm:py-3 px-4 rounded-md transition-colors text-sm sm:text-base"

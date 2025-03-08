@@ -523,7 +523,16 @@
     },
     "features": "Features",
     "similar": "Similar Cars",
-    "perDay": "day"
+    "perDay": "day",
+    "peugeot_208": {
+      "description": "Compact and economical city car"
+    },
+    "citroen_c3": {
+      "description": "Stylish and comfortable city car"
+    },
+    "mini_cooper_s": {
+      "description": "Sporty and elegant with exceptional performance"
+    }
   },
   "popularCars": {
     "mercedes_c_class": {

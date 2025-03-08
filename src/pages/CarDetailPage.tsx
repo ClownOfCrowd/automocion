@@ -162,8 +162,8 @@ const CarDetailPage = () => {
 
               <div className="mt-4 sm:mt-6">
                 <h2 className="text-lg font-medium text-gray-900 dark:text-white">{t('carDetail.description')}</h2>
-                <p className="mt-2 text-sm sm:text-base text-gray-600 dark:text-gray-400">
-                  {car.description}
+                <p className="text-gray-600 dark:text-premium-silver mt-2">
+                  {t(car.description)}
                 </p>
               </div>
 
@@ -310,7 +310,7 @@ const CarDetailPage = () => {
                     </div>
                     <div className="p-4">
                       <h3 className="text-lg font-bold mb-2 dark:text-white">{similarCar.name}</h3>
-                      <p className="text-sm text-gray-600 dark:text-gray-400 mb-4">{similarCar.description}</p>
+                      <p className="text-sm text-gray-600 dark:text-gray-400 mb-4">{t(similarCar.description)}</p>
                       <button
                         onClick={() => navigate(`/catalog/${similarCar.id}`)}
                         className="w-full bg-premium-black hover:bg-premium-black/90 text-white dark:bg-premium-gold dark:hover:bg-premium-gold/90 font-bold py-2 px-4 rounded-md transition-colors"

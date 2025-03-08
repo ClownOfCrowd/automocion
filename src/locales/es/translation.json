@@ -157,7 +157,29 @@
       "features": "Características",
       "book": "Reservar ahora",
       "notAvailable": "No disponible",
-      "defaultDescription": "El {{name}} es un excelente vehículo {{category}} que combina comodidad, fiabilidad y estilo. La elección perfecta para tu viaje."
+      "defaultDescription": "El {{name}} es un excelente vehículo {{category}} que combina comodidad, fiabilidad y estilo. La elección perfecta para tu viaje.",
+      "specs": {
+        "year": "Año",
+        "transmission": "Transmisión",
+        "fuel": "Tipo de combustible",
+        "consumption": "Consumo",
+        "seats": "Asientos",
+        "doors": "Puertas",
+        "engine": "Motor",
+        "power": "Potencia",
+        "acceleration": "Aceleración 0-100 km/h",
+        "topSpeed": "Velocidad máxima"
+      },
+      "similar": "Coches similares",
+      "peugeot_208": {
+        "description": "Compacto y económico coche urbano"
+      },
+      "citroen_c3": {
+        "description": "Elegante y cómodo coche urbano"
+      },
+      "mini_cooper_s": {
+        "description": "Deportivo y elegante con un rendimiento excepcional"
+      }
     },
     "luggage": "equipaje",
     "compare": {

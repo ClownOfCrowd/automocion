@@ -380,7 +380,17 @@
       "topSpeed": "Höchstgeschwindigkeit"
     },
     "features": "Ausstattung",
-    "similar": "Ähnliche Fahrzeuge"
+    "similar": "Ähnliche Fahrzeuge",
+    "perDay": "Tag",
+    "peugeot_208": {
+      "description": "Kompakter und wirtschaftlicher Stadtauto"
+    },
+    "citroen_c3": {
+      "description": "Stilvolles und komfortables Stadtauto"
+    },
+    "mini_cooper_s": {
+      "description": "Sportlich und elegant mit außergewöhnlicher Leistung"
+    }
   },
   "popularCars": {
     "mercedes_c_class": {

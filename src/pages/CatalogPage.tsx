@@ -354,8 +354,8 @@ const CatalogPage = () => {
                           </div>
                         </div>
                         <div className="p-6">
-                          <h3 className="text-xl font-bold mb-2 dark:text-white">{car.name}</h3>
-                          <p className="text-gray-600 dark:text-premium-silver mb-4">{car.description}</p>
+                          <h3 className="text-lg font-medium text-gray-900 dark:text-white mb-1">{car.name}</h3>
+                          <p className="text-gray-600 dark:text-premium-silver mb-4">{t(car.description)}</p>
                           
                           <div className="grid grid-cols-2 gap-2 mb-4">
                             <div className="flex items-center text-sm text-gray-600 dark:text-premium-silver">

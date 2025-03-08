@@ -28,8 +28,8 @@ export const cars: Car[] = [
   {
     id: 'peugeot-208',
     name: 'Peugeot 208',
-    description: 'Компактный и экономичный городской автомобиль',
-    category: 'Compact',
+    category: 'economy',
+    description: 'car.peugeot_208.description',
     price: 45,
     image: '/cars/peugeot-208.jpg',
     features: ['GPS', 'Bluetooth', 'Climatizador', 'USB'],
@@ -53,8 +53,8 @@ export const cars: Car[] = [
   {
     id: 'citroen-c3',
     name: 'Citroen C3',
-    description: 'Стильный и комфортный городской автомобиль',
-    category: 'Compact',
+    category: 'economy',
+    description: 'car.citroen_c3.description',
     price: 50,
     image: '/cars/citroen-c3.jpg',
     features: ['GPS', 'Bluetooth', 'Climatizador', 'Sensores de aparcamiento'],
@@ -78,8 +78,8 @@ export const cars: Car[] = [
   {
     id: 'mini-cooper-s',
     name: 'MINI Cooper S',
-    description: 'Deportivo y elegante con un rendimiento excepcional',
-    category: 'Premium',
+    category: 'premium',
+    description: 'car.mini_cooper_s.description',
     price: 85,
     image: '/cars/mini-cooper-s.jpg',
     features: ['GPS', 'Bluetooth', 'Climatizador', 'Asientos deportivos', 'Techo panorámico'],
