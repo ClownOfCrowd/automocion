@@ -1,5 +1,4 @@
-import { BrowserRouter as Router, Routes, Route, useLocation, Navigate } from 'react-router-dom'
-import { QueryClient, QueryClientProvider } from '@tanstack/react-query'
+import { BrowserRouter as Router, Routes, Route, useLocation } from 'react-router-dom'
 import { AnimatePresence } from 'framer-motion'
 import { Suspense } from 'react'
 import MainLayout from './layouts/MainLayout'
@@ -16,16 +15,6 @@ import { LoadingProvider } from './contexts/LoadingContext'
 import { ThemeProvider } from './contexts/ThemeContext'
 import { useLoadingManager } from './hooks/useLoadingManager'
 import BookingNotifications from './components/BookingNotifications'
-
-const queryClient = new QueryClient({
-  defaultOptions: {
-    queries: {
-      staleTime: 1000 * 60 * 5, // 5 minutes
-      cacheTime: 1000 * 60 * 30, // 30 minutes
-      suspense: true,
-    },
-  },
-})
 
 const AnimatedRoutes = () => {
   const location = useLocation()
@@ -82,16 +71,14 @@ const AnimatedRoutes = () => {
 
 function App() {
   return (
-    <QueryClientProvider client={queryClient}>
-      <ThemeProvider>
-        <LoadingProvider>
-          <Router>
-            <ScrollToTop />
-            <AnimatedRoutes />
-          </Router>
-        </LoadingProvider>
-      </ThemeProvider>
-    </QueryClientProvider>
+    <ThemeProvider>
+      <LoadingProvider>
+        <Router>
+          <ScrollToTop />
+          <AnimatedRoutes />
+        </Router>
+      </LoadingProvider>
+    </ThemeProvider>
   )
 }
 

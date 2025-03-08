@@ -1,5 +1,3 @@
-import React from 'react';
-
 interface TimeSelectorProps {
   value: string;
   onChange: (time: string) => void;

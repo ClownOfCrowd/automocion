@@ -3,7 +3,6 @@ import { motion, AnimatePresence } from 'framer-motion'
 import { useTranslation } from 'react-i18next'
 import { cars } from '../data/cars'
 import { useTheme } from '../contexts/ThemeContext'
-import axios from 'axios'
 
 // Расширенные списки имен для каждого языка
 const namesByLang = {

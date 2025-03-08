@@ -1,5 +1,4 @@
 import { useEffect, useRef } from 'react'
-import { useIsFetching, useIsMutating } from '@tanstack/react-query'
 import { useLoading } from '../contexts/LoadingContext'
 import { useLocation } from 'react-router-dom'
 
@@ -19,10 +18,6 @@ export const useLoadingManager = (options: UseLoadingManagerOptions = {}) => {
   const { showLoading, hideLoading } = useLoading()
   const location = useLocation()
   
-  // Получаем количество активных запросов
-  const isFetching = useIsFetching()
-  const isMutating = useIsMutating()
-
   // Refs для отслеживания состояния
   const loadingTimeoutRef = useRef<NodeJS.Timeout>()
   const startTimeRef = useRef<number>(0)
@@ -39,30 +34,28 @@ export const useLoadingManager = (options: UseLoadingManagerOptions = {}) => {
       startTimeRef.current = Date.now()
       showLoading()
       initialLoadRef.current = false
+      
+      // Скрываем загрузку после минимального времени
+      setTimeout(() => {
+        hideLoading()
+      }, minimumLoadingTime)
+      
       return
     }
 
-    const isLoading = isFetching > 0 || isMutating > 0
-
-    if (loadingTimeoutRef.current) {
-      clearTimeout(loadingTimeoutRef.current)
-    }
-
-    if (isLoading && isComplexPath) {
+    if (isPathChanged) {
+      // При изменении пути показываем загрузку с задержкой
       loadingTimeoutRef.current = setTimeout(() => {
-        // Показываем загрузку только если запрос все еще активен
-        if (isFetching > 0 || isMutating > 0) {
+        if (isComplexPath) {
           startTimeRef.current = Date.now()
           showLoading()
+          
+          // Скрываем загрузку после минимального времени
+          setTimeout(() => {
+            hideLoading()
+          }, minimumLoadingTime)
         }
       }, delayTime)
-    } else {
-      const elapsedTime = Date.now() - startTimeRef.current
-      const remainingTime = Math.max(0, minimumLoadingTime - elapsedTime)
-
-      setTimeout(() => {
-        hideLoading()
-      }, remainingTime)
     }
 
     return () => {
@@ -71,8 +64,6 @@ export const useLoadingManager = (options: UseLoadingManagerOptions = {}) => {
       }
     }
   }, [
-    isFetching,
-    isMutating,
     location.pathname,
     showLoading,
     hideLoading,
@@ -106,6 +97,7 @@ export const useLoadingManager = (options: UseLoadingManagerOptions = {}) => {
   }
 
   return {
+    isLoading: initialLoadRef.current === false && startTimeRef.current > 0 && (Date.now() - startTimeRef.current) < minimumLoadingTime,
     showLoading,
     hideLoading,
     withLoading

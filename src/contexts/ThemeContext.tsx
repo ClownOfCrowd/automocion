@@ -17,9 +17,29 @@ export const ThemeProvider = ({ children }: { children: ReactNode }) => {
     const savedTheme = localStorage.getItem('theme') as Theme
     if (savedTheme) return savedTheme
     
-    // По умолчанию всегда используем темную тему
+    // Проверяем системные предпочтения
+    if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
+      return 'dark'
+    }
+    
+    // По умолчанию используем темную тему
     return 'dark'
   })
+
+  // Слушаем изменения системных предпочтений
+  useEffect(() => {
+    const mediaQuery = window.matchMedia('(prefers-color-scheme: dark)')
+    const handleChange = (e: MediaQueryListEvent) => {
+      const savedTheme = localStorage.getItem('theme') as Theme
+      // Применяем системные предпочтения только если пользователь не выбрал тему вручную
+      if (!savedTheme) {
+        setTheme(e.matches ? 'dark' : 'light')
+      }
+    }
+    
+    mediaQuery.addEventListener('change', handleChange)
+    return () => mediaQuery.removeEventListener('change', handleChange)
+  }, [])
 
   // Применяем тему к документу
   useEffect(() => {

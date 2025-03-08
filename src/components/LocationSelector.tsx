@@ -1,4 +1,3 @@
-import React from 'react';
 import { Location, locations } from '../data/locations';
 
 interface LocationSelectorProps {

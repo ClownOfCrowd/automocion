@@ -100,14 +100,14 @@ const ReviewsSection = () => {
   }
 
   return (
-    <section className="relative py-24 bg-gradient-to-r from-premium-black to-premium-black/90">
+    <section className="relative py-24 bg-premium-radial">
       <div className="absolute inset-0">
-        <div className="bg-premium-black/50 w-full h-full"></div>
+        <div className="bg-premium-black-deep/20 w-full h-full"></div>
       </div>
       <div className="relative container mx-auto px-4">
         <div className="text-center mb-16">
           <h2 className="text-4xl font-bold text-white mb-4">
-            <span className="text-premium-gold">{t('home.reviews.title')}</span>
+            <span className="text-premium-gold premium-text-shadow">{t('home.reviews.title')}</span>
           </h2>
           <p className="text-xl text-premium-silver">
             {t('home.reviews.description')}
@@ -118,7 +118,6 @@ const ReviewsSection = () => {
           <div className="overflow-hidden">
             <motion.div
               animate={{ 
-                x: `-${currentSlide * 100}%`,
                 x: isDragging ? `calc(-${currentSlide * 100}% + ${dragOffset}px)` : `-${currentSlide * 100}%`
               }}
               transition={{ 
@@ -148,12 +147,12 @@ const ReviewsSection = () => {
                   viewport={{ once: true }}
                 >
                   <motion.div 
-                    className="bg-white/5 backdrop-blur-lg p-6 rounded-lg border border-premium-gold/10 h-full"
+                    className="bg-premium-gradient-1 p-6 rounded-lg border border-premium-gold/20 h-full premium-shadow"
                     whileHover={{ y: -5 }}
                     transition={{ type: "spring", stiffness: 300 }}
                   >
                     <div className="flex items-center mb-4">
-                      <div className="h-12 w-12 rounded-full overflow-hidden border-2 border-premium-gold/20">
+                      <div className="h-12 w-12 rounded-full overflow-hidden border-2 border-premium-gold/30">
                         <img
                           src={review.avatar}
                           alt={review.name}
@@ -189,7 +188,7 @@ const ReviewsSection = () => {
           <div className="hidden md:block">
             <button
               onClick={prevSlide}
-              className="absolute left-0 top-1/2 -translate-y-1/2 bg-premium-gold/10 hover:bg-premium-gold/20 p-3 rounded-full backdrop-blur-sm transition-colors z-10"
+              className="absolute left-0 top-1/2 -translate-y-1/2 bg-premium-black-elegant hover:bg-premium-gold/30 p-3 rounded-full backdrop-blur-sm transition-colors z-10 premium-shadow"
             >
               <svg className="h-6 w-6 text-premium-gold" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" />
@@ -197,7 +196,7 @@ const ReviewsSection = () => {
             </button>
             <button
               onClick={nextSlide}
-              className="absolute right-0 top-1/2 -translate-y-1/2 bg-premium-gold/10 hover:bg-premium-gold/20 p-3 rounded-full backdrop-blur-sm transition-colors z-10"
+              className="absolute right-0 top-1/2 -translate-y-1/2 bg-premium-black-elegant hover:bg-premium-gold/30 p-3 rounded-full backdrop-blur-sm transition-colors z-10 premium-shadow"
             >
               <svg className="h-6 w-6 text-premium-gold" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />

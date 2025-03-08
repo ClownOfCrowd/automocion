@@ -84,18 +84,19 @@ const HomePage = () => {
   return (
     <div className="min-h-screen bg-white dark:bg-premium-black">
       {/* Hero Section with Booking Form */}
-      <section className="relative h-screen bg-gradient-to-r from-premium-black to-premium-black/90">
+      <section className="relative h-screen bg-gradient-to-r from-premium-black-deep to-premium-black">
         <div className="absolute inset-0">
           <LazyImage
             src="/hero-bg.jpg"
             alt="Luxury cars"
-            className="w-full h-full object-cover opacity-50"
+            className="w-full h-full object-cover opacity-40"
           />
+          <div className="absolute inset-0 bg-gradient-to-b from-premium-black-deep/50 to-premium-black/90"></div>
         </div>
         <div className="relative container mx-auto px-4 h-full flex flex-col justify-center">
           <div className="max-w-3xl mx-auto text-center mb-12">
             <h1 className="text-5xl md:text-6xl font-bold text-white mb-6">
-              <span className="text-premium-gold block mb-2">{t('home.hero.title')}</span>
+              <span className="text-premium-gold block mb-2 premium-text-shadow">{t('home.hero.title')}</span>
               <span className="text-3xl md:text-4xl block">{t('home.hero.subtitle')}</span>
             </h1>
             <p className="text-xl text-premium-silver mb-8">
@@ -104,7 +105,7 @@ const HomePage = () => {
           </div>
           
           {/* Enhanced Booking Form */}
-          <div className="bg-white dark:bg-premium-black/90 p-4 sm:p-6 rounded-lg shadow-xl max-w-5xl mx-auto">
+          <div className="bg-white dark:bg-premium-gradient-gold p-4 sm:p-6 rounded-lg shadow-xl max-w-5xl mx-auto premium-shadow">
             <form onSubmit={handleBookingSubmit}>
               {/* Заголовок формы - только для мобильных */}
               <h3 className="md:hidden text-xl font-semibold text-premium-black dark:text-white text-center mb-3 border-b border-premium-gold pb-2">
@@ -248,19 +249,19 @@ const HomePage = () => {
       </section>
 
       {/* Features Section */}
-      <section className="relative py-24 bg-gradient-to-r from-premium-black to-premium-black/90">
+      <section className="relative py-24 bg-premium-gradient-2">
         <div className="absolute inset-0">
-          <div className="bg-premium-black/50 w-full h-full"></div>
+          <div className="bg-premium-black-deep/30 w-full h-full"></div>
         </div>
         <div className="relative container mx-auto px-4">
           <div className="text-center mb-16">
             <h2 className="text-4xl font-bold text-white mb-4">
-              <span className="text-premium-gold">{t('home.features.title')}</span>
+              <span className="text-premium-gold premium-text-shadow">{t('home.features.title')}</span>
             </h2>
             <p className="text-xl text-premium-silver">{t('home.features.subtitle')}</p>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            <div className="text-center">
+            <div className="text-center premium-container-1 p-6">
               <div className="w-16 h-16 mx-auto mb-4 text-premium-gold">
                 <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
@@ -269,7 +270,7 @@ const HomePage = () => {
               <h3 className="text-xl font-bold mb-2 text-white">{t('home.features.support24.title')}</h3>
               <p className="text-premium-silver">{t('home.features.support24.description')}</p>
             </div>
-            <div className="text-center">
+            <div className="text-center premium-container-3 p-6">
               <div className="w-16 h-16 mx-auto mb-4 text-premium-gold">
                 <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 10V3L4 14h7v7l9-11h-7z" />
@@ -278,7 +279,7 @@ const HomePage = () => {
               <h3 className="text-xl font-bold mb-2 text-white">{t('home.features.fastDelivery.title')}</h3>
               <p className="text-premium-silver">{t('home.features.fastDelivery.description')}</p>
             </div>
-            <div className="text-center">
+            <div className="text-center premium-container-4 p-6">
               <div className="w-16 h-16 mx-auto mb-4 text-premium-gold">
                 <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
@@ -292,16 +293,16 @@ const HomePage = () => {
       </section>
 
       {/* Car Catalog Section */}
-      <section className="py-8 sm:py-16 bg-gray-50 dark:bg-premium-black/50">
+      <section className="py-8 sm:py-16 bg-gray-50 dark:bg-premium-gradient-3">
         <div className="container mx-auto px-4">
-          <h2 className="text-2xl sm:text-3xl font-bold text-center mb-8 sm:mb-12 dark:text-white">
+          <h2 className="text-2xl sm:text-3xl font-bold text-center mb-8 sm:mb-12 dark:text-white premium-text-shadow">
             {t('home.catalog.title')}
           </h2>
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-8">
             {cars.map((car) => (
               <motion.div
                 key={car.id}
-                className="bg-white dark:bg-premium-black rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition-shadow"
+                className="bg-white dark:bg-premium-gradient-1 rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition-shadow premium-shadow"
                 whileHover={{ y: -5 }}
               >
                 <div className="relative h-40 sm:h-48">
@@ -331,7 +332,7 @@ const HomePage = () => {
       </section>
 
       {/* Process Section */}
-      <section className="relative py-12 sm:py-24 bg-white dark:bg-premium-black">
+      <section className="relative py-12 sm:py-24 bg-white dark:bg-premium-gradient-4">
         <div className="container mx-auto px-4">
           <motion.div 
             initial={{ opacity: 0, y: 20 }}
@@ -341,7 +342,7 @@ const HomePage = () => {
             className="text-center mb-8 sm:mb-16"
           >
             <h2 className="text-2xl sm:text-4xl font-bold text-premium-black dark:text-white mb-2 sm:mb-4">
-              <span className="text-premium-gold">{t('home.process.title')}</span>
+              <span className="text-premium-gold premium-text-shadow">{t('home.process.title')}</span>
             </h2>
             <p className="text-base sm:text-xl text-gray-600 dark:text-premium-silver">{t('home.process.description')}</p>
           </motion.div>
@@ -375,7 +376,7 @@ const HomePage = () => {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.5, delay: index * 0.2 }}
-                className="bg-white dark:bg-premium-black/50 p-6 rounded-lg shadow-md"
+                className={`premium-container-${(index % 4) + 1} p-6 rounded-lg shadow-md premium-shadow`}
               >
                 <div className="w-12 h-12 bg-premium-gold/10 rounded-full flex items-center justify-center mb-4">
                   <step.icon className="h-6 w-6 text-premium-gold" />
@@ -392,9 +393,9 @@ const HomePage = () => {
       <ReviewsSection />
 
       {/* Contact Section */}
-      <section className="relative py-24 bg-gradient-to-r from-premium-black to-premium-black/90">
+      <section className="relative py-24 bg-premium-gradient-gold">
         <div className="absolute inset-0">
-          <div className="bg-premium-black/50 w-full h-full"></div>
+          <div className="bg-premium-black-deep/20 w-full h-full"></div>
         </div>
         <div className="relative container mx-auto px-4">
           <div className="max-w-3xl mx-auto text-center">

@@ -14,7 +14,7 @@ const LoadingScreen = ({ isLoading }: LoadingScreenProps) => {
       animate={{ opacity: isLoading ? 1 : 0 }}
       exit={{ opacity: 0 }}
       transition={{ duration: 0.5 }}
-      className={`fixed inset-0 z-50 flex items-center justify-center bg-gradient-to-b from-white to-gray-50 dark:from-gray-900 dark:to-gray-950 ${
+      className={`fixed inset-0 z-50 flex items-center justify-center bg-gradient-to-b from-gray-50 to-gray-100 dark:from-premium-black-deep dark:to-premium-black ${
         !isLoading && 'pointer-events-none'
       }`}
     >
@@ -40,8 +40,8 @@ const LoadingScreen = ({ isLoading }: LoadingScreenProps) => {
                   ease: "easeOut"
                 }}
                 style={{
-                  color: i < 4 ? (theme === 'dark' ? '#ffffff' : '#1a1a1a') : (theme === 'dark' ? '#cccccc' : '#4a4a4a'),
-                  textShadow: '2px 2px 4px rgba(0,0,0,0.1)'
+                  color: i < 4 ? (theme === 'dark' ? '#ffffff' : '#333333') : (theme === 'dark' ? '#D4AF37' : '#666666'),
+                  textShadow: theme === 'dark' ? '2px 2px 4px rgba(0,0,0,0.2)' : '1px 1px 3px rgba(0,0,0,0.1)'
                 }}
               >
                 {letter}
