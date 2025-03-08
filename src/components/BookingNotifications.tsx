@@ -67,75 +67,19 @@ const BookingNotifications = () => {
     ipAddress: null,
     pauseUntil: 0
   });
-  const [userIp, setUserIp] = useState<string | null>(null);
 
-  // Загружаем состояние из localStorage при монтировании
+  // Сбрасываем состояние при монтировании
   useEffect(() => {
-    const savedState = localStorage.getItem(NOTIFICATION_STORAGE_KEY);
-    if (savedState) {
-      try {
-        const parsedState = JSON.parse(savedState) as NotificationState;
-        setNotificationState(parsedState);
-      } catch (e) {
-        console.error('Failed to parse notification state from localStorage', e);
-      }
-    }
-
-    // Получаем IP пользователя
-    const fetchIp = async () => {
-      try {
-        // Используем бесплатный API для получения IP
-        const response = await axios.get('https://api.ipify.org?format=json');
-        const ip = response.data.ip;
-        setUserIp(ip);
-        
-        // Проверяем, видел ли этот IP уже оповещения
-        const ipLastSeen = localStorage.getItem(IP_LAST_SEEN_KEY);
-        if (ipLastSeen) {
-          try {
-            const ipData = JSON.parse(ipLastSeen);
-            if (ipData[ip]) {
-              // Если этот IP уже видел оповещения, увеличиваем паузу
-              const lastSeen = ipData[ip];
-              const hoursSinceLastSeen = (Date.now() - lastSeen) / (1000 * 60 * 60);
-              
-              // Если прошло меньше 4 часов, увеличиваем паузу
-              if (hoursSinceLastSeen < 4) {
-                setNotificationState(prev => ({
-                  ...prev,
-                  shownCount: Math.min(prev.shownCount + 2, 5), // Увеличиваем счетчик, но не более 5
-                  pauseUntil: Date.now() + 120000 // Добавляем паузу в 2 минуты
-                }));
-              }
-            }
-          } catch (e) {
-            console.error('Failed to parse IP last seen data', e);
-          }
-        }
-      } catch (e) {
-        console.error('Failed to fetch IP address', e);
-      }
-    };
-
-    fetchIp();
-  }, []);
-
-  // Сохраняем состояние в localStorage при изменении
-  useEffect(() => {
-    localStorage.setItem(NOTIFICATION_STORAGE_KEY, JSON.stringify(notificationState));
+    localStorage.removeItem(NOTIFICATION_STORAGE_KEY);
+    localStorage.removeItem(IP_LAST_SEEN_KEY);
     
-    // Если у нас есть IP, обновляем время последнего посещения
-    if (userIp) {
-      const ipLastSeen = localStorage.getItem(IP_LAST_SEEN_KEY) || '{}';
-      try {
-        const ipData = JSON.parse(ipLastSeen);
-        ipData[userIp] = Date.now();
-        localStorage.setItem(IP_LAST_SEEN_KEY, JSON.stringify(ipData));
-      } catch (e) {
-        console.error('Failed to update IP last seen data', e);
-      }
-    }
-  }, [notificationState, userIp]);
+    setNotificationState({
+      lastShownTimestamp: 0,
+      shownCount: 0,
+      ipAddress: null,
+      pauseUntil: 0
+    });
+  }, []);
 
   // Функция для генерации случайного уведомления с учетом языка и международных имен
   const generateRandomNotification = () => {
@@ -207,86 +151,42 @@ const BookingNotifications = () => {
   }
 
   useEffect(() => {
-    // Адаптивный интервал показа оповещений в зависимости от количества уже показанных
+    // Адаптивный интервал показа оповещений
     const getAdaptiveInterval = () => {
       const { shownCount } = notificationState;
-      
-      // Чем больше оповещений показано, тем реже они будут появляться
-      if (shownCount === 0) return Math.floor(Math.random() * 30000) + 60000; // 60-90 сек для первого
-      if (shownCount === 1) return Math.floor(Math.random() * 30000) + 90000; // 90-120 сек для второго
-      if (shownCount === 2) return Math.floor(Math.random() * 30000) + 120000; // 120-150 сек для третьего
-      if (shownCount === 3) return Math.floor(Math.random() * 30000) + 150000; // 150-180 сек для четвертого
-      return Math.floor(Math.random() * 30000) + 180000; // 180-210 сек для пятого и далее
+      // Уменьшаем интервалы для более частого показа
+      if (shownCount === 0) return Math.floor(Math.random() * 15000) + 30000; // 30-45 сек для первого
+      if (shownCount === 1) return Math.floor(Math.random() * 15000) + 45000; // 45-60 сек для второго
+      if (shownCount === 2) return Math.floor(Math.random() * 15000) + 60000; // 60-75 сек для третьего
+      if (shownCount === 3) return Math.floor(Math.random() * 15000) + 75000; // 75-90 сек для четвертого
+      return Math.floor(Math.random() * 15000) + 90000; // 90-105 сек для пятого и далее
     };
 
-    // Проверяем, нужно ли показывать оповещения
+    // Упрощаем логику проверки
     const shouldShowNotifications = () => {
       const { pauseUntil, shownCount } = notificationState;
-      
-      // Если установлена пауза и она еще не истекла, не показываем оповещения
       if (pauseUntil > Date.now()) return false;
-      
-      // Если показано уже 5 оповещений, показываем с вероятностью 50%
-      if (shownCount >= 5) return Math.random() < 0.5;
-      
+      if (shownCount >= 10) return Math.random() < 0.7; // Увеличиваем вероятность показа
       return true;
     };
 
     // Показываем уведомление с адаптивным интервалом
     const showInterval = setInterval(() => {
-      // Проверяем, нужно ли показывать оповещение
       if (!shouldShowNotifications()) return;
       
       const newNotification = generateRandomNotification();
       setNotification(newNotification);
       setIsVisible(true);
       
-      // Обновляем состояние оповещений
       setNotificationState(prev => ({
         ...prev,
         lastShownTimestamp: Date.now(),
-        shownCount: prev.shownCount + 1,
-        ipAddress: userIp || prev.ipAddress
+        shownCount: prev.shownCount + 1
       }));
-
-      // Скрываем уведомление через 7 секунд
-      setTimeout(() => {
-        setIsVisible(false);
-      }, 7000);
     }, getAdaptiveInterval());
 
-    // Показываем первое уведомление через 8-15 секунд после загрузки,
-    // но только если это первый визит или прошло достаточно времени
-    const initialTimeout = setTimeout(() => {
-      const { lastShownTimestamp, pauseUntil } = notificationState;
-      const hoursSinceLastShown = (Date.now() - lastShownTimestamp) / (1000 * 60 * 60);
-      
-      // Показываем первое оповещение только если:
-      // 1. Это первый визит (lastShownTimestamp === 0)
-      // 2. Прошло более 2 часов с последнего показа
-      // 3. Нет активной паузы
-      if ((lastShownTimestamp === 0 || hoursSinceLastShown > 2) && pauseUntil <= Date.now()) {
-        const initialNotification = generateRandomNotification();
-        setNotification(initialNotification);
-        setIsVisible(true);
-        
-        // Обновляем состояние оповещений
-        setNotificationState(prev => ({
-          ...prev,
-          lastShownTimestamp: Date.now(),
-          shownCount: prev.shownCount + 1,
-          ipAddress: userIp || prev.ipAddress
-        }));
-        
-        setTimeout(() => setIsVisible(false), 7000);
-      }
-    }, Math.floor(Math.random() * 7000) + 8000); // от 8 до 15 секунд
-
-    return () => {
-      clearInterval(showInterval);
-      clearTimeout(initialTimeout);
-    }
-  }, [i18n.language, notificationState, userIp]);
+    return () => clearInterval(showInterval);
+  }, [notificationState]);
 
   if (!notification) return null;
 
