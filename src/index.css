@@ -98,11 +98,19 @@
 
 /* Определение текстовых теней */
 .premium-text-shadow {
-  text-shadow: 0 1px 2px rgba(0,0,0,0.1);
+  text-shadow: 0 2px 4px rgba(0,0,0,0.5);
 }
 
 .dark .premium-text-shadow {
   text-shadow: 0 2px 4px rgba(0,0,0,0.5);
+}
+
+.text-shadow-lg {
+  text-shadow: 0 2px 6px rgba(0,0,0,0.7), 0 0 3px rgba(0,0,0,0.5);
+}
+
+.text-shadow-sm {
+  text-shadow: 0 2px 4px rgba(0,0,0,0.6), 0 0 2px rgba(0,0,0,0.4);
 }
 
 /* Оптимизация для мобильных устройств */

@@ -95,11 +95,11 @@ const HomePage = () => {
         </div>
         <div className="relative container mx-auto px-4 h-full flex flex-col justify-center">
           <div className="max-w-3xl mx-auto text-center mb-12">
-            <h1 className="text-5xl md:text-6xl font-bold text-gray-800 dark:text-white mb-6">
+            <h1 className="text-5xl md:text-6xl font-bold text-white mb-6 text-shadow-lg">
               <span className="text-premium-gold block mb-2 premium-text-shadow">{t('home.hero.title')}</span>
               <span className="text-3xl md:text-4xl block">{t('home.hero.subtitle')}</span>
             </h1>
-            <p className="text-xl text-gray-700 dark:text-premium-silver mb-8">
+            <p className="text-xl text-white mb-8 text-shadow-sm">
               {t('home.hero.description')}
             </p>
           </div>
