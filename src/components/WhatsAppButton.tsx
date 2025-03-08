@@ -51,9 +51,9 @@ const WhatsAppButton = () => {
               animate={{ scale: 1 }}
               transition={{ delay: 0.5 }}
               onClick={handleClose}
-              className="absolute -top-2 -right-2 bg-white rounded-full p-1 shadow-md hover:bg-gray-100 transition-colors z-10"
+              className="absolute -top-2 -right-2 bg-white dark:bg-premium-black rounded-full p-1 shadow-md hover:bg-gray-100 dark:hover:bg-premium-black/80 transition-colors z-10"
             >
-              <XMarkIcon className="h-4 w-4 text-gray-500" />
+              <XMarkIcon className="h-4 w-4 text-gray-500 dark:text-white" />
             </motion.button>
 
             {/* Основная кнопка WhatsApp */}
@@ -127,16 +127,16 @@ const WhatsAppButton = () => {
                   animate={{ opacity: 1, x: 0, scale: 1 }}
                   exit={{ opacity: 0, x: -20, scale: 0.9 }}
                   transition={{ type: 'spring', stiffness: 300, damping: 25 }}
-                  className="absolute right-full mr-4 top-1/2 -translate-y-1/2 bg-white px-4 py-2 rounded-lg shadow-lg whitespace-nowrap"
+                  className="absolute right-full mr-4 top-1/2 -translate-y-1/2 bg-white dark:bg-premium-black px-4 py-2 rounded-lg shadow-lg whitespace-nowrap"
                 >
-                  <div className="text-sm font-medium text-gray-900">
+                  <div className="text-sm font-medium text-premium-black dark:text-white">
                     {t('whatsapp.message')}
                   </div>
-                  <div className="text-xs text-gray-500">
+                  <div className="text-xs text-gray-500 dark:text-premium-silver">
                     {t('whatsapp.available')}
                   </div>
                   {/* Стрелка */}
-                  <div className="absolute right-0 top-1/2 -translate-y-1/2 translate-x-1/2 transform rotate-45 w-2 h-2 bg-white shadow-lg" />
+                  <div className="absolute right-0 top-1/2 -translate-y-1/2 translate-x-1/2 transform rotate-45 w-2 h-2 bg-white dark:bg-premium-black" />
                 </motion.div>
               )}
             </AnimatePresence>

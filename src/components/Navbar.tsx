@@ -40,7 +40,9 @@ const Navbar = () => {
 
   return (
     <Disclosure as="nav" className={`fixed w-full z-50 transition-all duration-300 ${
-      isScrolled ? 'bg-white dark:bg-premium-black shadow-lg' : 'bg-transparent'
+      isScrolled 
+        ? 'bg-white dark:bg-premium-black shadow-lg' 
+        : 'bg-white/90 backdrop-blur-md dark:bg-premium-black/90 dark:backdrop-blur-md'
     }`}>
       {({ open }) => (
         <>
@@ -48,7 +50,7 @@ const Navbar = () => {
             <div className="flex h-16 justify-between">
               <div className="flex">
                 <div className="flex flex-shrink-0 items-center">
-                  <Link to="/" className="text-2xl font-bold text-gray-900 dark:text-white">
+                  <Link to="/" className="text-2xl font-bold text-premium-black dark:text-white">
                     O.V. <span className="text-premium-gold">Automoción</span>
                   </Link>
                 </div>
@@ -60,7 +62,7 @@ const Navbar = () => {
                       className={`inline-flex items-center px-1 pt-1 text-sm font-medium ${
                         location.pathname === item.href
                           ? 'text-premium-gold border-b-2 border-premium-gold'
-                          : 'text-gray-900 dark:text-white hover:text-premium-gold border-b-2 border-transparent hover:border-premium-gold'
+                          : 'text-premium-black dark:text-white hover:text-premium-gold border-b-2 border-transparent hover:border-premium-gold'
                       }`}
                     >
                       {item.name}
@@ -74,7 +76,7 @@ const Navbar = () => {
                 <LanguageSwitcher />
                 
                 {/* Mobile menu button */}
-                <Disclosure.Button className="md:hidden inline-flex items-center justify-center rounded-md p-3 text-gray-400 hover:bg-gray-100 hover:text-gray-500 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-premium-gold">
+                <Disclosure.Button className="md:hidden inline-flex items-center justify-center rounded-md p-3 text-premium-black dark:text-white hover:bg-gray-100 dark:hover:bg-premium-black/50 hover:text-premium-gold dark:hover:text-premium-gold focus:outline-none focus:ring-2 focus:ring-inset focus:ring-premium-gold">
                   <span className="sr-only">Open main menu</span>
                   {open ? (
                     <XMarkIcon className="block h-7 w-7" aria-hidden="true" />
@@ -103,7 +105,7 @@ const Navbar = () => {
                   className={`${
                     location.pathname === item.href
                       ? 'bg-premium-gold text-white'
-                      : 'text-gray-900 dark:text-white hover:bg-premium-gold/10 hover:text-premium-gold'
+                      : 'text-premium-black dark:text-white hover:bg-premium-gold/10 hover:text-premium-gold'
                   } block rounded-md px-4 py-3 text-base font-medium w-full text-left`}
                 >
                   {item.name}

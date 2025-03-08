@@ -22,11 +22,11 @@ const LanguageSwitcher = () => {
 
   return (
     <Menu as="div" className="relative">
-      <Menu.Button className="flex items-center space-x-1 px-3 py-2 text-sm font-medium text-gray-900 dark:text-premium-silver hover:text-premium-gold dark:hover:text-premium-gold transition-colors">
+      <Menu.Button className="flex items-center space-x-1 px-3 py-2 text-sm font-medium text-premium-black dark:text-white hover:text-premium-gold dark:hover:text-premium-gold transition-colors">
         <span>{languages.find(lang => lang.code === currentLang)?.name}</span>
         <ChevronDownIcon className="h-4 w-4" />
       </Menu.Button>
-      <Menu.Items className="absolute right-0 mt-2 w-48 origin-top-right rounded-md bg-white dark:bg-premium-black shadow-lg ring-1 ring-black ring-opacity-5 focus:outline-none">
+      <Menu.Items className="absolute right-0 mt-2 w-48 origin-top-right rounded-md bg-white dark:bg-premium-black shadow-lg ring-1 ring-black/5 dark:ring-white/10 focus:outline-none z-50">
         <div className="py-1">
           {languages.map((lang) => (
             <Menu.Item key={lang.code}>
@@ -36,9 +36,9 @@ const LanguageSwitcher = () => {
                   className={`${
                     active
                       ? 'bg-premium-gold/10 text-premium-gold'
-                      : 'text-gray-900 dark:text-white'
+                      : 'text-premium-black dark:text-white'
                   } ${
-                    currentLang === lang.code ? 'bg-premium-gold/5' : ''
+                    currentLang === lang.code ? 'bg-premium-gold/5 font-medium' : ''
                   } group flex w-full items-center px-4 py-2 text-sm transition-colors`}
                 >
                   {lang.name}

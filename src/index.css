@@ -15,7 +15,7 @@
     width: 100%;
     position: relative;
     overflow-x: hidden;
-    @apply bg-white dark:bg-gray-900 text-gray-900 dark:text-white transition-colors duration-300;
+    @apply bg-white dark:bg-premium-black text-premium-black dark:text-white transition-colors duration-300;
   }
 
   #root {
@@ -23,6 +23,11 @@
     width: 100%;
     display: flex;
     flex-direction: column;
+  }
+  
+  /* Улучшенные стили для ссылок */
+  a {
+    @apply text-premium-black dark:text-white hover:text-premium-gold dark:hover:text-premium-gold transition-colors duration-200;
   }
 }
 
@@ -33,20 +38,20 @@
   }
 
   .btn-secondary {
-    @apply inline-flex items-center justify-center px-4 py-2 border border-gray-300 dark:border-gray-600 text-base font-medium rounded-md text-gray-700 dark:text-gray-200 bg-white dark:bg-gray-800 hover:bg-gray-50 dark:hover:bg-gray-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-premium-gold transition-all duration-200;
+    @apply inline-flex items-center justify-center px-4 py-2 border border-gray-300 dark:border-gray-600 text-base font-medium rounded-md text-premium-black dark:text-white bg-white dark:bg-premium-black hover:bg-gray-50 dark:hover:bg-gray-800 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-premium-gold transition-all duration-200;
   }
 
   .input-primary {
-    @apply block w-full rounded-md border-gray-300 dark:border-gray-600 shadow-sm focus:border-premium-gold focus:ring-premium-gold dark:bg-gray-800 dark:text-white sm:text-sm transition-all duration-200;
+    @apply block w-full rounded-md border-gray-300 dark:border-gray-600 shadow-sm focus:border-premium-gold focus:ring-premium-gold dark:bg-premium-black/80 dark:text-white sm:text-sm transition-all duration-200;
   }
 
   /* Карточки и контейнеры */
   .card {
-    @apply bg-white dark:bg-gray-800 rounded-lg shadow-md transition-colors duration-300;
+    @apply bg-white dark:bg-premium-black rounded-lg shadow-md transition-colors duration-300;
   }
 
   .container-light {
-    @apply bg-gray-50 dark:bg-gray-900 transition-colors duration-300;
+    @apply bg-gray-50 dark:bg-premium-black/50 transition-colors duration-300;
   }
 }
 
@@ -66,7 +71,11 @@
 
 /* Улучшенная типография */
 h1, h2, h3, h4, h5, h6 {
-  @apply font-bold tracking-tight dark:text-white transition-colors duration-300;
+  @apply font-bold tracking-tight text-premium-black dark:text-white transition-colors duration-300;
+}
+
+p {
+  @apply text-premium-black/90 dark:text-white/90 transition-colors duration-300;
 }
 
 /* Темная тема для скроллбара */
@@ -76,11 +85,11 @@ h1, h2, h3, h4, h5, h6 {
   }
 
   .dark ::-webkit-scrollbar-track {
-    @apply bg-gray-800;
+    @apply bg-premium-black;
   }
 
   .dark ::-webkit-scrollbar-thumb {
-    @apply bg-gray-600 rounded-full border-2 border-gray-800;
+    @apply bg-gray-600 rounded-full border-2 border-premium-black;
   }
 
   .dark ::-webkit-scrollbar-thumb:hover {
