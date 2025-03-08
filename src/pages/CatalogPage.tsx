@@ -114,7 +114,7 @@ const CatalogPage = () => {
               className="w-full h-full object-cover opacity-30"
             />
           </div>
-          <div className="relative container mx-auto px-4 pt-16">
+          <div className="relative container mx-auto px-4">
             <div className="max-w-3xl mx-auto text-center">
               <h1 className="text-4xl font-bold text-white mb-4">
                 <span className="text-premium-gold">{t('catalog.title')}</span>
