@@ -333,7 +333,7 @@
     "sections": {
       "requirements": {
         "title": "Driver Requirements",
-        "content": "To rent a vehicle, you must be at least 21 years old and have held a valid driver's license for at least 2 years. For premium vehicles, the minimum age is 25 years. You must present a valid ID or passport and a credit card in your name."
+        "content": "To rent a vehicle, you must be at least 21 years old and have held a valid driver's license for at least 2 years. For premium vehicles, the minimum age is 21 year. You must present a valid ID or passport and a credit card in your name."
       },
       "insurance": {
         "title": "Insurance and Coverage",
@@ -374,11 +374,11 @@
     },
     "requirements": {
       "title": "Driver Requirements",
-      "age": "Minimum age: 25 years",
+      "age": "Minimum age: 21 years old",
       "license": "Driver's license held for at least 2 years",
       "credit": "Credit card in the driver's name",
       "documents": "Valid ID or passport",
-      "details": "When picking up the vehicle, both the main driver and additional drivers must present their driver's license. All drivers must have a driver's license with a minimum age of 24 months. The minimum age to drive is 21 years and the maximum is 80 years."
+      "details": "When picking up the vehicle, both the main driver and additional drivers must present their driver's license. All drivers must have a driver's license with a minimum age of 24 months. The minimum age to drive is 21 years old and the maximum is 80 years."
     },
     "insurance": {
       "title": "Insurance and Coverage",

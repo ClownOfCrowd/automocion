@@ -576,37 +576,73 @@
     "invalidPostalCode": "Format de code postal invalide"
   },
   "terms": {
-    "title": "Conditions de location",
-    "subtitle": "Tout ce que vous devez savoir sur la location de nos véhicules premium",
+    "title": "Conditions de Location",
+    "subtitle": "Veuillez lire attentivement ces conditions avant de louer un véhicule",
     "requirements": {
-      "title": "Conditions requises",
-      "age": "Âge minimum : 25 ans",
-      "license": "Permis de conduire de plus de 2 ans",
+      "title": "Exigences du Conducteur",
+      "age": "Âge minimum : 21 ans",
+      "license": "Permis de conduire détenu depuis au moins 2 ans",
       "credit": "Carte de crédit au nom du conducteur",
-      "documents": "Pièce d'identité ou passeport valide"
+      "documents": "Pièce d'identité ou passeport valide",
+      "details": "Lors de la prise en charge du véhicule, le conducteur principal et les conducteurs supplémentaires doivent présenter leur permis de conduire. Tous les conducteurs doivent avoir un permis de conduire d'une ancienneté minimale de 24 mois. L'âge minimum pour conduire est de 21 ans et l'âge maximum est de 80 ans."
     },
     "insurance": {
-      "title": "Assurance",
+      "title": "Assurance et Couverture",
       "basic": "Assurance responsabilité civile incluse",
       "full": "Assurance tous risques disponible",
       "theft": "Protection contre le vol",
-      "assistance": "Assistance routière 24/7"
+      "assistance": "Assistance routière 24/7",
+      "details": "Toutes les locations comprennent une couverture d'assurance de base. Celle-ci couvre les dommages au véhicule avec une franchise de 500 €. Des options d'assurance supplémentaires sont disponibles pour réduire ou éliminer la franchise."
     },
     "payment": {
-      "title": "Paiement",
-      "methods": "Toutes les principales cartes de crédit acceptées",
-      "deposit": "Caution requise",
+      "title": "Paiements",
+      "methods": "Toutes les principales cartes acceptées",
+      "deposit": "Caution de sécurité requise",
       "cancellation": "Annulation gratuite jusqu'à 48h avant",
-      "refund": "Remboursement intégral selon conditions"
+      "refund": "Remboursement complet selon les conditions",
+      "details": "La société de location exigera un dépôt de 200 € lors de la prise en charge du véhicule. Le dépôt sera débloqué à la fin de la location, à condition que le véhicule soit rendu dans les conditions convenues."
     },
     "additional": {
-      "title": "Services additionnels",
-      "fuel": "Politique carburant flexible",
+      "title": "Services Supplémentaires",
+      "fuel": "Politique de carburant flexible",
       "mileage": "Kilométrage illimité disponible",
       "cleaning": "Service de nettoyage inclus",
-      "delivery": "Livraison et collecte disponibles"
+      "delivery": "Livraison et récupération disponibles",
+      "details": "Nous proposons des services supplémentaires tels que GPS, sièges enfants, WiFi mobile et assurances complémentaires. Tous les services supplémentaires sont soumis aux taxes locales et aux taxes de vente."
     },
-    "footer": "Pour plus d'informations, n'hésitez pas à contacter notre service client."
+    "coverage": {
+      "title": "Couverture et Exemptions",
+      "cdw": "Assurance collision partielle (CDW)",
+      "tpl": "Assurance responsabilité civile (TPL)",
+      "tp": "Protection contre le vol (TP)",
+      "pai": "Assurance accidents personnels (PAI)",
+      "details": "En cas de dommages à la carrosserie pendant la location, le montant maximum que vous pourriez avoir à payer serait la 'franchise dommages'. La couverture ne sera valable que si les conditions du contrat de location sont respectées."
+    },
+    "included": {
+      "title": "Inclus dans le Prix",
+      "contract": "Frais de contrat",
+      "facilities": "Frais d'utilisation des installations",
+      "roadside": "Assistance routière",
+      "taxes": "Taxes locales",
+      "details": "Sans frais supplémentaires : frais de service de consolidation, frais de contrat, frais d'utilisation des installations, assurance du permis de circulation, assistance routière, frais environnementaux, taxes locales et frais."
+    },
+    "mileage": {
+      "title": "Kilométrage",
+      "limit1": "300km/jour pour une location de 1 à 2 jours",
+      "limit2": "250km/jour pour une location de 3 à 7 jours",
+      "limit3": "200km/jour pour une location de 7 à 30 jours",
+      "additional": "Kilométrage supplémentaire : 0,15 € par km",
+      "details": "Le kilométrage est limité selon la durée de la location. Le kilométrage supplémentaire coûtera 0,15 €, taxes comprises, pour chaque kilomètre supplémentaire."
+    },
+    "notIncluded": {
+      "title": "Non Inclus dans le Prix",
+      "cleaning": "Frais pour nettoyage excessif",
+      "fines": "Amendes, péages et frais",
+      "fuel": "Frais de carburant si retourné avec moins de carburant",
+      "extras": "Services supplémentaires optionnels",
+      "details": "Les clients seront responsables de tous les péages, frais de congestion, amendes pour excès de vitesse, stationnement et/ou infractions au code de la route, ainsi que de tous les frais administratifs associés."
+    },
+    "footer": "Pour plus d'informations, n'hésitez pas à contacter notre équipe de service client."
   },
   "categories": {
     "all": "Toutes",

@@ -414,35 +414,71 @@
   },
   "terms": {
     "title": "Mietbedingungen",
-    "subtitle": "Alles, was Sie über die Anmietung unserer Premium-Fahrzeuge wissen müssen",
+    "subtitle": "Bitte lesen Sie diese Bedingungen sorgfältig durch, bevor Sie ein Fahrzeug mieten",
     "requirements": {
-      "title": "Anforderungen",
-      "age": "Mindestalter: 25 Jahre",
-      "license": "Führerschein seit mehr als 2 Jahren",
+      "title": "Fahreranforderungen",
+      "age": "Mindestalter: 21 Jahre",
+      "license": "Führerschein seit mindestens 2 Jahren",
       "credit": "Kreditkarte auf den Namen des Fahrers",
-      "documents": "Gültiger Ausweis oder Reisepass"
+      "documents": "Gültiger Ausweis oder Reisepass",
+      "details": "Bei der Abholung des Fahrzeugs müssen sowohl der Hauptfahrer als auch zusätzliche Fahrer ihren Führerschein vorlegen. Alle Fahrer müssen einen Führerschein mit einem Mindestalter von 24 Monaten besitzen. Das Mindestalter zum Fahren beträgt 21 Jahre und das Höchstalter 80 Jahre."
     },
     "insurance": {
-      "title": "Versicherung",
+      "title": "Versicherung und Deckung",
       "basic": "Haftpflichtversicherung inklusive",
       "full": "Vollkaskoversicherung verfügbar",
       "theft": "Diebstahlschutz",
-      "assistance": "24/7 Pannenhilfe"
+      "assistance": "24/7 Pannenhilfe",
+      "details": "Alle Mietverträge beinhalten eine Grundversicherung. Diese deckt Schäden am Fahrzeug mit einer Selbstbeteiligung von 500 € ab. Zusätzliche Versicherungsoptionen sind verfügbar, um die Selbstbeteiligung zu reduzieren oder zu eliminieren."
     },
     "payment": {
-      "title": "Zahlung",
-      "methods": "Alle gängigen Kreditkarten akzeptiert",
-      "deposit": "Kaution erforderlich",
-      "cancellation": "Kostenlose Stornierung bis 48h vorher",
-      "refund": "Volle Rückerstattung gemäß Bedingungen"
+      "title": "Zahlungen",
+      "methods": "Alle gängigen Karten werden akzeptiert",
+      "deposit": "Sicherheitskaution erforderlich",
+      "cancellation": "Kostenlose Stornierung bis 48 Stunden vorher",
+      "refund": "Vollständige Rückerstattung gemäß den Bedingungen",
+      "details": "Die Mietfirma verlangt bei der Abholung des Fahrzeugs eine Kaution von 200 €. Die Kaution wird am Ende der Mietzeit freigegeben, sofern das Fahrzeug in dem vereinbarten Zustand zurückgegeben wird."
     },
     "additional": {
-      "title": "Zusätzliche Leistungen",
+      "title": "Zusätzliche Dienstleistungen",
       "fuel": "Flexible Kraftstoffpolitik",
-      "mileage": "Unbegrenzte Kilometer verfügbar",
+      "mileage": "Unbegrenzte Kilometerleistung verfügbar",
       "cleaning": "Reinigungsservice inklusive",
-      "delivery": "Lieferung und Abholung möglich"
+      "delivery": "Lieferung und Abholung verfügbar",
+      "details": "Wir bieten zusätzliche Dienstleistungen wie GPS, Kindersitze, mobiles WLAN und zusätzliche Versicherungen an. Alle zusätzlichen Dienstleistungen unterliegen lokalen Steuern und Umsatzsteuern."
     },
-    "footer": "Für weitere Informationen kontaktieren Sie bitte unseren Kundenservice."
+    "coverage": {
+      "title": "Deckung und Ausnahmen",
+      "cdw": "Teilkaskoversicherung (CDW)",
+      "tpl": "Haftpflichtversicherung (TPL)",
+      "tp": "Diebstahlschutz (TP)",
+      "pai": "Personenunfallversicherung (PAI)",
+      "details": "Falls die Karosserie während der Mietzeit beschädigt wird, wäre der maximale Betrag, den Sie zahlen müssten, die sogenannte 'Schadenselbstbeteiligung'. Die Deckung ist nur gültig, wenn die Bedingungen des Mietvertrags erfüllt sind."
+    },
+    "included": {
+      "title": "Im Preis inbegriffen",
+      "contract": "Vertragsgebühr",
+      "facilities": "Nutzungsgebühr für Einrichtungen",
+      "roadside": "Pannenhilfe",
+      "taxes": "Lokale Steuern",
+      "details": "Ohne zusätzliche Kosten: Konsolidierungsservicegebühr, Vertragsgebühr, Nutzungsgebühr für Einrichtungen, Versicherung für die Verkehrszulassung, Pannenhilfe, Umweltgebühr, lokale Steuern und Gebühren."
+    },
+    "mileage": {
+      "title": "Kilometerleistung",
+      "limit1": "300 km/Tag bei Miete für 1-2 Tage",
+      "limit2": "250 km/Tag bei Miete für 3-7 Tage",
+      "limit3": "200 km/Tag bei Miete für 7-30 Tage",
+      "additional": "Zusätzliche Kilometer: 0,15 € pro km",
+      "details": "Die Kilometerleistung ist je nach Mietdauer begrenzt. Zusätzliche Kilometer kosten 0,15 €, inklusive Steuern, für jeden zusätzlichen Kilometer."
+    },
+    "notIncluded": {
+      "title": "Nicht im Preis inbegriffen",
+      "cleaning": "Gebühr für übermäßige Reinigung",
+      "fines": "Bußgelder, Mautgebühren und Gebühren",
+      "fuel": "Betankungsgebühr bei Rückgabe mit weniger Kraftstoff",
+      "extras": "Optionale zusätzliche Dienstleistungen",
+      "details": "Kunden sind verantwortlich für alle Mautgebühren, Staugebühren, Geschwindigkeitsbußgelder, Park- und/oder Verkehrsbußgelder sowie alle damit verbundenen Verwaltungskosten."
+    },
+    "footer": "Für weitere Informationen wenden Sie sich bitte an unser Kundendienstteam."
   }
 } 
