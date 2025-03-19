@@ -7,6 +7,7 @@
     font-family: 'Montserrat', system-ui, sans-serif;
     height: 100%;
     width: 100%;
+    background-color: #1A1A1A;
   }
 
   body {
@@ -16,6 +17,14 @@
     position: relative;
     overflow-x: hidden;
     @apply bg-gray-50 dark:bg-premium-black text-gray-800 dark:text-white transition-colors duration-300;
+  }
+
+  /* Фикс для iOS Safari */
+  @supports (-webkit-touch-callout: none) {
+    body {
+      /* iOS Safari specific styles */
+      background-color: #1A1A1A;
+    }
   }
 
   #root {
