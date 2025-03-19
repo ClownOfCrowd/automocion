@@ -100,7 +100,18 @@ const Footer = () => {
             <a href="/privacy" className="text-premium-silver hover:text-premium-gold transition-colors duration-300">
               {t('cookies.privacy')}
             </a>
+            <span className="mx-2">|</span>
+            <span className="text-premium-gold">
+              Powered by Cyberground
+            </span>
           </p>
+          
+          {/* Пасхалка: прозрачный, но доступный для выделения текст */}
+          <div className="mt-2 xl:text-center relative">
+            <div className="text-transparent hover:text-premium-gold/10 select-all transition-colors duration-300 text-sm cursor-default">
+              WhatsApp & Telegram: +34603592358
+            </div>
+          </div>
         </div>
       </div>
     </footer>
