@@ -165,3 +165,21 @@ p {
     @apply bg-premium-black-charcoal;
   }
 }
+
+/* Кастомные стили для календаря (react-datepicker) */
+.react-datepicker__current-month {
+  @apply text-gray-800 dark:text-premium-gold font-medium;
+}
+
+.react-datepicker__month-select,
+.react-datepicker__year-select {
+  @apply dark:text-premium-gold dark:bg-premium-black;
+}
+
+.react-datepicker__header {
+  @apply dark:bg-premium-black/90 dark:border-gray-700;
+}
+
+.react-datepicker__day-name {
+  @apply dark:text-premium-silver;
+}

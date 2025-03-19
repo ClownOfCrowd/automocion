@@ -6,11 +6,15 @@ interface TimeSelectorProps {
 }
 
 const TimeSelector: React.FC<TimeSelectorProps> = ({ value, onChange, className = '', label }) => {
-  // Генерируем временные интервалы с шагом 30 минут
+  // Генерируем временные интервалы с 9:00 до 19:00 с шагом 30 минут
   const generateTimeOptions = () => {
     const options = [];
-    for (let hour = 0; hour < 24; hour++) {
+    // Начинаем с 9 утра и заканчиваем в 19:00
+    for (let hour = 9; hour <= 19; hour++) {
       for (let minute = 0; minute < 60; minute += 30) {
+        // Пропускаем 19:30, так как последнее время должно быть 19:00
+        if (hour === 19 && minute > 0) continue;
+        
         const h = hour.toString().padStart(2, '0');
         const m = minute.toString().padStart(2, '0');
         options.push(`${h}:${m}`);
