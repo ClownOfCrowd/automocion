@@ -98,8 +98,8 @@ const BookingNotifications = () => {
         
         // Если fingerprint совпадает с сохраненным и показано >= 2 уведомлений
         if (parsedData.ipAddress === fingerprint && parsedData.shownCount >= 2) {
-          // Устанавливаем паузу на 24 часа
-          const pauseTime = 24 * 60 * 60 * 1000; // 24 часа в миллисекундах
+          // Устанавливаем длительную паузу (7 дней)
+          const pauseTime = 7 * 24 * 60 * 60 * 1000; // 7 дней в миллисекундах
           setNotificationState(prev => ({
             ...prev,
             pauseUntil: Date.now() + pauseTime
@@ -108,27 +108,24 @@ const BookingNotifications = () => {
       } catch (e) {
         console.error('Error parsing saved IP data', e);
         // Если данные повреждены, создаем новые
-        setIpData({
+        const newIpData = {
           ipAddress: fingerprint,
           shownCount: 0,
           lastSeen: Date.now()
-        });
+        };
+        setIpData(newIpData);
+        localStorage.setItem(IP_STORAGE_KEY, JSON.stringify(newIpData));
       }
     } else {
       // Первое посещение, инициализируем данные
-      setIpData({
+      const newIpData = {
         ipAddress: fingerprint,
         shownCount: 0,
         lastSeen: Date.now()
-      });
+      };
+      setIpData(newIpData);
+      localStorage.setItem(IP_STORAGE_KEY, JSON.stringify(newIpData));
     }
-    
-    // Сохраняем актуальные данные при размонтировании компонента
-    return () => {
-      if (ipData) {
-        localStorage.setItem(IP_STORAGE_KEY, JSON.stringify(ipData));
-      }
-    };
   }, []);
 
   // Функция для генерации случайного уведомления с учетом языка и международных имен
@@ -199,13 +196,12 @@ const BookingNotifications = () => {
     // Увеличенные интервалы для более редкого показа
     const getAdaptiveInterval = () => {
       const { shownCount } = notificationState;
-      // Первое уведомление через 30-60 секунд
-      if (shownCount === 0) return Math.floor(Math.random() * 30000) + 30000; 
-      // Последующие уведомления через более длинные интервалы
-      if (shownCount === 1) return Math.floor(Math.random() * 30000) + 90000; // 90-120 сек
-      if (shownCount === 2) return Math.floor(Math.random() * 30000) + 120000; // 120-150 сек
-      if (shownCount === 3) return Math.floor(Math.random() * 30000) + 150000; // 150-180 сек
-      return Math.floor(Math.random() * 30000) + 180000; // 180-210 сек для пятого и далее
+      // Первое уведомление через 30-90 секунд
+      if (shownCount === 0) return Math.floor(Math.random() * 60000) + 30000; 
+      // Второе уведомление через 2-3 минуты
+      if (shownCount === 1) return Math.floor(Math.random() * 60000) + 120000; // 2-3 мин
+      // Последующие уведомления не должны показываться, но на всякий случай большой интервал
+      return 30 * 60 * 1000; // 30 минут
     };
 
     // Логика проверки показа уведомлений
@@ -215,7 +211,7 @@ const BookingNotifications = () => {
       // Проверка времени паузы
       if (pauseUntil > Date.now()) return false;
       
-      // Проверка по IP/fingerprint
+      // Проверка по IP/fingerprint - строго максимум 2 уведомления
       if (ipData && ipData.shownCount >= 2) return false;
       
       // Проверка на текущее видимое состояние
@@ -240,13 +236,23 @@ const BookingNotifications = () => {
           lastSeen: Date.now()
         };
         setIpData(updatedIpData);
+        // Немедленно сохраняем в localStorage для синхронизации между вкладками
         localStorage.setItem(IP_STORAGE_KEY, JSON.stringify(updatedIpData));
+        
+        // Если это второе уведомление, устанавливаем длительную паузу
+        if (updatedIpData.shownCount >= 2) {
+          const pauseTime = 7 * 24 * 60 * 60 * 1000; // 7 дней в миллисекундах
+          setNotificationState(prev => ({
+            ...prev,
+            pauseUntil: Date.now() + pauseTime
+          }));
+        }
       }
       
-      // Скрываем уведомление через 7 секунд
+      // Скрываем уведомление через 8 секунд
       setTimeout(() => {
         setIsVisible(false);
-      }, 7000);
+      }, 8000);
       
       setNotificationState(prev => ({
         ...prev,
@@ -259,6 +265,34 @@ const BookingNotifications = () => {
       clearInterval(showInterval);
     };
   }, [notificationState, isVisible, ipData]);
+
+  // Дополнительный эффект для синхронизации изменений localStorage между вкладками
+  useEffect(() => {
+    const handleStorageChange = (event: StorageEvent) => {
+      if (event.key === IP_STORAGE_KEY && event.newValue) {
+        try {
+          const updatedData = JSON.parse(event.newValue) as IpData;
+          setIpData(updatedData);
+          
+          // Если уже показано 2 уведомления, устанавливаем паузу
+          if (updatedData.shownCount >= 2) {
+            const pauseTime = 7 * 24 * 60 * 60 * 1000; // 7 дней
+            setNotificationState(prev => ({
+              ...prev,
+              pauseUntil: Date.now() + pauseTime
+            }));
+          }
+        } catch (e) {
+          console.error('Error parsing updated IP data from storage event', e);
+        }
+      }
+    };
+
+    window.addEventListener('storage', handleStorageChange);
+    return () => {
+      window.removeEventListener('storage', handleStorageChange);
+    };
+  }, []);
 
   const formatTimeAgo = (minutes: number) => {
     if (minutes < 60) {
@@ -282,13 +316,13 @@ const BookingNotifications = () => {
   const timeFormatted = formatTimeAgo(notification.timeAgo);
 
   return (
-    <AnimatePresence>
+    <AnimatePresence mode="wait">
       {isVisible && (
         <motion.div
           initial={{ opacity: 0, x: 100, y: 0 }}
           animate={{ opacity: 1, x: 0, y: 0 }}
           exit={{ opacity: 0, x: 100, y: 0 }}
-          transition={{ type: 'spring', stiffness: 400, damping: 30 }}
+          transition={{ type: 'spring', stiffness: 300, damping: 25 }}
           className="fixed bottom-24 right-6 z-40 max-w-sm rounded-lg p-4 border-2"
           style={{
             background: isDarkMode 
