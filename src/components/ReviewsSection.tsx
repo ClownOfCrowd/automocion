@@ -154,14 +154,7 @@ const ReviewsSection = () => {
                     transition={{ type: "spring", stiffness: 300 }}
                   >
                     <div className="flex items-center mb-4">
-                      <div className="h-12 w-12 rounded-full overflow-hidden border-2 border-premium-gold/30">
-                        <img
-                          src={review.avatar}
-                          alt={review.name}
-                          className="h-full w-full object-cover"
-                        />
-                      </div>
-                      <div className="ml-4">
+                      <div className="ml-0">
                         <h3 className="text-lg font-semibold text-gray-800 dark:text-white">{review.name}</h3>
                         <p className="text-sm text-gray-700 dark:text-premium-silver">{review.car}</p>
                       </div>

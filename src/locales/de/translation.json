@@ -112,7 +112,7 @@
     },
     "contact": {
       "title": "Kontaktieren Sie uns",
-      "description": "Wir sind immer bereit, Ihre Fragen zu beantworten und Ihnen bei der Auswahl des richtigen Autos zu helfen",
+      "description": "Wir sind hier, um Ihnen mit allen Fragen zu unseren Fahrzeugen und Dienstleistungen zu helfen. Unser Team steht bereit, um Ihnen die Informationen zu geben, die Sie für ein reibungsloses und angenehmes Mietfahrzeug-Erlebnis benötigen.",
       "form": {
         "title": "Nachricht senden",
         "name": "Ihr Name",
@@ -232,7 +232,8 @@
       "Tarragona": "Tarragona",
       "Reus": "Reus",
       "Salou": "Salou",
-      "Barcelona": "Barcelona"
+      "La Pineda": "La Pineda",
+      "Cambrils": "Cambrils"
     },
     "rental": {
       "title": "Mietdetails",
@@ -288,9 +289,9 @@
     "submit": "Buchung bestätigen"
   },
   "contact": {
-    "title": "Kontakt",
-    "subtitle": "Wir sind für Sie da",
-    "description": "Haben Sie Fragen zu unseren Dienstleistungen oder benötigen Sie Hilfe bei Ihrer Buchung? Unser Team steht Ihnen bei allen Anfragen zu unseren Fahrzeugen, Dienstleistungen oder dem Reservierungsprozess zur Verfügung. Kontaktieren Sie uns und wir melden uns so schnell wie möglich bei Ihnen.",
+    "title": "Kontaktieren Sie uns",
+    "subtitle": "Wir sind hier, um Ihnen mit allen Fragen zu unseren Fahrzeugen und Dienstleistungen zu helfen. Unser Team steht bereit, um Ihnen die Informationen zu geben, die Sie für ein reibungsloses und angenehmes Mietfahrzeug-Erlebnis benötigen.",
+    "description": "Haben Sie Fragen zu unseren Dienstleistungen oder benötigen Sie Hilfe bei Ihrer Buchung? Unser Team steht Ihnen bei allen Anfragen zu unseren Fahrzeugen, Dienstleistungen oder zum Reservierungsprozess zur Verfügung. Kontaktieren Sie uns, und wir werden uns so schnell wie möglich bei Ihnen melden.",
     "info": {
       "title": "Kontaktinformationen",
       "schedule": "Öffnungszeiten: 9:00-13:00 / 15:00-19:00",

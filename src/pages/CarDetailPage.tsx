@@ -20,7 +20,7 @@ import LazyImage from '../components/LazyImage'
 const CarDetailPage = () => {
   const { id } = useParams()
   const navigate = useNavigate()
-  const { t } = useTranslation()
+  const { t, i18n } = useTranslation()
   const [pickupDate, setPickupDate] = useState<Date | null>(null)
   const [returnDate, setReturnDate] = useState<Date | null>(null)
   const [pickupLocation, setPickupLocation] = useState('Vila-seca')
@@ -46,6 +46,76 @@ const CarDetailPage = () => {
       .filter(c => c.id !== car.id && c.category === car.category)
       .slice(0, 3)
   }, [car])
+
+  const totalDays = useMemo(() => {
+    if (!pickupDate || !returnDate) return 0
+    const diff = returnDate.getTime() - pickupDate.getTime()
+    return Math.ceil(diff / (1000 * 3600 * 24))
+  }, [pickupDate, returnDate])
+
+  const totalPrice = useMemo(() => {
+    if (!car || totalDays === 0) return 0
+    return car.price * totalDays
+  }, [car, totalDays])
+
+  const handleBookNow = () => {
+    const currentLang = i18n.language || 'es';
+    
+    // Форматирование даты для сообщения
+    const formatDate = (date: Date | null) => {
+      if (!date) return "";
+      return `${date.getDate()}/${date.getMonth() + 1}/${date.getFullYear()}`;
+    };
+    
+    let message = '';
+    
+    if (currentLang === 'es') {
+      message = `Hola, me gustaría reservar un coche:\n\n` +
+                `🚗 Modelo: ${car?.name}\n` +
+                `📅 Fecha de recogida: ${formatDate(pickupDate)}\n` +
+                `📅 Fecha de devolución: ${formatDate(returnDate)}\n` +
+                `📍 Lugar de recogida: ${pickupLocation}\n` +
+                `📍 Lugar de devolución: ${returnLocation}\n` +
+                `💰 Precio total: ${totalPrice}€`;
+    } else if (currentLang === 'ru') {
+      message = `Здравствуйте, я хотел бы забронировать автомобиль:\n\n` +
+                `🚗 Модель: ${car?.name}\n` +
+                `📅 Дата получения: ${formatDate(pickupDate)}\n` +
+                `📅 Дата возврата: ${formatDate(returnDate)}\n` +
+                `📍 Место получения: ${pickupLocation}\n` +
+                `📍 Место возврата: ${returnLocation}\n` +
+                `💰 Общая стоимость: ${totalPrice}€`;
+    } else if (currentLang === 'fr') {
+      message = `Bonjour, je souhaiterais réserver une voiture:\n\n` +
+                `🚗 Modèle: ${car?.name}\n` +
+                `📅 Date de prise en charge: ${formatDate(pickupDate)}\n` +
+                `📅 Date de retour: ${formatDate(returnDate)}\n` +
+                `📍 Lieu de prise en charge: ${pickupLocation}\n` +
+                `📍 Lieu de retour: ${returnLocation}\n` +
+                `💰 Prix total: ${totalPrice}€`;
+    } else if (currentLang === 'de') {
+      message = `Hallo, ich möchte ein Auto buchen:\n\n` +
+                `🚗 Modell: ${car?.name}\n` +
+                `📅 Abholdatum: ${formatDate(pickupDate)}\n` +
+                `📅 Rückgabedatum: ${formatDate(returnDate)}\n` +
+                `📍 Abholort: ${pickupLocation}\n` +
+                `📍 Rückgabeort: ${returnLocation}\n` +
+                `💰 Gesamtpreis: ${totalPrice}€`;
+    } else {
+      // English default
+      message = `Hello, I would like to book a car:\n\n` +
+                `🚗 Model: ${car?.name}\n` +
+                `📅 Pickup date: ${formatDate(pickupDate)}\n` +
+                `📅 Return date: ${formatDate(returnDate)}\n` +
+                `📍 Pickup location: ${pickupLocation}\n` +
+                `📍 Return location: ${returnLocation}\n` +
+                `💰 Total price: ${totalPrice}€`;
+    }
+    
+    // Открываем WhatsApp с подготовленным сообщением
+    const encodedMessage = encodeURIComponent(message);
+    window.open(`https://wa.me/34671332591?text=${encodedMessage}`, '_blank');
+  };
 
   if (!car) {
     return (
@@ -102,17 +172,6 @@ const CarDetailPage = () => {
       value: `${car.power} CV`
     }
   ]
-
-  // Расчет общей стоимости аренды
-  const calculateTotalPrice = () => {
-    if (!pickupDate || !returnDate) return 0
-    
-    const diffTime = Math.abs(returnDate.getTime() - pickupDate.getTime())
-    const diffDays = Math.ceil(diffTime / (1000 * 60 * 60 * 24))
-    return diffDays * car.price
-  }
-
-  const totalPrice = calculateTotalPrice()
 
   return (
     <PageTransition>
@@ -227,9 +286,12 @@ const CarDetailPage = () => {
                       onChange={(e) => setPickupLocation(e.target.value)}
                       className="w-full rounded-md border border-gray-300 dark:border-gray-700 dark:bg-premium-black dark:text-white py-2 px-3"
                     >
-                      <option value="Vila-seca">{t('booking.location.options.Vila-seca')}</option>
-                      <option value="Tarragona">{t('booking.location.options.Tarragona')}</option>
-                      <option value="Reus">{t('booking.location.options.Reus')}</option>
+                      <option value="Vila-seca">{t('booking.locationOptions.Vila-seca')}</option>
+                      <option value="Tarragona">{t('booking.locationOptions.Tarragona')}</option>
+                      <option value="Reus">{t('booking.locationOptions.Reus')}</option>
+                      <option value="Salou">{t('booking.locationOptions.Salou')}</option>
+                      <option value="La Pineda">{t('booking.locationOptions.La Pineda')}</option>
+                      <option value="Cambrils">{t('booking.locationOptions.Cambrils')}</option>
                     </select>
                   </div>
                   <div>
@@ -241,9 +303,12 @@ const CarDetailPage = () => {
                       onChange={(e) => setReturnLocation(e.target.value)}
                       className="w-full rounded-md border border-gray-300 dark:border-gray-700 dark:bg-premium-black dark:text-white py-2 px-3"
                     >
-                      <option value="Vila-seca">{t('booking.location.options.Vila-seca')}</option>
-                      <option value="Tarragona">{t('booking.location.options.Tarragona')}</option>
-                      <option value="Reus">{t('booking.location.options.Reus')}</option>
+                      <option value="Vila-seca">{t('booking.locationOptions.Vila-seca')}</option>
+                      <option value="Tarragona">{t('booking.locationOptions.Tarragona')}</option>
+                      <option value="Reus">{t('booking.locationOptions.Reus')}</option>
+                      <option value="Salou">{t('booking.locationOptions.Salou')}</option>
+                      <option value="La Pineda">{t('booking.locationOptions.La Pineda')}</option>
+                      <option value="Cambrils">{t('booking.locationOptions.Cambrils')}</option>
                     </select>
                   </div>
                 </div>
@@ -259,6 +324,7 @@ const CarDetailPage = () => {
 
                 <button
                   className="w-full bg-premium-gold hover:bg-premium-gold/90 text-white font-bold py-3 px-4 rounded-md transition-colors"
+                  onClick={handleBookNow}
                 >
                   {t('common.bookNow')}
                 </button>
@@ -312,8 +378,8 @@ const CarDetailPage = () => {
                       <h3 className="text-lg font-bold mb-2 dark:text-white">{similarCar.name}</h3>
                       <p className="text-sm text-gray-600 dark:text-gray-400 mb-4">{t(similarCar.description)}</p>
                       <button
+                        className="w-full bg-premium-gold hover:bg-premium-gold/90 text-white font-bold py-2 px-4 rounded"
                         onClick={() => navigate(`/catalog/${similarCar.id}`)}
-                        className="w-full bg-premium-black hover:bg-premium-black/90 text-white dark:bg-premium-gold dark:hover:bg-premium-gold/90 font-bold py-2 px-4 rounded-md transition-colors"
                       >
                         {t('common.viewDetails')}
                       </button>

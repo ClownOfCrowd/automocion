@@ -218,7 +218,7 @@
     "title": "Booking",
     "location": "Location",
     "pickupLocation": "Pickup Location",
-      "returnLocation": "Return Location",
+    "returnLocation": "Return Location",
     "sameReturnLocation": "Return to same location",
     "pickupDetails": "Pickup Details",
     "returnDetails": "Return Details",
@@ -236,12 +236,13 @@
       "Tarragona": "Tarragona",
       "Reus": "Reus",
       "Salou": "Salou",
-      "Barcelona": "Barcelona"
+      "La Pineda": "La Pineda",
+      "Cambrils": "Cambrils"
     }
   },
   "contact": {
     "title": "Contact Us",
-    "subtitle": "We're here to help",
+    "subtitle": "We're here to help you with any questions about our vehicles and services. Our team is ready to provide you with the information you need to make your car rental experience smooth and enjoyable.",
     "description": "Have questions about our services or need assistance with your booking? Our team is ready to help you with any inquiries about our vehicles, services, or reservation process. Contact us and we'll get back to you as soon as possible.",
     "form": {
       "title": "Send us a message",
@@ -562,6 +563,17 @@
     "USB": "USB",
     "Sensores de aparcamiento": "Parking Sensors",
     "Asientos deportivos": "Sport Seats",
-    "Techo panorámico": "Panoramic Roof"
+    "Techo panorámico": "Panoramic Roof",
+    "location": {
+      "title": "Pick-up Location",
+      "options": {
+        "Reus Airport": "Reus Airport",
+        "Tarragona": "Tarragona",
+        "Vila-seca": "Vila-seca",
+        "Salou": "Salou",
+        "La Pineda": "La Pineda",
+        "Cambrils": "Cambrils"
+      }
+    }
   }
 } 

@@ -36,8 +36,13 @@ const Footer = () => {
             </h3>
             <ul className="mt-4 space-y-4">
               <li>
-                <a href="tel:+34600000000" className="text-base text-premium-silver hover:text-premium-gold transition-colors duration-300">
-                  +34 600 000 000
+                <a href="tel:+34671332591" className="text-base text-premium-silver hover:text-premium-gold transition-colors duration-300">
+                  +34 671 332 591 (esp/eng)
+                </a>
+              </li>
+              <li>
+                <a href="tel:+34647030703" className="text-base text-premium-silver hover:text-premium-gold transition-colors duration-300">
+                  +34 647 030 703 (rus/ua)
                 </a>
               </li>
               <li>
@@ -70,17 +75,12 @@ const Footer = () => {
             </h3>
             <ul className="mt-4 space-y-4">
               <li>
-                <a href="#" className="text-base text-premium-silver hover:text-premium-gold transition-colors duration-300">
+                <a href="https://www.instagram.com/o.v.auto_mocion/" target="_blank" rel="noopener noreferrer" className="text-base text-premium-silver hover:text-premium-gold transition-colors duration-300">
                   {t('contact.social.instagram')}
                 </a>
               </li>
               <li>
-                <a href="#" className="text-base text-premium-silver hover:text-premium-gold transition-colors duration-300">
-                  {t('contact.social.facebook')}
-                </a>
-              </li>
-              <li>
-                <a href="#" className="text-base text-premium-silver hover:text-premium-gold transition-colors duration-300">
+                <a href="https://wa.me/34671332591" target="_blank" rel="noopener noreferrer" className="text-base text-premium-silver hover:text-premium-gold transition-colors duration-300">
                   {t('contact.social.whatsapp')}
                 </a>
               </li>

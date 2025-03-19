@@ -1,4 +1,5 @@
 import { Location, locations } from '../data/locations';
+import { useTranslation } from 'react-i18next';
 
 interface LocationSelectorProps {
   value: string;
@@ -15,6 +16,8 @@ const LocationSelector: React.FC<LocationSelectorProps> = ({
   label,
   placeholder = 'Seleccionar ubicación'
 }) => {
+  const { t } = useTranslation();
+
   return (
     <div className={className}>
       {label && (
@@ -28,12 +31,12 @@ const LocationSelector: React.FC<LocationSelectorProps> = ({
         className="w-full rounded-md border border-gray-300 dark:border-gray-700 dark:bg-premium-black dark:text-white shadow-sm py-1.5 sm:py-2 px-2 sm:px-3 text-xs sm:text-sm"
       >
         <option value="">{placeholder}</option>
-        <option value="Vila-seca">Vila-seca</option>
-        <option value="Tarragona">Tarragona</option>
-        <option value="Reus">Reus</option>
-        <option value="Salou">Salou</option>
-        <option value="Cambrils">Cambrils</option>
-        <option value="Barcelona">Barcelona</option>
+        <option value="Vila-seca">{t('booking.locationOptions.Vila-seca')}</option>
+        <option value="Tarragona">{t('booking.locationOptions.Tarragona')}</option>
+        <option value="Reus">{t('booking.locationOptions.Reus')}</option>
+        <option value="Salou">{t('booking.locationOptions.Salou')}</option>
+        <option value="La Pineda">{t('booking.locationOptions.La Pineda')}</option>
+        <option value="Cambrils">{t('booking.locationOptions.Cambrils')}</option>
       </select>
     </div>
   );

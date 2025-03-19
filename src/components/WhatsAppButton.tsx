@@ -31,7 +31,7 @@ const WhatsAppButton = () => {
 
   const handleClick = () => {
     // В реальном приложении здесь будет настоящий номер WhatsApp
-    window.open('https://wa.me/34600000000', '_blank')
+    window.open('https://wa.me/34671332591', '_blank')
   }
 
   return (
@@ -63,7 +63,7 @@ const WhatsAppButton = () => {
               onClick={handleClick}
               onMouseEnter={() => setShowTooltip(true)}
               onMouseLeave={() => setShowTooltip(false)}
-              className="relative flex items-center justify-center w-16 h-16 bg-green-500 rounded-full shadow-lg hover:bg-green-600 transition-colors"
+              className="group relative flex items-center justify-center w-14 h-14 rounded-full bg-premium-gold shadow-lg hover:bg-premium-gold/90 transition-all duration-300"
             >
               {/* Пульсирующие круги */}
               <motion.div
@@ -80,7 +80,7 @@ const WhatsAppButton = () => {
                   ease: "easeInOut"
                 }}
                 style={{
-                  background: 'radial-gradient(circle, rgba(34,197,94,0.4) 0%, rgba(34,197,94,0) 70%)'
+                  background: 'radial-gradient(circle, rgba(214,168,107,0.4) 0%, rgba(214,168,107,0) 70%)'
                 }}
               />
               <motion.div
@@ -98,7 +98,7 @@ const WhatsAppButton = () => {
                   delay: 0.3
                 }}
                 style={{
-                  background: 'radial-gradient(circle, rgba(34,197,94,0.3) 0%, rgba(34,197,94,0) 70%)'
+                  background: 'radial-gradient(circle, rgba(214,168,107,0.3) 0%, rgba(214,168,107,0) 70%)'
                 }}
               />
 

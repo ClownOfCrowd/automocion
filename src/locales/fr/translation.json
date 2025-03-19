@@ -29,7 +29,7 @@
     "filter": "Filtrer",
     "sort": "Trier",
     "price": "Prix",
-    "fromPrice": "À partir de {{price}}€/jour",
+    "fromPrice": "À partir de {{price}}€",
     "bookNow": "Réserver maintenant",
     "viewDetails": "Voir les détails",
     "back": "Retour",
@@ -247,13 +247,14 @@
       "Tarragona": "Tarragone",
       "Reus": "Reus",
       "Salou": "Salou",
-      "Barcelona": "Barcelone"
+      "La Pineda": "La Pineda",
+      "Cambrils": "Cambrils"
     }
   },
   "contact": {
     "title": "Contactez-nous",
-    "subtitle": "Nous sommes là pour vous aider",
-    "description": "Vous avez des questions sur nos services ou besoin d'aide pour votre réservation? Notre équipe est prête à vous aider avec toutes vos demandes concernant nos véhicules, nos services ou le processus de réservation. Contactez-nous et nous vous répondrons dans les plus brefs délais.",
+    "subtitle": "Nous sommes là pour vous aider avec toutes vos questions concernant nos véhicules et services. Notre équipe est prête à vous fournir les informations dont vous avez besoin pour rendre votre expérience de location de voiture agréable et sans problème.",
+    "description": "Vous avez des questions sur nos services ou besoin d'aide pour votre réservation ? Notre équipe est prête à vous aider pour toute demande concernant nos véhicules, services ou processus de réservation. Contactez-nous et nous vous répondrons dans les plus brefs délais.",
     "info": {
       "title": "Informations de contact",
       "schedule": "Heures d'ouverture: 9:00-13:00 / 15:00-19:00",

@@ -266,13 +266,14 @@
       "Tarragona": "Tarragona",
       "Reus": "Reus",
       "Salou": "Salou",
-      "Barcelona": "Barcelona"
+      "La Pineda": "La Pineda",
+      "Cambrils": "Cambrils"
     }
   },
   "contact": {
-    "title": "Contacto",
-    "subtitle": "Estamos aquí para ayudarte",
-    "description": "¿Tienes preguntas sobre nuestros servicios o necesitas ayuda con tu reserva? Nuestro equipo está listo para ayudarte con cualquier consulta sobre nuestros vehículos, servicios o proceso de reserva. Contáctanos y te responderemos lo antes posible.",
+    "title": "Contáctenos",
+    "subtitle": "Estamos aquí para ayudarle con cualquier pregunta sobre nuestros vehículos y servicios. Nuestro equipo está listo para proporcionarle la información que necesita para que su experiencia de alquiler de coches sea agradable y sin complicaciones.",
+    "description": "¿Tiene preguntas sobre nuestros servicios o necesita ayuda con su reserva? Nuestro equipo está listo para ayudarle con cualquier consulta sobre nuestros vehículos, servicios o proceso de reserva. Contáctenos y le responderemos lo antes posible.",
     "form": {
       "title": "Envíanos un mensaje",
       "name": "Tu Nombre",

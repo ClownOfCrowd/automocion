@@ -88,7 +88,7 @@ const ContactPage = () => {
                           </div>
                         </div>
                         <div className="ml-4">
-                          <p className="text-lg font-medium text-premium-black dark:text-white">+34 600 000 000</p>
+                          <p className="text-lg font-medium text-premium-black dark:text-white">+34 671 332 591 (esp/eng)</p>
                           <p className="mt-1 text-premium-black dark:text-premium-silver">{t('contact.info.schedule')}</p>
                           <p className="text-premium-black dark:text-premium-silver">{t('contact.info.workdays')}</p>
                         </div>
@@ -101,12 +101,14 @@ const ContactPage = () => {
                         <div className="flex-shrink-0">
                           <div className="p-2 bg-premium-black/5 dark:bg-premium-black rounded-full group-hover:bg-premium-gold/10 transition-colors duration-300">
                             <svg className="h-6 w-6 text-premium-gold" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+                              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
                             </svg>
                           </div>
                         </div>
                         <div className="ml-4">
-                          <p className="text-lg font-medium text-premium-black dark:text-white">info@automocion.es</p>
+                          <p className="text-lg font-medium text-premium-black dark:text-white">+34 647 030 703 (rus/ua)</p>
+                          <p className="mt-1 text-premium-black dark:text-premium-silver">{t('contact.info.schedule')}</p>
+                          <p className="text-premium-black dark:text-premium-silver">{t('contact.info.workdays')}</p>
                         </div>
                       </motion.div>
                       <motion.div 
@@ -145,18 +147,9 @@ const ContactPage = () => {
                       <motion.a 
                         whileHover={{ scale: 1.1 }}
                         whileTap={{ scale: 0.9 }}
-                        href="#" 
-                        className="text-premium-gold hover:text-premium-gold/80 transition-colors duration-300"
-                      >
-                        <span className="sr-only">{t('contact.social.facebook')}</span>
-                        <svg className="h-8 w-8" fill="currentColor" viewBox="0 0 24 24">
-                          <path fillRule="evenodd" d="M22 12c0-5.523-4.477-10-10-10S2 6.477 2 12c0 4.991 3.657 9.128 8.438 9.878v-6.987h-2.54V12h2.54V9.797c0-2.506 1.492-3.89 3.777-3.89 1.094 0 2.238.195 2.238.195v2.46h-1.26c-1.243 0-1.63.771-1.63 1.562V12h2.773l-.443 2.89h-2.33v6.988C18.343 21.128 22 16.991 22 12z" clipRule="evenodd" />
-                        </svg>
-                      </motion.a>
-                      <motion.a 
-                        whileHover={{ scale: 1.1 }}
-                        whileTap={{ scale: 0.9 }}
-                        href="#" 
+                        href="https://www.instagram.com/o.v.auto_mocion/" 
+                        target="_blank"
+                        rel="noopener noreferrer"
                         className="text-premium-gold hover:text-premium-gold/80 transition-colors duration-300"
                       >
                         <span className="sr-only">{t('contact.social.instagram')}</span>
@@ -167,7 +160,9 @@ const ContactPage = () => {
                       <motion.a 
                         whileHover={{ scale: 1.1 }}
                         whileTap={{ scale: 0.9 }}
-                        href="#" 
+                        href="https://wa.me/34671332591" 
+                        target="_blank"
+                        rel="noopener noreferrer"
                         className="text-premium-gold hover:text-premium-gold/80 transition-colors duration-300"
                       >
                         <span className="sr-only">{t('contact.social.whatsapp')}</span>
