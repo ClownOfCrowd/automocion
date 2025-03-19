@@ -48,8 +48,23 @@ const HomePage = () => {
   
   const [sameReturnLocation, setSameReturnLocation] = useState(true)
 
+  // Проверка на заполненность всех полей формы
+  const isFormValid = () => {
+    return (
+      bookingForm.pickupLocation !== '' &&
+      (sameReturnLocation || bookingForm.returnLocation !== '') &&
+      bookingForm.pickupDate !== null &&
+      bookingForm.returnDate !== null &&
+      bookingForm.pickupTime !== '' &&
+      bookingForm.returnTime !== ''
+    )
+  }
+
   const handleBookingSubmit = (e: React.FormEvent) => {
     e.preventDefault()
+    
+    // Если форма не валидна, не отправляем
+    if (!isFormValid()) return
     
     // Если выбрано "то же место возврата", используем место получения
     const formData = {
@@ -226,7 +241,8 @@ const HomePage = () => {
                   <div>
                     <button
                       type="submit"
-                      className="w-full bg-premium-gold hover:bg-premium-gold/90 text-white font-bold py-2 sm:py-3 px-4 sm:px-6 rounded-md transition-colors text-sm sm:text-base shadow-md"
+                      disabled={!isFormValid()}
+                      className={`w-full ${isFormValid() ? 'bg-premium-gold hover:bg-premium-gold/90' : 'bg-gray-400 cursor-not-allowed'} text-white font-bold py-2 sm:py-3 px-4 sm:px-6 rounded-md transition-colors text-sm sm:text-base shadow-md`}
                     >
                       {t('booking.searchButton')}
                     </button>
