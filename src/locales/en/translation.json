@@ -579,7 +579,8 @@
   "cookies": {
     "message": "This website uses cookies to enhance your experience. By continuing to browse, you accept our cookie policy.",
     "accept": "Accept",
-    "learnMore": "Learn More"
+    "learnMore": "Learn More",
+    "privacy": "Privacy Policy"
   },
   "privacy": {
     "title": "Privacy Policy",

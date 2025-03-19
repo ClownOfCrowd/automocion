@@ -729,7 +729,8 @@
   "cookies": {
     "message": "Ce site utilise des cookies pour améliorer votre expérience. En continuant à naviguer, vous acceptez notre politique en matière de cookies.",
     "accept": "Accepter",
-    "learnMore": "En savoir plus"
+    "learnMore": "En savoir plus",
+    "privacy": "Politique de confidentialité"
   },
   "privacy": {
     "title": "Politique de Confidentialité",

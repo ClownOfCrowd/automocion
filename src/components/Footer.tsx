@@ -96,6 +96,10 @@ const Footer = () => {
         <div className="mt-8 border-t border-premium-gold/10 pt-8">
           <p className="text-base text-premium-silver xl:text-center">
             © {currentYear} O.V. Automoción. {t('footer.copyright')}
+            <span className="mx-2">|</span>
+            <a href="/privacy" className="text-premium-silver hover:text-premium-gold transition-colors duration-300">
+              {t('cookies.privacy')}
+            </a>
           </p>
         </div>
       </div>

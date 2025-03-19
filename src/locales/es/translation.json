@@ -502,7 +502,8 @@
   "cookies": {
     "message": "Este sitio web utiliza cookies para mejorar su experiencia. Al continuar navegando, acepta nuestra política de cookies.",
     "accept": "Aceptar",
-    "learnMore": "Más información"
+    "learnMore": "Más información",
+    "privacy": "Política de Privacidad"
   },
   "privacy": {
     "title": "Política de Privacidad",

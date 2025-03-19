@@ -544,7 +544,8 @@
   "cookies": {
     "message": "Diese Website verwendet Cookies, um Ihre Erfahrung zu verbessern. Durch die weitere Nutzung akzeptieren Sie unsere Cookie-Richtlinie.",
     "accept": "Akzeptieren",
-    "learnMore": "Mehr erfahren"
+    "learnMore": "Mehr erfahren",
+    "privacy": "Datenschutzrichtlinie"
   },
   "privacy": {
     "title": "Datenschutzerklärung",
