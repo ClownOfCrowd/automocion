@@ -15,7 +15,7 @@
     width: 100%;
     position: relative;
     overflow-x: hidden;
-    @apply bg-premium-silver-light dark:bg-premium-black text-gray-700 dark:text-white transition-colors duration-300;
+    @apply bg-gray-50 dark:bg-premium-black text-gray-800 dark:text-white transition-colors duration-300;
   }
 
   #root {
@@ -27,7 +27,7 @@
   
   /* Улучшенные стили для ссылок */
   a {
-    @apply text-gray-700 dark:text-white hover:text-premium-gold dark:hover:text-premium-gold transition-colors duration-200;
+    @apply text-gray-800 dark:text-white hover:text-premium-gold dark:hover:text-premium-gold transition-colors duration-200;
   }
 }
 
@@ -38,11 +38,11 @@
   }
 
   .btn-secondary {
-    @apply inline-flex items-center justify-center px-4 py-2 border border-gray-300 dark:border-gray-600 text-base font-medium rounded-md text-gray-700 dark:text-white bg-white dark:bg-premium-black hover:bg-premium-silver-light dark:hover:bg-premium-black-charcoal focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-premium-gold transition-all duration-200;
+    @apply inline-flex items-center justify-center px-4 py-2 border border-gray-400 dark:border-gray-600 text-base font-medium rounded-md text-gray-800 dark:text-white bg-white dark:bg-premium-black hover:bg-gray-100 dark:hover:bg-premium-black-charcoal focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-premium-gold transition-all duration-200;
   }
 
   .input-primary {
-    @apply block w-full rounded-md border-gray-300 dark:border-gray-600 shadow-sm focus:border-premium-gold focus:ring-premium-gold dark:bg-premium-black/80 dark:text-white bg-white text-gray-700 sm:text-sm transition-all duration-200;
+    @apply block w-full rounded-md border-gray-400 dark:border-gray-600 shadow-sm focus:border-premium-gold focus:ring-premium-gold dark:bg-premium-black/80 dark:text-white bg-white text-gray-800 sm:text-sm transition-all duration-200;
   }
 
   /* Карточки и контейнеры */
@@ -88,7 +88,7 @@
   
   /* Премиальные эффекты */
   .premium-border {
-    @apply border border-premium-silver-medium dark:border-premium-black-onyx;
+    @apply border border-gray-300 dark:border-premium-black-onyx;
   }
   
   .premium-shadow {
@@ -98,7 +98,7 @@
 
 /* Определение текстовых теней */
 .premium-text-shadow {
-  text-shadow: 0 2px 4px rgba(0,0,0,0.5);
+  text-shadow: 0 1px 2px rgba(0,0,0,0.2);
 }
 
 .dark .premium-text-shadow {
@@ -106,11 +106,11 @@
 }
 
 .text-shadow-lg {
-  text-shadow: 0 2px 6px rgba(0,0,0,0.7), 0 0 3px rgba(0,0,0,0.5);
+  text-shadow: 0 1px 3px rgba(0,0,0,0.4), 0 0 1px rgba(0,0,0,0.2);
 }
 
 .text-shadow-sm {
-  text-shadow: 0 2px 4px rgba(0,0,0,0.6), 0 0 2px rgba(0,0,0,0.4);
+  text-shadow: 0 1px 2px rgba(0,0,0,0.3), 0 0 1px rgba(0,0,0,0.2);
 }
 
 /* Оптимизация для мобильных устройств */
@@ -122,11 +122,11 @@
 
 /* Улучшенная типография */
 h1, h2, h3, h4, h5, h6 {
-  @apply font-bold tracking-tight text-gray-700 dark:text-white transition-colors duration-300;
+  @apply font-bold tracking-tight text-gray-900 dark:text-white transition-colors duration-300;
 }
 
 p {
-  @apply text-gray-600 dark:text-white/90 transition-colors duration-300;
+  @apply text-gray-700 dark:text-white/90 transition-colors duration-300;
 }
 
 /* Стили для скроллбара */
@@ -137,15 +137,15 @@ p {
   }
 
   ::-webkit-scrollbar-track {
-    @apply bg-premium-silver-light;
+    @apply bg-gray-100;
   }
 
   ::-webkit-scrollbar-thumb {
-    @apply bg-premium-silver-dark rounded-full border-2 border-premium-silver-light;
+    @apply bg-gray-400 rounded-full border-2 border-gray-100;
   }
 
   ::-webkit-scrollbar-thumb:hover {
-    @apply bg-premium-silver;
+    @apply bg-gray-500;
   }
 
   /* Темная тема для скроллбара */
@@ -168,18 +168,26 @@ p {
 
 /* Кастомные стили для календаря (react-datepicker) */
 .react-datepicker__current-month {
-  @apply text-gray-800 dark:text-premium-gold font-medium;
+  @apply text-gray-900 dark:text-premium-gold font-medium;
 }
 
 .react-datepicker__month-select,
 .react-datepicker__year-select {
-  @apply dark:text-premium-gold dark:bg-premium-black;
+  @apply text-gray-900 dark:text-premium-gold bg-white dark:bg-premium-black;
 }
 
 .react-datepicker__header {
-  @apply dark:bg-premium-black/90 dark:border-gray-700;
+  @apply bg-white dark:bg-premium-black/90 border-gray-300 dark:border-gray-700;
 }
 
 .react-datepicker__day-name {
-  @apply dark:text-premium-silver;
+  @apply text-gray-700 dark:text-premium-silver;
+}
+
+.react-datepicker__day {
+  @apply text-gray-900 hover:bg-gray-200 dark:hover:bg-premium-black-charcoal;
+}
+
+.react-datepicker__day--selected {
+  @apply bg-premium-gold text-white hover:bg-premium-gold/90;
 }
