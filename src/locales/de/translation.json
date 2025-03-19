@@ -540,5 +540,49 @@
       "details": "Kunden sind verantwortlich für alle Mautgebühren, Staugebühren, Geschwindigkeitsbußgelder, Park- und/oder Verkehrsbußgelder sowie alle damit verbundenen Verwaltungskosten."
     },
     "footer": "Für weitere Informationen wenden Sie sich bitte an unser Kundendienstteam."
+  },
+  "cookies": {
+    "message": "Diese Website verwendet Cookies, um Ihre Erfahrung zu verbessern. Durch die weitere Nutzung akzeptieren Sie unsere Cookie-Richtlinie.",
+    "accept": "Akzeptieren",
+    "learnMore": "Mehr erfahren"
+  },
+  "privacy": {
+    "title": "Datenschutzerklärung",
+    "subtitle": "Wie wir Ihre Daten schützen und verwenden",
+    "company": {
+      "title": "Unternehmensinformationen",
+      "name": "Unternehmensname",
+      "address": "Adresse",
+      "email": "E-Mail",
+      "id": "Unternehmens-ID",
+      "vat": "USt-IdNr.",
+      "authority": "Aufsichtsbehörde"
+    },
+    "data": {
+      "title": "Datenerhebung",
+      "description": "Wir erheben folgende Daten:",
+      "purposes": "Zwecke der Datenerhebung:"
+    },
+    "protection": {
+      "title": "Datenschutz",
+      "description": "Wir implementieren folgende Maßnahmen zum Schutz Ihrer Daten:"
+    },
+    "cookies": {
+      "title": "Verwendung von Cookies",
+      "description": "Wir verwenden folgende Arten von Cookies:"
+    },
+    "rights": {
+      "title": "Ihre Rechte",
+      "description": "Wir sind für Sie da, wenn es um Ihre Daten geht. Sie können:",
+      "access": "Eine Kopie Ihrer Daten anfordern",
+      "correct": "Ungenaue Informationen korrigieren",
+      "delete": "Ihre Daten löschen",
+      "transfer": "Ihre Daten an ein anderes Unternehmen übertragen",
+      "object": "Der Datenverarbeitung widersprechen"
+    },
+    "contact": {
+      "title": "Kontakt",
+      "description": "Bei Fragen zur Verarbeitung Ihrer personenbezogenen Daten können Sie uns unter folgender Adresse erreichen:"
+    }
   }
 } 

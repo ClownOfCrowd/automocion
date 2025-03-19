@@ -498,5 +498,48 @@
       "details": "Los clientes se responsabilizarán de todos los peajes, tasas de congestión, multas por velocidad, aparcamiento y/o de tráfico, así como de todos los gastos administrativos asociados."
     },
     "footer": "Para más información, no dude en contactar con nuestro equipo de atención al cliente."
+  },
+  "cookies": {
+    "message": "Este sitio web utiliza cookies para mejorar su experiencia. Al continuar navegando, acepta nuestra política de cookies.",
+    "accept": "Aceptar",
+    "learnMore": "Más información"
+  },
+  "privacy": {
+    "title": "Política de Privacidad",
+    "company": {
+      "title": "Información de la Empresa",
+      "name": "Nombre de la Empresa",
+      "address": "Dirección",
+      "email": "Email",
+      "id": "ID de la Empresa",
+      "vat": "Número de IVA",
+      "authority": "Autoridad Reguladora"
+    },
+    "data": {
+      "title": "Recopilación de Datos",
+      "description": "Recopilamos los siguientes datos:",
+      "purposes": "Propósitos de la recopilación de datos:"
+    },
+    "protection": {
+      "title": "Protección de Datos",
+      "description": "Implementamos las siguientes medidas para proteger sus datos:"
+    },
+    "cookies": {
+      "title": "Uso de Cookies",
+      "description": "Utilizamos los siguientes tipos de cookies:"
+    },
+    "rights": {
+      "title": "Sus Derechos",
+      "description": "Estamos aquí para ayudarle con sus datos. Usted puede:",
+      "access": "Solicitar una copia de sus datos",
+      "correct": "Corregir información inexacta",
+      "delete": "Eliminar sus datos",
+      "transfer": "Transferir sus datos a otra empresa",
+      "object": "Oponerse al procesamiento de datos"
+    },
+    "contact": {
+      "title": "Contáctenos",
+      "description": "Para cualquier pregunta sobre cómo manejamos sus datos personales, puede contactarnos en:"
+    }
   }
 } 

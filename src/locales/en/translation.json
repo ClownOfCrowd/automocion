@@ -575,5 +575,48 @@
         "Cambrils": "Cambrils"
       }
     }
+  },
+  "cookies": {
+    "message": "This website uses cookies to enhance your experience. By continuing to browse, you accept our cookie policy.",
+    "accept": "Accept",
+    "learnMore": "Learn More"
+  },
+  "privacy": {
+    "title": "Privacy Policy",
+    "company": {
+      "title": "Company Information",
+      "name": "Company Name",
+      "address": "Address",
+      "email": "Email",
+      "id": "Company ID",
+      "vat": "VAT Number",
+      "authority": "Regulatory Authority"
+    },
+    "data": {
+      "title": "Data Collection",
+      "description": "We collect the following data:",
+      "purposes": "Purposes of data collection:"
+    },
+    "protection": {
+      "title": "Data Protection",
+      "description": "We implement the following measures to protect your data:"
+    },
+    "cookies": {
+      "title": "Use of Cookies",
+      "description": "We use the following types of cookies:"
+    },
+    "rights": {
+      "title": "Your Rights",
+      "description": "We're here to help you with your data. You can:",
+      "access": "Request a copy of your data",
+      "correct": "Correct inaccurate information",
+      "delete": "Delete your data",
+      "transfer": "Transfer your data to another company",
+      "object": "Object to data processing"
+    },
+    "contact": {
+      "title": "Contact Us",
+      "description": "For any questions about how we handle your personal data, you can reach us at:"
+    }
   }
 } 

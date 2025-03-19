@@ -26,7 +26,12 @@ const Footer = () => {
               <h4 className="text-sm font-semibold text-premium-gold tracking-wider uppercase mb-4">
                 {t('footer.payments')}
               </h4>
-              <PaymentBadges variant="compact" />
+              <div className="flex space-x-4">
+                <img src="/images/payment/visa.svg" alt="Visa" className="h-8 w-auto" />
+                <img src="/images/payment/mastercard.svg" alt="Mastercard" className="h-8 w-auto" />
+                <img src="/images/payment/apple-pay.svg" alt="Apple Pay" className="h-8 w-auto" />
+                <img src="/images/payment/google-pay.svg" alt="Google Pay" className="h-8 w-auto" />
+              </div>
             </div>
           </div>
           

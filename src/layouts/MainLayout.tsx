@@ -2,6 +2,8 @@ import { Outlet } from 'react-router-dom'
 import Navbar from '../components/Navbar'
 import Footer from '../components/Footer'
 import WhatsAppButton from '../components/WhatsAppButton'
+import BookingNotifications from '../components/BookingNotifications'
+import CookieConsent from '../components/CookieConsent'
 
 const MainLayout = () => {
   return (
@@ -12,6 +14,8 @@ const MainLayout = () => {
       </main>
       <Footer />
       <WhatsAppButton />
+      <BookingNotifications />
+      <CookieConsent />
     </div>
   )
 }

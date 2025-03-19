@@ -15,6 +15,8 @@ import { LoadingProvider } from './contexts/LoadingContext'
 import { ThemeProvider } from './contexts/ThemeContext'
 import { useLoadingManager } from './hooks/useLoadingManager'
 import BookingNotifications from './components/BookingNotifications'
+import TermsPage from './pages/TermsPage'
+import PrivacyPage from './pages/PrivacyPage'
 
 const AnimatedRoutes = () => {
   const location = useLocation()
@@ -59,6 +61,11 @@ const AnimatedRoutes = () => {
             <Route path="terms" element={
               <Suspense fallback={null}>
                 <RentalTermsPage />
+              </Suspense>
+            } />
+            <Route path="privacy" element={
+              <Suspense fallback={null}>
+                <PrivacyPage />
               </Suspense>
             } />
           </Route>

@@ -725,5 +725,49 @@
       "description": "Une erreur s'est produite sur le serveur. Veuillez réessayer plus tard.",
       "button": "Retour à l'accueil"
     }
+  },
+  "cookies": {
+    "message": "Ce site utilise des cookies pour améliorer votre expérience. En continuant à naviguer, vous acceptez notre politique en matière de cookies.",
+    "accept": "Accepter",
+    "learnMore": "En savoir plus"
+  },
+  "privacy": {
+    "title": "Politique de Confidentialité",
+    "subtitle": "Comment nous protégeons et utilisons vos données",
+    "company": {
+      "title": "Informations de l'Entreprise",
+      "name": "Nom de l'Entreprise",
+      "address": "Adresse",
+      "email": "Email",
+      "id": "ID de l'Entreprise",
+      "vat": "Numéro de TVA",
+      "authority": "Autorité de Régulation"
+    },
+    "data": {
+      "title": "Collecte de Données",
+      "description": "Nous collectons les données suivantes :",
+      "purposes": "Objectifs de la collecte de données :"
+    },
+    "protection": {
+      "title": "Protection des Données",
+      "description": "Nous mettons en œuvre les mesures suivantes pour protéger vos données :"
+    },
+    "cookies": {
+      "title": "Utilisation des Cookies",
+      "description": "Nous utilisons les types de cookies suivants :"
+    },
+    "rights": {
+      "title": "Vos Droits",
+      "description": "Nous sommes là pour vous aider avec vos données. Vous pouvez :",
+      "access": "Demander une copie de vos données",
+      "correct": "Corriger les informations inexactes",
+      "delete": "Supprimer vos données",
+      "transfer": "Transférer vos données à une autre entreprise",
+      "object": "Vous opposer au traitement des données"
+    },
+    "contact": {
+      "title": "Contactez-nous",
+      "description": "Pour toute question concernant le traitement de vos données personnelles, vous pouvez nous contacter à :"
+    }
   }
 } 
