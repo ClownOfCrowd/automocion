@@ -43,17 +43,34 @@ const namesByLang = {
   ]
 }
 
-// Ключ для localStorage
+// Ключи для localStorage
 const NOTIFICATION_STORAGE_KEY = 'booking_notifications_state';
-const IP_LAST_SEEN_KEY = 'booking_notifications_ip_last_seen';
+const IP_STORAGE_KEY = 'booking_notifications_ip_data';
 
 // Интерфейс для состояния оповещений
 interface NotificationState {
   lastShownTimestamp: number;
   shownCount: number;
-  ipAddress: string | null;
   pauseUntil: number;
 }
+
+// Интерфейс для хранения данных по IP
+interface IpData {
+  ipAddress: string;
+  shownCount: number;
+  lastSeen: number;
+}
+
+// Функция для получения "фингерпринта" браузера как замена IP
+const getBrowserFingerprint = (): string => {
+  const userAgent = navigator.userAgent;
+  const screenInfo = `${window.screen.width}x${window.screen.height}x${window.screen.colorDepth}`;
+  const timezone = new Date().getTimezoneOffset();
+  const language = navigator.language;
+  
+  // Создаем "отпечаток" из этих данных
+  return btoa(`${userAgent}-${screenInfo}-${timezone}-${language}`);
+};
 
 const BookingNotifications = () => {
   const { t, i18n } = useTranslation()
@@ -63,21 +80,55 @@ const BookingNotifications = () => {
   const [notificationState, setNotificationState] = useState<NotificationState>({
     lastShownTimestamp: 0,
     shownCount: 0,
-    ipAddress: null,
     pauseUntil: 0
   });
+  const [ipData, setIpData] = useState<IpData | null>(null);
 
-  // Сбрасываем состояние при монтировании
+  // Инициализация состояния
   useEffect(() => {
-    localStorage.removeItem(NOTIFICATION_STORAGE_KEY);
-    localStorage.removeItem(IP_LAST_SEEN_KEY);
+    // Получаем fingerprint браузера
+    const fingerprint = getBrowserFingerprint();
     
-    setNotificationState({
-      lastShownTimestamp: 0,
-      shownCount: 0,
-      ipAddress: null,
-      pauseUntil: 0
-    });
+    // Пытаемся получить сохраненные данные
+    const savedIpData = localStorage.getItem(IP_STORAGE_KEY);
+    if (savedIpData) {
+      try {
+        const parsedData = JSON.parse(savedIpData) as IpData;
+        setIpData(parsedData);
+        
+        // Если fingerprint совпадает с сохраненным и показано >= 2 уведомлений
+        if (parsedData.ipAddress === fingerprint && parsedData.shownCount >= 2) {
+          // Устанавливаем паузу на 24 часа
+          const pauseTime = 24 * 60 * 60 * 1000; // 24 часа в миллисекундах
+          setNotificationState(prev => ({
+            ...prev,
+            pauseUntil: Date.now() + pauseTime
+          }));
+        }
+      } catch (e) {
+        console.error('Error parsing saved IP data', e);
+        // Если данные повреждены, создаем новые
+        setIpData({
+          ipAddress: fingerprint,
+          shownCount: 0,
+          lastSeen: Date.now()
+        });
+      }
+    } else {
+      // Первое посещение, инициализируем данные
+      setIpData({
+        ipAddress: fingerprint,
+        shownCount: 0,
+        lastSeen: Date.now()
+      });
+    }
+    
+    // Сохраняем актуальные данные при размонтировании компонента
+    return () => {
+      if (ipData) {
+        localStorage.setItem(IP_STORAGE_KEY, JSON.stringify(ipData));
+      }
+    };
   }, []);
 
   // Функция для генерации случайного уведомления с учетом языка и международных имен
@@ -145,22 +196,31 @@ const BookingNotifications = () => {
   }
 
   useEffect(() => {
-    // Адаптивный интервал показа оповещений
+    // Увеличенные интервалы для более редкого показа
     const getAdaptiveInterval = () => {
       const { shownCount } = notificationState;
-      // Уменьшаем интервалы для более частого показа
-      if (shownCount === 0) return Math.floor(Math.random() * 15000) + 30000; // 30-45 сек для первого
-      if (shownCount === 1) return Math.floor(Math.random() * 15000) + 45000; // 45-60 сек для второго
-      if (shownCount === 2) return Math.floor(Math.random() * 15000) + 60000; // 60-75 сек для третьего
-      if (shownCount === 3) return Math.floor(Math.random() * 15000) + 75000; // 75-90 сек для четвертого
-      return Math.floor(Math.random() * 15000) + 90000; // 90-105 сек для пятого и далее
+      // Первое уведомление через 30-60 секунд
+      if (shownCount === 0) return Math.floor(Math.random() * 30000) + 30000; 
+      // Последующие уведомления через более длинные интервалы
+      if (shownCount === 1) return Math.floor(Math.random() * 30000) + 90000; // 90-120 сек
+      if (shownCount === 2) return Math.floor(Math.random() * 30000) + 120000; // 120-150 сек
+      if (shownCount === 3) return Math.floor(Math.random() * 30000) + 150000; // 150-180 сек
+      return Math.floor(Math.random() * 30000) + 180000; // 180-210 сек для пятого и далее
     };
 
-    // Упрощаем логику проверки
+    // Логика проверки показа уведомлений
     const shouldShowNotifications = () => {
-      const { pauseUntil, shownCount } = notificationState;
+      const { pauseUntil } = notificationState;
+      
+      // Проверка времени паузы
       if (pauseUntil > Date.now()) return false;
-      if (shownCount >= 10) return Math.random() < 0.7; // Увеличиваем вероятность показа
+      
+      // Проверка по IP/fingerprint
+      if (ipData && ipData.shownCount >= 2) return false;
+      
+      // Проверка на текущее видимое состояние
+      if (isVisible) return false;
+      
       return true;
     };
 
@@ -171,6 +231,17 @@ const BookingNotifications = () => {
       const newNotification = generateRandomNotification();
       setNotification(newNotification);
       setIsVisible(true);
+      
+      // Увеличиваем счетчик для текущего пользователя
+      if (ipData) {
+        const updatedIpData = {
+          ...ipData,
+          shownCount: ipData.shownCount + 1,
+          lastSeen: Date.now()
+        };
+        setIpData(updatedIpData);
+        localStorage.setItem(IP_STORAGE_KEY, JSON.stringify(updatedIpData));
+      }
       
       // Скрываем уведомление через 7 секунд
       setTimeout(() => {
@@ -187,7 +258,7 @@ const BookingNotifications = () => {
     return () => {
       clearInterval(showInterval);
     };
-  }, [notificationState]);
+  }, [notificationState, isVisible, ipData]);
 
   const formatTimeAgo = (minutes: number) => {
     if (minutes < 60) {
