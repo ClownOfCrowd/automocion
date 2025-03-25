@@ -295,7 +295,8 @@
       "Reus": "Reus",
       "Salou": "Salou",
       "La Pineda": "La Pineda",
-      "Cambrils": "Cambrils"
+      "Cambrils": "Cambrils",
+      "Barcelona": "Barcelona"
     }
   },
   "contact": {
@@ -526,11 +527,11 @@
       "details": "Los clientes se responsabilizarán de todos los peajes, tasas de congestión, multas por velocidad, aparcamiento y/o de tráfico, así como de todos los gastos administrativos asociados."
     },
     "penalties": {
-      "title": "Penalizaciones Adicionales",
+      "title": "Penalizaciones adicionales",
       "smoking": "Fumar en el vehículo: penalización de 200€",
       "pets": "Mascotas no autorizadas en el vehículo: penalización de 100€",
       "damages": "Daños no reportados: Coste total de reparación más tarifa administrativa",
-      "details": "Cualquier violación de nuestras condiciones de alquiler incurrirá en penalizaciones adicionales. Está estrictamente prohibido fumar en todos nuestros vehículos."
+      "details": "Cualquier violación de nuestros términos de alquiler incurrirá en penalizaciones adicionales. Está estrictamente prohibido fumar en todos nuestros vehículos."
     },
     "footer": "Para más información, no dude en contactar con nuestro equipo de atención al cliente."
   },

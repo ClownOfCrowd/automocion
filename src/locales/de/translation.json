@@ -233,7 +233,8 @@
       "Reus": "Reus",
       "Salou": "Salou",
       "La Pineda": "La Pineda",
-      "Cambrils": "Cambrils"
+      "Cambrils": "Cambrils",
+      "Barcelona": "Barcelona"
     },
     "rental": {
       "title": "Mietdetails",
@@ -539,7 +540,14 @@
       "extras": "Optionale zusätzliche Dienstleistungen",
       "details": "Kunden sind verantwortlich für alle Mautgebühren, Staugebühren, Geschwindigkeitsbußgelder, Park- und/oder Verkehrsbußgelder sowie alle damit verbundenen Verwaltungskosten."
     },
-    "footer": "Für weitere Informationen wenden Sie sich bitte an unser Kundendienstteam."
+    "footer": "Für weitere Informationen wenden Sie sich bitte an unser Kundendienstteam.",
+    "penalties": {
+      "title": "Zusätzliche Strafen",
+      "smoking": "Rauchen im Fahrzeug: 200€ Strafe",
+      "pets": "Nicht genehmigte Haustiere im Fahrzeug: 100€ Strafe",
+      "damages": "Nicht gemeldete Schäden: Volle Reparaturkosten plus Verwaltungsgebühr",
+      "details": "Jeder Verstoß gegen unsere Mietbedingungen zieht zusätzliche Strafen nach sich. Rauchen ist in allen unseren Fahrzeugen strengstens verboten."
+    }
   },
   "cookies": {
     "message": "Diese Website verwendet Cookies, um Ihre Erfahrung zu verbessern. Durch die weitere Nutzung akzeptieren Sie unsere Cookie-Richtlinie.",

@@ -85,6 +85,15 @@ const RentalTermsPage = () => {
         t('terms.notIncluded.extras')
       ],
       details: t('terms.notIncluded.details')
+    },
+    {
+      title: t('terms.penalties.title'),
+      items: [
+        t('terms.penalties.smoking'),
+        t('terms.penalties.pets'),
+        t('terms.penalties.damages')
+      ],
+      details: t('terms.penalties.details')
     }
   ];
 

@@ -37,6 +37,7 @@ const LocationSelector: React.FC<LocationSelectorProps> = ({
         <option value="Salou">{t('booking.locationOptions.Salou')}</option>
         <option value="La Pineda">{t('booking.locationOptions.La Pineda')}</option>
         <option value="Cambrils">{t('booking.locationOptions.Cambrils')}</option>
+        <option value="Barcelona">{t('booking.locationOptions.Barcelona')}</option>
       </select>
     </div>
   );

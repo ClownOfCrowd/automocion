@@ -244,11 +244,12 @@
     "totalPrice": "Prix total",
     "locationOptions": {
       "Vila-seca": "Vila-seca",
-      "Tarragona": "Tarragone",
+      "Tarragona": "Tarragona",
       "Reus": "Reus",
       "Salou": "Salou",
       "La Pineda": "La Pineda",
-      "Cambrils": "Cambrils"
+      "Cambrils": "Cambrils",
+      "Barcelona": "Barcelone"
     }
   },
   "contact": {
@@ -617,7 +618,14 @@
       "cleaning": "Frais de nettoyage spécial (si nécessaire)",
       "damage": "Dommages non couverts par l'assurance"
     },
-    "footer": "Pour plus d'informations, n'hésitez pas à contacter notre équipe de service client."
+    "footer": "Pour plus d'informations, n'hésitez pas à contacter notre équipe de service client.",
+    "penalties": {
+      "title": "Pénalités supplémentaires",
+      "smoking": "Fumer dans le véhicule: pénalité de 200€",
+      "pets": "Animaux non autorisés dans le véhicule: pénalité de 100€",
+      "damages": "Dommages non signalés: Coût total de réparation plus frais administratifs",
+      "details": "Toute violation de nos conditions de location entraînera des pénalités supplémentaires. Il est strictement interdit de fumer dans tous nos véhicules."
+    }
   },
   "categories": {
     "all": "Toutes",
