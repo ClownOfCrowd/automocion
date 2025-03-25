@@ -396,6 +396,13 @@
       "extras": "Optional additional services",
       "details": "Customers will be responsible for all tolls, congestion charges, speeding fines, parking and/or traffic fines, as well as all associated administrative expenses."
     },
+    "penalties": {
+      "title": "Additional Penalties",
+      "smoking": "Smoking in the vehicle: €200 penalty",
+      "pets": "Unauthorized pets in the vehicle: €100 penalty",
+      "damages": "Unreported damages: Full repair cost plus administration fee",
+      "details": "Any violation of our rental terms will incur additional penalties. Smoking is strictly prohibited in all our vehicles."
+    },
     "footer": "For more information, please do not hesitate to contact our customer service team."
   },
   "validation": {
@@ -502,6 +509,18 @@
     },
     "mini_cooper_s": {
       "description": "Sporty and elegant with exceptional performance"
+    },
+    "seat_ibiza": {
+      "description": "Reliable and fuel-efficient compact car"
+    },
+    "peugeot_207sw": {
+      "description": "Practical station wagon with extra luggage space"
+    },
+    "mercedes_gle": {
+      "description": "Luxurious and powerful SUV with premium features"
+    },
+    "range_rover_velar": {
+      "description": "Sophisticated design with advanced technology and off-road capability"
     }
   },
   "popularCars": {

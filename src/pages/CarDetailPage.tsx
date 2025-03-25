@@ -10,7 +10,8 @@ import {
   UserIcon,
   TruckIcon,
   BeakerIcon,
-  CogIcon
+  CogIcon,
+  ExclamationTriangleIcon
 } from '@heroicons/react/24/outline'
 import { cars } from '../data/cars'
 import PageTransition from '../components/PageTransition'
@@ -351,6 +352,18 @@ const CarDetailPage = () => {
                 </motion.div>
               ))}
             </div>
+          </div>
+
+          {/* Важная информация о штрафах */}
+          <div className="mt-8 p-4 border border-red-500 rounded-lg bg-red-50 dark:bg-red-900/20">
+            <h2 className="text-lg font-bold text-red-700 dark:text-red-400 mb-2">{t('terms.penalties.title')}</h2>
+            <div className="flex items-start">
+              <ExclamationTriangleIcon className="h-5 w-5 text-red-600 dark:text-red-400 mr-2 mt-0.5 flex-shrink-0" />
+              <p className="text-red-700 dark:text-red-400 text-sm">
+                <strong>{t('terms.penalties.smoking')}</strong>
+              </p>
+            </div>
+            <p className="text-sm text-gray-600 dark:text-gray-400 mt-2">{t('terms.penalties.details')}</p>
           </div>
 
           {/* Похожие автомобили */}

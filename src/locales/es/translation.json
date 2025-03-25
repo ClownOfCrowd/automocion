@@ -18,14 +18,42 @@
     "reset": "Restablecer"
   },
   "car": {
+    "defaultDescription": "El {{name}} es un excelente vehículo {{category}} que combina comodidad, fiabilidad y estilo. La elección perfecta para tu viaje.",
+    "specs": {
+      "year": "Año",
+      "transmission": "Transmisión",
+      "fuel": "Tipo de combustible",
+      "consumption": "Consumo",
+      "seats": "Asientos",
+      "doors": "Puertas",
+      "engine": "Motor",
+      "power": "Potencia",
+      "acceleration": "Aceleración 0-100 km/h",
+      "topSpeed": "Velocidad máxima"
+    },
+    "features": "Características",
+    "similar": "Coches similares",
+    "perDay": "día",
     "peugeot_208": {
-      "description": "Compacto y económico coche urbano"
+      "description": "Coche urbano compacto y económico"
     },
     "citroen_c3": {
-      "description": "Coche urbano elegante y cómodo"
+      "description": "Coche urbano elegante y confortable"
     },
     "mini_cooper_s": {
       "description": "Deportivo y elegante con rendimiento excepcional"
+    },
+    "seat_ibiza": {
+      "description": "Coche compacto fiable y eficiente en consumo"
+    },
+    "peugeot_207sw": {
+      "description": "Familiar práctico con mayor espacio para equipaje"
+    },
+    "mercedes_gle": {
+      "description": "SUV lujoso y potente con características premium"
+    },
+    "range_rover_velar": {
+      "description": "Diseño sofisticado con tecnología avanzada y capacidad todoterreno"
     }
   },
   "home": {
@@ -496,6 +524,13 @@
       "fuel": "Cargo por repostaje si devuelve con menos combustible",
       "extras": "Servicios adicionales opcionales",
       "details": "Los clientes se responsabilizarán de todos los peajes, tasas de congestión, multas por velocidad, aparcamiento y/o de tráfico, así como de todos los gastos administrativos asociados."
+    },
+    "penalties": {
+      "title": "Penalizaciones Adicionales",
+      "smoking": "Fumar en el vehículo: penalización de 200€",
+      "pets": "Mascotas no autorizadas en el vehículo: penalización de 100€",
+      "damages": "Daños no reportados: Coste total de reparación más tarifa administrativa",
+      "details": "Cualquier violación de nuestras condiciones de alquiler incurrirá en penalizaciones adicionales. Está estrictamente prohibido fumar en todos nuestros vehículos."
     },
     "footer": "Para más información, no dude en contactar con nuestro equipo de atención al cliente."
   },
