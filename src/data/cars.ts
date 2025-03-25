@@ -114,7 +114,7 @@ export const cars: Car[] = [
     luggage: 2,
     power: 85,
     specs: {
-      year: 2011,
+      year: 2016,
       transmission: 'Manual',
       fuel: 'Gasolina',
       consumption: 5.0,
