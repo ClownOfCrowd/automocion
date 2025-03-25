@@ -296,7 +296,7 @@ const CatalogPage = () => {
                       <input
                         type="range"
                         min="30"
-                        max="300"
+                        max="400"
                         step="10"
                         value={filters.priceRange}
                         onChange={(e) => handleFilterChange('priceRange', parseInt(e.target.value))}
@@ -305,7 +305,7 @@ const CatalogPage = () => {
                       <div className="flex justify-between">
                         <span className="text-sm text-gray-700 dark:text-premium-silver">30€</span>
                         <span className="text-sm text-gray-700 dark:text-premium-silver">{filters.priceRange}€</span>
-                        <span className="text-sm text-gray-700 dark:text-premium-silver">300€</span>
+                        <span className="text-sm text-gray-700 dark:text-premium-silver">400€</span>
                       </div>
                     </div>
                   </div>
