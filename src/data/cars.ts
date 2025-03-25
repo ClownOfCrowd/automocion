@@ -153,7 +153,7 @@ export const cars: Car[] = [
   {
     id: 'mercedes-gle-350',
     name: 'Mercedes GLE 350 2019',
-    category: 'premium',
+    category: 'Premium',
     description: 'car.mercedes_gle.description',
     price: 350,
     image: '/cars/mercedes-gle.jpg',
@@ -178,7 +178,7 @@ export const cars: Car[] = [
   {
     id: 'range-rover-velar',
     name: 'Range Rover Velar 2019',
-    category: 'premium',
+    category: 'Premium',
     description: 'car.range_rover_velar.description',
     price: 350,
     image: '/cars/range-rover-velar.jpg',
