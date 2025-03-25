@@ -31,7 +31,7 @@ const WhatsAppButton = () => {
 
   const handleClick = () => {
     // В реальном приложении здесь будет настоящий номер WhatsApp
-    window.open('https://wa.me/34671332591', '_blank')
+    window.open('https://wa.me/34647030703', '_blank')
   }
 
   return (

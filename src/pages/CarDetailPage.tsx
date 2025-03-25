@@ -115,7 +115,7 @@ const CarDetailPage = () => {
     
     // Открываем WhatsApp с подготовленным сообщением
     const encodedMessage = encodeURIComponent(message);
-    window.open(`https://wa.me/34671332591?text=${encodedMessage}`, '_blank');
+    window.open(`https://wa.me/34647030703?text=${encodedMessage}`, '_blank');
   };
 
   if (!car) {

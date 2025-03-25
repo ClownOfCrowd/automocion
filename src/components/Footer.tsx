@@ -85,7 +85,7 @@ const Footer = () => {
                 </a>
               </li>
               <li>
-                <a href="https://wa.me/34671332591" target="_blank" rel="noopener noreferrer" className="text-base text-premium-silver hover:text-premium-gold transition-colors duration-300">
+                <a href="https://wa.me/34647030703" target="_blank" rel="noopener noreferrer" className="text-base text-premium-silver hover:text-premium-gold transition-colors duration-300">
                   {t('contact.social.whatsapp')}
                 </a>
               </li>

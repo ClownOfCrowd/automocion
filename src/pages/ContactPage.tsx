@@ -160,7 +160,7 @@ const ContactPage = () => {
                       <motion.a 
                         whileHover={{ scale: 1.1 }}
                         whileTap={{ scale: 0.9 }}
-                        href="https://wa.me/34671332591" 
+                        href="https://wa.me/34647030703" 
                         target="_blank"
                         rel="noopener noreferrer"
                         className="text-premium-gold hover:text-premium-gold/80 transition-colors duration-300"
