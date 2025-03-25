@@ -39,7 +39,7 @@ export const cars: Car[] = [
     luggage: 2,
     power: 100,
     specs: {
-      year: 2022,
+      year: 2018,
       transmission: 'Manual',
       fuel: 'Gasolina',
       consumption: 4.5,
@@ -78,7 +78,7 @@ export const cars: Car[] = [
   {
     id: 'mini-cooper-s',
     name: 'MINI Cooper S',
-    category: 'premium',
+    category: 'economy',
     description: 'car.mini_cooper_s.description',
     price: 35,
     image: '/cars/mini-cooper-s.jpg',
@@ -89,7 +89,7 @@ export const cars: Car[] = [
     luggage: 1,
     power: 178,
     specs: {
-      year: 2022,
+      year: 2011,
       transmission: 'Automático',
       fuel: 'Gasolina',
       consumption: 6.2,
@@ -102,7 +102,7 @@ export const cars: Car[] = [
   },
   {
     id: 'seat-ibiza',
-    name: 'Seat IBIZA 1.4',
+    name: 'Seat IBIZA',
     category: 'economy',
     description: 'car.seat_ibiza.description',
     price: 35,
@@ -114,7 +114,7 @@ export const cars: Car[] = [
     luggage: 2,
     power: 85,
     specs: {
-      year: 2021,
+      year: 2011,
       transmission: 'Manual',
       fuel: 'Gasolina',
       consumption: 5.0,
@@ -139,7 +139,7 @@ export const cars: Car[] = [
     luggage: 3,
     power: 90,
     specs: {
-      year: 2020,
+      year: 2010,
       transmission: 'Manual',
       fuel: 'Diesel',
       consumption: 4.8,
