@@ -273,11 +273,18 @@ const ContactPage = () => {
             src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3010.0475006453584!2d1.1198344!3d41.1198312!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x12a156a2f0693755%3A0x76707a66a020bc14!2sCarrer%20del%20Mas%20de%20l&#39;Abat%2C%20145F%2C%2043480%20Vila-seca%2C%20Tarragona!5e0!3m2!1sen!2ses!4v1708532511893!5m2!1sen!2ses"
             width="100%"
             height="100%"
+            title="O.V. Automoción office location"
             style={{ border: 0 }}
             allowFullScreen
             loading="lazy"
+            importance="high"
             referrerPolicy="no-referrer-when-downgrade"
-          />
+            sandbox="allow-scripts allow-same-origin allow-popups"
+          >
+            <a href="https://maps.google.com/maps?q=Carrer+del+Mas+de+l'Abat,+145F,+43480+Vila-seca,+Tarragona&hl=en&t=m&z=14" target="_blank" rel="noopener noreferrer">
+              {t('contact.info.address')}, {t('contact.info.location')}, {t('contact.info.postal')}
+            </a>
+          </iframe>
         </motion.div>
       </div>
     </PageTransition>
