@@ -29,6 +29,25 @@
   ExpiresByType font/woff2 "access plus 1 year"
 </IfModule>
 
+# Перенаправления для HTTPS и www
+<IfModule mod_rewrite.c>
+  RewriteEngine On
+  RewriteBase /
+  
+  # Перенаправление с HTTP на HTTPS (первым приоритетом)
+  RewriteCond %{HTTPS} off
+  RewriteRule ^ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301,NE]
+  
+  # Перенаправление с www на без www
+  RewriteCond %{HTTP_HOST} ^www\.(.+)$ [NC]
+  RewriteRule ^ https://%1%{REQUEST_URI} [L,R=301,NE]
+  
+  # Принудительный HSTS (HTTP Strict Transport Security)
+  <IfModule mod_headers.c>
+    Header always set Strict-Transport-Security "max-age=31536000; includeSubDomains; preload" env=HTTPS
+  </IfModule>
+</IfModule>
+
 # Включение GZip сжатия
 <IfModule mod_deflate.c>
   AddOutputFilterByType DEFLATE text/html
@@ -71,27 +90,19 @@
   
   # Политика безопасности контента
   Header set Content-Security-Policy "default-src 'self'; script-src 'self' 'unsafe-inline' 'unsafe-eval' https://www.google-analytics.com https://www.googletagmanager.com; style-src 'self' 'unsafe-inline'; img-src 'self' data: https://www.google-analytics.com; font-src 'self'; connect-src 'self' https://www.google-analytics.com; frame-src 'self'; object-src 'none'"
+  
+  # Запрет смешанного контента (HTTP на HTTPS странице)
+  Header always set Content-Security-Policy "upgrade-insecure-requests;" env=HTTPS
 </IfModule>
 
 # Перенаправления для SPA (React Router)
 <IfModule mod_rewrite.c>
-  RewriteEngine On
-  RewriteBase /
-  
   # Если запрос не файл и не директория
   RewriteCond %{REQUEST_FILENAME} !-f
   RewriteCond %{REQUEST_FILENAME} !-d
   
   # Перенаправляем на index.html
   RewriteRule ^(.*)$ index.html [QSA,L]
-
-  # Перенаправление с HTTP на HTTPS
-  RewriteCond %{HTTPS} off
-  RewriteRule ^(.*)$ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
-
-  # Перенаправление с www на без www
-  RewriteCond %{HTTP_HOST} ^www\.(.+)$ [NC]
-  RewriteRule ^(.*)$ https://%1/$1 [R=301,L]
 </IfModule>
 
 # Включение доступа к ресурсам CORS
