@@ -2,6 +2,7 @@
   "nav": {
     "home": "Accueil",
     "catalog": "Catalogue",
+    "blog": "Blog",
     "booking": "Réservation",
     "contact": "Contact",
     "cart": "Panier",
@@ -781,6 +782,116 @@
     "contact": {
       "title": "Contactez-nous",
       "description": "Pour toute question concernant le traitement de vos données personnelles, vous pouvez nous contacter à :"
+    }
+  },
+  "blog": {
+    "title": "Blog de voyage",
+    "subtitle": "Découvrez les plus beaux itinéraires et lieux de Catalogne. Inspirez-vous pour votre prochain voyage.",
+    "backToBlog": "Retour au blog",
+    "readMore": "Lire la suite",
+    "tags": "Tags",
+    "share": "Partager cet article",
+    "relatedPosts": "Vous pourriez aussi aimer",
+    "author": {
+      "name": "Équipe OV Automoción"
+    },
+    "categories": {
+      "all": "Tous",
+      "routes": "Itinéraires",
+      "dayTrips": "Excursions d'une journée",
+      "attractions": "Attractions",
+      "gastronomy": "Gastronomie",
+      "culture": "Culture",
+      "nature": "Nature"
+    },
+    "newsletter": {
+      "title": "Abonnez-vous à notre newsletter",
+      "description": "Recevez les derniers conseils de voyage, itinéraires et offres spéciales directement dans votre boîte de réception.",
+      "emailLabel": "Adresse e-mail",
+      "emailPlaceholder": "Entrez votre e-mail",
+      "subscribe": "S'abonner",
+      "privacy": "Nous prenons soin de vos données. Lisez notre",
+      "privacyLink": "politique de confidentialité"
+    },
+    "posts": {
+      "tarragonaCoast": {
+        "title": "Découverte de la magnifique Costa Dorada",
+        "description": "Un voyage pittoresque le long du littoral de Tarragone à L'Ametlla de Mar, offrant des vues imprenables sur la Méditerranée.",
+        "date": "15 mars 2024",
+        "category": "Itinéraires",
+        "content": {
+          "0": "La Costa Dorada, ou 'Côte dorée', s'étend le long de la mer Méditerranée dans la province de Tarragone, en Catalogne. Elle doit son nom au scintillement doré de ses plages de sable sous le soleil espagnol. Cette région côtière offre un mélange parfait de sites historiques, de beautés naturelles et de délices gastronomiques.",
+          "1": "Commencez votre voyage à Vila-seca et dirigez-vous vers le sud le long de la côte, en direction de la ville de Tarragone. Ancienne capitale romaine de l'Hispanie tarraconaise, Tarragone abrite d'impressionnants sites classés au patrimoine mondial de l'UNESCO. Garez votre voiture et prenez le temps d'explorer l'amphithéâtre romain, qui offre une vue imprenable sur la Méditerranée, et le cirque romain, autrefois utilisé pour les courses de chars.",
+          "2": "Après avoir exploré Tarragone, poursuivez votre route vers le sud le long de la route côtière N-340. Cet itinéraire pittoresque vous mènera à travers de charmantes localités côtières comme Altafulla, connue pour sa belle plage et sa vieille ville médiévale. Arrêtez-vous ici pour déjeuner dans l'un des restaurants en bord de mer et déguster la fraîche cuisine méditerranéenne.",
+          "3": "Plus au sud, vous trouverez Torredembarra avec sa plage naturelle unique qui présente un écosystème rare de dunes et de zones humides. C'est un excellent endroit pour une courte promenade ou une baignade rafraîchissante pendant les mois les plus chauds. La formation rocheuse naturelle en arc du Roc de Sant Gaietà voisin vaut également un arrêt photo.",
+          "4": "Terminez votre voyage à L'Ametlla de Mar, un village de pêcheurs traditionnel qui a conservé son charme authentique. Vous pourrez y profiter de certaines des plages les plus vierges de la région, comme Cala Calafató ou Cala Sant Jordi. La ville est également connue pour ses restaurants de fruits de mer où vous pourrez déguster la pêche fraîche du jour tout en observant le coucher de soleil sur la Méditerranée."
+        }
+      },
+      "barcelonaDayTrip": {
+        "title": "Barcelone en une journée : Le guide ultime",
+        "description": "L'itinéraire parfait pour une excursion d'une journée à Barcelone, incluant les attractions incontournables et des conseils d'initiés.",
+        "date": "28 février 2024",
+        "category": "Excursions d'une journée",
+        "content": {
+          "0": "Barcelone, la vibrante capitale de la Catalogne, n'est qu'à une courte distance en voiture de Vila-seca, ce qui en fait la destination parfaite pour une excursion d'une journée. Bien qu'il soit impossible de voir tout ce que cette grande ville a à offrir en une seule journée, cet itinéraire soigneusement planifié vous aidera à vivre les moments forts.",
+          "1": "Commencez votre journée tôt et allez directement au chef-d'œuvre d'Antoni Gaudí, la Sagrada Familia. Cette basilique emblématique, en construction depuis 1882, combine de manière unique des éléments gothiques et Art nouveau. Pour éviter les longues files d'attente, réservez vos billets en ligne à l'avance. Passez environ une heure à admirer les façades artistiques et l'intérieur coloré en verre.",
+          "2": "Dirigez-vous ensuite vers le Park Güell, une autre création de Gaudí. Ce parc fantaisiste offre des vues panoramiques sur la ville et impressionne avec ses mosaïques colorées, ses bancs ondulés et ses structures qui semblent sortir d'un conte de fées. La zone monumentale centrale nécessite des billets, mais il existe également des zones libres que vous pouvez explorer.",
+          "3": "Pour le déjeuner, rendez-vous dans le quartier gothique historique (Barri Gòtic). Perdez-vous dans ses rues médiévales étroites et découvrez des places cachées comme la Plaça Reial ou la Plaça del Pi. Cette zone offre de nombreuses options de restauration, des restaurants catalans traditionnels aux bars à tapas modernes. Essayez les spécialités locales comme la paella, les bombas (croquettes de pommes de terre) ou le pan con tomate (pain à la tomate).",
+          "4": "Après le déjeuner, flânez le long de La Rambla, le célèbre boulevard piétonnier bordé d'arbres de Barcelone. Bien qu'il soit assez touristique, il vaut toujours la peine d'expérimenter les artistes de rue, les stands de fleurs et l'atmosphère animée. N'oubliez pas de visiter le marché de La Boqueria, l'un des meilleurs marchés alimentaires d'Europe, juste à côté de La Rambla."
+        }
+      },
+      "portaventuraGuide": {
+        "title": "PortAventura World : Un guide complet",
+        "description": "Tout ce que vous devez savoir sur la visite du parc à thème PortAventura et de Ferrari Land, des meilleures attractions aux conseils pratiques.",
+        "date": "5 mars 2024",
+        "category": "Attractions",
+        "content": {
+          "0": "PortAventura World, situé à quelques minutes de Vila-seca à Salou, est l'un des principaux complexes de parcs à thème d'Europe. Composé de trois parcs - PortAventura Park, Ferrari Land et Caribe Aquatic Park - il offre une expérience inoubliable aux visiteurs de tous âges. Ce guide vous aidera à tirer le meilleur parti de votre visite dans ce lieu passionnant.",
+          "1": "Le parc PortAventura est divisé en six zones thématiques : Mediterrània, Far West, México, China, Polynesia et SésamoAventura. Chaque zone propose des manèges uniques, des spectacles et des restaurants. Pour les amateurs d'adrénaline, Shambhala, la montagne russe la plus haute d'Europe, ou Dragon Khan avec ses 8 inversions sont incontournables. Les familles avec de jeunes enfants apprécieront les manèges plus doux et les attractions de SésamoAventura, qui sont thématisés selon les personnages de Sesame Street.",
+          "2": "Ferrari Land, la dernière addition au complexe, est un paradis pour les enthousiastes de Ferrari et les amateurs d'adrénaline. L'attraction principale est Red Force, la montagne russe d'accélération la plus haute et la plus rapide d'Europe, propulsant les coureurs de 0 à 180 km/h en seulement 5 secondes. Le parc propose également Racing Legends, un manège simulateur, et Flying Dreams, une douce expérience de vol adaptée à tous les âges.",
+          "3": "Pour optimiser votre temps, arrivez tôt et dirigez-vous directement vers les attractions les plus populaires. Envisagez d'acheter des pass express si vous venez en haute saison pour éviter les files d'attente régulières. Pour manger, les parcs offrent de nombreux restaurants et stands de nourriture avec diverses cuisines. Les visiteurs soucieux de leur budget peuvent également apporter leurs propres collations et manger dans les zones de pique-nique désignées à l'extérieur des parcs.",
+          "4": "Si vous séjournez à proximité, vous pourriez répartir votre visite sur plusieurs jours, surtout si vous souhaitez explorer les trois parcs. PortAventura propose également ses propres hôtels à thème avec des avantages spéciaux comme un accès illimité au parc PortAventura et un accès unique à Ferrari Land, un accès anticipé au parc PortAventura et un service de navette gratuit vers les parcs."
+        }
+      },
+      "wineriesTour": {
+        "title": "Visite de dégustation de vins dans la région du Priorat",
+        "description": "Découvrez les vins de renommée mondiale du Priorat avec cette pittoresque promenade en voiture à travers les vignobles et les charmants villages.",
+        "date": "20 janvier 2024",
+        "category": "Gastronomie",
+        "content": {
+          "0": "À seulement une courte distance en voiture de la côte se trouve l'une des régions viticoles les plus prestigieuses d'Espagne : le Priorat. Connue pour ses puissants vins rouges élaborés à partir de raisins Grenache et Carignan, cette région montagneuse offre non seulement des vins exceptionnels, mais aussi des paysages à couper le souffle et des villages pittoresques. Cette excursion en voiture vous emmène au cœur de cette remarquable région viticole.",
+          "1": "Commencez votre voyage à Falset, la capitale de la comarque du Priorat. Avant de vous diriger vers les vignobles, visitez le Castell del Vi (Château du Vin), un centre d'interprétation du vin installé dans un château rénové qui offre une excellente introduction à l'histoire viticole de la région. De là, dirigez-vous vers le village de Gratallops, considéré comme le cœur de la production viticole du Priorat.",
+          "2": "À Gratallops, vous trouverez plusieurs domaines viticoles renommés comme Álvaro Palacios, producteur du célèbre vin L'Ermita, l'un des vins les plus prestigieux d'Espagne. De nombreux domaines proposent des visites et des dégustations, mais les réservations sont essentielles. Les paysages dramatiques des vignobles autour de Gratallops, avec des vignes poussant sur des pentes d'ardoise abruptes connues sous le nom de 'llicorella', offrent des opportunités photographiques spectaculaires.",
+          "3": "Poursuivez votre tour jusqu'au village de Porrera, un autre centre viticole important du Priorat. Le trajet entre ces villages vous emmène sur des routes sinueuses avec des vues à couper le souffle sur les vignobles en terrasses et les montagnes escarpées. À Porrera, visitez de plus petits domaines viticoles familiaux pour une expérience de dégustation de vin plus intime.",
+          "4": "Complétez votre tour viticole par une visite à la Chartreuse de Scala Dei (Escalier vers Dieu), qui donne son nom à la région. Les moines qui s'y sont installés au 12ème siècle ont été les premiers à introduire des techniques viticoles dans la région. Les ruines du monastère offrent un aperçu fascinant du passé, et le domaine viticole adjacent propose d'excellents vins à déguster et à acheter comme souvenir de votre aventure dans le Priorat."
+        }
+      },
+      "deltaEbro": {
+        "title": "Paradis naturel : Delta de l'Èbre",
+        "description": "Explorez l'écosystème unique du delta de l'Èbre, un paradis pour l'observation des oiseaux, les rizières et les plages immaculées.",
+        "date": "10 février 2024",
+        "category": "Nature",
+        "content": {
+          "0": "Le delta de l'Èbre (Delta de l'Ebre), situé dans la partie sud de la Catalogne, est l'une des zones humides les plus importantes de la Méditerranée. Ce paradis naturel, où le puissant fleuve Èbre rencontre la mer, offre un paysage unique de rizières, de lagunes, de salines et de plages immaculées qui s'étendent sur des kilomètres. Une promenade à travers cet écosystème remarquable promet une expérience inoubliable pour les amoureux de la nature.",
+          "1": "Commencez votre voyage à Deltebre, la capitale du delta. Visitez l'Écomusée, qui offre une excellente introduction à l'écosystème du delta, aux méthodes agricoles traditionnelles et à la culture locale. De là, dirigez-vous vers le Mirador del Zigurat, une tour d'observation en bois qui offre une vue panoramique sur les rizières environnantes, dont l'apparence change tout au long de la saison de croissance.",
+          "2": "Poursuivez votre route vers la Lagune de l'Encanyissada, la plus grande lagune du delta et une importante réserve ornithologique. C'est un excellent endroit pour l'observation des oiseaux, avec des possibilités d'apercevoir des flamants roses, des hérons et de nombreuses espèces d'oiseaux migrateurs. Le centre des visiteurs fournit des informations sur la faune locale et prête des jumelles pour un regard plus proche sur les oiseaux.",
+          "3": "Ensuite, dirigez-vous vers la Playa del Trabucador, une étroite bande de sable qui relie le delta principal à la péninsule de la Punta de la Banya. Cette plage unique a la mer d'un côté et la baie des Alfacs de l'autre, créant un contraste visuel impressionnant. C'est un endroit parfait pour une promenade tranquille ou une baignade rafraîchissante dans les eaux chaudes de la Méditerranée.",
+          "4": "Terminez votre exploration du delta à la Punta del Fangar, une péninsule semblable à un désert avec des dunes de sable changeantes et un phare. Le paysage différent ici se sent complètement différent du reste du delta et offre des opportunités photographiques spectaculaires, particulièrement au coucher du soleil lorsque la lumière jette une lueur dorée sur les dunes et les montagnes lointaines."
+        }
+      },
+      "romanTarragona": {
+        "title": "Héritage romain de Tarragone",
+        "description": "Remontez dans le temps avec une visite historique de l'ancienne Tarraco, explorant d'impressionnantes ruines romaines et des sites archéologiques.",
+        "date": "5 janvier 2024",
+        "category": "Culture",
+        "content": {
+          "0": "Tarragone, connue dans l'Antiquité sous le nom de Tarraco, était l'une des villes les plus importantes de l'Hispanie romaine et servait de capitale à la province d'Hispanie tarraconaise. Aujourd'hui, ses vestiges romains remarquablement bien conservés ont atteint le statut de patrimoine mondial de l'UNESCO. Une excursion d'une journée pour explorer ce riche héritage historique offre un voyage fascinant dans les jours de l'Empire romain.",
+          "1": "Commencez votre visite historique au Musée archéologique de Tarragone, qui abrite une impressionnante collection d'artefacts qui fournissent le contexte des sites que vous visiterez. De là, dirigez-vous vers l'Amphithéâtre romain voisin, construit au 2ème siècle après J.-C. Surplombant la Méditerranée, cette arène accueillait autrefois des combats de gladiateurs et pouvait accueillir jusqu'à 14 000 spectateurs. Les vestiges d'une basilique wisigothique et d'une église médiévale à l'intérieur de l'amphithéâtre racontent l'histoire de l'évolution du site à travers les siècles.",
+          "2": "Poursuivez votre chemin vers le Cirque romain, où se déroulaient les courses de chars. Une grande partie de la structure reste cachée sous des bâtiments médiévaux, mais les voûtes souterraines sont accessibles et impressionnantes. La Tour du Prétoire adjacente offre un accès à une partie du cirque et des vues panoramiques sur la ville depuis son toit. Suivez les murailles antiques, les plus anciennes fortifications romaines hors d'Italie, qui s'étendent sur plus d'un kilomètre et présentent des tours et des portes impressionnantes.",
+          "3": "Après le déjeuner dans la charmante vieille ville, visitez le Forum provincial, le centre administratif de Tarraco romaine. Aujourd'hui, seules des parties sont visibles, dont l'impressionnante Torre del Pretori. À proximité, ne manquez pas le Forum Local, qui servait de marché et de centre civique de la ville. Les vestiges comprennent les fondations de divers bâtiments et une basilique.",
+          "4": "Complétez votre voyage romain à l'impressionnant Aqueduc Les Ferreres, également connu sous le nom de Pont du Diable (Pont del Diable), situé à environ 4 km au nord de la ville. Cette section bien préservée de l'aqueduc romain est haute de 27 mètres et comprend deux niveaux d'arches qui s'étendent sur 217 mètres. Une promenade le long du sommet de l'aqueduc, qui transportait autrefois l'eau de la rivière Francolí à la ville, offre une connexion tangible avec l'ingénierie de la Rome antique."
+        }
+      }
     }
   }
 } 
