@@ -17,6 +17,8 @@ import { useLoadingManager } from './hooks/useLoadingManager'
 import BookingNotifications from './components/BookingNotifications'
 import TermsPage from './pages/TermsPage'
 import PrivacyPage from './pages/PrivacyPage'
+import BlogPage from './pages/BlogPage'
+import BlogPostPage from './pages/BlogPostPage'
 
 const AnimatedRoutes = () => {
   const location = useLocation()
@@ -66,6 +68,16 @@ const AnimatedRoutes = () => {
             <Route path="privacy" element={
               <Suspense fallback={null}>
                 <PrivacyPage />
+              </Suspense>
+            } />
+            <Route path="blog" element={
+              <Suspense fallback={null}>
+                <BlogPage />
+              </Suspense>
+            } />
+            <Route path="blog/:postId" element={
+              <Suspense fallback={null}>
+                <BlogPostPage />
               </Suspense>
             } />
           </Route>

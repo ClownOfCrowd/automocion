@@ -2,6 +2,7 @@
   "nav": {
     "home": "Home",
     "catalog": "Catalog",
+    "blog": "Blog",
     "booking": "Booking",
     "contact": "Contact",
     "cart": "Cart",
@@ -642,6 +643,116 @@
     "contact": {
       "title": "Contact Us",
       "description": "For any questions about how we handle your personal data, you can reach us at:"
+    }
+  },
+  "blog": {
+    "title": "Travel Blog",
+    "subtitle": "Discover the most beautiful routes and places to visit in Catalonia. Get inspired for your next road trip.",
+    "backToBlog": "Back to Blog",
+    "readMore": "Read More",
+    "tags": "Tags",
+    "share": "Share this article",
+    "relatedPosts": "You might also like",
+    "author": {
+      "name": "OV Automoción Team"
+    },
+    "categories": {
+      "all": "All",
+      "routes": "Routes",
+      "dayTrips": "Day Trips",
+      "attractions": "Attractions",
+      "gastronomy": "Gastronomy",
+      "culture": "Culture",
+      "nature": "Nature"
+    },
+    "newsletter": {
+      "title": "Subscribe to our newsletter",
+      "description": "Get the latest travel tips, routes, and special offers directly to your inbox.",
+      "emailLabel": "Email address",
+      "emailPlaceholder": "Enter your email",
+      "subscribe": "Subscribe",
+      "privacy": "We care about your data. Read our",
+      "privacyLink": "Privacy Policy"
+    },
+    "posts": {
+      "tarragonaCoast": {
+        "title": "Exploring the Stunning Costa Dorada",
+        "description": "A scenic coastal drive from Tarragona to L'Ametlla de Mar with breathtaking views of the Mediterranean.",
+        "date": "March 15, 2024",
+        "category": "Routes",
+        "content": {
+          "0": "The Costa Dorada, or 'Golden Coast,' stretches along the Mediterranean Sea in the province of Tarragona, Catalonia. Its name comes from the golden hue of its sandy beaches that glisten under the Spanish sun. This coastal region offers a perfect blend of historical sites, natural beauty, and gastronomic delights.",
+          "1": "Starting your journey from Vila-seca, head south along the coast towards Tarragona city. As the former Roman capital of Hispania Tarraconensis, Tarragona is home to impressive UNESCO World Heritage sites. Park your car and take time to explore the Roman Amphitheatre, which offers stunning views of the Mediterranean, and the Roman Circus, once used for chariot races.",
+          "2": "After exploring Tarragona, continue your drive south along the N-340 coastal road. This scenic route will take you through charming coastal towns like Altafulla, known for its beautiful beach and medieval old town. Stop here for lunch at one of the seafront restaurants and enjoy fresh Mediterranean cuisine.",
+          "3": "Further south, you'll find Torredembarra with its unique natural beach featuring a rare ecosystem of dunes and wetlands. This is an excellent spot for a short walk or a refreshing swim during the warmer months. The natural arch rock formation at nearby Roc de Sant Gaietà is also worth a photo stop.",
+          "4": "End your journey at L'Ametlla de Mar, a traditional fishing village that has maintained its authentic charm. Here you can enjoy some of the most pristine beaches in the region, like Cala Calafató or Cala Sant Jordi. The town is also renowned for its seafood restaurants where you can savor the day's fresh catch while watching the sunset over the Mediterranean."
+        }
+      },
+      "barcelonaDayTrip": {
+        "title": "Barcelona in One Day: The Ultimate Guide",
+        "description": "The perfect itinerary for a day trip to Barcelona, including the must-see attractions and insider tips.",
+        "date": "February 28, 2024",
+        "category": "Day Trips",
+        "content": {
+          "0": "Barcelona, the vibrant capital of Catalonia, is just a short drive from Vila-seca, making it the perfect destination for a day trip. While it's impossible to see everything this magnificent city has to offer in a single day, this carefully planned itinerary will help you experience the highlights.",
+          "1": "Start your day early and head straight to Antoni Gaudí's masterpiece, the Sagrada Familia. This iconic basilica has been under construction since 1882 and combines Gothic and Art Nouveau styles in a way that's truly unique. To avoid long queues, book your tickets online in advance. Spend about an hour marveling at its intricate facades and colorful stained glass interior.",
+          "2": "Next, make your way to Park Güell, another Gaudí creation. This whimsical park offers panoramic views of the city and features colorful mosaics, undulating benches, and structures that seem straight out of a fairy tale. The main monumental zone requires tickets, but there are free sections you can explore as well.",
+          "3": "For lunch, head to the historic Gothic Quarter (Barri Gòtic). Get lost in its narrow medieval streets and discover hidden squares like Plaça Reial or Plaça del Pi. This area offers numerous dining options, from traditional Catalan restaurants to modern tapas bars. Try local specialties like paella, bombas (potato croquettes), or pan con tomate (bread with tomato).",
+          "4": "After lunch, take a stroll down La Rambla, Barcelona's famous tree-lined pedestrian boulevard. While it's quite touristy, it's still worth experiencing the street performers, flower stalls, and the vibrant atmosphere. Don't forget to visit La Boqueria Market, one of Europe's best food markets, located just off La Rambla."
+        }
+      },
+      "portaventuraGuide": {
+        "title": "PortAventura World: A Complete Guide",
+        "description": "Everything you need to know about visiting PortAventura theme park and Ferrari Land, from the best rides to practical tips.",
+        "date": "March 5, 2024",
+        "category": "Attractions",
+        "content": {
+          "0": "PortAventura World, located just minutes from Vila-seca in Salou, is one of Europe's premier theme park resorts. Comprising three parks—PortAventura Park, Ferrari Land, and Caribe Aquatic Park—it offers an unforgettable experience for visitors of all ages. This guide will help you make the most of your visit to this exciting destination.",
+          "1": "PortAventura Park is divided into six themed areas: Mediterrània, Far West, México, China, Polynesia, and SésamoAventura. Each area features unique rides, shows, and restaurants. For thrill-seekers, don't miss Shambhala, Europe's highest roller coaster, or the Dragon Khan with its 8 inversions. Families with young children will enjoy the gentler rides and attractions in SésamoAventura, themed around Sesame Street characters.",
+          "2": "Ferrari Land, the newest addition to the resort, is a paradise for Ferrari enthusiasts and adrenaline junkies. The star attraction is Red Force, Europe's highest and fastest accelerator coaster, launching riders from 0 to 180 km/h in just 5 seconds. The park also features Racing Legends, a simulator ride, and Flying Dreams, a gentle flying theater experience suitable for all ages.",
+          "3": "To maximize your time, arrive early and head directly to the most popular attractions. Consider purchasing Express Passes if you're visiting during peak season to skip the regular lines. For dining, the parks offer numerous restaurants and food stalls serving a variety of cuisines. Budget-conscious visitors can also bring their own snacks and eat in the designated picnic areas outside the parks.",
+          "4": "If you're staying nearby, you might consider splitting your visit across multiple days, especially if you want to experience all three parks. PortAventura also offers its own themed hotels with special benefits like unlimited entry to PortAventura Park and one-day access to Ferrari Land, early entry to PortAventura Park, and free shuttle service to the parks."
+        }
+      },
+      "wineriesTour": {
+        "title": "Wine Tasting Tour in Priorat Region",
+        "description": "Discover the world-renowned wines of Priorat with this scenic driving tour through vineyards and charming villages.",
+        "date": "January 20, 2024",
+        "category": "Gastronomy",
+        "content": {
+          "0": "Just a short drive from the coast lies one of Spain's most prestigious wine regions: Priorat. Known for its powerful red wines produced from Garnacha and Cariñena grapes, this mountainous area offers not only exceptional wines but also breathtaking landscapes and picturesque villages. This driving tour will take you through the heart of this remarkable wine region.",
+          "1": "Begin your journey in Falset, the capital of Priorat comarca. Before heading to the vineyards, visit the Castell del Vi (Wine Castle), a wine interpretation center housed in a renovated castle that provides an excellent introduction to the region's winemaking history. From here, drive to the village of Gratallops, considered the heart of Priorat wine production.",
+          "2": "In Gratallops, you'll find several renowned wineries like Álvaro Palacios, producer of the famous L'Ermita wine, one of Spain's most prestigious labels. Many wineries offer tours and tastings, but reservations are essential. The dramatic vineyard landscapes surrounding Gratallops, with vines growing on steep slate slopes known as 'llicorella', make for spectacular photo opportunities.",
+          "3": "Continue your tour to the village of Porrera, another important wine center in Priorat. The drive between these villages takes you through winding roads with stunning views of terraced vineyards and rugged mountains. In Porrera, visit smaller family-run wineries for a more intimate wine tasting experience.",
+          "4": "Complete your wine tour with a visit to the Carthusian monastery of Scala Dei (Stairway to God), which gives the region its name. The monks who settled here in the 12th century were the first to introduce winemaking techniques to the area. The ruins of the monastery provide a fascinating glimpse into the past, and the adjacent winery offers excellent wines to taste and purchase as souvenirs of your Priorat adventure."
+        }
+      },
+      "deltaEbro": {
+        "title": "Natural Paradise: Delta del Ebro",
+        "description": "Explore the unique ecosystem of the Ebro Delta, a haven for birdwatching, rice fields, and pristine beaches.",
+        "date": "February 10, 2024",
+        "category": "Nature",
+        "content": {
+          "0": "The Ebro Delta (Delta de l'Ebre), located in the southern part of Catalonia, is one of the most important wetland areas in the Mediterranean. This natural paradise, where the mighty Ebro River meets the sea, offers a unique landscape of rice fields, lagoons, salt pans, and unspoiled beaches that stretch for kilometers. A drive through this remarkable ecosystem promises an unforgettable experience for nature lovers.",
+          "1": "Start your journey in Deltebre, the main town in the delta. Visit the Ecomuseum, which provides an excellent introduction to the delta's ecosystem, traditional farming methods, and local culture. From here, drive to the Mirador del Zigurat, a wooden observation tower that offers panoramic views of the surrounding rice fields, which change appearance throughout the growing season.",
+          "2": "Continue your drive to the Laguna de la Encanyissada, the largest lagoon in the delta and an important bird sanctuary. This is an excellent spot for birdwatching, with opportunities to see flamingos, herons, and numerous migratory species. The visitor center provides information about the local wildlife and offers binocular rentals for a closer look at the birds.",
+          "3": "Next, head to the Playa del Trabucador, a narrow sandbar connecting the main delta with the Punta de la Banya peninsula. This unique beach has the sea on one side and Alfacs Bay on the other, creating a stunning visual contrast. It's a perfect spot for a leisurely walk or a refreshing swim in the warm Mediterranean waters.",
+          "4": "End your delta exploration at the Punta del Fangar, a desert-like peninsula with shifting sand dunes and a lighthouse. The otherworldly landscape here feels completely different from the rest of the delta and offers spectacular photo opportunities, especially during sunset when the light casts a golden glow over the dunes and the distant mountains."
+        }
+      },
+      "romanTarragona": {
+        "title": "Roman Heritage of Tarragona",
+        "description": "Step back in time with a historical tour of ancient Tarraco, exploring impressive Roman ruins and archaeological sites.",
+        "date": "January 5, 2024",
+        "category": "Culture",
+        "content": {
+          "0": "Tarragona, known as Tarraco in ancient times, was one of the most important cities in Roman Hispania and served as the capital of the province of Hispania Tarraconensis. Today, its remarkably preserved Roman remains have earned UNESCO World Heritage status. A day trip to explore this rich historical legacy offers a fascinating journey back to the days of the Roman Empire.",
+          "1": "Begin your historical tour at the Archaeological Museum of Tarragona, which houses an impressive collection of artifacts that provide context for the sites you'll visit. From there, walk to the nearby Roman Amphitheatre, built in the 2nd century AD. Overlooking the Mediterranean Sea, this arena once hosted gladiatorial games and could accommodate up to 14,000 spectators. The remains of a Visigothic basilica and a medieval church within the amphitheatre tell the story of the site's evolution through centuries.",
+          "2": "Continue to the Roman Circus, where chariot races were held. Much of the structure remains hidden beneath medieval buildings, but the underground vaults are accessible and impressive. The adjacent Praetorium tower offers access to part of the circus and panoramic views of the city from its rooftop. Follow the ancient city walls, the oldest Roman fortifications outside Italy, which extend for more than a kilometer and feature impressive towers and gates.",
+          "3": "After lunch in the charming Old Town, visit the Provincial Forum, the administrative center of Roman Tarraco. Today, only parts of it remain visible, including the impressive Torre del Pretori. Nearby, don't miss the Local Forum, which served as the city's marketplace and civic center. The remains include foundations of various buildings and a basilica.",
+          "4": "Complete your Roman journey at the impressive Les Ferreres Aqueduct, also known as Pont del Diable (Devil's Bridge), located about 4 km north of the city. This well-preserved section of the Roman aqueduct stands 27 meters high and features two tiers of arches spanning 217 meters. Walking along the top of the aqueduct, which once carried water from the Francolí River to the city, offers a tangible connection to the engineering prowess of ancient Rome."
+        }
+      }
     }
   }
 } 

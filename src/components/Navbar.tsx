@@ -34,6 +34,8 @@ const Navbar = () => {
 
   const navigation = [
     { name: t('nav.home'), href: '/' },
+    { name: t('nav.catalog'), href: '/catalog' },
+    { name: t('nav.blog'), href: '/blog' },
     { name: t('nav.terms'), href: '/terms' },
     { name: t('nav.contact'), href: '/contact' },
   ]
