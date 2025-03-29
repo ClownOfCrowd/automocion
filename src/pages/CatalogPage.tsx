@@ -30,9 +30,10 @@ const CatalogPage = () => {
   // Получаем параметры из URL или из состояния навигации
   const queryParams = new URLSearchParams(location.search)
   const locationState = location.state as { booking?: any, filters?: any } || {}
-  const showAll = queryParams.get('all') === '1'
   
-  // Инициализация фильтров с учетом параметра all=1
+  // По умолчанию показываем все машины, если в URL нет явного указания обратного
+  const showAll = queryParams.has('all') ? queryParams.get('all') === '1' : true
+  
   const [filters, setFilters] = useState<Filters>({
     category: queryParams.get('category') || locationState?.filters?.category || 'All',
     transmission: queryParams.get('transmission') || locationState?.filters?.transmission || 'All',
@@ -42,24 +43,14 @@ const CatalogPage = () => {
     all: showAll
   })
 
-  // Эффект для обновления URL при изменении фильтров
+  // При первом рендере, если all=true, добавляем в URL параметр all=1
   useEffect(() => {
-    // Если параметр all=1, то обновляем URL только с этим параметром
-    if (filters.all) {
-      navigate(`${location.pathname}?all=1`, { replace: true })
-    } else {
-      // Иначе создаем URL с другими параметрами фильтрации
-      const params = new URLSearchParams()
-      
-      if (filters.category !== 'All') params.set('category', filters.category)
-      if (filters.transmission !== 'All') params.set('transmission', filters.transmission) 
-      if (filters.fuel !== 'All') params.set('fuel', filters.fuel)
-      if (filters.priceRange !== 200) params.set('priceRange', filters.priceRange.toString())
-      if (filters.search) params.set('search', filters.search)
-      
-      navigate(`${location.pathname}?${params.toString()}`, { replace: true })
+    if (filters.all && !queryParams.has('all')) {
+      const newParams = new URLSearchParams(location.search)
+      newParams.set('all', '1')
+      navigate(`${location.pathname}?${newParams.toString()}`, { replace: true })
     }
-  }, [filters, navigate, location.pathname])
+  }, [])
 
   // Фильтрация автомобилей
   const filteredCars = cars.filter(car => {
@@ -93,6 +84,40 @@ const CatalogPage = () => {
   const handleFilterChange = (key: keyof Filters, value: string | number | boolean) => {
     // Обновляем состояние фильтров
     setFilters(prev => ({ ...prev, [key]: value }))
+    
+    // Обновляем URL с учетом изменений
+    const newParams = new URLSearchParams(location.search)
+    
+    if (key === 'all') {
+      if (value === true) {
+        newParams.set('all', '1')
+      } else {
+        newParams.delete('all')
+      }
+    } else {
+      // Если изменяется другой фильтр, обновляем соответствующий параметр
+      if (key === 'category' || key === 'transmission' || key === 'fuel') {
+        if (value === 'All') {
+          newParams.delete(key)
+        } else {
+          newParams.set(key, value.toString())
+        }
+      } else if (key === 'priceRange') {
+        if (value === 200) {
+          newParams.delete(key)
+        } else {
+          newParams.set(key, value.toString())
+        }
+      } else if (key === 'search') {
+        if (!value) {
+          newParams.delete(key)
+        } else {
+          newParams.set(key, value.toString())
+        }
+      }
+    }
+    
+    navigate(`${location.pathname}?${newParams.toString()}`, { replace: true })
   }
 
   const handleSortChange = (e: React.ChangeEvent<HTMLSelectElement>) => {
@@ -106,16 +131,11 @@ const CatalogPage = () => {
       fuel: 'All',
       priceRange: 200,
       search: '',
-      all: false
+      all: true // При сбросе фильтров также показываем все автомобили
     })
-  }
-
-  // Функция для переключения режима "Показать все"
-  const toggleShowAll = () => {
-    setFilters(prev => ({
-      ...prev,
-      all: !prev.all
-    }))
+    
+    // Обновляем URL только с параметром all=1
+    navigate(`${location.pathname}?all=1`, { replace: true })
   }
 
   return (
@@ -198,7 +218,7 @@ const CatalogPage = () => {
                         type="checkbox"
                         id="show-all"
                         checked={filters.all}
-                        onChange={toggleShowAll}
+                        onChange={() => handleFilterChange('all', !filters.all)}
                         className="h-4 w-4 text-premium-gold focus:ring-premium-gold border-gray-300 rounded"
                       />
                       <label
@@ -208,13 +228,10 @@ const CatalogPage = () => {
                         {t('catalog.showAll')}
                       </label>
                     </div>
-                    <p className="mt-2 text-xs text-gray-500 dark:text-gray-400">
-                      {t('catalog.showAllDescription', 'Показать все автомобили независимо от фильтров')}
-                    </p>
                   </div>
 
                   {/* Category Filter */}
-                  <div className={`mb-6 ${filters.all ? 'opacity-50 pointer-events-none' : ''}`}>
+                  <div className="mb-6">
                     <h3 className="text-md font-semibold text-premium-black dark:text-white mb-3">
                       {t('catalog.filters.category')}
                     </h3>
@@ -228,7 +245,6 @@ const CatalogPage = () => {
                             checked={filters.category === category}
                             onChange={() => handleFilterChange('category', category)}
                             className="h-4 w-4 text-premium-gold focus:ring-premium-gold border-gray-300"
-                            disabled={filters.all}
                           />
                           <label
                             htmlFor={`category-${category}`}
@@ -242,7 +258,7 @@ const CatalogPage = () => {
                   </div>
 
                   {/* Transmission Filter */}
-                  <div className={`mb-6 ${filters.all ? 'opacity-50 pointer-events-none' : ''}`}>
+                  <div className="mb-6">
                     <h3 className="text-md font-semibold text-premium-black dark:text-white mb-3">
                       {t('catalog.filters.transmission')}
                     </h3>
@@ -256,7 +272,6 @@ const CatalogPage = () => {
                             checked={filters.transmission === transmission}
                             onChange={() => handleFilterChange('transmission', transmission)}
                             className="h-4 w-4 text-premium-gold focus:ring-premium-gold border-gray-300"
-                            disabled={filters.all}
                           />
                           <label
                             htmlFor={`transmission-${transmission}`}
@@ -270,7 +285,7 @@ const CatalogPage = () => {
                   </div>
 
                   {/* Fuel Filter */}
-                  <div className={`mb-6 ${filters.all ? 'opacity-50 pointer-events-none' : ''}`}>
+                  <div className="mb-6">
                     <h3 className="text-md font-semibold text-premium-black dark:text-white mb-3">
                       {t('catalog.filters.fuel')}
                     </h3>
@@ -284,7 +299,6 @@ const CatalogPage = () => {
                             checked={filters.fuel === fuel}
                             onChange={() => handleFilterChange('fuel', fuel)}
                             className="h-4 w-4 text-premium-gold focus:ring-premium-gold border-gray-300"
-                            disabled={filters.all}
                           />
                           <label
                             htmlFor={`fuel-${fuel}`}
@@ -298,7 +312,7 @@ const CatalogPage = () => {
                   </div>
 
                   {/* Price Range Filter */}
-                  <div className={`mb-6 ${filters.all ? 'opacity-50 pointer-events-none' : ''}`}>
+                  <div className="mb-6">
                     <h3 className="text-md font-semibold text-premium-black dark:text-white mb-3">
                       {t('catalog.filters.priceRange')}
                     </h3>
@@ -311,7 +325,6 @@ const CatalogPage = () => {
                         value={filters.priceRange}
                         onChange={(e) => handleFilterChange('priceRange', parseInt(e.target.value))}
                         className="w-full h-2 bg-gray-200 dark:bg-gray-700 rounded-lg appearance-none cursor-pointer accent-premium-gold"
-                        disabled={filters.all}
                       />
                       <div className="flex justify-between">
                         <span className="text-sm text-gray-700 dark:text-premium-silver">30€</span>
