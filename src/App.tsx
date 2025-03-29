@@ -19,6 +19,8 @@ import TermsPage from './pages/TermsPage'
 import PrivacyPage from './pages/PrivacyPage'
 import BlogPage from './pages/BlogPage'
 import BlogPostPage from './pages/BlogPostPage'
+import NewsPage from './pages/NewsPage'
+import NewsArticlePage from './pages/NewsArticlePage'
 
 const AnimatedRoutes = () => {
   const location = useLocation()
@@ -78,6 +80,16 @@ const AnimatedRoutes = () => {
             <Route path="blog/:postId" element={
               <Suspense fallback={null}>
                 <BlogPostPage />
+              </Suspense>
+            } />
+            <Route path="news" element={
+              <Suspense fallback={null}>
+                <NewsPage />
+              </Suspense>
+            } />
+            <Route path="news/:articleId" element={
+              <Suspense fallback={null}>
+                <NewsArticlePage />
               </Suspense>
             } />
           </Route>

@@ -8,7 +8,7 @@
                             http://www.google.com/schemas/sitemap-image/1.1/sitemap-image.xsd">
   <url>
     <loc>https://www.ovautomocion.es/</loc>
-    <lastmod>2023-03-25</lastmod>
+    <lastmod>2023-03-29</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
     <image:image>
@@ -18,7 +18,7 @@
   </url>
   <url>
     <loc>https://www.ovautomocion.es/catalog</loc>
-    <lastmod>2023-03-25</lastmod>
+    <lastmod>2023-03-29</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
     <image:image>
@@ -28,7 +28,7 @@
   </url>
   <url>
     <loc>https://www.ovautomocion.es/contact</loc>
-    <lastmod>2023-03-25</lastmod>
+    <lastmod>2023-03-29</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
     <image:image>
@@ -52,6 +52,155 @@
     <changefreq>yearly</changefreq>
     <priority>0.6</priority>
   </url>
+  
+  <!-- Страница блога -->
+  <url>
+    <loc>https://www.ovautomocion.es/blog</loc>
+    <lastmod>2023-03-29</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://www.ovautomocion.es/images/blog/blog-hero.jpg</image:loc>
+      <image:title>O.V. Automoción - Blog</image:title>
+    </image:image>
+  </url>
+  
+  <!-- Новости -->
+  <url>
+    <loc>https://www.ovautomocion.es/news</loc>
+    <lastmod>2023-03-29</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://www.ovautomocion.es/images/news/news-hero.jpg</image:loc>
+      <image:title>O.V. Automoción - News and Articles</image:title>
+    </image:image>
+  </url>
+  
+  <!-- Страницы блоговых постов -->
+  <url>
+    <loc>https://www.ovautomocion.es/blog/tarragona-coastal-route</loc>
+    <lastmod>2023-03-29</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <image:image>
+      <image:loc>https://www.ovautomocion.es/images/blog/tarragona-coast.jpg</image:loc>
+      <image:title>Tarragona Coastal Route - O.V. Automoción Blog</image:title>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://www.ovautomocion.es/blog/barcelona-day-trip</loc>
+    <lastmod>2023-03-29</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <image:image>
+      <image:loc>https://www.ovautomocion.es/images/blog/barcelona-trip.jpg</image:loc>
+      <image:title>Barcelona Day Trip - O.V. Automoción Blog</image:title>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://www.ovautomocion.es/blog/portaventura-guide</loc>
+    <lastmod>2023-03-29</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <image:image>
+      <image:loc>https://www.ovautomocion.es/images/blog/portaventura.jpg</image:loc>
+      <image:title>PortAventura Guide - O.V. Automoción Blog</image:title>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://www.ovautomocion.es/blog/wineries-tour</loc>
+    <lastmod>2023-03-29</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <image:image>
+      <image:loc>https://www.ovautomocion.es/images/blog/wineries.jpg</image:loc>
+      <image:title>Wineries Tour - O.V. Automoción Blog</image:title>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://www.ovautomocion.es/blog/delta-ebro-nature</loc>
+    <lastmod>2023-03-29</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <image:image>
+      <image:loc>https://www.ovautomocion.es/images/blog/delta-ebro.jpg</image:loc>
+      <image:title>Delta del Ebro Nature - O.V. Automoción Blog</image:title>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://www.ovautomocion.es/blog/roman-tarragona</loc>
+    <lastmod>2023-03-29</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <image:image>
+      <image:loc>https://www.ovautomocion.es/images/blog/roman-tarragona.jpg</image:loc>
+      <image:title>Roman Tarragona - O.V. Automoción Blog</image:title>
+    </image:image>
+  </url>
+  
+  <!-- Страницы новостных статей -->
+  <url>
+    <loc>https://www.ovautomocion.es/news/best-car-travel-spain</loc>
+    <lastmod>2023-03-29</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <image:image>
+      <image:loc>https://www.ovautomocion.es/images/news/spain-travel-car.jpg</image:loc>
+      <image:title>Best Car Travel in Spain - O.V. Automoción News</image:title>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://www.ovautomocion.es/news/economy-vs-premium</loc>
+    <lastmod>2023-03-29</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <image:image>
+      <image:loc>https://www.ovautomocion.es/images/news/economy-vs-premium.jpg</image:loc>
+      <image:title>Economy vs Premium Cars - O.V. Automoción News</image:title>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://www.ovautomocion.es/news/spain-road-rules</loc>
+    <lastmod>2023-03-29</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <image:image>
+      <image:loc>https://www.ovautomocion.es/images/news/road-rules.jpg</image:loc>
+      <image:title>Spain Road Rules - O.V. Automoción News</image:title>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://www.ovautomocion.es/news/car-rent-faq</loc>
+    <lastmod>2023-03-29</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <image:image>
+      <image:loc>https://www.ovautomocion.es/images/news/car-rent-faq.jpg</image:loc>
+      <image:title>Car Rental FAQ - O.V. Automoción News</image:title>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://www.ovautomocion.es/news/summer-travel-cars</loc>
+    <lastmod>2023-03-29</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <image:image>
+      <image:loc>https://www.ovautomocion.es/images/news/summer-cars.jpg</image:loc>
+      <image:title>Summer Travel Cars - O.V. Automoción News</image:title>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://www.ovautomocion.es/news/family-travel-advice</loc>
+    <lastmod>2023-03-29</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <image:image>
+      <image:loc>https://www.ovautomocion.es/images/news/family-travel.jpg</image:loc>
+      <image:title>Family Travel Advice - O.V. Automoción News</image:title>
+    </image:image>
+  </url>
+  
   <url>
     <loc>https://www.ovautomocion.es/catalog/mini-cooper-s</loc>
     <lastmod>2023-03-25</lastmod>

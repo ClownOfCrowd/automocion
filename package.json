@@ -7,12 +7,14 @@
     "dev": "vite",
     "build": "tsc && vite build",
     "lint": "eslint . --ext ts,tsx --report-unused-disable-directives --max-warnings 0",
-    "preview": "vite preview"
+    "preview": "vite preview",
+    "update-sitemap": "node scripts/update-sitemap.js"
   },
   "dependencies": {
     "@headlessui/react": "^1.7.18",
     "@heroicons/react": "^2.1.1",
     "@types/react-datepicker": "^6.2.0",
+    "@types/react-helmet": "^6.1.11",
     "framer-motion": "^11.0.3",
     "i18next": "^23.8.2",
     "i18next-browser-languagedetector": "^7.2.0",
@@ -20,8 +22,10 @@
     "react": "^18.2.0",
     "react-datepicker": "^8.1.0",
     "react-dom": "^18.2.0",
+    "react-helmet": "^6.1.0",
     "react-i18next": "^14.0.5",
-    "react-router-dom": "^6.22.0"
+    "react-router-dom": "^6.22.0",
+    "xml2js": "^0.6.2"
   },
   "devDependencies": {
     "@tailwindcss/forms": "^0.5.7",

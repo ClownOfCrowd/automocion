@@ -2,6 +2,7 @@ import { useTranslation } from 'react-i18next'
 import { Link } from 'react-router-dom'
 import { motion } from 'framer-motion'
 import PageTransition from '../components/PageTransition'
+import { Helmet } from 'react-helmet'
 
 interface BlogPost {
   id: string
@@ -13,7 +14,8 @@ interface BlogPost {
 }
 
 const BlogPage = () => {
-  const { t } = useTranslation()
+  const { t, i18n } = useTranslation()
+  const currentLanguage = i18n.language || 'es'
 
   // Временные данные для блога, в будущем можно перенести в отдельный файл
   const blogPosts: BlogPost[] = [
@@ -67,8 +69,69 @@ const BlogPage = () => {
     }
   ]
 
+  // Создаем структурированные данные для JSON-LD
+  const blogPostListItems = blogPosts.map(post => ({
+    "@type": "BlogPosting",
+    "headline": post.title,
+    "description": post.description,
+    "image": `https://www.ovautomocion.es${post.image}`,
+    "datePublished": post.date,
+    "url": `https://www.ovautomocion.es/${currentLanguage !== 'es' ? currentLanguage + '/' : ''}blog/${post.id}`,
+    "author": {
+      "@type": "Organization",
+      "name": "O.V. Automoción"
+    }
+  }));
+
+  const jsonLd = {
+    "@context": "https://schema.org",
+    "@type": "Blog",
+    "name": t('blog.metaTitle', 'O.V. Automoción - Blog sobre alquiler de coches en Tarragona'),
+    "description": t('blog.metaDescription', 'Consejos de viaje, rutas turísticas, lugares que visitar y eventos interesantes para disfrutar con tu coche de alquiler en Tarragona y Costa Daurada.'),
+    "url": `https://www.ovautomocion.es/${currentLanguage !== 'es' ? currentLanguage + '/' : ''}blog`,
+    "publisher": {
+      "@type": "Organization",
+      "name": "O.V. Automoción",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://www.ovautomocion.es/images/logo.png"
+      }
+    },
+    "blogPost": blogPostListItems
+  };
+
   return (
     <PageTransition>
+      <Helmet>
+        <title>{t('blog.metaTitle', 'O.V. Automoción - Blog sobre alquiler de coches en Tarragona')}</title>
+        <meta name="description" content={t('blog.metaDescription', 'Consejos de viaje, rutas turísticas, lugares que visitar y eventos interesantes para disfrutar con tu coche de alquiler en Tarragona y Costa Daurada.')} />
+        <meta name="keywords" content={t('blog.metaKeywords', 'blog alquiler coches, rutas tarragona, viajes costa dorada, portaventura, turismo cataluña, consejos viaje coche, lugares visitar tarragona')} />
+        <link rel="canonical" href={`https://www.ovautomocion.es/${currentLanguage !== 'es' ? currentLanguage + '/' : ''}blog`} />
+        {/* Open Graph / Facebook */}
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content={`https://www.ovautomocion.es/${currentLanguage !== 'es' ? currentLanguage + '/' : ''}blog`} />
+        <meta property="og:title" content={t('blog.metaTitle', 'O.V. Automoción - Blog sobre alquiler de coches en Tarragona')} />
+        <meta property="og:description" content={t('blog.metaDescription', 'Consejos de viaje, rutas turísticas, lugares que visitar y eventos interesantes para disfrutar con tu coche de alquiler en Tarragona y Costa Daurada.')} />
+        <meta property="og:image" content="https://www.ovautomocion.es/images/blog/blog-hero.jpg" />
+        {/* Twitter */}
+        <meta property="twitter:card" content="summary_large_image" />
+        <meta property="twitter:url" content={`https://www.ovautomocion.es/${currentLanguage !== 'es' ? currentLanguage + '/' : ''}blog`} />
+        <meta property="twitter:title" content={t('blog.metaTitle', 'O.V. Automoción - Blog sobre alquiler de coches en Tarragona')} />
+        <meta property="twitter:description" content={t('blog.metaDescription', 'Consejos de viaje, rutas turísticas, lugares que visitar y eventos interesantes para disfrutar con tu coche de alquiler en Tarragona y Costa Daurada.')} />
+        <meta property="twitter:image" content="https://www.ovautomocion.es/images/blog/blog-hero.jpg" />
+        {/* Альтернативные языковые версии */}
+        <link rel="alternate" hreflang="es" href="https://www.ovautomocion.es/blog" />
+        <link rel="alternate" hreflang="en" href="https://www.ovautomocion.es/en/blog" />
+        <link rel="alternate" hreflang="ru" href="https://www.ovautomocion.es/ru/blog" />
+        <link rel="alternate" hreflang="de" href="https://www.ovautomocion.es/de/blog" />
+        <link rel="alternate" hreflang="fr" href="https://www.ovautomocion.es/fr/blog" />
+        <link rel="alternate" hreflang="x-default" href="https://www.ovautomocion.es/blog" />
+        
+        {/* JSON-LD структурированные данные */}
+        <script type="application/ld+json">
+          {JSON.stringify(jsonLd)}
+        </script>
+      </Helmet>
       <div className="bg-white dark:bg-premium-black">
         {/* Hero Section */}
         <div className="relative h-[350px] sm:h-[450px] lg:h-[550px] bg-gradient-to-r from-premium-black to-premium-black/90">

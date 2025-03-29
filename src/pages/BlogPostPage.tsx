@@ -15,19 +15,92 @@ interface BlogPostContent {
 }
 
 const BlogPostPage = () => {
-  const { t } = useTranslation()
+  const { t, i18n } = useTranslation()
   const { postId } = useParams<{ postId: string }>()
+
+  // Преобразуем ID с дефисами в формат с подчеркиваниями для совместимости с ключами переводов
+  const getTranslationKey = (id: string): string => {
+    // Строковое преобразование с заменой дефисов на подчеркивания
+    const formattedId = id.replace(/-/g, '_')
+    const mapping: {[key: string]: string} = {
+      'tarragona_coastal_route': 'tarragonaCoast',
+      'barcelona_day_trip': 'barcelonaDayTrip',
+      'portaventura_guide': 'portaventuraGuide',
+      'wineries_tour': 'wineriesTour',
+      'delta_ebro_nature': 'deltaEbro',
+      'roman_tarragona': 'romanTarragona'
+    }
+    return mapping[formattedId] || formattedId
+  }
+
+  // Отладочная информация для проверки структуры переводов
+  console.log('Current language:', i18n.language)
+  console.log('Translation structure:', i18n.store.data)
+  console.log('Post ID:', postId)
+  console.log('Translation key:', getTranslationKey(postId || ''))
+  
+  // Функция для проверки существования ключа перевода
+  const keyExists = (path: string): boolean => {
+    try {
+      const value = t(path, { returnObjects: true })
+      console.log(`Key ${path} value:`, value)
+      return value !== path // Если возвращается сам ключ, значит перевода нет
+    } catch (error) {
+      console.error(`Error checking key ${path}:`, error)
+      return false
+    }
+  }
+
+  // Находим все ключи перевода для контента данной статьи
+  const getContentKeys = (id: string): number => {
+    try {
+      if (!id) {
+        console.error('ID is undefined')
+        return 5
+      }
+
+      const translationKey = getTranslationKey(id)
+
+      // Проверяем существование ключей для отладки
+      const basePath = `blog.posts.${translationKey}`
+      console.log('Checking base path:', basePath)
+      keyExists(basePath)
+      keyExists(`${basePath}.title`)
+      keyExists(`${basePath}.content`)
+
+      let contentLength = 0
+      let hasMoreContent = true
+      
+      // Проверяем каждый индекс контента, пока не найдем отсутствующий
+      while (hasMoreContent && contentLength < 20) { // Ограничиваем до 20 для безопасности
+        const contentKey = `${basePath}.content.${contentLength}`
+        hasMoreContent = keyExists(contentKey)
+        if (hasMoreContent) {
+          contentLength++
+        }
+      }
+      
+      console.log(`Found ${contentLength} content keys for ${id}`)
+      return contentLength > 0 ? contentLength : 5
+    } catch (error) {
+      console.error('Error getting content keys:', error)
+      return 5 // По умолчанию 5 параграфов
+    }
+  }
 
   // Заглушка для данных статьи, в будущем можно добавить получение данных из API
   const getPostData = (id: string): BlogPostContent => {
     // В реальном приложении здесь будет загрузка контента статьи
     // для демонстрации используем заглушку
+    const contentLength = getContentKeys(id)
+    const translationKey = getTranslationKey(id)
+    
     return {
-      title: t(`blog.posts.${id}.title`),
-      date: t(`blog.posts.${id}.date`),
+      title: t(`blog.posts.${translationKey}.title`),
+      date: t(`blog.posts.${translationKey}.date`),
       image: `/images/blog/${id}.jpg`,
-      content: Array.from({ length: 5 }, (_, i) => t(`blog.posts.${id}.content.${i}`)),
-      category: t(`blog.posts.${id}.category`),
+      content: Array.from({ length: contentLength }, (_, i) => t(`blog.posts.${translationKey}.content.${i}`)),
+      category: t(`blog.posts.${translationKey}.category`),
       authorName: t('blog.author.name'),
       authorImage: '/images/blog/author.jpg',
       relatedPosts: ['tarragona-coastal-route', 'barcelona-day-trip', 'portaventura-guide'].filter(p => p !== id).slice(0, 2)
@@ -180,20 +253,20 @@ const BlogPostPage = () => {
                     <div className="w-40 h-full">
                       <img
                         src={`/images/blog/${relatedPostId}.jpg`}
-                        alt={t(`blog.posts.${relatedPostId}.title`)}
+                        alt={t(`blog.posts.${getTranslationKey(relatedPostId)}.title`)}
                         className="h-full w-full object-cover object-center group-hover:scale-105 transition-transform duration-300"
                       />
                     </div>
                     <div className="flex-1 p-6">
                       <span className="inline-block text-xs font-medium text-premium-gold mb-2">
-                        {t(`blog.posts.${relatedPostId}.category`)}
+                        {t(`blog.posts.${getTranslationKey(relatedPostId)}.category`)}
                       </span>
                       <Link to={`/blog/${relatedPostId}`} className="block mt-1">
                         <h3 className="text-lg font-semibold text-premium-black dark:text-white group-hover:text-premium-gold dark:group-hover:text-premium-gold transition-colors duration-300">
-                          {t(`blog.posts.${relatedPostId}.title`)}
+                          {t(`blog.posts.${getTranslationKey(relatedPostId)}.title`)}
                         </h3>
                         <p className="mt-2 text-sm text-gray-600 dark:text-gray-400 line-clamp-2">
-                          {t(`blog.posts.${relatedPostId}.description`)}
+                          {t(`blog.posts.${getTranslationKey(relatedPostId)}.description`)}
                         </p>
                       </Link>
                       <div className="mt-4">
