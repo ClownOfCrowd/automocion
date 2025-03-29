@@ -3,9 +3,9 @@
     "home": "Home",
     "catalog": "Catalog",
     "blog": "Blog",
+    "news": "News",
     "booking": "Booking",
     "contact": "Contact",
-    "cart": "Cart",
     "terms": "Terms"
   },
   "breadcrumbs": {
@@ -751,6 +751,113 @@
           "2": "Continue to the Roman Circus, where chariot races were held. Much of the structure remains hidden beneath medieval buildings, but the underground vaults are accessible and impressive. The adjacent Praetorium tower offers access to part of the circus and panoramic views of the city from its rooftop. Follow the ancient city walls, the oldest Roman fortifications outside Italy, which extend for more than a kilometer and feature impressive towers and gates.",
           "3": "After lunch in the charming Old Town, visit the Provincial Forum, the administrative center of Roman Tarraco. Today, only parts of it remain visible, including the impressive Torre del Pretori. Nearby, don't miss the Local Forum, which served as the city's marketplace and civic center. The remains include foundations of various buildings and a basilica.",
           "4": "Complete your Roman journey at the impressive Les Ferreres Aqueduct, also known as Pont del Diable (Devil's Bridge), located about 4 km north of the city. This well-preserved section of the Roman aqueduct stands 27 meters high and features two tiers of arches spanning 217 meters. Walking along the top of the aqueduct, which once carried water from the Francolí River to the city, offers a tangible connection to the engineering prowess of ancient Rome."
+        }
+      }
+    }
+  },
+  "news": {
+    "title": "News & Articles",
+    "subtitle": "Useful tips, recommendations, and expert information about car rental for travel",
+    "backToNews": "Back to News",
+    "readMore": "Read More",
+    "featured": "Featured",
+    "tags": "Tags",
+    "share": "Share",
+    "relatedArticles": "Related Articles",
+    "popularPosts": "Popular Articles",
+    "popularCategories": "Popular Categories",
+    "search": {
+      "title": "Search",
+      "placeholder": "What are you looking for?"
+    },
+    "newsletter": {
+      "title": "Subscribe to Our Newsletter",
+      "description": "Get the latest articles, tips, and offers directly to your inbox",
+      "placeholder": "Your email",
+      "subscribe": "Subscribe",
+      "privacy": "We care about your data. Read our",
+      "privacyLink": "privacy policy"
+    },
+    "categories": {
+      "title": "Categories",
+      "all": "All Categories",
+      "guides": "Guides",
+      "comparison": "Comparisons",
+      "rules": "Rules",
+      "faq": "FAQ",
+      "seasonal": "Seasonal",
+      "advice": "Advice"
+    },
+    "articles": {
+      "bestCarTravel": {
+        "title": "How to Choose the Best Car for Traveling in Spain",
+        "description": "A practical guide to selecting the ideal car for your Spain journey based on route, number of passengers, and budget.",
+        "content": {
+          "0": "Spain is a country of remarkable contrasts, from bustling cities to serene beaches and mountainous landscapes. To best explore this beautiful country, renting a car is often the ideal solution, providing the freedom and flexibility that public transportation lacks. But how do you choose the right car for your Spanish adventure?",
+          "1": "First, consider your route. If you're planning mostly city trips with occasional excursions to the countryside, a compact car such as a Peugeot 208 or Citroen C3 will serve you perfectly. These cars are economical, maneuverable, and easy to park in congested city centers like Barcelona or Madrid. They're also suitable for couples or small families with minimal luggage.",
+          "2": "For longer journeys through scenic regions like Andalusia, Catalonia, or the Basque Country, consider a mid-size car such as a Seat Leon or Volkswagen Golf. These provide a good balance between comfort, luggage capacity, and fuel efficiency. These cars excel on extended highway drives and provide a smoother ride across various road surfaces.",
+          "3": "If your itinerary includes mountainous areas like the Pyrenees or Sierra Nevada, an SUV like the Toyota RAV4 or Mercedes-Benz GLC might be your best choice. Their elevated ground clearance and improved handling on challenging terrain will ensure you a peaceful journey even on winding mountain roads. SUVs also offer better visibility, allowing you to fully enjoy the breathtaking views.",
+          "4": "For groups or families with substantial luggage, a minivan such as the Mercedes-Benz V-Class or Volkswagen Multivan will provide maximum space and comfort. These vehicles are perfect for extended family vacations or a group of friends traveling together, offering ample room for both passengers and suitcases.",
+          "5": "Finally, for those wanting to add a touch of luxury to their journey or make an impression during an important business trip, a premium car like the BMW 5 Series or Audi A6 combines elegance, performance, and modern technology to create a truly special driving experience in one of Europe's most beautiful countries."
+        }
+      },
+      "economyVsPremium": {
+        "title": "Economy or Premium: What to Choose for Your Trip?",
+        "description": "Comparing the advantages and disadvantages of renting economy and premium cars for different types of travel.",
+        "content": {
+          "0": "When renting a car for a vacation or business trip, one of the most crucial questions is whether to choose an economy or premium option. This decision can significantly impact both your budget and experience, so it's important to carefully weigh the pros and cons of both options.",
+          "1": "Economy cars, such as the Peugeot 208, Volkswagen Polo, or Citroen C3, offer numerous advantages for budget-conscious travelers. They are significantly cheaper to rent, typically 30-50% less than their premium counterparts. Additionally, they're more fuel-efficient, which is particularly important in countries where gas prices are high. Their compact size makes them ideal for navigating narrow European streets and parking in limited spaces in city centers. They also typically have a lower refundable deposit amount.",
+          "2": "On the other hand, premium cars, such as the BMW 5 Series, Mercedes-Benz E-Class, or Audi A6, offer an entirely different level of comfort and experience. They come equipped with more powerful engines, providing smooth acceleration and confident driving, which is particularly appreciated on highways and in mountainous terrain. Premium car interiors are typically crafted from high-quality materials, equipped with advanced technological features, and provide superior sound insulation. Safety and driver assistance systems are also typically more advanced, providing additional peace of mind while traveling through unfamiliar places.",
+          "3": "When making your decision, consider the duration of your trip, the route, and the number of passengers. For short city trips or solo travel, an economy car is usually the more practical choice. For extended journeys, especially across varied terrain or with multiple passengers, the added comfort and space of a premium car can significantly enhance the experience. Business trips where making an impression is important, or special occasions such as a honeymoon, may justify the additional expense of a premium model, adding a special touch to your experience.",
+          "4": "Regardless of your choice, it's always recommended to book your car in advance, especially during peak season, to ensure availability of your preferred car type and the best possible rates. Many rental companies, including OV Automoción, offer seasonal promotions and loyalty programs that can make premium cars more accessible, so it's worth exploring all available options before making your final decision."
+        }
+      },
+      "spainRoadRules": {
+        "title": "Important Road Rules in Spain for Tourists",
+        "description": "Key rules and recommendations for safe driving during your vacation in Spain.",
+        "content": {
+          "0": "Driving in Spain can be an enjoyable and convenient way to explore the country's beautiful landscapes, from bustling coastal roads to scenic mountain routes. However, as with any foreign country, understanding local traffic rules and driving practices is crucial for ensuring a safe and hassle-free journey.",
+          "1": "First and foremost, driving in Spain is on the right side of the road, with overtaking on the left. You must carry a valid driving license, car insurance documents, and identification at all times. Visitors from non-EU countries may require an International Driving Permit in addition to their national license. Seat belts are mandatory for all passengers, and child seats are compulsory for children under 135cm in height.",
+          "2": "Spanish speed limits are typically 50 km/h in urban areas, 90 km/h on rural roads, and from 100 to 120 km/h on motorways (autopistas). It's important to note that some sections of urban roads are limited to 30 km/h. Fines for speeding can be substantial, and speed cameras are common throughout the country, so always pay attention to speed limit signs. Driving under the influence of alcohol or drugs is strictly penalized, with lower permissible blood alcohol content limits compared to some other European countries.",
+          "3": "Spanish roads are generally well-maintained and clearly marked, with an extensive network of modern highways connecting major cities. Nevertheless, it's worth noting that many motorways (autopistas) are toll roads. Alternative free routes, known as 'autovias', are also available, though they may be more congested and generally slower. In urban areas, parking can be a challenge; look for signs indicating restricted parking zones or meter-controlled areas.",
+          "4": "One feature of Spanish roads that may be unfamiliar to some visitors is the roundabout. When entering a roundabout, you typically yield to vehicles already on the circle. However, in large cities, some roundabouts operate on traffic lights. Additionally, be vigilant on rural and mountain roads, where steep turns, narrow lanes, and occasional livestock crossings can pose a challenge for unprepared drivers. Direction signs often indicate the destination rather than the road number, so it's helpful to know the names of towns along your route in advance."
+        }
+      },
+      "carRentFaq": {
+        "title": "FAQ: Frequently Asked Questions About Car Rental in Spain",
+        "description": "Comprehensive answers to the most common customer questions about the rental process, requirements, and policies.",
+        "content": {
+          "0": "We've compiled answers to the most frequently asked questions about car rental in Spain to make your experience as smooth and safe as possible.",
+          "1": "What documents do I need to rent a car in Spain? To rent a car in Spain, you'll need: a valid driver's license (for non-EU citizens, an International Driving Permit may also be required), a passport or ID card, and a credit card in the driver's name for the deposit. Note that the driver must be at least 21 years old and have at least 1 year of driving experience. For some car categories (especially premium ones), the minimum age may be higher.",
+          "2": "Is insurance included in the rental price? Basic Collision Damage Waiver (CDW) and Theft Protection (TP) are usually included in the basic rental price, but with an excess (the amount you'll have to pay in case of damage to the car). You can purchase additional insurance to reduce or eliminate the excess. It's also recommended to check the coverage of personal liability insurance, which protects against third-party claims.",
+          "3": "Can I cross borders with a rental car? Most car rental companies in Spain allow travel to European Union countries, however, this may require prior permission and an additional fee. Travel to non-EU countries (such as Morocco) is usually restricted. At OV Automoción, we allow trips to France, Portugal, and Andorra without additional charge, but you need to inform us of your plans when booking.",
+          "4": "What to do in case of an accident or breakdown? In case of an accident, immediately notify the police (if there are injuries or significant damage) and contact the car rental company. Don't leave the scene until the police arrive if necessary. Take photos of the damage and collect contact information from witnesses. In case of a breakdown, contact the roadside assistance service, the number of which should be indicated in the rental documents.",
+          "5": "What are the fuel return policies? At OV Automoción, we provide cars with a full tank and expect them to be returned in the same condition. If the car is returned with less fuel, a refueling fee plus a service charge is applied. We also offer a 'prepaid tank' option, where you pay for a full tank when picking up the car and can return it with any fuel level without additional charges.",
+          "6": "How to avoid additional charges when returning the car? To avoid additional charges, make sure you return the car at the designated time and place, with a full tank of fuel (if the prepaid tank option wasn't chosen), in a clean condition, and without damage. It's also important not to smoke in the car or transport pets without prior agreement, as this may lead to additional cleaning charges."
+        }
+      },
+      "summerTravelCars": {
+        "title": "Best Cars for Summer Travel in Catalonia",
+        "description": "Recommendations for choosing the perfect car for summer holidays on the Costa Dorada and exploring the region.",
+        "content": {
+          "0": "Catalonia, with its 580 kilometers of coastline, picturesque mountainous areas, and breathtaking landscapes, is one of the most popular summer destinations in Spain. Renting a car here opens up endless possibilities for exploration, from bustling seaside resorts to quiet medieval villages and stunning natural parks. In this article, we'll tell you about the best cars for summer adventures in this diverse region.",
+          "1": "For couples or solo travelers who mainly plan city trips with occasional visits to beaches, a compact convertible like the Mini Cooper Cabrio or Fiat 500C can be the perfect choice. These stylish cars not only provide an exhilarating open-top driving experience, allowing you to enjoy the warm Mediterranean breeze and bright sunshine, but are also maneuverable enough to navigate the narrow streets of historic cities like Tarragona or Girona. Their compact size also makes them ideal for parking in crowded tourist areas.",
+          "2": "Families heading to the Costa Dorada coast might find an estate car, such as the Volkswagen Passat Variant or Audi A4 Avant, ideal. These spacious vehicles offer abundant luggage space (invaluable for beach gear, inflatables, and snorkeling equipment) while providing a comfortable ride for all passengers. Their longer wheelbase provides stability on the high-speed highways connecting the main coastal towns, while modern climate control systems keep cool on the hottest summer days.",
+          "3": "For those looking to explore further off the beaten track, an SUV like the Toyota RAV4 Hybrid or Mercedes-Benz GLC might be the best choice. The elevated seating position provides excellent views of winding coastal roads, such as the scenic route from Barcelona to Cadaqués, and the improved ground clearance is helpful when accessing more remote beaches and hiking trails in natural parks like Aigüestortes i Estany de Sant Maurici National Park. Hybrid versions are especially good for summer trips, as they are more fuel-efficient and environmentally friendly.",
+          "4": "For maximum luxury travel, consider a premium sedan such as the BMW 5 Series or Mercedes-Benz E-Class. These cars combine sophistication, comfort, and technology to create a truly refined driving experience. Advanced driver assistance systems reduce stress on long journeys, and high-quality audio systems excellently reproduce your summer playlist while you enjoy the scenic landscapes of Catalonia.",
+          "5": "Regardless of the type of car you choose, make sure it's equipped with an efficient air conditioning system, as summer temperatures in Catalonia can often exceed 30°C. A GPS navigation system is also a valuable addition, helping you easily find hidden coves, remote wineries, and scenic viewpoints, making your summer adventure in Catalonia truly unforgettable."
+        }
+      },
+      "familyTravel": {
+        "title": "Tips for Comfortable Family Car Travel",
+        "description": "Practical recommendations and ideas for planning the perfect family vacation with children in a rental car.",
+        "content": {
+          "0": "Family trips create some of the most valuable memories, but they can also be challenging in terms of logistics, especially with small children. Renting the right car and proper planning can significantly improve the family vacation experience, providing comfort, safety, and flexibility for the whole family.",
+          "1": "Choosing the right car is crucial. For families with one or two children, a mid-size SUV like the Volkswagen Tiguan or Toyota RAV4 typically offers a good balance of space, comfort, and fuel economy. For larger families or extended trips, consider a minivan like the Mercedes-Benz V-Class or Volkswagen Multivan, which offer abundant space for passengers and luggage. Whichever car you choose, make sure it's equipped with working air conditioning, an entertainment system, and enough USB ports for charging devices.",
+          "2": "Child safety should be the top priority. Always pre-book appropriate child seats for your child. In Spain, children under 135 cm in height must ride in a suitable child seat or booster. When receiving the car, make sure the child seats are properly installed or ask the rental company staff to help with installation. It's also useful to request a car with child locks and window locks. Before leaving the rental point, check that all seat belts are working properly and that you know how all the car's safety features work.",
+          "3": "Planning your route with children's needs in mind can significantly improve your experience. Avoid planning too long journeys between stops; instead, break long trips into shorter segments with frequent breaks. Research rest stops along your route in advance, especially those that have children's playgrounds or open spaces where kids can stretch their legs. If possible, plan trips during your children's usual nap times to minimize awake time in the car. Use technology to your advantage by downloading offline maps and information about child-friendly attractions along your route.",
+          "4": "Equipping the car with necessary supplies can significantly improve the trip for everyone. Pack a car bag with essentials including wet wipes, a change of clothes, trash bags, paper towels, and hand sanitizer. Don't forget snacks and drinks, preferably in non-spill containers. For entertainment, consider tablets with pre-loaded movies or games, traditional road trip games, audiobooks that the whole family will enjoy, or kids' backpacks filled with new small toys or activities.",
+          "5": "Last but not least: maintain flexibility and patience. Traveling with children rarely goes exactly according to plan, so leave room for contingencies, whether it's extra toilet stops, unexpected breakdowns, or simply discovering an interesting attraction your family wants to explore. Remember that the journey is part of the adventure, not just a means to reach the destination. With the right car, proper preparation, and a positive attitude, a family car trip can be a precious experience that your family will fondly remember for years to come."
         }
       }
     }

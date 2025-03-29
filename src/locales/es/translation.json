@@ -3,6 +3,7 @@
     "home": "Inicio",
     "catalog": "Catálogo",
     "blog": "Blog",
+    "news": "Noticias",
     "booking": "Reserva",
     "contact": "Contacto",
     "cart": "Carrito",
@@ -690,6 +691,113 @@
           "2": "Continúa hasta el Circo Romano, donde se celebraban carreras de carros. Gran parte de la estructura permanece oculta bajo edificios medievales, pero las bóvedas subterráneas son accesibles e impresionantes. La torre adyacente del Pretorio ofrece acceso a parte del circo y vistas panorámicas de la ciudad desde su azotea. Sigue las antiguas murallas de la ciudad, las fortificaciones romanas más antiguas fuera de Italia, que se extienden por más de un kilómetro y cuentan con impresionantes torres y puertas.",
           "3": "Después del almuerzo en el encantador Casco Antiguo, visita el Foro Provincial, el centro administrativo de la Tarraco romana. Hoy, solo partes de él permanecen visibles, incluyendo la impresionante Torre del Pretori. Cerca, no te pierdas el Foro Local, que servía como mercado y centro cívico de la ciudad. Los restos incluyen cimientos de varios edificios y una basílica.",
           "4": "Completa tu viaje romano en el impresionante Acueducto de Les Ferreres, también conocido como Pont del Diable (Puente del Diablo), ubicado a unos 4 km al norte de la ciudad. Esta sección bien conservada del acueducto romano se eleva 27 metros de altura y presenta dos niveles de arcos que abarcan 217 metros. Caminar por la parte superior del acueducto, que una vez transportó agua desde el río Francolí hasta la ciudad, ofrece una conexión tangible con la destreza ingenieril de la antigua Roma."
+        }
+      }
+    }
+  },
+  "news": {
+    "title": "Noticias y Artículos",
+    "subtitle": "Consejos útiles, recomendaciones e información de expertos sobre alquiler de coches para viajes",
+    "backToNews": "Volver a Noticias",
+    "readMore": "Leer más",
+    "featured": "Destacado",
+    "tags": "Etiquetas",
+    "share": "Compartir",
+    "relatedArticles": "Artículos relacionados",
+    "popularPosts": "Artículos populares",
+    "popularCategories": "Categorías populares",
+    "search": {
+      "title": "Buscar",
+      "placeholder": "¿Qué estás buscando?"
+    },
+    "newsletter": {
+      "title": "Suscríbete a Nuestro Boletín",
+      "description": "Recibe los últimos artículos, consejos y ofertas directamente en tu bandeja de entrada",
+      "placeholder": "Tu correo electrónico",
+      "subscribe": "Suscribirse",
+      "privacy": "Nos preocupamos por tus datos. Lee nuestra",
+      "privacyLink": "política de privacidad"
+    },
+    "categories": {
+      "title": "Categorías",
+      "all": "Todas las Categorías",
+      "guides": "Guías",
+      "comparison": "Comparativas",
+      "rules": "Reglas",
+      "faq": "Preguntas frecuentes",
+      "seasonal": "Temporada",
+      "advice": "Consejos"
+    },
+    "articles": {
+      "bestCarTravel": {
+        "title": "Cómo elegir el mejor coche para viajar por España",
+        "description": "Una guía práctica para seleccionar el coche ideal para tu viaje por España según la ruta, el número de pasajeros y el presupuesto.",
+        "content": {
+          "0": "España es un país de notables contrastes, desde ciudades bulliciosas hasta playas serenas y paisajes montañosos. Para explorar mejor este hermoso país, alquilar un coche suele ser la solución ideal, proporcionando la libertad y flexibilidad que el transporte público no ofrece. Pero, ¿cómo elegir el coche adecuado para tu aventura española?",
+          "1": "Primero, considera tu ruta. Si planeas principalmente viajes urbanos con excursiones ocasionales al campo, un coche compacto como un Peugeot 208 o Citroën C3 te servirá perfectamente. Estos coches son económicos, maniobrables y fáciles de aparcar en centros urbanos congestionados como Barcelona o Madrid. También son adecuados para parejas o familias pequeñas con equipaje mínimo.",
+          "2": "Para viajes más largos a través de regiones pintorescas como Andalucía, Cataluña o el País Vasco, considera un coche de tamaño medio como un Seat Leon o Volkswagen Golf. Estos proporcionan un buen equilibrio entre comodidad, capacidad de equipaje y eficiencia de combustible. Estos coches destacan en viajes largos por autopista y proporcionan un viaje más suave en diferentes superficies de carretera.",
+          "3": "Si tu itinerario incluye áreas montañosas como los Pirineos o Sierra Nevada, un SUV como el Toyota RAV4 o Mercedes-Benz GLC podría ser tu mejor opción. Su elevada distancia al suelo y mejor manejo en terrenos desafiantes te asegurarán un viaje tranquilo incluso en carreteras de montaña sinuosas. Los SUV también ofrecen mejor visibilidad, permitiéndote disfrutar plenamente de las vistas impresionantes.",
+          "4": "Para grupos o familias con equipaje sustancial, una minivan como la Mercedes-Benz Clase V o Volkswagen Multivan proporcionará máximo espacio y comodidad. Estos vehículos son perfectos para vacaciones familiares prolongadas o un grupo de amigos viajando juntos, ofreciendo amplio espacio tanto para pasajeros como para maletas.",
+          "5": "Finalmente, para aquellos que desean añadir un toque de lujo a su viaje o causar impresión durante un importante viaje de negocios, un coche premium como el BMW Serie 5 o Audi A6 combina elegancia, rendimiento y tecnología moderna para crear una experiencia de conducción verdaderamente especial en uno de los países más hermosos de Europa."
+        }
+      },
+      "economyVsPremium": {
+        "title": "Económico o Premium: ¿Qué elegir para tu viaje?",
+        "description": "Comparando las ventajas y desventajas de alquilar coches económicos y premium para diferentes tipos de viajes.",
+        "content": {
+          "0": "Al alquilar un coche para unas vacaciones o un viaje de negocios, una de las preguntas más cruciales es si elegir una opción económica o premium. Esta decisión puede impactar significativamente tanto tu presupuesto como tu experiencia, por lo que es importante sopesar cuidadosamente los pros y contras de ambas opciones.",
+          "1": "Los coches económicos, como el Peugeot 208, Volkswagen Polo o Citroën C3, ofrecen numerosas ventajas para viajeros conscientes del presupuesto. Son significativamente más baratos de alquilar, típicamente 30-50% menos que sus homólogos premium. Además, son más eficientes en combustible, lo que es particularmente importante en países donde los precios de la gasolina son altos. Su tamaño compacto los hace ideales para navegar por estrechas calles europeas y aparcar en espacios limitados en centros urbanos. También suelen tener un importe de depósito reembolsable menor.",
+          "2": "Por otro lado, los coches premium, como el BMW Serie 5, Mercedes-Benz Clase E o Audi A6, ofrecen un nivel completamente diferente de comodidad y experiencia. Vienen equipados con motores más potentes, proporcionando aceleración suave y conducción confiada, lo que se aprecia particularmente en autopistas y en terreno montañoso. Los interiores de coches premium típicamente están elaborados con materiales de alta calidad, equipados con características tecnológicas avanzadas y proporcionan aislamiento acústico superior. Los sistemas de seguridad y asistencia al conductor también suelen ser más avanzados, proporcionando tranquilidad adicional mientras viajas por lugares desconocidos.",
+          "3": "Al tomar tu decisión, considera la duración de tu viaje, la ruta y el número de pasajeros. Para viajes cortos por ciudad o viajes en solitario, un coche económico suele ser la elección más práctica. Para viajes más largos, especialmente a través de terreno variado o con múltiples pasajeros, la comodidad y espacio adicionales de un coche premium pueden mejorar significativamente la experiencia. Viajes de negocios donde es importante causar impresión, u ocasiones especiales como una luna de miel, pueden justificar el gasto adicional de un modelo premium, añadiendo un toque especial a tu experiencia.",
+          "4": "Independientemente de tu elección, siempre se recomienda reservar tu coche con antelación, especialmente durante la temporada alta, para asegurar la disponibilidad del tipo de coche que prefieres y las mejores tarifas posibles. Muchas compañías de alquiler, incluyendo OV Automoción, ofrecen promociones de temporada y programas de fidelidad que pueden hacer que los coches premium sean más accesibles, por lo que vale la pena explorar todas las opciones disponibles antes de tomar tu decisión final."
+        }
+      },
+      "spainRoadRules": {
+        "title": "Normas de circulación importantes en España para turistas",
+        "description": "Reglas clave y recomendaciones para conducir de forma segura durante tus vacaciones en España.",
+        "content": {
+          "0": "Conducir en España puede ser una forma agradable y conveniente de explorar los hermosos paisajes del país, desde animadas carreteras costeras hasta rutas montañosas pintorescas. Sin embargo, como en cualquier país extranjero, entender las normas de tráfico locales y las prácticas de conducción es crucial para asegurar un viaje seguro y sin problemas.",
+          "1": "En primer lugar, en España se conduce por el lado derecho de la carretera, con adelantamiento por la izquierda. Debes llevar contigo siempre un permiso de conducir válido, documentos del seguro del coche e identificación. Los visitantes de países no pertenecientes a la UE pueden necesitar un Permiso Internacional de Conducir además de su licencia nacional. Los cinturones de seguridad son obligatorios para todos los pasajeros, y las sillas infantiles son obligatorias para niños menores de 135 cm de altura.",
+          "2": "Los límites de velocidad en España son típicamente de 50 km/h en áreas urbanas, 90 km/h en carreteras rurales, y de 100 a 120 km/h en autopistas. Es importante notar que algunas secciones de vías urbanas están limitadas a 30 km/h. Las multas por exceso de velocidad pueden ser sustanciales, y los radares son comunes por todo el país, así que presta siempre atención a las señales de límite de velocidad. Conducir bajo la influencia del alcohol o drogas está estrictamente penalizado, con límites de contenido de alcohol en sangre permitidos más bajos comparados con algunos otros países europeos.",
+          "3": "Las carreteras españolas están generalmente bien mantenidas y claramente señalizadas, con una extensa red de autopistas modernas conectando las principales ciudades. Sin embargo, vale la pena señalar que muchas autopistas son de peaje. Rutas alternativas gratuitas, conocidas como 'autovías', también están disponibles, aunque pueden estar más congestionadas y generalmente ser más lentas. En áreas urbanas, aparcar puede ser un desafío; busca señales indicando zonas de estacionamiento restringido o áreas controladas por parquímetros.",
+          "4": "Una característica de las carreteras españolas que puede no ser familiar para algunos visitantes es la rotonda. Al entrar en una rotonda, normalmente cedes el paso a los vehículos que ya están en el círculo. Sin embargo, en grandes ciudades, algunas rotondas funcionan con semáforos. Además, sé vigilante en carreteras rurales y de montaña, donde curvas pronunciadas, carriles estrechos y ocasionales cruces de ganado pueden suponer un desafío para conductores no preparados. Las señales de dirección a menudo indican el destino en lugar del número de carretera, por lo que es útil conocer los nombres de las localidades a lo largo de tu ruta con antelación."
+        }
+      },
+      "carRentFaq": {
+        "title": "FAQ: Preguntas frecuentes sobre alquiler de coches en España",
+        "description": "Respuestas completas a las preguntas más comunes de los clientes sobre el proceso de alquiler, requisitos y políticas.",
+        "content": {
+          "0": "Hemos recopilado respuestas a las preguntas más frecuentes sobre alquiler de coches en España para hacer tu experiencia lo más fluida y segura posible.",
+          "1": "¿Qué documentos necesito para alquilar un coche en España? Para alquilar un coche en España, necesitarás: un permiso de conducir válido (para ciudadanos no pertenecientes a la UE, puede ser necesario también un Permiso Internacional de Conducir), un pasaporte o DNI, y una tarjeta de crédito a nombre del conductor para el depósito. Ten en cuenta que el conductor debe tener al menos 21 años y al menos 1 año de experiencia al volante. Para algunas categorías de coches (especialmente los premium), la edad mínima puede ser mayor.",
+          "2": "¿Está incluido el seguro en el precio del alquiler? La Cobertura de Daños por Colisión básica (CDW) y la Protección contra Robo (TP) suelen estar incluidas en el precio básico del alquiler, pero con una franquicia (el importe que tendrás que pagar en caso de daño al coche). Puedes adquirir seguros adicionales para reducir o eliminar la franquicia. También se recomienda verificar la cobertura del seguro de responsabilidad civil, que protege contra reclamaciones de terceros.",
+          "3": "¿Puedo cruzar fronteras con un coche de alquiler? La mayoría de empresas de alquiler de coches en España permiten viajar a países de la Unión Europea, sin embargo, esto puede requerir permiso previo y una tarifa adicional. Los viajes a países no pertenecientes a la UE (como Marruecos) suelen estar restringidos. En OV Automoción, permitimos viajes a Francia, Portugal y Andorra sin cargo adicional, pero debes informarnos de tus planes al realizar la reserva.",
+          "4": "¿Qué hacer en caso de accidente o avería? En caso de accidente, notifica inmediatamente a la policía (si hay heridos o daños significativos) y contacta con la empresa de alquiler de coches. No abandones el lugar hasta que llegue la policía si es necesario. Toma fotos de los daños y recoge información de contacto de testigos. En caso de avería, contacta con el servicio de asistencia en carretera, cuyo número debería estar indicado en los documentos del alquiler.",
+          "5": "¿Cuáles son las políticas de devolución de combustible? En OV Automoción, proporcionamos coches con el depósito lleno y esperamos que sean devueltos en la misma condición. Si el coche se devuelve con menos combustible, se aplica una tarifa de repostaje más un cargo por servicio. También ofrecemos una opción de 'depósito prepagado', donde pagas por un depósito lleno al recoger el coche y puedes devolverlo con cualquier nivel de combustible sin cargos adicionales.",
+          "6": "¿Cómo evitar cargos adicionales al devolver el coche? Para evitar cargos adicionales, asegúrate de devolver el coche a la hora y lugar designados, con el depósito lleno de combustible (si no se eligió la opción de depósito prepagado), en condición limpia y sin daños. También es importante no fumar en el coche ni transportar mascotas sin acuerdo previo, ya que esto puede llevar a cargos adicionales de limpieza."
+        }
+      },
+      "summerTravelCars": {
+        "title": "Mejores coches para viajes de verano en Cataluña",
+        "description": "Recomendaciones para elegir el coche perfecto para vacaciones de verano en la Costa Dorada y explorar la región.",
+        "content": {
+          "0": "Cataluña, con sus 580 kilómetros de costa, áreas montañosas pintorescas y paisajes impresionantes, es uno de los destinos de verano más populares en España. Alquilar un coche aquí abre infinitas posibilidades de exploración, desde bulliciosos centros turísticos costeros hasta tranquilos pueblos medievales y impresionantes parques naturales. En este artículo, te contamos sobre los mejores coches para aventuras de verano en esta diversa región.",
+          "1": "Para parejas o viajeros solitarios que planean principalmente viajes urbanos con visitas ocasionales a playas, un descapotable compacto como el Mini Cooper Cabrio o Fiat 500C puede ser la elección perfecta. Estos elegantes coches no solo proporcionan una emocionante experiencia de conducción a cielo abierto, permitiéndote disfrutar de la cálida brisa mediterránea y el brillante sol, sino que también son lo suficientemente maniobrables para navegar por las estrechas calles de ciudades históricas como Tarragona o Girona. Su tamaño compacto también los hace ideales para aparcar en concurridas áreas turísticas.",
+          "2": "Las familias que se dirigen a la costa de la Costa Dorada podrían encontrar ideal un coche familiar, como el Volkswagen Passat Variant o Audi A4 Avant. Estos vehículos espaciosos ofrecen abundante espacio para equipaje (invaluable para equipo de playa, inflables y equipo de snorkel) a la vez que proporcionan un viaje cómodo para todos los pasajeros. Su mayor distancia entre ejes proporciona estabilidad en las autopistas de alta velocidad que conectan las principales ciudades costeras, mientras que los sistemas de control de clima modernos mantienen el fresco en los días más calurosos del verano.",
+          "3": "Para aquellos que buscan explorar más allá de los caminos trillados, un SUV como el Toyota RAV4 Hybrid o Mercedes-Benz GLC podría ser la mejor elección. La posición de asiento elevada proporciona excelentes vistas de carreteras costeras sinuosas, como la ruta pintoresca de Barcelona a Cadaqués, y la mayor distancia al suelo es útil para acceder a playas más remotas y senderos de senderismo en parques naturales como el Parque Nacional de Aigüestortes i Estany de Sant Maurici. Las versiones híbridas son especialmente buenas para viajes de verano, ya que son más eficientes en combustible y respetuosas con el medio ambiente.",
+          "4": "Para un viaje de máximo lujo, considera un sedán premium como el BMW Serie 5 o Mercedes-Benz Clase E. Estos coches combinan sofisticación, comodidad y tecnología para crear una experiencia de conducción verdaderamente refinada. Sistemas avanzados de asistencia al conductor reducen el estrés en viajes largos, y sistemas de audio de alta calidad reproducen excelentemente tu lista de reproducción de verano mientras disfrutas de los paisajes pintorescos de Cataluña.",
+          "5": "Independientemente del tipo de coche que elijas, asegúrate de que esté equipado con un sistema de aire acondicionado eficiente, ya que las temperaturas de verano en Cataluña a menudo pueden superar los 30°C. Un sistema de navegación GPS también es una valiosa adición, ayudándote a encontrar fácilmente calas escondidas, bodegas remotas y miradores pintorescos, haciendo tu aventura de verano en Cataluña verdaderamente inolvidable."
+        }
+      },
+      "familyTravel": {
+        "title": "Consejos para viajes familiares cómodos en coche",
+        "description": "Recomendaciones prácticas e ideas para planificar las vacaciones familiares perfectas con niños en un coche de alquiler.",
+        "content": {
+          "0": "Los viajes familiares crean algunos de los recuerdos más valiosos, pero también pueden ser desafiantes en términos de logística, especialmente con niños pequeños. Alquilar el coche adecuado y una planificación adecuada pueden mejorar significativamente la experiencia de vacaciones familiares, proporcionando comodidad, seguridad y flexibilidad para toda la familia.",
+          "1": "Elegir el coche adecuado es crucial. Para familias con uno o dos niños, un SUV de tamaño medio como el Volkswagen Tiguan o Toyota RAV4 típicamente ofrece un buen equilibrio entre espacio, comodidad y economía de combustible. Para familias más grandes o viajes prolongados, considera una minivan como la Mercedes-Benz Clase V o Volkswagen Multivan, que ofrecen abundante espacio para pasajeros y equipaje. Cualquiera que sea el coche que elijas, asegúrate de que esté equipado con aire acondicionado funcionando, un sistema de entretenimiento y suficientes puertos USB para cargar dispositivos.",
+          "2": "La seguridad infantil debe ser la máxima prioridad. Reserva siempre con antelación sillas infantiles apropiadas para tu hijo. En España, los niños menores de 135 cm de altura deben viajar en una silla infantil o elevador adecuado. Al recibir el coche, asegúrate de que las sillas infantiles estén correctamente instaladas o pide al personal de la empresa de alquiler que te ayude con la instalación. También es útil solicitar un coche con bloqueos infantiles y bloqueos de ventanas. Antes de salir del punto de alquiler, verifica que todos los cinturones de seguridad estén funcionando correctamente y que sabes cómo funcionan todas las características de seguridad del coche.",
+          "3": "Planificar tu ruta teniendo en cuenta las necesidades de los niños puede mejorar significativamente tu experiencia. Evita planificar viajes demasiado largos entre paradas; en su lugar, divide los viajes largos en segmentos más cortos con pausas frecuentes. Investiga con antelación áreas de descanso a lo largo de tu ruta, especialmente aquellas que tienen parques infantiles o espacios abiertos donde los niños puedan estirar las piernas. Si es posible, planifica viajes durante las horas habituales de siesta de tus hijos para minimizar el tiempo de vigilia en el coche. Utiliza la tecnología a tu favor descargando mapas sin conexión e información sobre atracciones aptas para niños a lo largo de tu ruta.",
+          "4": "Equipar el coche con los suministros necesarios puede mejorar significativamente el viaje para todos. Prepara una bolsa de coche con elementos esenciales incluyendo toallitas húmedas, un cambio de ropa, bolsas de basura, toallas de papel y desinfectante de manos. No olvides aperitivos y bebidas, preferiblemente en recipientes que no se derramen. Para el entretenimiento, considera tablets con películas o juegos precargados, juegos tradicionales de viaje en coche, audiolibros que toda la familia disfrutará, o mochilas infantiles llenas de nuevos juguetes pequeños o actividades.",
+          "5": "Por último, pero no menos importante: mantén flexibilidad y paciencia. Viajar con niños rara vez va exactamente según lo planeado, así que deja espacio para contingencias, ya sean paradas adicionales al baño, averías inesperadas, o simplemente descubrir una atracción interesante que tu familia quiere explorar. Recuerda que el viaje es parte de la aventura, no solo un medio para llegar al destino. Con el coche adecuado, la preparación adecuada y una actitud positiva, un viaje familiar en coche puede ser una experiencia preciosa que tu familia recordará con cariño durante años."
         }
       }
     }
