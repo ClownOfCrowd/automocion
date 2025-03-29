@@ -1,14 +1,8 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
-        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-        xmlns:image="http://www.google.com/schemas/sitemap-image/1.1"
-        xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9
-                            http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd
-                            http://www.google.com/schemas/sitemap-image/1.1
-                            http://www.google.com/schemas/sitemap-image/1.1/sitemap-image.xsd">
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:image="http://www.google.com/schemas/sitemap-image/1.1" xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9&#xD;&#xA;                            http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd&#xD;&#xA;                            http://www.google.com/schemas/sitemap-image/1.1&#xD;&#xA;                            http://www.google.com/schemas/sitemap-image/1.1/sitemap-image.xsd">
   <url>
     <loc>https://www.ovautomocion.es/</loc>
-    <lastmod>2023-03-29</lastmod>
+    <lastmod>2025-03-29</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
     <image:image>
@@ -52,8 +46,6 @@
     <changefreq>yearly</changefreq>
     <priority>0.6</priority>
   </url>
-  
-  <!-- Страница блога -->
   <url>
     <loc>https://www.ovautomocion.es/blog</loc>
     <lastmod>2023-03-29</lastmod>
@@ -64,8 +56,6 @@
       <image:title>O.V. Automoción - Blog</image:title>
     </image:image>
   </url>
-  
-  <!-- Новости -->
   <url>
     <loc>https://www.ovautomocion.es/news</loc>
     <lastmod>2023-03-29</lastmod>
@@ -76,8 +66,6 @@
       <image:title>O.V. Automoción - News and Articles</image:title>
     </image:image>
   </url>
-  
-  <!-- Страницы блоговых постов -->
   <url>
     <loc>https://www.ovautomocion.es/blog/tarragona-coastal-route</loc>
     <lastmod>2023-03-29</lastmod>
@@ -138,8 +126,6 @@
       <image:title>Roman Tarragona - O.V. Automoción Blog</image:title>
     </image:image>
   </url>
-  
-  <!-- Страницы новостных статей -->
   <url>
     <loc>https://www.ovautomocion.es/news/best-car-travel-spain</loc>
     <lastmod>2023-03-29</lastmod>
@@ -200,7 +186,6 @@
       <image:title>Family Travel Advice - O.V. Automoción News</image:title>
     </image:image>
   </url>
-  
   <url>
     <loc>https://www.ovautomocion.es/catalog/mini-cooper-s</loc>
     <lastmod>2023-03-25</lastmod>
@@ -271,4 +256,4 @@
       <image:title>O.V. Automoción - Seat Ibiza rental in Vila-seca</image:title>
     </image:image>
   </url>
-</urlset> 
+</urlset>
