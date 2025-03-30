@@ -2,8 +2,15 @@ import { useTranslation } from 'react-i18next'
 import PaymentBadges from './PaymentBadges'
 
 const Footer = () => {
-  const { t } = useTranslation()
+  const { t, i18n } = useTranslation()
   const currentYear = new Date().getFullYear()
+
+  // Создаем функцию для генерации URL WhatsApp с текстом из переводов
+  const getWhatsAppLink = () => {
+    const phone = "34603592358"
+    const message = t('cyberground.message')
+    return `https://wa.me/${phone}?text=${encodeURIComponent(message)}`
+  }
 
   return (
     <footer className="relative bg-gradient-to-r from-premium-black to-premium-black/90">
@@ -101,17 +108,15 @@ const Footer = () => {
               {t('cookies.privacy')}
             </a>
             <span className="mx-2">|</span>
-            <span className="text-premium-gold">
+            <a 
+              href={getWhatsAppLink()} 
+              target="_blank" 
+              rel="noopener noreferrer" 
+              className="text-premium-gold hover:text-premium-gold/80 transition-colors duration-300"
+            >
               Powered by Cyberground
-            </span>
+            </a>
           </p>
-          
-          {/* Пасхалка: прозрачный, но доступный для выделения текст */}
-          <div className="mt-2 xl:text-center relative">
-            <div className="text-transparent hover:text-premium-gold/10 select-all transition-colors duration-300 text-sm cursor-default">
-              WhatsApp & Telegram: +34603592358
-            </div>
-          </div>
         </div>
       </div>
     </footer>

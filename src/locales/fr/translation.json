@@ -260,8 +260,8 @@
     "description": "Vous avez des questions sur nos services ou besoin d'aide pour votre réservation ? Notre équipe est prête à vous aider pour toute demande concernant nos véhicules, services ou processus de réservation. Contactez-nous et nous vous répondrons dans les plus brefs délais.",
     "info": {
       "title": "Informations de contact",
-      "schedule": "Heures d'ouverture: 9:00-13:00 / 15:00-19:00",
-      "workdays": "Du lundi au vendredi",
+      "schedule": "Heures d'ouverture: 9:00 - 20:00",
+      "workdays": "Nous travaillons tous les jours",
       "address": "Carrer del Mas de l'Abat 145F",
       "location": "Vila-seca, Catalogne",
       "postal": "43480"
@@ -396,6 +396,9 @@
   "whatsapp": {
     "message": "Contactez-nous sur WhatsApp",
     "available": "Nous sommes en ligne, réponse rapide !"
+  },
+  "cyberground": {
+    "message": "Bonjour, je souhaite me renseigner sur vos services numériques pour mon projet de site web"
   },
   "notifications": {
     "booked": "a réservé {{car}} il y a {{time}} minutes"

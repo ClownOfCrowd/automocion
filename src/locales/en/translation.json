@@ -261,8 +261,8 @@
       "address": "Carrer del Mas de l'Abat 145F",
       "location": "Vila-seca, Catalonia",
       "postal": "43480",
-      "schedule": "Hours: 9:00-13:00 / 15:00-19:00",
-      "workdays": "Monday to Friday"
+      "schedule": "Hours: 9:00 - 20:00",
+      "workdays": "We work every day"
     },
     "social": {
       "title": "Follow Us",
@@ -414,8 +414,11 @@
     "invalidPostalCode": "Please enter a valid postal code"
   },
   "whatsapp": {
-    "message": "Need help? Chat with us!",
-    "available": "We're available 24/7"
+    "message": "Contact us on WhatsApp",
+    "available": "We are online, quick response!"
+  },
+  "cyberground": {
+    "message": "Hello, I would like to inquire about your digital services for my website project"
   },
   "notifications": {
     "booked": "booked {{car}} {{time}} minutes ago"
