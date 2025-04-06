@@ -2,6 +2,7 @@ import { useTranslation } from 'react-i18next'
 import { useParams, Link } from 'react-router-dom'
 import { motion } from 'framer-motion'
 import PageTransition from '../components/PageTransition'
+import { Helmet } from 'react-helmet-async'
 
 interface BlogPostContent {
   title: string
@@ -17,6 +18,7 @@ interface BlogPostContent {
 const BlogPostPage = () => {
   const { t, i18n } = useTranslation()
   const { postId } = useParams<{ postId: string }>()
+  const currentLanguage = i18n.language || 'es'
 
   // Преобразуем ID с дефисами в формат с подчеркиваниями для совместимости с ключами переводов
   const getTranslationKey = (id: string): string => {
@@ -111,6 +113,74 @@ const BlogPostPage = () => {
 
   return (
     <PageTransition>
+      <Helmet>
+        <title>{post.title} | {t('blog.title', 'Blog')} | O.V. Automoción</title>
+        <meta 
+          name="description" 
+          content={post.content[0]?.substring(0, 160) || t('blog.defaultMetaDescription', 'Descubre nuestros consejos y guías para disfrutar de tu estancia en Tarragona y alrededores con nuestro servicio de alquiler de coches.')}
+        />
+        <meta name="keywords" content={`${post.category}, alquiler coches, Tarragona, blog viajes, ${postId}`} />
+        
+        {/* OpenGraph / Facebook */}
+        <meta property="og:type" content="article" />
+        <meta property="og:url" content={`https://www.ovautomocion.es/${currentLanguage !== 'es' ? currentLanguage + '/' : ''}blog/${postId}`} />
+        <meta property="og:title" content={post.title} />
+        <meta property="og:description" content={post.content[0]?.substring(0, 160) || t('blog.defaultMetaDescription', 'Descubre nuestros consejos y guías para disfrutar de tu estancia en Tarragona y alrededores con nuestro servicio de alquiler de coches.')} />
+        <meta property="og:image" content={`https://www.ovautomocion.es${post.image}`} />
+        <meta property="article:published_time" content={post.date} />
+        <meta property="article:section" content={post.category} />
+        <meta property="article:tag" content="Tarragona" />
+        <meta property="article:tag" content="Travel" />
+        <meta property="article:tag" content="Spain" />
+        
+        {/* Twitter */}
+        <meta property="twitter:card" content="summary_large_image" />
+        <meta property="twitter:url" content={`https://www.ovautomocion.es/${currentLanguage !== 'es' ? currentLanguage + '/' : ''}blog/${postId}`} />
+        <meta property="twitter:title" content={post.title} />
+        <meta property="twitter:description" content={post.content[0]?.substring(0, 160) || t('blog.defaultMetaDescription', 'Descubre nuestros consejos y guías para disfrutar de tu estancia en Tarragona y alrededores con nuestro servicio de alquiler de coches.')} />
+        <meta property="twitter:image" content={`https://www.ovautomocion.es${post.image}`} />
+        
+        {/* Альтернативные языковые версии */}
+        <link rel="alternate" hreflang="es" href={`https://www.ovautomocion.es/blog/${postId}`} />
+        <link rel="alternate" hreflang="en" href={`https://www.ovautomocion.es/en/blog/${postId}`} />
+        <link rel="alternate" hreflang="de" href={`https://www.ovautomocion.es/de/blog/${postId}`} />
+        <link rel="alternate" hreflang="fr" href={`https://www.ovautomocion.es/fr/blog/${postId}`} />
+        <link rel="alternate" hreflang="ru" href={`https://www.ovautomocion.es/ru/blog/${postId}`} />
+        <link rel="alternate" hreflang="x-default" href={`https://www.ovautomocion.es/blog/${postId}`} />
+        
+        {/* JSON-LD структурированные данные */}
+        <script type="application/ld+json">
+          {JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "BlogPosting",
+            "headline": post.title,
+            "image": [`https://www.ovautomocion.es${post.image}`],
+            "datePublished": post.date,
+            "dateModified": post.date,
+            "author": {
+              "@type": "Person",
+              "name": post.authorName,
+              "image": `https://www.ovautomocion.es${post.authorImage}`
+            },
+            "publisher": {
+              "@type": "Organization",
+              "name": "O.V. Automoción",
+              "logo": {
+                "@type": "ImageObject",
+                "url": "https://www.ovautomocion.es/images/logo.png"
+              }
+            },
+            "description": post.content[0]?.substring(0, 160),
+            "articleSection": post.category,
+            "keywords": "Tarragona, Travel, Routes, Spain, Tourism",
+            "mainEntityOfPage": {
+              "@type": "WebPage",
+              "@id": `https://www.ovautomocion.es/${currentLanguage !== 'es' ? currentLanguage + '/' : ''}blog/${postId}`
+            }
+          })}
+        </script>
+      </Helmet>
+      
       <div className="bg-white dark:bg-premium-black">
         {/* Hero Section */}
         <div className="relative h-[350px] sm:h-[450px] lg:h-[550px]">

@@ -3,11 +3,13 @@ import { Link, useParams, useNavigate } from 'react-router-dom'
 import { motion } from 'framer-motion'
 import { useEffect } from 'react'
 import PageTransition from '../components/PageTransition'
+import { Helmet } from 'react-helmet-async'
 
 const NewsArticlePage = () => {
-  const { t } = useTranslation()
+  const { t, i18n } = useTranslation()
   const { articleId } = useParams<{ articleId: string }>()
   const navigate = useNavigate()
+  const currentLanguage = i18n.language || 'es'
 
   // В реальном приложении здесь был бы запрос к API или импорт из файла данных
   // Временные моковые данные для демонстрации
@@ -84,6 +86,73 @@ const NewsArticlePage = () => {
 
   return (
     <PageTransition>
+      <Helmet>
+        <title>{article.title} | {t('news.title', 'Noticias')} | O.V. Automoción</title>
+        <meta 
+          name="description" 
+          content={article.description || article.content[0]?.substring(0, 160)}
+        />
+        <meta name="keywords" content={article.tags.join(', ')} />
+        
+        {/* OpenGraph / Facebook */}
+        <meta property="og:type" content="article" />
+        <meta property="og:url" content={`https://www.ovautomocion.es/${currentLanguage !== 'es' ? currentLanguage + '/' : ''}news/${articleId}`} />
+        <meta property="og:title" content={article.title} />
+        <meta property="og:description" content={article.description || article.content[0]?.substring(0, 160)} />
+        <meta property="og:image" content={`https://www.ovautomocion.es${article.image}`} />
+        <meta property="article:published_time" content={article.date} />
+        <meta property="article:section" content={article.category} />
+        {article.tags.map((tag, index) => (
+          <meta key={index} property="article:tag" content={tag} />
+        ))}
+        
+        {/* Twitter */}
+        <meta property="twitter:card" content="summary_large_image" />
+        <meta property="twitter:url" content={`https://www.ovautomocion.es/${currentLanguage !== 'es' ? currentLanguage + '/' : ''}news/${articleId}`} />
+        <meta property="twitter:title" content={article.title} />
+        <meta property="twitter:description" content={article.description || article.content[0]?.substring(0, 160)} />
+        <meta property="twitter:image" content={`https://www.ovautomocion.es${article.image}`} />
+        
+        {/* Альтернативные языковые версии */}
+        <link rel="alternate" hreflang="es" href={`https://www.ovautomocion.es/news/${articleId}`} />
+        <link rel="alternate" hreflang="en" href={`https://www.ovautomocion.es/en/news/${articleId}`} />
+        <link rel="alternate" hreflang="de" href={`https://www.ovautomocion.es/de/news/${articleId}`} />
+        <link rel="alternate" hreflang="fr" href={`https://www.ovautomocion.es/fr/news/${articleId}`} />
+        <link rel="alternate" hreflang="ru" href={`https://www.ovautomocion.es/ru/news/${articleId}`} />
+        <link rel="alternate" hreflang="x-default" href={`https://www.ovautomocion.es/news/${articleId}`} />
+        
+        {/* JSON-LD структурированные данные */}
+        <script type="application/ld+json">
+          {JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "NewsArticle",
+            "headline": article.title,
+            "image": [`https://www.ovautomocion.es${article.image}`],
+            "datePublished": article.date,
+            "dateModified": article.date,
+            "author": {
+              "@type": "Organization",
+              "name": article.author
+            },
+            "publisher": {
+              "@type": "Organization",
+              "name": "O.V. Automoción",
+              "logo": {
+                "@type": "ImageObject",
+                "url": "https://www.ovautomocion.es/images/logo.png"
+              }
+            },
+            "description": article.description || article.content[0]?.substring(0, 160),
+            "articleSection": article.category,
+            "keywords": article.tags.join(', '),
+            "mainEntityOfPage": {
+              "@type": "WebPage",
+              "@id": `https://www.ovautomocion.es/${currentLanguage !== 'es' ? currentLanguage + '/' : ''}news/${articleId}`
+            }
+          })}
+        </script>
+      </Helmet>
+      
       <div className="bg-white dark:bg-premium-black">
         {/* Hero Section */}
         <div className="relative h-[300px] sm:h-[400px] lg:h-[500px]">

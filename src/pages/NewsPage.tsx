@@ -2,7 +2,7 @@ import { useTranslation } from 'react-i18next'
 import { Link } from 'react-router-dom'
 import { motion } from 'framer-motion'
 import PageTransition from '../components/PageTransition'
-import { Helmet } from 'react-helmet'
+import { Helmet } from 'react-helmet-async'
 
 interface NewsArticle {
   id: string

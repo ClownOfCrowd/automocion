@@ -17,11 +17,13 @@ import { cars } from '../data/cars'
 import PageTransition from '../components/PageTransition'
 import { CheckIcon } from '@heroicons/react/24/outline'
 import LazyImage from '../components/LazyImage'
+import { Helmet } from 'react-helmet-async'
 
 const CarDetailPage = () => {
   const { id } = useParams()
   const navigate = useNavigate()
   const { t, i18n } = useTranslation()
+  const currentLanguage = i18n.language || 'es'
   const [pickupDate, setPickupDate] = useState<Date | null>(null)
   const [returnDate, setReturnDate] = useState<Date | null>(null)
   const [pickupLocation, setPickupLocation] = useState('Vila-seca')
@@ -121,6 +123,10 @@ const CarDetailPage = () => {
   if (!car) {
     return (
       <PageTransition>
+        <Helmet>
+          <title>{t('carDetail.notFound')} | O.V. Automoción</title>
+          <meta name="description" content={t('carDetail.notFoundDescription')} />
+        </Helmet>
         <div className="min-h-screen flex items-center justify-center">
           <div className="text-center">
             <h2 className="text-2xl font-bold text-gray-900 dark:text-white">
@@ -176,6 +182,63 @@ const CarDetailPage = () => {
 
   return (
     <PageTransition>
+      <Helmet>
+        <title>{car.name} | {t('common.rental')} | O.V. Automoción</title>
+        <meta name="description" content={t(car.description)} />
+        <meta name="keywords" content={`alquiler ${car.name}, rent ${car.name}, ${car.category} car rental, coches ${car.category}`} />
+        
+        {/* OpenGraph / Facebook */}
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content={`https://www.ovautomocion.es/${currentLanguage !== 'es' ? currentLanguage + '/' : ''}catalog/${car.id}`} />
+        <meta property="og:title" content={`${car.name} | ${t('common.rental')} | O.V. Automoción`} />
+        <meta property="og:description" content={t(car.description)} />
+        <meta property="og:image" content={`https://www.ovautomocion.es${car.image}`} />
+        
+        {/* Twitter */}
+        <meta property="twitter:card" content="summary_large_image" />
+        <meta property="twitter:url" content={`https://www.ovautomocion.es/${currentLanguage !== 'es' ? currentLanguage + '/' : ''}catalog/${car.id}`} />
+        <meta property="twitter:title" content={`${car.name} | ${t('common.rental')} | O.V. Automoción`} />
+        <meta property="twitter:description" content={t(car.description)} />
+        <meta property="twitter:image" content={`https://www.ovautomocion.es${car.image}`} />
+        
+        {/* Альтернативные языковые версии */}
+        <link rel="alternate" hreflang="es" href={`https://www.ovautomocion.es/catalog/${car.id}`} />
+        <link rel="alternate" hreflang="en" href={`https://www.ovautomocion.es/en/catalog/${car.id}`} />
+        <link rel="alternate" hreflang="de" href={`https://www.ovautomocion.es/de/catalog/${car.id}`} />
+        <link rel="alternate" hreflang="fr" href={`https://www.ovautomocion.es/fr/catalog/${car.id}`} />
+        <link rel="alternate" hreflang="ru" href={`https://www.ovautomocion.es/ru/catalog/${car.id}`} />
+        <link rel="alternate" hreflang="x-default" href={`https://www.ovautomocion.es/catalog/${car.id}`} />
+        
+        {/* JSON-LD структурированные данные */}
+        <script type="application/ld+json">
+          {JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "Product",
+            "name": car.name,
+            "image": `https://www.ovautomocion.es${car.image}`,
+            "description": t(car.description),
+            "brand": {
+              "@type": "Brand",
+              "name": car.name.split(' ')[0]
+            },
+            "offers": {
+              "@type": "Offer",
+              "url": `https://www.ovautomocion.es/${currentLanguage !== 'es' ? currentLanguage + '/' : ''}catalog/${car.id}`,
+              "priceCurrency": "EUR",
+              "price": car.price,
+              "priceValidUntil": new Date(new Date().setFullYear(new Date().getFullYear() + 1)).toISOString().split('T')[0],
+              "availability": "https://schema.org/InStock"
+            },
+            "vehicleSpecification": {
+              "@type": "VehicleSpecification",
+              "fuelType": car.fuel,
+              "seatingCapacity": car.seats,
+              "vehicleTransmission": car.transmission,
+              "vehicleModelDate": car.specs?.year.toString() || "2022"
+            }
+          })}
+        </script>
+      </Helmet>
       <div className="bg-white dark:bg-premium-black">
         {/* Хлебные крошки */}
         <nav className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-4">
@@ -207,7 +270,9 @@ const CarDetailPage = () => {
                   <LazyImage
                     src={car.image}
                     alt={car.name}
-                    className="h-full w-full object-contain"
+                    className="h-full w-full"
+                    objectFit="contain"
+                    maxHeight={384}
                   />
                 </motion.div>
               </div>
@@ -383,7 +448,9 @@ const CarDetailPage = () => {
                       <LazyImage
                         src={similarCar.image}
                         alt={similarCar.name}
-                        className="w-full h-full object-cover"
+                        className="w-full h-full"
+                        objectFit="contain"
+                        maxHeight={160}
                       />
                       <div className="absolute top-2 right-2 bg-premium-gold text-white px-3 py-1 rounded-full text-sm">
                         {t('common.fromPrice', { price: similarCar.price })}

@@ -3,6 +3,7 @@ import { useNavigate, useLocation } from 'react-router-dom'
 import { useTranslation } from 'react-i18next'
 import PageTransition from '../components/PageTransition'
 import { cars } from '../data/cars'
+import { Helmet } from 'react-helmet-async'
 
 interface CheckoutForm {
   firstName: string
@@ -18,9 +19,10 @@ interface CheckoutForm {
 }
 
 const CheckoutPage = () => {
-  const { t } = useTranslation()
+  const { t, i18n } = useTranslation()
   const navigate = useNavigate()
   const location = useLocation()
+  const currentLanguage = i18n.language || 'es'
   const [form, setForm] = useState<CheckoutForm>({
     firstName: '',
     lastName: '',
@@ -44,6 +46,23 @@ const CheckoutPage = () => {
 
   return (
     <PageTransition>
+      <Helmet>
+        <title>{t('checkout.title', 'Completar Reserva')} | O.V. Automoción</title>
+        <meta name="description" content={t('checkout.metaDescription', 'Complete su reserva de alquiler de coche. Introduzca sus datos personales y de pago para finalizar el proceso de alquiler.')} />
+        <meta name="robots" content="noindex, nofollow" />
+        
+        {/* OpenGraph / Facebook */}
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content={`https://www.ovautomocion.es/${currentLanguage !== 'es' ? currentLanguage + '/' : ''}checkout`} />
+        <meta property="og:title" content={`${t('checkout.title', 'Completar Reserva')} | O.V. Automoción`} />
+        <meta property="og:description" content={t('checkout.metaDescription', 'Complete su reserva de alquiler de coche. Introduzca sus datos personales y de pago para finalizar el proceso de alquiler.')} />
+        
+        {/* Запрет на кеширование */}
+        <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate" />
+        <meta http-equiv="Pragma" content="no-cache" />
+        <meta http-equiv="Expires" content="0" />
+      </Helmet>
+      
       <div className="min-h-screen bg-gray-50 dark:bg-premium-black">
         <div className="max-w-7xl mx-auto py-12 px-4 sm:px-6 lg:px-8">
           <div className="max-w-3xl mx-auto">

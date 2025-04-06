@@ -2,6 +2,7 @@ import { useState } from 'react'
 import { motion } from 'framer-motion'
 import { useTranslation } from 'react-i18next'
 import PageTransition from '../components/PageTransition'
+import { Helmet } from 'react-helmet-async'
 
 interface ContactForm {
   name: string
@@ -11,7 +12,8 @@ interface ContactForm {
 }
 
 const ContactPage = () => {
-  const { t } = useTranslation()
+  const { t, i18n } = useTranslation()
+  const currentLanguage = i18n.language || 'es'
   const [form, setForm] = useState<ContactForm>({
     name: '',
     email: '',
@@ -27,6 +29,65 @@ const ContactPage = () => {
 
   return (
     <PageTransition>
+      <Helmet>
+        <title>{t('contact.title', 'Contacto')} | O.V. Automoción</title>
+        <meta name="description" content={t('contact.metaDescription', 'Ponte en contacto con O.V. Automoción en Vila-seca, Tarragona. Horarios, ubicación, teléfono y formulario de contacto para resolver tus dudas sobre alquiler de coches.')} />
+        <meta name="keywords" content={t('contact.metaKeywords', 'contacto, alquiler coches, Vila-seca, Tarragona, dirección, telefono')} />
+        
+        {/* OpenGraph / Facebook */}
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content={`https://www.ovautomocion.es/${currentLanguage !== 'es' ? currentLanguage + '/' : ''}contact`} />
+        <meta property="og:title" content={`${t('contact.title', 'Contacto')} | O.V. Automoción`} />
+        <meta property="og:description" content={t('contact.metaDescription', 'Ponte en contacto con O.V. Automoción en Vila-seca, Tarragona. Horarios, ubicación, teléfono y formulario de contacto para resolver tus dudas sobre alquiler de coches.')} />
+        <meta property="og:image" content="https://www.ovautomocion.es/images/contact-hero.jpg" />
+        
+        {/* Twitter */}
+        <meta property="twitter:card" content="summary_large_image" />
+        <meta property="twitter:url" content={`https://www.ovautomocion.es/${currentLanguage !== 'es' ? currentLanguage + '/' : ''}contact`} />
+        <meta property="twitter:title" content={`${t('contact.title', 'Contacto')} | O.V. Automoción`} />
+        <meta property="twitter:description" content={t('contact.metaDescription', 'Ponte en contacto con O.V. Automoción en Vila-seca, Tarragona. Horarios, ubicación, teléfono y formulario de contacto para resolver tus dudas sobre alquiler de coches.')} />
+        <meta property="twitter:image" content="https://www.ovautomocion.es/images/contact-hero.jpg" />
+        
+        {/* Альтернативные языковые версии */}
+        <link rel="alternate" hreflang="es" href="https://www.ovautomocion.es/contact" />
+        <link rel="alternate" hreflang="en" href="https://www.ovautomocion.es/en/contact" />
+        <link rel="alternate" hreflang="de" href="https://www.ovautomocion.es/de/contact" />
+        <link rel="alternate" hreflang="fr" href="https://www.ovautomocion.es/fr/contact" />
+        <link rel="alternate" hreflang="ru" href="https://www.ovautomocion.es/ru/contact" />
+        <link rel="alternate" hreflang="x-default" href="https://www.ovautomocion.es/contact" />
+        
+        {/* JSON-LD структурированные данные */}
+        <script type="application/ld+json">
+          {JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "LocalBusiness",
+            "name": "O.V. Automoción",
+            "image": "https://www.ovautomocion.es/images/contact-hero.jpg",
+            "url": `https://www.ovautomocion.es/${currentLanguage !== 'es' ? currentLanguage + '/' : ''}contact`,
+            "telephone": "+34671332591",
+            "email": "ovautomocion@gmail.com",
+            "address": {
+              "@type": "PostalAddress",
+              "streetAddress": "Carrer del Mas de l'Abat 145F",
+              "addressLocality": "Vila-seca",
+              "addressRegion": "Tarragona",
+              "postalCode": "43480",
+              "addressCountry": "ES"
+            },
+            "geo": {
+              "@type": "GeoCoordinates",
+              "latitude": "41.1054",
+              "longitude": "1.1502"
+            },
+            "openingHoursSpecification": {
+              "@type": "OpeningHoursSpecification",
+              "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"],
+              "opens": "09:00",
+              "closes": "20:00"
+            }
+          })}
+        </script>
+      </Helmet>
       <div className="bg-white dark:bg-premium-black">
         {/* Hero Section */}
         <div className="relative h-[350px] sm:h-[450px] lg:h-[550px] bg-gradient-to-r from-premium-black to-premium-black/90">

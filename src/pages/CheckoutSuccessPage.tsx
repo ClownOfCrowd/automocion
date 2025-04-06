@@ -3,13 +3,32 @@ import { motion } from 'framer-motion'
 import { useTranslation } from 'react-i18next'
 import { CheckCircleIcon } from '@heroicons/react/24/outline'
 import PageTransition from '../components/PageTransition'
+import { Helmet } from 'react-helmet-async'
 
 const CheckoutSuccessPage = () => {
-  const { t } = useTranslation()
+  const { t, i18n } = useTranslation()
   const navigate = useNavigate()
+  const currentLanguage = i18n.language || 'es'
 
   return (
     <PageTransition>
+      <Helmet>
+        <title>{t('checkout.success.title', 'Reserva Completada')} | O.V. Automoción</title>
+        <meta name="description" content={t('checkout.success.metaDescription', 'Su reserva de alquiler de coche ha sido procesada con éxito. Gracias por confiar en O.V. Automoción.')} />
+        <meta name="robots" content="noindex, nofollow" />
+        
+        {/* OpenGraph / Facebook */}
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content={`https://www.ovautomocion.es/${currentLanguage !== 'es' ? currentLanguage + '/' : ''}checkout/success`} />
+        <meta property="og:title" content={`${t('checkout.success.title', 'Reserva Completada')} | O.V. Automoción`} />
+        <meta property="og:description" content={t('checkout.success.metaDescription', 'Su reserva de alquiler de coche ha sido procesada con éxito. Gracias por confiar en O.V. Automoción.')} />
+        
+        {/* Запрет на кеширование */}
+        <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate" />
+        <meta http-equiv="Pragma" content="no-cache" />
+        <meta http-equiv="Expires" content="0" />
+      </Helmet>
+      
       <div className="min-h-screen flex items-center justify-center bg-gray-50 dark:bg-premium-black py-8 px-4 sm:px-6 lg:px-8">
         <div className="max-w-md w-full space-y-8 text-center">
           <motion.div

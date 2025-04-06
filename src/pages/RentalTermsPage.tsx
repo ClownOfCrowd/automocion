@@ -1,9 +1,11 @@
 import { useTranslation } from 'react-i18next';
 import { motion } from 'framer-motion';
 import PageTransition from '../components/PageTransition';
+import { Helmet } from 'react-helmet-async';
 
 const RentalTermsPage = () => {
-  const { t } = useTranslation();
+  const { t, i18n } = useTranslation();
+  const currentLanguage = i18n.language || 'es';
 
   const sections = [
     {
@@ -99,6 +101,32 @@ const RentalTermsPage = () => {
 
   return (
     <PageTransition>
+      <Helmet>
+        <title>{t('rental.termsTitle', 'Condiciones de Alquiler')} | O.V. Automoción</title>
+        <meta name="description" content={t('rental.metaDescription', 'Términos y condiciones para el alquiler de vehículos en O.V. Automoción. Requisitos, coberturas, seguros, exclusiones y políticas de alquiler de nuestro servicio de coches en Vila-seca.')} />
+        <meta name="keywords" content={t('rental.metaKeywords', 'condiciones alquiler, requisitos, seguros, coberturas, políticas, alquiler coches')} />
+        
+        {/* OpenGraph / Facebook */}
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content={`https://www.ovautomocion.es/${currentLanguage !== 'es' ? currentLanguage + '/' : ''}rental-terms`} />
+        <meta property="og:title" content={`${t('rental.termsTitle', 'Condiciones de Alquiler')} | O.V. Automoción`} />
+        <meta property="og:description" content={t('rental.metaDescription', 'Términos y condiciones para el alquiler de vehículos en O.V. Automoción. Requisitos, coberturas, seguros, exclusiones y políticas de alquiler de nuestro servicio de coches en Vila-seca.')} />
+        
+        {/* Twitter */}
+        <meta property="twitter:card" content="summary" />
+        <meta property="twitter:url" content={`https://www.ovautomocion.es/${currentLanguage !== 'es' ? currentLanguage + '/' : ''}rental-terms`} />
+        <meta property="twitter:title" content={`${t('rental.termsTitle', 'Condiciones de Alquiler')} | O.V. Automoción`} />
+        <meta property="twitter:description" content={t('rental.metaDescription', 'Términos y condiciones para el alquiler de vehículos en O.V. Automoción. Requisitos, coberturas, seguros, exclusiones y políticas de alquiler de nuestro servicio de coches en Vila-seca.')} />
+        
+        {/* Альтернативные языковые версии */}
+        <link rel="alternate" hreflang="es" href="https://www.ovautomocion.es/rental-terms" />
+        <link rel="alternate" hreflang="en" href="https://www.ovautomocion.es/en/rental-terms" />
+        <link rel="alternate" hreflang="de" href="https://www.ovautomocion.es/de/rental-terms" />
+        <link rel="alternate" hreflang="fr" href="https://www.ovautomocion.es/fr/rental-terms" />
+        <link rel="alternate" hreflang="ru" href="https://www.ovautomocion.es/ru/rental-terms" />
+        <link rel="alternate" hreflang="x-default" href="https://www.ovautomocion.es/rental-terms" />
+      </Helmet>
+
       {/* Hero Section */}
       <section className="relative h-[50vh] bg-gradient-to-r from-premium-black to-premium-black/90">
         <div className="absolute inset-0">

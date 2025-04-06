@@ -414,8 +414,8 @@
     "invalidPostalCode": "Please enter a valid postal code"
   },
   "whatsapp": {
-    "message": "Contact us on WhatsApp",
-    "available": "We are online, quick response!"
+    "message": "Message us on WhatsApp",
+    "available": "We're online, quick response!"
   },
   "cyberground": {
     "message": "Hello, I would like to inquire about your digital services for my website project"

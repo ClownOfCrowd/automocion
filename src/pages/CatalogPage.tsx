@@ -1,15 +1,19 @@
-import { useState, useEffect } from 'react'
-import { useNavigate, useLocation } from 'react-router-dom'
+import { useState, useEffect, useMemo } from 'react'
+import { useNavigate, useLocation, Link } from 'react-router-dom'
 import { useTranslation } from 'react-i18next'
 import { motion } from 'framer-motion'
 import { 
   AdjustmentsHorizontalIcon, 
   FunnelIcon,
-  XMarkIcon
+  XMarkIcon,
+  ArrowPathIcon,
+  ChevronDownIcon
 } from '@heroicons/react/24/outline'
+import { StarIcon } from '@heroicons/react/24/solid'
 import { cars } from '../data/cars'
 import LazyImage from '../components/LazyImage'
 import PageTransition from '../components/PageTransition'
+import { Helmet } from 'react-helmet-async'
 
 interface Filters {
   category: string
@@ -21,9 +25,10 @@ interface Filters {
 }
 
 const CatalogPage = () => {
-  const { t } = useTranslation()
+  const { t, i18n } = useTranslation()
   const navigate = useNavigate()
   const location = useLocation()
+  const currentLanguage = i18n.language || 'es'
   const [isFiltersOpen, setIsFiltersOpen] = useState(false)
   const [sortBy, setSortBy] = useState('price-asc')
   
@@ -140,6 +145,59 @@ const CatalogPage = () => {
 
   return (
     <PageTransition>
+      <Helmet>
+        <title>{t('catalog.title', 'Catálogo de Coches')} | O.V. Automoción</title>
+        <meta name="description" content={t('catalog.metaDescription', 'Explora nuestra amplia selección de vehículos de alquiler, desde económicos hasta premium. Encuentra el coche perfecto para tus necesidades en Vila-seca, Tarragona.')} />
+        <meta name="keywords" content={t('catalog.metaKeywords', 'alquiler coches Vila-seca, catalogo vehiculos, coches disponibles, SUV, economicos, premium')} />
+        
+        {/* OpenGraph / Facebook */}
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content={`https://www.ovautomocion.es/${currentLanguage !== 'es' ? currentLanguage + '/' : ''}catalog${location.search}`} />
+        <meta property="og:title" content={`${t('catalog.title', 'Catálogo de Coches')} | O.V. Automoción`} />
+        <meta property="og:description" content={t('catalog.metaDescription', 'Explora nuestra amplia selección de vehículos de alquiler, desde económicos hasta premium. Encuentra el coche perfecto para tus necesidades en Vila-seca, Tarragona.')} />
+        <meta property="og:image" content="https://www.ovautomocion.es/images/hero/catalog-hero.jpg" />
+        
+        {/* Twitter */}
+        <meta property="twitter:card" content="summary_large_image" />
+        <meta property="twitter:url" content={`https://www.ovautomocion.es/${currentLanguage !== 'es' ? currentLanguage + '/' : ''}catalog${location.search}`} />
+        <meta property="twitter:title" content={`${t('catalog.title', 'Catálogo de Coches')} | O.V. Automoción`} />
+        <meta property="twitter:description" content={t('catalog.metaDescription', 'Explora nuestra amplia selección de vehículos de alquiler, desde económicos hasta premium. Encuentra el coche perfecto para tus necesidades en Vila-seca, Tarragona.')} />
+        <meta property="twitter:image" content="https://www.ovautomocion.es/images/hero/catalog-hero.jpg" />
+        
+        {/* Альтернативные языковые версии */}
+        <link rel="alternate" hreflang="es" href={`https://www.ovautomocion.es/catalog${location.search}`} />
+        <link rel="alternate" hreflang="en" href={`https://www.ovautomocion.es/en/catalog${location.search}`} />
+        <link rel="alternate" hreflang="de" href={`https://www.ovautomocion.es/de/catalog${location.search}`} />
+        <link rel="alternate" hreflang="fr" href={`https://www.ovautomocion.es/fr/catalog${location.search}`} />
+        <link rel="alternate" hreflang="ru" href={`https://www.ovautomocion.es/ru/catalog${location.search}`} />
+        <link rel="alternate" hreflang="x-default" href={`https://www.ovautomocion.es/catalog${location.search}`} />
+        
+        {/* JSON-LD структурированные данные */}
+        <script type="application/ld+json">
+          {JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "ItemList",
+            "itemListElement": filteredCars.map((car, index) => ({
+              "@type": "ListItem",
+              "position": index + 1,
+              "item": {
+                "@type": "Product",
+                "name": car.name,
+                "image": `https://www.ovautomocion.es${car.image}`,
+                "description": t(car.description),
+                "offers": {
+                  "@type": "Offer",
+                  "url": `https://www.ovautomocion.es/${currentLanguage !== 'es' ? currentLanguage + '/' : ''}catalog/${car.id}`,
+                  "priceCurrency": "EUR",
+                  "price": car.price,
+                  "availability": "https://schema.org/InStock"
+                }
+              }
+            }))
+          })}
+        </script>
+      </Helmet>
+      
       <div className="min-h-screen bg-white dark:bg-premium-black">
         {/* Hero Section */}
         <section className="relative py-16 bg-gradient-to-r from-premium-black to-premium-black/90">
@@ -371,7 +429,9 @@ const CatalogPage = () => {
                           <LazyImage
                             src={car.image}
                             alt={car.name}
-                            className="w-full h-full object-cover"
+                            className="w-full h-full"
+                            objectFit="contain"
+                            maxHeight={180}
                           />
                           <div className="absolute top-4 right-4 bg-premium-gold text-white px-4 py-1 rounded-full text-sm">
                             {t('common.fromPrice', { price: car.price })}

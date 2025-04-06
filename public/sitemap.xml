@@ -2,7 +2,7 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:image="http://www.google.com/schemas/sitemap-image/1.1" xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9&#xD;&#xA;                            http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd&#xD;&#xA;                            http://www.google.com/schemas/sitemap-image/1.1&#xD;&#xA;                            http://www.google.com/schemas/sitemap-image/1.1/sitemap-image.xsd">
   <url>
     <loc>https://www.ovautomocion.es/</loc>
-    <lastmod>2025-03-29</lastmod>
+    <lastmod>2025-04-06</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
     <image:image>
@@ -192,7 +192,7 @@
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
     <image:image>
-      <image:loc>https://www.ovautomocion.es/cars/mini-cooper-s.jpg</image:loc>
+      <image:loc>https://www.ovautomocion.es/cars/mini-cooper-s.png</image:loc>
       <image:title>O.V. Automoción - Mini Cooper S rental in Vila-seca</image:title>
     </image:image>
   </url>
@@ -202,7 +202,7 @@
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
     <image:image>
-      <image:loc>https://www.ovautomocion.es/cars/citroen-c3.jpg</image:loc>
+      <image:loc>https://www.ovautomocion.es/cars/citroen-c3.png</image:loc>
       <image:title>O.V. Automoción - Citroen C3 rental in Vila-seca</image:title>
     </image:image>
   </url>
@@ -212,7 +212,7 @@
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
     <image:image>
-      <image:loc>https://www.ovautomocion.es/cars/peugeot-208.jpg</image:loc>
+      <image:loc>https://www.ovautomocion.es/cars/peugeot-208.png</image:loc>
       <image:title>O.V. Automoción - Peugeot 208 rental in Vila-seca</image:title>
     </image:image>
   </url>
@@ -222,7 +222,7 @@
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
     <image:image>
-      <image:loc>https://www.ovautomocion.es/cars/peugeot-207sw.jpg</image:loc>
+      <image:loc>https://www.ovautomocion.es/cars/peugeot-207sw.png</image:loc>
       <image:title>O.V. Automoción - Peugeot 207 SW rental in Vila-seca</image:title>
     </image:image>
   </url>
@@ -232,7 +232,7 @@
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
     <image:image>
-      <image:loc>https://www.ovautomocion.es/cars/range-rover-velar.jpg</image:loc>
+      <image:loc>https://www.ovautomocion.es/cars/range-rover-velar.png</image:loc>
       <image:title>O.V. Automoción - Range Rover Velar rental in Vila-seca</image:title>
     </image:image>
   </url>
@@ -242,7 +242,7 @@
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
     <image:image>
-      <image:loc>https://www.ovautomocion.es/cars/mercedes-gle.jpg</image:loc>
+      <image:loc>https://www.ovautomocion.es/cars/mercedes-gle.png</image:loc>
       <image:title>O.V. Automoción - Mercedes GLE rental in Vila-seca</image:title>
     </image:image>
   </url>
@@ -252,7 +252,7 @@
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
     <image:image>
-      <image:loc>https://www.ovautomocion.es/cars/seat-ibiza.jpg</image:loc>
+      <image:loc>https://www.ovautomocion.es/cars/seat-ibiza.png</image:loc>
       <image:title>O.V. Automoción - Seat Ibiza rental in Vila-seca</image:title>
     </image:image>
   </url>

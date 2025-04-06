@@ -1,6 +1,6 @@
 import { BrowserRouter as Router, Routes, Route, useLocation } from 'react-router-dom'
 import { AnimatePresence } from 'framer-motion'
-import { Suspense } from 'react'
+import { Suspense, lazy } from 'react'
 import MainLayout from './layouts/MainLayout'
 import HomePage from './pages/HomePage'
 import CarDetailPage from './pages/CarDetailPage'
@@ -21,6 +21,7 @@ import BlogPage from './pages/BlogPage'
 import BlogPostPage from './pages/BlogPostPage'
 import NewsPage from './pages/NewsPage'
 import NewsArticlePage from './pages/NewsArticlePage'
+import { HelmetProvider } from 'react-helmet-async'
 
 const AnimatedRoutes = () => {
   const location = useLocation()
@@ -93,6 +94,262 @@ const AnimatedRoutes = () => {
               </Suspense>
             } />
           </Route>
+          
+          {/* English routes */}
+          <Route path="/en" element={<MainLayout />}>
+            <Route index element={
+              <Suspense fallback={null}>
+                <HomePage />
+              </Suspense>
+            } />
+            <Route path="catalog" element={
+              <Suspense fallback={null}>
+                <CatalogPage />
+              </Suspense>
+            } />
+            <Route path="catalog/:id" element={
+              <Suspense fallback={null}>
+                <CarDetailPage />
+              </Suspense>
+            } />
+            <Route path="contact" element={
+              <Suspense fallback={null}>
+                <ContactPage />
+              </Suspense>
+            } />
+            <Route path="checkout" element={
+              <Suspense fallback={null}>
+                <CheckoutPage />
+              </Suspense>
+            } />
+            <Route path="checkout/success" element={
+              <Suspense fallback={null}>
+                <CheckoutSuccessPage />
+              </Suspense>
+            } />
+            <Route path="terms" element={
+              <Suspense fallback={null}>
+                <RentalTermsPage />
+              </Suspense>
+            } />
+            <Route path="privacy" element={
+              <Suspense fallback={null}>
+                <PrivacyPage />
+              </Suspense>
+            } />
+            <Route path="blog" element={
+              <Suspense fallback={null}>
+                <BlogPage />
+              </Suspense>
+            } />
+            <Route path="blog/:postId" element={
+              <Suspense fallback={null}>
+                <BlogPostPage />
+              </Suspense>
+            } />
+            <Route path="news" element={
+              <Suspense fallback={null}>
+                <NewsPage />
+              </Suspense>
+            } />
+            <Route path="news/:articleId" element={
+              <Suspense fallback={null}>
+                <NewsArticlePage />
+              </Suspense>
+            } />
+          </Route>
+          
+          {/* French routes */}
+          <Route path="/fr" element={<MainLayout />}>
+            <Route index element={
+              <Suspense fallback={null}>
+                <HomePage />
+              </Suspense>
+            } />
+            <Route path="catalog" element={
+              <Suspense fallback={null}>
+                <CatalogPage />
+              </Suspense>
+            } />
+            <Route path="catalog/:id" element={
+              <Suspense fallback={null}>
+                <CarDetailPage />
+              </Suspense>
+            } />
+            <Route path="contact" element={
+              <Suspense fallback={null}>
+                <ContactPage />
+              </Suspense>
+            } />
+            <Route path="checkout" element={
+              <Suspense fallback={null}>
+                <CheckoutPage />
+              </Suspense>
+            } />
+            <Route path="checkout/success" element={
+              <Suspense fallback={null}>
+                <CheckoutSuccessPage />
+              </Suspense>
+            } />
+            <Route path="terms" element={
+              <Suspense fallback={null}>
+                <RentalTermsPage />
+              </Suspense>
+            } />
+            <Route path="privacy" element={
+              <Suspense fallback={null}>
+                <PrivacyPage />
+              </Suspense>
+            } />
+            <Route path="blog" element={
+              <Suspense fallback={null}>
+                <BlogPage />
+              </Suspense>
+            } />
+            <Route path="blog/:postId" element={
+              <Suspense fallback={null}>
+                <BlogPostPage />
+              </Suspense>
+            } />
+            <Route path="news" element={
+              <Suspense fallback={null}>
+                <NewsPage />
+              </Suspense>
+            } />
+            <Route path="news/:articleId" element={
+              <Suspense fallback={null}>
+                <NewsArticlePage />
+              </Suspense>
+            } />
+          </Route>
+          
+          {/* German routes */}
+          <Route path="/de" element={<MainLayout />}>
+            <Route index element={
+              <Suspense fallback={null}>
+                <HomePage />
+              </Suspense>
+            } />
+            <Route path="catalog" element={
+              <Suspense fallback={null}>
+                <CatalogPage />
+              </Suspense>
+            } />
+            <Route path="catalog/:id" element={
+              <Suspense fallback={null}>
+                <CarDetailPage />
+              </Suspense>
+            } />
+            <Route path="contact" element={
+              <Suspense fallback={null}>
+                <ContactPage />
+              </Suspense>
+            } />
+            <Route path="checkout" element={
+              <Suspense fallback={null}>
+                <CheckoutPage />
+              </Suspense>
+            } />
+            <Route path="checkout/success" element={
+              <Suspense fallback={null}>
+                <CheckoutSuccessPage />
+              </Suspense>
+            } />
+            <Route path="terms" element={
+              <Suspense fallback={null}>
+                <RentalTermsPage />
+              </Suspense>
+            } />
+            <Route path="privacy" element={
+              <Suspense fallback={null}>
+                <PrivacyPage />
+              </Suspense>
+            } />
+            <Route path="blog" element={
+              <Suspense fallback={null}>
+                <BlogPage />
+              </Suspense>
+            } />
+            <Route path="blog/:postId" element={
+              <Suspense fallback={null}>
+                <BlogPostPage />
+              </Suspense>
+            } />
+            <Route path="news" element={
+              <Suspense fallback={null}>
+                <NewsPage />
+              </Suspense>
+            } />
+            <Route path="news/:articleId" element={
+              <Suspense fallback={null}>
+                <NewsArticlePage />
+              </Suspense>
+            } />
+          </Route>
+          
+          {/* Russian routes */}
+          <Route path="/ru" element={<MainLayout />}>
+            <Route index element={
+              <Suspense fallback={null}>
+                <HomePage />
+              </Suspense>
+            } />
+            <Route path="catalog" element={
+              <Suspense fallback={null}>
+                <CatalogPage />
+              </Suspense>
+            } />
+            <Route path="catalog/:id" element={
+              <Suspense fallback={null}>
+                <CarDetailPage />
+              </Suspense>
+            } />
+            <Route path="contact" element={
+              <Suspense fallback={null}>
+                <ContactPage />
+              </Suspense>
+            } />
+            <Route path="checkout" element={
+              <Suspense fallback={null}>
+                <CheckoutPage />
+              </Suspense>
+            } />
+            <Route path="checkout/success" element={
+              <Suspense fallback={null}>
+                <CheckoutSuccessPage />
+              </Suspense>
+            } />
+            <Route path="terms" element={
+              <Suspense fallback={null}>
+                <RentalTermsPage />
+              </Suspense>
+            } />
+            <Route path="privacy" element={
+              <Suspense fallback={null}>
+                <PrivacyPage />
+              </Suspense>
+            } />
+            <Route path="blog" element={
+              <Suspense fallback={null}>
+                <BlogPage />
+              </Suspense>
+            } />
+            <Route path="blog/:postId" element={
+              <Suspense fallback={null}>
+                <BlogPostPage />
+              </Suspense>
+            } />
+            <Route path="news" element={
+              <Suspense fallback={null}>
+                <NewsPage />
+              </Suspense>
+            } />
+            <Route path="news/:articleId" element={
+              <Suspense fallback={null}>
+                <NewsArticlePage />
+              </Suspense>
+            } />
+          </Route>
         </Routes>
       </AnimatePresence>
       <BookingNotifications />
@@ -102,14 +359,16 @@ const AnimatedRoutes = () => {
 
 function App() {
   return (
-    <ThemeProvider>
-      <LoadingProvider>
-        <Router>
-          <ScrollToTop />
-          <AnimatedRoutes />
-        </Router>
-      </LoadingProvider>
-    </ThemeProvider>
+    <HelmetProvider>
+      <ThemeProvider>
+        <LoadingProvider>
+          <Router>
+            <ScrollToTop />
+            <AnimatedRoutes />
+          </Router>
+        </LoadingProvider>
+      </ThemeProvider>
+    </HelmetProvider>
   )
 }
 

@@ -2,7 +2,7 @@ import { useTranslation } from 'react-i18next'
 import { Link } from 'react-router-dom'
 import { motion } from 'framer-motion'
 import PageTransition from '../components/PageTransition'
-import { Helmet } from 'react-helmet'
+import { Helmet } from 'react-helmet-async'
 
 interface BlogPost {
   id: string
@@ -122,9 +122,9 @@ const BlogPage = () => {
         {/* Альтернативные языковые версии */}
         <link rel="alternate" hreflang="es" href="https://www.ovautomocion.es/blog" />
         <link rel="alternate" hreflang="en" href="https://www.ovautomocion.es/en/blog" />
-        <link rel="alternate" hreflang="ru" href="https://www.ovautomocion.es/ru/blog" />
         <link rel="alternate" hreflang="de" href="https://www.ovautomocion.es/de/blog" />
         <link rel="alternate" hreflang="fr" href="https://www.ovautomocion.es/fr/blog" />
+        <link rel="alternate" hreflang="ru" href="https://www.ovautomocion.es/ru/blog" />
         <link rel="alternate" hreflang="x-default" href="https://www.ovautomocion.es/blog" />
         
         {/* JSON-LD структурированные данные */}
