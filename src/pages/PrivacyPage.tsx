@@ -1,20 +1,39 @@
-import { useState } from 'react'
 import { useTranslation } from 'react-i18next'
 import { motion } from 'framer-motion'
 import { fadeIn } from '../utils/animations'
 import PageTransition from '../components/PageTransition'
-import SEO from '../components/SEO'
+import SEOHead from '../components/SEO/SEOHead'
 
 const PrivacyPage = () => {
   const { t, i18n } = useTranslation()
   const currentLanguage = i18n.language || 'es'
 
+  // Структурированные данные для страницы политики конфиденциальности
+  const structuredData = {
+    "@context": "https://schema.org",
+    "@type": "WebPage",
+    "name": t('privacy.title'),
+    "description": t('privacy.metaDescription'),
+    "publisher": {
+      "@type": "Organization",
+      "name": "O.V. Automoción",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://www.ovautomocion.es/images/logo.png"
+      }
+    },
+    "inLanguage": currentLanguage
+  };
+
   return (
     <PageTransition>
-      <SEO
-        title={`${t('privacy.title', 'Política de Privacidad')} | O.V. Automoción`}
-        description={t('privacy.metaDescription', 'Política de privacidad de O.V. Automoción. Información sobre cómo recogemos, procesamos y protegemos sus datos personales cuando utiliza nuestro servicio de alquiler de coches.')}
-        keywords={t('privacy.metaKeywords', 'privacidad, protección datos, RGPD, cookies, alquiler coches')}
+      <SEOHead
+        title={`${t('privacy.title')} | O.V. Automoción`}
+        description={t('privacy.metaDescription')}
+        structuredData={structuredData}
+        additionalMetaTags={[
+          { name: 'keywords', content: t('privacy.metaKeywords') }
+        ]}
       />
       
       <div className="w-full">
@@ -26,7 +45,7 @@ const PrivacyPage = () => {
               animate="visible"
               className="text-4xl font-bold text-white mb-4"
             >
-              {t('privacy.title', 'Privacy Policy')}
+              {t('privacy.title')}
             </motion.h1>
             <motion.p 
               variants={fadeIn}
@@ -34,7 +53,7 @@ const PrivacyPage = () => {
               animate="visible"
               className="text-premium-silver"
             >
-              {t('privacy.subtitle', 'How we protect and use your data')}
+              {t('privacy.subtitle')}
             </motion.p>
           </div>
         </div>
@@ -48,67 +67,67 @@ const PrivacyPage = () => {
               className="space-y-8"
             >
               <section>
-                <h2 className="text-2xl font-semibold mb-4">{t('privacy.company.title', 'Company Information')}</h2>
-                <p>{t('privacy.company.name', 'Company Name')}: OV Automoción</p>
-                <p>{t('privacy.company.address', 'Registered Address')}:<br />
+                <h2 className="text-2xl font-semibold mb-4">{t('privacy.company.title')}</h2>
+                <p>{t('privacy.company.name')}: OV Automoción</p>
+                <p>{t('privacy.company.address')}:<br />
                   Carrer Mas del L Abat, 145F<br />
                   Poligono Ind. Alba<br />
                   43480-Vilaseca<br />
                   TARRAGONA
                 </p>
-                <p>{t('privacy.company.email', 'Email')}: ovautomocion@gmail.com</p>
-                <p>{t('privacy.company.id', 'Company ID')}: IX8855040V</p>
-                <p>{t('privacy.company.vat', 'VAT Number')}: X8855040V</p>
-                <p>{t('privacy.company.authority', 'Regulatory Authority')}: España</p>
+                <p>{t('privacy.company.email')}: ovautomocion@gmail.com</p>
+                <p>{t('privacy.company.id')}: IX8855040V</p>
+                <p>{t('privacy.company.vat')}: X8855040V</p>
+                <p>{t('privacy.company.authority')}: España</p>
               </section>
 
               <section>
-                <h2 className="text-2xl font-semibold mb-4">{t('privacy.dataCollection.title', 'Data Collection')}</h2>
-                <p>{t('privacy.dataCollection.description', 'We collect and process your personal data for the following purposes:')}</p>
+                <h2 className="text-2xl font-semibold mb-4">{t('privacy.dataCollection.title')}</h2>
+                <p>{t('privacy.dataCollection.description')}</p>
                 <ul className="list-disc pl-6 space-y-2">
-                  <li>{t('privacy.dataCollection.booking', 'Processing your car rental bookings')}</li>
-                  <li>{t('privacy.dataCollection.communication', 'Communicating with you about your rentals')}</li>
-                  <li>{t('privacy.dataCollection.legal', 'Complying with legal requirements')}</li>
-                  <li>{t('privacy.dataCollection.improvement', 'Improving our services')}</li>
+                  <li>{t('privacy.dataCollection.booking')}</li>
+                  <li>{t('privacy.dataCollection.communication')}</li>
+                  <li>{t('privacy.dataCollection.legal')}</li>
+                  <li>{t('privacy.dataCollection.improvement')}</li>
                 </ul>
               </section>
 
               <section>
-                <h2 className="text-2xl font-semibold mb-4">{t('privacy.dataProtection.title', 'Data Protection')}</h2>
-                <p>{t('privacy.dataProtection.description', 'We implement appropriate technical and organizational measures to ensure the security of your personal data, including:')}</p>
+                <h2 className="text-2xl font-semibold mb-4">{t('privacy.dataProtection.title')}</h2>
+                <p>{t('privacy.dataProtection.description')}</p>
                 <ul className="list-disc pl-6 space-y-2">
-                  <li>{t('privacy.dataProtection.encryption', 'Data encryption')}</li>
-                  <li>{t('privacy.dataProtection.access', 'Limited access to personal information')}</li>
-                  <li>{t('privacy.dataProtection.monitoring', 'Regular security monitoring')}</li>
-                  <li>{t('privacy.dataProtection.training', 'Staff training on data protection')}</li>
+                  <li>{t('privacy.dataProtection.encryption')}</li>
+                  <li>{t('privacy.dataProtection.access')}</li>
+                  <li>{t('privacy.dataProtection.monitoring')}</li>
+                  <li>{t('privacy.dataProtection.training')}</li>
                 </ul>
               </section>
 
               <section>
-                <h2 className="text-2xl font-semibold mb-4">{t('privacy.cookies.title', 'Use of Cookies')}</h2>
-                <p>{t('privacy.cookies.description', 'Our website uses cookies to enhance your browsing experience. These cookies may include:')}</p>
+                <h2 className="text-2xl font-semibold mb-4">{t('privacy.cookies.title')}</h2>
+                <p>{t('privacy.cookies.description')}</p>
                 <ul className="list-disc pl-6 space-y-2">
-                  <li>{t('privacy.cookies.essential', 'Essential cookies for website functionality')}</li>
-                  <li>{t('privacy.cookies.analytics', 'Analytics cookies to improve our service')}</li>
-                  <li>{t('privacy.cookies.preferences', 'Preference cookies to remember your settings')}</li>
+                  <li>{t('privacy.cookies.essential')}</li>
+                  <li>{t('privacy.cookies.analytics')}</li>
+                  <li>{t('privacy.cookies.preferences')}</li>
                 </ul>
               </section>
 
               <section>
-                <h2 className="text-2xl font-semibold mb-4">{t('privacy.rights.title', 'Your Rights')}</h2>
-                <p>{t('privacy.rights.description', 'We are here to help you with your data. You can:')}</p>
+                <h2 className="text-2xl font-semibold mb-4">{t('privacy.rights.title')}</h2>
+                <p>{t('privacy.rights.description')}</p>
                 <ul className="list-disc pl-6 space-y-2">
-                  <li>{t('privacy.rights.access', 'Request a copy of your data')}</li>
-                  <li>{t('privacy.rights.correct', 'Correct inaccurate information')}</li>
-                  <li>{t('privacy.rights.delete', 'Delete your data')}</li>
-                  <li>{t('privacy.rights.transfer', 'Transfer your data to another company')}</li>
-                  <li>{t('privacy.rights.object', 'Object to data processing')}</li>
+                  <li>{t('privacy.rights.access')}</li>
+                  <li>{t('privacy.rights.correct')}</li>
+                  <li>{t('privacy.rights.delete')}</li>
+                  <li>{t('privacy.rights.transfer')}</li>
+                  <li>{t('privacy.rights.object')}</li>
                 </ul>
               </section>
 
               <section>
-                <h2 className="text-2xl font-semibold mb-4">{t('privacy.contact.title', 'Contact Us')}</h2>
-                <p>{t('privacy.contact.description', 'For any privacy-related queries or to exercise your rights, please contact us at:')}</p>
+                <h2 className="text-2xl font-semibold mb-4">{t('privacy.contact.title')}</h2>
+                <p>{t('privacy.contact.description')}</p>
                 <p className="mt-2">Email: ovautomocion@gmail.com</p>
               </section>
             </motion.div>

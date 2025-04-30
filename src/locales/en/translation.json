@@ -507,25 +507,25 @@
     "similar": "Similar Cars",
     "perDay": "day",
     "peugeot_208": {
-      "description": "Compact and economical city car"
+      "description": "Compact fuel-efficient city car with low fuel consumption"
     },
     "citroen_c3": {
-      "description": "Stylish and comfortable city car"
+      "description": "Stylish city hatchback with unique design and comfortable interior"
     },
     "mini_cooper_s": {
-      "description": "Sporty and elegant with exceptional performance"
+      "description": "Sporty compact car with excellent handling and dynamics"
     },
     "seat_ibiza": {
       "description": "Reliable and fuel-efficient compact car"
     },
     "peugeot_207sw": {
-      "description": "Practical station wagon with extra luggage space"
+      "description": "Practical family wagon with increased luggage space"
     },
     "mercedes_gle": {
       "description": "Luxurious and powerful SUV with premium features"
     },
     "range_rover_velar": {
-      "description": "Sophisticated design with advanced technology and off-road capability"
+      "description": "Sophisticated design with advanced technology and off-road capabilities"
     }
   },
   "popularCars": {
@@ -605,38 +605,66 @@
     }
   },
   "cookies": {
-    "message": "This website uses cookies to enhance your experience. By continuing to browse, you accept our cookie policy.",
-    "accept": "Accept",
+    "message": "This website uses cookies to improve your experience. You can choose which cookies to allow.",
+    "accept": "Accept All",
+    "reject": "Decline",
+    "details": "Details",
     "learnMore": "Learn More",
-    "privacy": "Privacy Policy"
+    "saveSettings": "Save Settings",
+    "alwaysActive": "Always Active",
+    "essential": {
+      "title": "Essential Cookies",
+      "description": "Necessary for the basic functionality of the site. Always active."
+    },
+    "analytics": {
+      "title": "Analytics Cookies",
+      "description": "Help us improve our website through usage statistics."
+    },
+    "preferences": {
+      "title": "Preference Cookies",
+      "description": "Store your preferences such as language and dark theme."
+    }
   },
   "privacy": {
     "title": "Privacy Policy",
+    "subtitle": "How we protect and use your data",
+    "metaDescription": "O.V. Automoción Privacy Policy. Information about how we collect, process, and protect your personal data when using our car rental services.",
+    "metaKeywords": "privacy, data protection, GDPR, cookies, car rental",
     "company": {
       "title": "Company Information",
       "name": "Company Name",
-      "address": "Address",
+      "address": "Registered Address",
       "email": "Email",
       "id": "Company ID",
       "vat": "VAT Number",
       "authority": "Regulatory Authority"
     },
-    "data": {
+    "dataCollection": {
       "title": "Data Collection",
-      "description": "We collect the following data:",
-      "purposes": "Purposes of data collection:"
+      "description": "We collect and process your personal data for the following purposes:",
+      "booking": "Processing your car rental bookings",
+      "communication": "Communicating with you about your rentals",
+      "legal": "Complying with legal requirements",
+      "improvement": "Improving our services"
     },
-    "protection": {
+    "dataProtection": {
       "title": "Data Protection",
-      "description": "We implement the following measures to protect your data:"
+      "description": "We implement appropriate technical and organizational measures to ensure the security of your personal data, including:",
+      "encryption": "Data encryption",
+      "access": "Limited access to personal information",
+      "monitoring": "Regular security monitoring",
+      "training": "Staff training on data protection"
     },
     "cookies": {
       "title": "Use of Cookies",
-      "description": "We use the following types of cookies:"
+      "description": "Our website uses cookies to enhance your browsing experience. These cookies may include:",
+      "essential": "Essential cookies for website functionality",
+      "analytics": "Analytics cookies to improve our service",
+      "preferences": "Preference cookies to remember your settings"
     },
     "rights": {
       "title": "Your Rights",
-      "description": "We're here to help you with your data. You can:",
+      "description": "We are here to help you with your data. You can:",
       "access": "Request a copy of your data",
       "correct": "Correct inaccurate information",
       "delete": "Delete your data",
@@ -645,7 +673,7 @@
     },
     "contact": {
       "title": "Contact Us",
-      "description": "For any questions about how we handle your personal data, you can reach us at:"
+      "description": "For any privacy-related queries or to exercise your rights, please contact us at:"
     }
   },
   "blog": {

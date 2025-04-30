@@ -5,7 +5,13 @@ import WhatsAppButton from '../components/WhatsAppButton'
 import BookingNotifications from '../components/BookingNotifications'
 import CookieConsent from '../components/CookieConsent'
 import { useTranslation } from 'react-i18next'
-import { Helmet } from 'react-helmet-async'
+import SEOHead from '../components/SEO/SEOHead'
+import HreflangTags from '../components/SEO/HreflangTags'
+
+// Конфигурация для SEO
+const SITE_URL = 'https://www.ovautomocion.es';
+const DEFAULT_LANGUAGE = 'es';
+const SUPPORTED_LANGUAGES = ['es', 'en', 'ru', 'de', 'fr'];
 
 const MainLayout = () => {
   const location = useLocation();
@@ -61,16 +67,57 @@ const MainLayout = () => {
   
   const { title, description } = getSeoData();
   
+  // Структурированные данные для LocalBusiness
+  const structuredData = {
+    "@context": "https://schema.org",
+    "@type": "LocalBusiness",
+    "name": "O.V. Automoción",
+    "image": `${SITE_URL}/images/logo.png`,
+    "url": SITE_URL,
+    "telephone": "+34 000 000 000",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "Calle Ejemplo, 123",
+      "addressLocality": "Vila-seca",
+      "postalCode": "43480",
+      "addressRegion": "Tarragona",
+      "addressCountry": "ES"
+    },
+    "geo": {
+      "@type": "GeoCoordinates",
+      "latitude": 41.1111,
+      "longitude": 1.1111
+    },
+    "openingHoursSpecification": [
+      {
+        "@type": "OpeningHoursSpecification",
+        "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
+        "opens": "09:00",
+        "closes": "19:00"
+      },
+      {
+        "@type": "OpeningHoursSpecification",
+        "dayOfWeek": ["Saturday"],
+        "opens": "10:00",
+        "closes": "14:00"
+      }
+    ],
+    "priceRange": "€€"
+  };
+  
   return (
     <div className="flex flex-col min-h-screen w-full bg-white dark:bg-premium-black text-premium-black dark:text-white transition-colors duration-300">
-      <Helmet>
-        <title>{title}</title>
-        <meta name="description" content={description} />
-        <html lang={currentLanguage} />
-        <meta property="og:title" content={title} />
-        <meta property="og:description" content={description} />
-        <meta property="og:type" content="website" />
-      </Helmet>
+      <SEOHead 
+        title={title}
+        description={description}
+        structuredData={structuredData}
+      />
+      
+      <HreflangTags 
+        supportedLanguages={SUPPORTED_LANGUAGES}
+        defaultLanguage={DEFAULT_LANGUAGE}
+        baseUrl={SITE_URL}
+      />
 
       <Navbar />
       <main className="flex-grow w-full pt-16">

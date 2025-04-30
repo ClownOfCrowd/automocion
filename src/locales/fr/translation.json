@@ -547,13 +547,25 @@
       "viewAll": "Voir tout"
     },
     "peugeot_208": {
-      "description": "Citadine élégante et économique, parfaite pour la conduite en ville."
+      "description": "Voiture urbaine compacte et économe en carburant avec faible consommation"
     },
     "citroen_c3": {
-      "description": "Compacte polyvalente au style distinctif et à l'intérieur spacieux."
+      "description": "Citadine élégante avec design unique et intérieur confortable"
     },
     "mini_cooper_s": {
-      "description": "Sportive élégante offrant une conduite dynamique et exaltante."
+      "description": "Voiture compacte sportive avec excellente tenue de route et dynamique"
+    },
+    "seat_ibiza": {
+      "description": "Voiture compacte fiable et économe en carburant"
+    },
+    "peugeot_207sw": {
+      "description": "Break familial pratique avec espace de chargement accru"
+    },
+    "mercedes_gle": {
+      "description": "SUV luxueux et puissant avec caractéristiques premium"
+    },
+    "range_rover_velar": {
+      "description": "Design sophistiqué avec technologie avancée et capacités tout-terrain"
     }
   },
   "validation": {
@@ -744,48 +756,75 @@
     }
   },
   "cookies": {
-    "message": "Ce site utilise des cookies pour améliorer votre expérience. En continuant à naviguer, vous acceptez notre politique en matière de cookies.",
-    "accept": "Accepter",
+    "message": "Ce site web utilise des cookies pour améliorer votre expérience. Vous pouvez choisir quels cookies autoriser.",
+    "accept": "Tout accepter",
+    "reject": "Refuser",
+    "details": "Détails",
     "learnMore": "En savoir plus",
-    "privacy": "Politique de confidentialité"
+    "saveSettings": "Enregistrer les paramètres",
+    "alwaysActive": "Toujours actif",
+    "essential": {
+      "title": "Cookies essentiels",
+      "description": "Nécessaires au fonctionnement de base du site. Toujours actifs."
+    },
+    "analytics": {
+      "title": "Cookies analytiques",
+      "description": "Nous aident à améliorer notre site grâce aux statistiques d'utilisation."
+    },
+    "preferences": {
+      "title": "Cookies de préférences",
+      "description": "Enregistrent vos préférences comme la langue et le thème sombre."
+    }
   },
   "privacy": {
     "title": "Politique de Confidentialité",
     "subtitle": "Comment nous protégeons et utilisons vos données",
+    "metaDescription": "Politique de confidentialité d'O.V. Automoción. Informations sur la façon dont nous collectons, traitons et protégeons vos données personnelles lors de l'utilisation de nos services de location de voitures.",
+    "metaKeywords": "confidentialité, protection des données, RGPD, cookies, location de voitures",
     "company": {
-      "title": "Informations de l'Entreprise",
-      "name": "Nom de l'Entreprise",
-      "address": "Adresse",
+      "title": "Informations sur la société",
+      "name": "Nom de la société",
+      "address": "Adresse enregistrée",
       "email": "Email",
-      "id": "ID de l'Entreprise",
+      "id": "Numéro d'identification",
       "vat": "Numéro de TVA",
-      "authority": "Autorité de Régulation"
+      "authority": "Autorité de régulation"
     },
-    "data": {
-      "title": "Collecte de Données",
-      "description": "Nous collectons les données suivantes :",
-      "purposes": "Objectifs de la collecte de données :"
+    "dataCollection": {
+      "title": "Collecte de données",
+      "description": "Nous collectons et traitons vos données personnelles aux fins suivantes:",
+      "booking": "Traitement de vos réservations de location de voitures",
+      "communication": "Communication avec vous concernant vos locations",
+      "legal": "Respect des exigences légales",
+      "improvement": "Amélioration de nos services"
     },
-    "protection": {
-      "title": "Protection des Données",
-      "description": "Nous mettons en œuvre les mesures suivantes pour protéger vos données :"
+    "dataProtection": {
+      "title": "Protection des données",
+      "description": "Nous mettons en œuvre des mesures techniques et organisationnelles appropriées pour assurer la sécurité de vos données personnelles, notamment:",
+      "encryption": "Chiffrement des données",
+      "access": "Accès limité aux informations personnelles",
+      "monitoring": "Surveillance régulière de la sécurité",
+      "training": "Formation du personnel à la protection des données"
     },
     "cookies": {
-      "title": "Utilisation des Cookies",
-      "description": "Nous utilisons les types de cookies suivants :"
+      "title": "Utilisation des cookies",
+      "description": "Notre site web utilise des cookies pour améliorer votre expérience de navigation. Ces cookies peuvent inclure:",
+      "essential": "Cookies essentiels pour la fonctionnalité du site",
+      "analytics": "Cookies d'analyse pour améliorer notre service",
+      "preferences": "Cookies de préférence pour mémoriser vos paramètres"
     },
     "rights": {
-      "title": "Vos Droits",
-      "description": "Nous sommes là pour vous aider avec vos données. Vous pouvez :",
+      "title": "Vos droits",
+      "description": "Nous sommes là pour vous aider avec vos données. Vous pouvez:",
       "access": "Demander une copie de vos données",
-      "correct": "Corriger les informations inexactes",
+      "correct": "Corriger des informations inexactes",
       "delete": "Supprimer vos données",
       "transfer": "Transférer vos données à une autre entreprise",
       "object": "Vous opposer au traitement des données"
     },
     "contact": {
       "title": "Contactez-nous",
-      "description": "Pour toute question concernant le traitement de vos données personnelles, vous pouvez nous contacter à :"
+      "description": "Pour toute question relative à la confidentialité ou pour exercer vos droits, veuillez nous contacter à:"
     }
   },
   "blog": {

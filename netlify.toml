@@ -6,7 +6,46 @@
   command = "npm run dev"
   port = 3000
 
+# Редирект на основную страницу SPA
 [[redirects]]
   from = "/*"
   to = "/index.html"
-  status = 200 
+  status = 200
+
+# Принудительный HTTPS
+[[headers]]
+  for = "/*"
+  [headers.values]
+    Strict-Transport-Security = "max-age=31536000; includeSubDomains; preload"
+    X-Content-Type-Options = "nosniff"
+    X-Frame-Options = "DENY"
+    X-XSS-Protection = "1; mode=block"
+    Referrer-Policy = "strict-origin-when-cross-origin"
+    Content-Security-Policy = "upgrade-insecure-requests"
+    Cache-Control = "public, max-age=31536000"
+
+# Отдельные правила для медиа-файлов
+[[headers]]
+  for = "*.js"
+  [headers.values]
+    Cache-Control = "public, max-age=31536000"
+
+[[headers]]
+  for = "*.css"
+  [headers.values]
+    Cache-Control = "public, max-age=31536000"
+
+[[headers]]
+  for = "*.png"
+  [headers.values]
+    Cache-Control = "public, max-age=31536000"
+
+[[headers]]
+  for = "*.jpg"
+  [headers.values]
+    Cache-Control = "public, max-age=31536000"
+
+[[headers]]
+  for = "*.svg"
+  [headers.values]
+    Cache-Control = "public, max-age=31536000" 

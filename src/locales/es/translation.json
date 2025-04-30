@@ -37,13 +37,13 @@
     "similar": "Coches similares",
     "perDay": "día",
     "peugeot_208": {
-      "description": "Coche urbano compacto y económico"
+      "description": "Coche urbano compacto y eficiente con bajo consumo de combustible"
     },
     "citroen_c3": {
-      "description": "Coche urbano elegante y confortable"
+      "description": "Hatchback urbano elegante con diseño único e interior confortable"
     },
     "mini_cooper_s": {
-      "description": "Deportivo y elegante con rendimiento excepcional"
+      "description": "Coche compacto deportivo con excelente manejo y dinámica"
     },
     "seat_ibiza": {
       "description": "Coche compacto fiable y eficiente en consumo"
@@ -545,34 +545,62 @@
     "footer": "Para más información, no dude en contactar con nuestro equipo de atención al cliente."
   },
   "cookies": {
-    "message": "Este sitio utiliza cookies para mejorar su experiencia. Al continuar navegando, acepta nuestra política de cookies.",
-    "accept": "Aceptar",
-    "learnMore": "Saber más",
-    "privacy": "Política de Privacidad"
+    "message": "Este sitio web utiliza cookies para mejorar su experiencia. Puede elegir qué cookies permitir.",
+    "accept": "Aceptar todo",
+    "reject": "Rechazar",
+    "details": "Detalles",
+    "learnMore": "Más información",
+    "saveSettings": "Guardar ajustes",
+    "alwaysActive": "Siempre activo",
+    "essential": {
+      "title": "Cookies Esenciales",
+      "description": "Necesarias para el funcionamiento básico del sitio. Siempre activas."
+    },
+    "analytics": {
+      "title": "Cookies Analíticas",
+      "description": "Nos ayudan a mejorar nuestro sitio mediante estadísticas de uso."
+    },
+    "preferences": {
+      "title": "Cookies de Preferencias",
+      "description": "Guardan sus preferencias como el idioma y tema oscuro."
+    }
   },
   "privacy": {
     "title": "Política de Privacidad",
+    "subtitle": "Cómo protegemos y utilizamos sus datos",
+    "metaDescription": "Política de privacidad de O.V. Automoción. Información sobre cómo recogemos, procesamos y protegemos sus datos personales cuando utiliza nuestros servicios de alquiler de coches.",
+    "metaKeywords": "privacidad, protección de datos, RGPD, cookies, alquiler de coches",
     "company": {
       "title": "Información de la Empresa",
       "name": "Nombre de la Empresa",
-      "address": "Dirección",
-      "email": "Email",
+      "address": "Dirección Registrada",
+      "email": "Correo Electrónico",
       "id": "ID de la Empresa",
       "vat": "Número de IVA",
       "authority": "Autoridad Reguladora"
     },
-    "data": {
+    "dataCollection": {
       "title": "Recopilación de Datos",
-      "description": "Recopilamos los siguientes datos:",
-      "purposes": "Propósitos de la recopilación de datos:"
+      "description": "Recopilamos y procesamos sus datos personales para los siguientes propósitos:",
+      "booking": "Procesar sus reservas de alquiler de coches",
+      "communication": "Comunicarnos con usted sobre sus alquileres",
+      "legal": "Cumplir con los requisitos legales",
+      "improvement": "Mejorar nuestros servicios"
     },
-    "protection": {
+    "dataProtection": {
       "title": "Protección de Datos",
-      "description": "Implementamos las siguientes medidas para proteger sus datos:"
+      "description": "Implementamos medidas técnicas y organizativas apropiadas para garantizar la seguridad de sus datos personales, incluyendo:",
+      "encryption": "Cifrado de datos",
+      "access": "Acceso limitado a la información personal",
+      "monitoring": "Monitoreo regular de seguridad",
+      "training": "Formación del personal en protección de datos"
     },
     "cookies": {
       "title": "Uso de Cookies",
-      "description": "Utilizamos los siguientes tipos de cookies:"
+      "description": "Nuestro sitio web utiliza cookies para mejorar su experiencia de navegación. Estas cookies pueden incluir:",
+      "essential": "Cookies esenciales para la funcionalidad del sitio web",
+      "analytics": "Cookies analíticas para mejorar nuestro servicio",
+      "preferences": "Cookies de preferencias para recordar su configuración"
     },
     "rights": {
       "title": "Sus Derechos",
@@ -585,7 +613,7 @@
     },
     "contact": {
       "title": "Contáctenos",
-      "description": "Para cualquier pregunta sobre cómo manejamos sus datos personales, puede contactarnos en:"
+      "description": "Para cualquier consulta relacionada con la privacidad o para ejercer sus derechos, póngase en contacto con nosotros en:"
     }
   },
   "blog": {

@@ -2,7 +2,7 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
         xmlns:xhtml="http://www.w3.org/1999/xhtml">
     <url>
-        <loc>https://www.ovautomocion.es/en</loc>
+        <loc>https://www.ovautomocion.es/fr</loc>
         <lastmod>2025-04-30T10:00:00+00:00</lastmod>
         <changefreq>weekly</changefreq>
         <priority>1.0</priority>
@@ -14,7 +14,7 @@
         <xhtml:link rel="alternate" hreflang="x-default" href="https://www.ovautomocion.es"/>
     </url>
     <url>
-        <loc>https://www.ovautomocion.es/en/catalog</loc>
+        <loc>https://www.ovautomocion.es/fr/catalog</loc>
         <lastmod>2025-04-30T10:00:00+00:00</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.9</priority>
@@ -26,7 +26,7 @@
         <xhtml:link rel="alternate" hreflang="x-default" href="https://www.ovautomocion.es/catalog"/>
     </url>
     <url>
-        <loc>https://www.ovautomocion.es/en/blog</loc>
+        <loc>https://www.ovautomocion.es/fr/blog</loc>
         <lastmod>2025-04-30T10:00:00+00:00</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.8</priority>
@@ -38,7 +38,7 @@
         <xhtml:link rel="alternate" hreflang="x-default" href="https://www.ovautomocion.es/blog"/>
     </url>
     <url>
-        <loc>https://www.ovautomocion.es/en/news</loc>
+        <loc>https://www.ovautomocion.es/fr/news</loc>
         <lastmod>2025-04-30T10:00:00+00:00</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.8</priority>
@@ -50,7 +50,7 @@
         <xhtml:link rel="alternate" hreflang="x-default" href="https://www.ovautomocion.es/news"/>
     </url>
     <url>
-        <loc>https://www.ovautomocion.es/en/contact</loc>
+        <loc>https://www.ovautomocion.es/fr/contact</loc>
         <lastmod>2025-04-30T10:00:00+00:00</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.7</priority>
@@ -62,7 +62,7 @@
         <xhtml:link rel="alternate" hreflang="x-default" href="https://www.ovautomocion.es/contact"/>
     </url>
     <url>
-        <loc>https://www.ovautomocion.es/en/terms</loc>
+        <loc>https://www.ovautomocion.es/fr/terms</loc>
         <lastmod>2025-04-30T10:00:00+00:00</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.6</priority>
@@ -74,7 +74,7 @@
         <xhtml:link rel="alternate" hreflang="x-default" href="https://www.ovautomocion.es/terms"/>
     </url>
     <url>
-        <loc>https://www.ovautomocion.es/en/privacy</loc>
+        <loc>https://www.ovautomocion.es/fr/privacy</loc>
         <lastmod>2025-04-30T10:00:00+00:00</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.6</priority>

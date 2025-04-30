@@ -2,6 +2,9 @@
 User-agent: *
 Allow: /
 
+# Задержка между запросами для снижения нагрузки
+Crawl-delay: 10
+
 # Запрещаем индексацию страницы успешного оформления заказа
 Disallow: /checkout/success
 Disallow: /*/checkout/success

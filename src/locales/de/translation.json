@@ -442,13 +442,25 @@
     "similar": "Ähnliche Fahrzeuge",
     "perDay": "Tag",
     "peugeot_208": {
-      "description": "Kompakter und wirtschaftlicher Stadtauto"
+      "description": "Kompakter, kraftstoffsparender Stadtauto mit niedrigem Verbrauch"
     },
     "citroen_c3": {
-      "description": "Stilvolles und komfortables Stadtauto"
+      "description": "Stylischer City-Hatchback mit einzigartigem Design und komfortablem Interieur"
     },
     "mini_cooper_s": {
-      "description": "Sportlich und elegant mit außergewöhnlicher Leistung"
+      "description": "Sportlicher Kompaktwagen mit hervorragendem Handling und Dynamik"
+    },
+    "seat_ibiza": {
+      "description": "Zuverlässiger und kraftstoffsparender Kompaktwagen"
+    },
+    "peugeot_207sw": {
+      "description": "Praktischer Familien-Kombi mit vergrößertem Gepäckraum"
+    },
+    "mercedes_gle": {
+      "description": "Luxuriöser und leistungsstarker SUV mit Premium-Ausstattung"
+    },
+    "range_rover_velar": {
+      "description": "Anspruchsvolles Design mit fortschrittlicher Technologie und Geländefähigkeit"
     }
   },
   "popularCars": {
@@ -559,39 +571,66 @@
     }
   },
   "cookies": {
-    "message": "Diese Website verwendet Cookies, um Ihre Erfahrung zu verbessern. Durch die weitere Nutzung akzeptieren Sie unsere Cookie-Richtlinie.",
-    "accept": "Akzeptieren",
+    "message": "Diese Website verwendet Cookies, um Ihre Erfahrung zu verbessern. Sie können wählen, welche Cookies zugelassen werden sollen.",
+    "accept": "Alle akzeptieren",
+    "reject": "Ablehnen",
+    "details": "Details",
     "learnMore": "Mehr erfahren",
-    "privacy": "Datenschutzrichtlinie"
+    "saveSettings": "Einstellungen speichern",
+    "alwaysActive": "Immer aktiv",
+    "essential": {
+      "title": "Essentielle Cookies",
+      "description": "Erforderlich für die grundlegende Funktionalität der Website. Immer aktiv."
+    },
+    "analytics": {
+      "title": "Analytische Cookies",
+      "description": "Helfen uns, unsere Website durch Nutzungsstatistiken zu verbessern."
+    },
+    "preferences": {
+      "title": "Präferenz-Cookies",
+      "description": "Speichern Ihre Einstellungen wie Sprache und dunkles Theme."
+    }
   },
   "privacy": {
-    "title": "Datenschutzerklärung",
+    "title": "Datenschutzrichtlinie",
     "subtitle": "Wie wir Ihre Daten schützen und verwenden",
+    "metaDescription": "Datenschutzrichtlinie von O.V. Automoción. Informationen darüber, wie wir Ihre personenbezogenen Daten bei der Nutzung unserer Autovermietungsdienste sammeln, verarbeiten und schützen.",
+    "metaKeywords": "Datenschutz, Datenschutz, DSGVO, Cookies, Autovermietung",
     "company": {
       "title": "Unternehmensinformationen",
       "name": "Unternehmensname",
-      "address": "Adresse",
+      "address": "Registrierte Adresse",
       "email": "E-Mail",
       "id": "Unternehmens-ID",
-      "vat": "USt-IdNr.",
+      "vat": "Umsatzsteuer-ID",
       "authority": "Aufsichtsbehörde"
     },
-    "data": {
+    "dataCollection": {
       "title": "Datenerhebung",
-      "description": "Wir erheben folgende Daten:",
-      "purposes": "Zwecke der Datenerhebung:"
+      "description": "Wir sammeln und verarbeiten Ihre personenbezogenen Daten für die folgenden Zwecke:",
+      "booking": "Bearbeitung Ihrer Autovermietungsbuchungen",
+      "communication": "Kommunikation mit Ihnen über Ihre Vermietungen",
+      "legal": "Einhaltung gesetzlicher Anforderungen",
+      "improvement": "Verbesserung unserer Dienstleistungen"
     },
-    "protection": {
+    "dataProtection": {
       "title": "Datenschutz",
-      "description": "Wir implementieren folgende Maßnahmen zum Schutz Ihrer Daten:"
+      "description": "Wir setzen geeignete technische und organisatorische Maßnahmen um, um die Sicherheit Ihrer personenbezogenen Daten zu gewährleisten, darunter:",
+      "encryption": "Datenverschlüsselung",
+      "access": "Begrenzter Zugriff auf persönliche Informationen",
+      "monitoring": "Regelmäßige Sicherheitsüberwachung",
+      "training": "Mitarbeiterschulung zum Datenschutz"
     },
     "cookies": {
       "title": "Verwendung von Cookies",
-      "description": "Wir verwenden folgende Arten von Cookies:"
+      "description": "Unsere Website verwendet Cookies, um Ihr Surferlebnis zu verbessern. Diese Cookies können Folgendes umfassen:",
+      "essential": "Wesentliche Cookies für die Funktionalität der Website",
+      "analytics": "Analytische Cookies zur Verbesserung unseres Service",
+      "preferences": "Präferenz-Cookies zum Speichern Ihrer Einstellungen"
     },
     "rights": {
       "title": "Ihre Rechte",
-      "description": "Wir sind für Sie da, wenn es um Ihre Daten geht. Sie können:",
+      "description": "Wir sind für Sie da, um Ihnen mit Ihren Daten zu helfen. Sie können:",
       "access": "Eine Kopie Ihrer Daten anfordern",
       "correct": "Ungenaue Informationen korrigieren",
       "delete": "Ihre Daten löschen",
@@ -599,8 +638,8 @@
       "object": "Der Datenverarbeitung widersprechen"
     },
     "contact": {
-      "title": "Kontakt",
-      "description": "Bei Fragen zur Verarbeitung Ihrer personenbezogenen Daten können Sie uns unter folgender Adresse erreichen:"
+      "title": "Kontaktieren Sie uns",
+      "description": "Bei datenschutzbezogenen Fragen oder zur Ausübung Ihrer Rechte kontaktieren Sie uns bitte unter:"
     }
   },
   "blog": {
