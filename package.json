@@ -8,7 +8,9 @@
     "build": "tsc && vite build",
     "lint": "eslint . --ext ts,tsx --report-unused-disable-directives --max-warnings 0",
     "preview": "vite preview",
-    "update-sitemap": "node scripts/update-sitemap.js"
+    "update-sitemap": "node scripts/update-sitemap.js",
+    "optimize-images": "node scripts/optimize-images.js",
+    "copy-images": "node scripts/copy-images.js"
   },
   "dependencies": {
     "@headlessui/react": "^1.7.18",
@@ -22,10 +24,10 @@
     "react": "^18.2.0",
     "react-datepicker": "^8.1.0",
     "react-dom": "^18.2.0",
-    "react-helmet": "^6.1.0",
     "react-helmet-async": "^2.0.5",
     "react-i18next": "^14.0.5",
     "react-router-dom": "^6.22.0",
+    "sharp": "^0.34.1",
     "xml2js": "^0.6.2"
   },
   "devDependencies": {

@@ -23,7 +23,7 @@ import ReviewsSection from '../components/ReviewsSection'
 import LazyImage from '../components/LazyImage'
 import TimeSelector from '../components/TimeSelector'
 import LocationSelector from '../components/LocationSelector'
-import { Helmet } from 'react-helmet-async'
+import SEO from '../components/SEO'
 import PageTransition from '../components/PageTransition'
 
 interface BookingForm {
@@ -99,69 +99,47 @@ const HomePage = () => {
     },
   ]
 
+  // JSON-LD структурированные данные
+  const schemaData = {
+    "@context": "https://schema.org",
+    "@type": "RentalCarAgency",
+    "name": "O.V. Automoción",
+    "url": `https://www.ovautomocion.es/${currentLanguage !== 'es' ? currentLanguage + '/' : ''}`,
+    "logo": "https://www.ovautomocion.es/images/logo.png",
+    "image": "https://www.ovautomocion.es/hero-bg.jpg",
+    "description": t('home.metaDescription', 'Alquiler de coches premium en Vila-seca, Tarragona. Gran selección de vehículos de lujo, SUV, económicos. Reserva fácil, precios competitivos, servicio personalizado.'),
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "Carrer Mas del L Abat, 145F, Poligono Ind. Alba",
+      "addressLocality": "Vila-seca",
+      "addressRegion": "Tarragona",
+      "postalCode": "43480",
+      "addressCountry": "ES"
+    },
+    "geo": {
+      "@type": "GeoCoordinates",
+      "latitude": "41.1054",
+      "longitude": "1.1502"
+    },
+    "telephone": "+34671332591",
+    "email": "ovautomocion@gmail.com",
+    "openingHoursSpecification": {
+      "@type": "OpeningHoursSpecification",
+      "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"],
+      "opens": "09:00",
+      "closes": "20:00"
+    }
+  };
+
   return (
     <PageTransition>
-      <Helmet>
-        <title>{t('home.metaTitle', 'O.V. Automoción - Alquiler de Coches Premium en Vila-seca')}</title>
-        <meta name="description" content={t('home.metaDescription', 'Alquiler de coches premium en Vila-seca, Tarragona. Gran selección de vehículos de lujo, SUV, económicos. Reserva fácil, precios competitivos, servicio personalizado.')} />
-        <meta name="keywords" content={t('home.metaKeywords', 'alquiler coches Vila-seca, rent a car Tarragona, alquiler vehiculos Cataluña, coches premium')} />
-        
-        {/* OpenGraph / Facebook */}
-        <meta property="og:type" content="website" />
-        <meta property="og:url" content={`https://www.ovautomocion.es/${currentLanguage !== 'es' ? currentLanguage + '/' : ''}`} />
-        <meta property="og:title" content={t('home.metaTitle', 'O.V. Automoción - Alquiler de Coches Premium en Vila-seca')} />
-        <meta property="og:description" content={t('home.metaDescription', 'Alquiler de coches premium en Vila-seca, Tarragona. Gran selección de vehículos de lujo, SUV, económicos. Reserva fácil, precios competitivos, servicio personalizado.')} />
-        <meta property="og:image" content="https://www.ovautomocion.es/hero-bg.jpg" />
-        
-        {/* Twitter */}
-        <meta property="twitter:card" content="summary_large_image" />
-        <meta property="twitter:url" content={`https://www.ovautomocion.es/${currentLanguage !== 'es' ? currentLanguage + '/' : ''}`} />
-        <meta property="twitter:title" content={t('home.metaTitle', 'O.V. Automoción - Alquiler de Coches Premium en Vila-seca')} />
-        <meta property="twitter:description" content={t('home.metaDescription', 'Alquiler de coches premium en Vila-seca, Tarragona. Gran selección de vehículos de lujo, SUV, económicos. Reserva fácil, precios competitivos, servicio personalizado.')} />
-        <meta property="twitter:image" content="https://www.ovautomocion.es/hero-bg.jpg" />
-        
-        {/* Альтернативные языковые версии */}
-        <link rel="alternate" hreflang="es" href="https://www.ovautomocion.es/" />
-        <link rel="alternate" hreflang="en" href="https://www.ovautomocion.es/en/" />
-        <link rel="alternate" hreflang="de" href="https://www.ovautomocion.es/de/" />
-        <link rel="alternate" hreflang="fr" href="https://www.ovautomocion.es/fr/" />
-        <link rel="alternate" hreflang="ru" href="https://www.ovautomocion.es/ru/" />
-        <link rel="alternate" hreflang="x-default" href="https://www.ovautomocion.es/" />
-        
-        {/* JSON-LD структурированные данные */}
-        <script type="application/ld+json">
-          {JSON.stringify({
-            "@context": "https://schema.org",
-            "@type": "RentalCarAgency",
-            "name": "O.V. Automoción",
-            "url": `https://www.ovautomocion.es/${currentLanguage !== 'es' ? currentLanguage + '/' : ''}`,
-            "logo": "https://www.ovautomocion.es/images/logo.png",
-            "image": "https://www.ovautomocion.es/hero-bg.jpg",
-            "description": t('home.metaDescription', 'Alquiler de coches premium en Vila-seca, Tarragona. Gran selección de vehículos de lujo, SUV, económicos. Reserva fácil, precios competitivos, servicio personalizado.'),
-            "address": {
-              "@type": "PostalAddress",
-              "streetAddress": "Carrer Mas del L Abat, 145F, Poligono Ind. Alba",
-              "addressLocality": "Vila-seca",
-              "addressRegion": "Tarragona",
-              "postalCode": "43480",
-              "addressCountry": "ES"
-            },
-            "geo": {
-              "@type": "GeoCoordinates",
-              "latitude": "41.1054",
-              "longitude": "1.1502"
-            },
-            "telephone": "+34671332591",
-            "email": "ovautomocion@gmail.com",
-            "openingHoursSpecification": {
-              "@type": "OpeningHoursSpecification",
-              "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"],
-              "opens": "09:00",
-              "closes": "20:00"
-            }
-          })}
-        </script>
-      </Helmet>
+      <SEO 
+        title={t('home.metaTitle', 'O.V. Automoción - Alquiler de Coches Premium en Vila-seca')}
+        description={t('home.metaDescription', 'Alquiler de coches premium en Vila-seca, Tarragona. Gran selección de vehículos de lujo, SUV, económicos. Reserva fácil, precios competitivos, servicio personalizado.')}
+        keywords={t('home.metaKeywords', 'alquiler coches Vila-seca, rent a car Tarragona, alquiler vehiculos Cataluña, coches premium')}
+        image="/hero-bg.jpg"
+        schemaData={schemaData}
+      />
       
       <div className="min-h-screen bg-premium-silver-light dark:bg-premium-black">
         {/* Hero Section with Booking Form */}
@@ -171,6 +149,7 @@ const HomePage = () => {
               src="/hero-bg.jpg"
               alt="Luxury cars"
               className="w-full h-full object-cover opacity-75 dark:opacity-40"
+              priority={true}
             />
             <div className="absolute inset-0 bg-black/20 dark:bg-gradient-to-b dark:from-premium-black-deep/50 dark:to-premium-black/90"></div>
           </div>

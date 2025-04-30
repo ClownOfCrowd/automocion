@@ -10,27 +10,52 @@ const PaymentBadges = ({ className = '', variant = 'default' }: PaymentBadgesPro
     {
       name: 'Visa',
       icon: '/payments/visa.svg',
-      color: 'bg-premium-gold/10 dark:bg-premium-gold/20'
+      color: 'bg-blue-50 dark:bg-blue-900/20'
     },
     {
       name: 'Mastercard',
       icon: '/payments/mastercard.svg',
-      color: 'bg-premium-gold/10 dark:bg-premium-gold/20'
-    },
-    {
-      name: 'PayPal',
-      icon: '/payments/paypal.svg',
-      color: 'bg-blue-50 dark:bg-blue-900'
+      color: 'bg-blue-50 dark:bg-blue-900/20'
     },
     {
       name: 'Apple Pay',
       icon: '/payments/apple-pay.svg',
-      color: 'bg-gray-50 dark:bg-gray-800'
+      color: 'bg-blue-50 dark:bg-blue-900/20'
     },
     {
       name: 'Google Pay',
       icon: '/payments/google-pay.svg',
-      color: 'bg-gray-50 dark:bg-gray-800'
+      color:'bg-blue-50 dark:bg-blue-900/20'
+    },
+    {
+      name: 'Union Pay',
+      icon: '/payments/union-pay.svg',
+      color: 'bg-blue-50 dark:bg-blue-900/20'
+    },
+    {
+      name: 'Discover',
+      icon: '/payments/discover.svg',
+      color: 'bg-blue-50 dark:bg-blue-900/20'
+    },
+    {
+      name: 'Maestro',
+      icon: '/payments/maestro.svg',
+      color: 'bg-blue-50 dark:bg-blue-900/20'
+    },
+    {
+      name: 'Diners Club',
+      icon: '/payments/diners-club.svg',
+      color: 'bg-blue-50 dark:bg-blue-900/20'
+    },
+    {
+      name: 'JCB',
+      icon: '/payments/jcb.svg',
+      color: 'bg-blue-50 dark:bg-blue-900/20'
+    },
+    {
+      name: 'V Pay',
+      icon: '/payments/v-pay.svg',
+      color: 'bg-blue-50 dark:bg-blue-900/20'
     }
   ]
 

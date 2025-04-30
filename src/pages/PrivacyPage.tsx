@@ -1,8 +1,9 @@
+import { useState } from 'react'
 import { useTranslation } from 'react-i18next'
 import { motion } from 'framer-motion'
 import { fadeIn } from '../utils/animations'
 import PageTransition from '../components/PageTransition'
-import { Helmet } from 'react-helmet'
+import SEO from '../components/SEO'
 
 const PrivacyPage = () => {
   const { t, i18n } = useTranslation()
@@ -10,31 +11,11 @@ const PrivacyPage = () => {
 
   return (
     <PageTransition>
-      <Helmet>
-        <title>{t('privacy.title', 'Política de Privacidad')} | O.V. Automoción</title>
-        <meta name="description" content={t('privacy.metaDescription', 'Política de privacidad de O.V. Automoción. Información sobre cómo recogemos, procesamos y protegemos sus datos personales cuando utiliza nuestro servicio de alquiler de coches.')} />
-        <meta name="keywords" content={t('privacy.metaKeywords', 'privacidad, protección datos, RGPD, cookies, alquiler coches')} />
-        
-        {/* OpenGraph / Facebook */}
-        <meta property="og:type" content="website" />
-        <meta property="og:url" content={`https://www.ovautomocion.es/${currentLanguage !== 'es' ? currentLanguage + '/' : ''}privacy`} />
-        <meta property="og:title" content={`${t('privacy.title', 'Política de Privacidad')} | O.V. Automoción`} />
-        <meta property="og:description" content={t('privacy.metaDescription', 'Política de privacidad de O.V. Automoción. Información sobre cómo recogemos, procesamos y protegemos sus datos personales cuando utiliza nuestro servicio de alquiler de coches.')} />
-        
-        {/* Twitter */}
-        <meta property="twitter:card" content="summary" />
-        <meta property="twitter:url" content={`https://www.ovautomocion.es/${currentLanguage !== 'es' ? currentLanguage + '/' : ''}privacy`} />
-        <meta property="twitter:title" content={`${t('privacy.title', 'Política de Privacidad')} | O.V. Automoción`} />
-        <meta property="twitter:description" content={t('privacy.metaDescription', 'Política de privacidad de O.V. Automoción. Información sobre cómo recogemos, procesamos y protegemos sus datos personales cuando utiliza nuestro servicio de alquiler de coches.')} />
-        
-        {/* Альтернативные языковые версии */}
-        <link rel="alternate" hreflang="es" href="https://www.ovautomocion.es/privacy" />
-        <link rel="alternate" hreflang="en" href="https://www.ovautomocion.es/en/privacy" />
-        <link rel="alternate" hreflang="de" href="https://www.ovautomocion.es/de/privacy" />
-        <link rel="alternate" hreflang="fr" href="https://www.ovautomocion.es/fr/privacy" />
-        <link rel="alternate" hreflang="ru" href="https://www.ovautomocion.es/ru/privacy" />
-        <link rel="alternate" hreflang="x-default" href="https://www.ovautomocion.es/privacy" />
-      </Helmet>
+      <SEO
+        title={`${t('privacy.title', 'Política de Privacidad')} | O.V. Automoción`}
+        description={t('privacy.metaDescription', 'Política de privacidad de O.V. Automoción. Información sobre cómo recogemos, procesamos y protegemos sus datos personales cuando utiliza nuestro servicio de alquiler de coches.')}
+        keywords={t('privacy.metaKeywords', 'privacidad, protección datos, RGPD, cookies, alquiler coches')}
+      />
       
       <div className="w-full">
         <div className="bg-gradient-to-r from-premium-black to-premium-black/90 py-16">

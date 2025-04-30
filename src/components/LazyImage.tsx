@@ -9,6 +9,7 @@ interface LazyImageProps {
   maxHeight?: number;
   objectFit?: 'cover' | 'contain' | 'fill' | 'scale-down' | 'none';
   customAdjustments?: boolean;
+  priority?: boolean; // Приоритетная загрузка (без ленивой загрузки)
 }
 
 const LazyImage = ({ 
@@ -19,13 +20,46 @@ const LazyImage = ({
   height,
   maxHeight,
   objectFit = 'cover',
-  customAdjustments = true
+  customAdjustments = true,
+  priority = false
 }: LazyImageProps) => {
   const [isLoaded, setIsLoaded] = useState(false);
-  const [isInView, setIsInView] = useState(false);
+  const [isInView, setIsInView] = useState(priority); // Если priority=true, сразу устанавливаем isInView=true
   const imgRef = useRef<HTMLDivElement>(null);
 
+  // Получаем путь к оптимизированному изображению
+  const getOptimizedImagePath = () => {
+    // Проверяем, есть ли расширение в исходном пути
+    const hasExtension = /\.(png|jpg|jpeg|webp)$/i.test(src);
+    
+    if (src.includes('/cars/')) {
+      // Если путь содержит /cars/, заменяем на /optimized/cars/
+      return hasExtension 
+        ? src.replace('/cars/', '/optimized/cars/') 
+        : src;
+    } else if (src.includes('/images/')) {
+      // Если путь содержит /images/, заменяем на /optimized/images/
+      return hasExtension 
+        ? src.replace('/images/', '/optimized/images/') 
+        : src;
+    } else if (src.startsWith('/')) {
+      // Для корневых изображений
+      const fileName = src.split('/').pop();
+      return hasExtension && fileName 
+        ? `/optimized/${fileName}` 
+        : src;
+    }
+    
+    // Если ничего не подошло, возвращаем исходный путь
+    return src;
+  };
+
+  const optimizedSrc = getOptimizedImagePath();
+
   useEffect(() => {
+    // Если изображение должно загружаться приоритетно, не используем IntersectionObserver
+    if (priority) return;
+    
     const observer = new IntersectionObserver(
       (entries) => {
         if (entries[0].isIntersecting) {
@@ -33,7 +67,7 @@ const LazyImage = ({
           observer.disconnect();
         }
       },
-      { threshold: 0.1 }
+      { threshold: 0.1, rootMargin: '100px' } // Предзагрузка изображений на расстоянии 100px от видимой области
     );
 
     if (imgRef.current) {
@@ -43,7 +77,7 @@ const LazyImage = ({
     return () => {
       observer.disconnect();
     };
-  }, []);
+  }, [priority]);
 
   const handleImageLoad = () => {
     setIsLoaded(true);
@@ -107,9 +141,10 @@ const LazyImage = ({
           className={`w-full h-full transition-opacity duration-300 ${isLoaded ? 'opacity-100' : 'opacity-0'}`}
           style={imageStyle}
           onLoad={handleImageLoad}
-          loading="lazy"
+          loading={priority ? 'eager' : 'lazy'}
           width={width}
           height={height}
+          fetchPriority={priority ? 'high' : 'auto'}
         />
       )}
     </div>
