@@ -1,62 +1,37 @@
 import { createContext, useContext, useState, useEffect, ReactNode } from 'react'
 
-type Theme = 'light' | 'dark'
+type Theme = 'dark' // Теперь у нас только темная тема
 
 interface ThemeContextType {
   theme: Theme
-  toggleTheme: () => void
-  setTheme: (theme: Theme) => void
+  toggleTheme: () => void // Оставляем для обратной совместимости, но функция ничего не будет делать
+  setTheme: (theme: Theme) => void // Оставляем для обратной совместимости
 }
 
 const ThemeContext = createContext<ThemeContextType | undefined>(undefined)
 
 export const ThemeProvider = ({ children }: { children: ReactNode }) => {
-  // Проверяем предпочтения пользователя и сохраненные настройки
-  const [theme, setTheme] = useState<Theme>(() => {
-    // Проверяем localStorage
-    const savedTheme = localStorage.getItem('theme') as Theme
-    if (savedTheme) return savedTheme
-    
-    // Проверяем системные предпочтения
-    if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
-      return 'dark'
-    }
-    
-    // По умолчанию используем темную тему
-    return 'dark'
-  })
+  // Теперь всегда используется темная тема
+  const [theme] = useState<Theme>('dark')
 
-  // Слушаем изменения системных предпочтений
-  useEffect(() => {
-    const mediaQuery = window.matchMedia('(prefers-color-scheme: dark)')
-    const handleChange = (e: MediaQueryListEvent) => {
-      const savedTheme = localStorage.getItem('theme') as Theme
-      // Применяем системные предпочтения только если пользователь не выбрал тему вручную
-      if (!savedTheme) {
-        setTheme(e.matches ? 'dark' : 'light')
-      }
-    }
-    
-    mediaQuery.addEventListener('change', handleChange)
-    return () => mediaQuery.removeEventListener('change', handleChange)
-  }, [])
-
-  // Применяем тему к документу
+  // Применяем тему к документу при инициализации
   useEffect(() => {
     const root = window.document.documentElement
+    root.classList.add('dark')
     
-    if (theme === 'dark') {
-      root.classList.add('dark')
-    } else {
-      root.classList.remove('dark')
-    }
-    
-    // Сохраняем выбор пользователя
-    localStorage.setItem('theme', theme)
-  }, [theme])
+    // Сохраняем настройку в localStorage для совместимости
+    localStorage.setItem('theme', 'dark')
+  }, [])
 
+  // Оставляем пустые функции для обратной совместимости
   const toggleTheme = () => {
-    setTheme(prevTheme => prevTheme === 'light' ? 'dark' : 'light')
+    // Ничего не делает, так как у нас только темная тема
+    console.log('Theme toggling is disabled, only dark theme is available')
+  }
+
+  const setTheme = () => {
+    // Ничего не делает, так как у нас только темная тема
+    console.log('Setting theme is disabled, only dark theme is available')
   }
 
   return (

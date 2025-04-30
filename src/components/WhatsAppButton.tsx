@@ -53,7 +53,7 @@ const WhatsAppButton = () => {
               onClick={handleClose}
               className="absolute -top-2 -right-2 bg-white dark:bg-premium-black rounded-full p-1 shadow-md hover:bg-gray-100 dark:hover:bg-premium-black/80 transition-colors z-10"
             >
-              <XMarkIcon className="h-4 w-4 text-gray-500 dark:text-white" />
+              <XMarkIcon className="h-4 w-4 text-gray-500 dark:text-premium-steel-light" />
             </motion.button>
 
             {/* Основная кнопка WhatsApp */}
@@ -63,7 +63,7 @@ const WhatsAppButton = () => {
               onClick={handleClick}
               onMouseEnter={() => setShowTooltip(true)}
               onMouseLeave={() => setShowTooltip(false)}
-              className="group relative flex items-center justify-center w-14 h-14 rounded-full bg-premium-gold shadow-lg hover:bg-premium-gold/90 transition-all duration-300"
+              className="group relative flex items-center justify-center w-14 h-14 rounded-full bg-premium-red shadow-lg hover:bg-premium-red-dark transition-all duration-300"
             >
               {/* Пульсирующие круги */}
               <motion.div
@@ -80,7 +80,7 @@ const WhatsAppButton = () => {
                   ease: "easeInOut"
                 }}
                 style={{
-                  background: 'radial-gradient(circle, rgba(214,168,107,0.4) 0%, rgba(214,168,107,0) 70%)'
+                  background: 'radial-gradient(circle, rgba(196,30,58,0.4) 0%, rgba(196,30,58,0) 70%)'
                 }}
               />
               <motion.div
@@ -98,7 +98,7 @@ const WhatsAppButton = () => {
                   delay: 0.3
                 }}
                 style={{
-                  background: 'radial-gradient(circle, rgba(214,168,107,0.3) 0%, rgba(214,168,107,0) 70%)'
+                  background: 'radial-gradient(circle, rgba(196,30,58,0.3) 0%, rgba(196,30,58,0) 70%)'
                 }}
               />
 
@@ -129,10 +129,10 @@ const WhatsAppButton = () => {
                   transition={{ type: 'spring', stiffness: 300, damping: 25 }}
                   className="absolute right-full mr-4 top-1/2 -translate-y-1/2 bg-white dark:bg-premium-black px-4 py-2 rounded-lg shadow-lg whitespace-nowrap"
                 >
-                  <div className="text-sm font-medium text-premium-black dark:text-white">
+                  <div className="text-sm font-medium text-premium-black dark:text-premium-steel-light">
                     {t('whatsapp.message')}
                   </div>
-                  <div className="text-xs text-gray-500 dark:text-premium-silver">
+                  <div className="text-xs text-gray-500 dark:text-premium-steel">
                     {t('whatsapp.available')}
                   </div>
                   {/* Стрелка */}

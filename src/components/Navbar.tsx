@@ -3,7 +3,6 @@ import { Link, useLocation } from 'react-router-dom'
 import { Disclosure } from '@headlessui/react'
 import { Bars3Icon, XMarkIcon } from '@heroicons/react/24/outline'
 import { useTranslation } from 'react-i18next'
-import ThemeToggle from './ThemeToggle'
 import LanguageSwitcher from './LanguageSwitcher'
 import { motion } from 'framer-motion'
 
@@ -44,8 +43,8 @@ const Navbar = () => {
   return (
     <Disclosure as="nav" className={`fixed w-full z-50 transition-all duration-300 ${
       isScrolled 
-        ? 'bg-silver-gradient-1 dark:bg-premium-gradient-1 shadow-md' 
-        : 'bg-premium-silver-light/90 backdrop-blur-md dark:bg-premium-black/90 dark:backdrop-blur-md'
+        ? 'bg-premium-gradient-1 shadow-md' 
+        : 'bg-premium-black/90 backdrop-blur-md'
     }`}>
       {({ open }) => (
         <>
@@ -53,8 +52,8 @@ const Navbar = () => {
             <div className="flex h-16 justify-between">
               <div className="flex">
                 <div className="flex flex-shrink-0 items-center">
-                  <Link to="/" className="text-2xl font-bold text-premium-black dark:text-white">
-                    O.V. <span className="text-premium-gold">Automoción</span>
+                  <Link to="/" className="text-2xl font-bold">
+                    <span className="text-premium-steel-light">O.V.</span> <span className="text-premium-red">Automoción</span>
                   </Link>
                 </div>
                 <div className="hidden md:ml-6 md:flex md:space-x-8">
@@ -64,8 +63,8 @@ const Navbar = () => {
                       to={item.href}
                       className={`inline-flex items-center px-1 pt-1 text-sm font-medium ${
                         location.pathname === item.href
-                          ? 'text-premium-gold border-b-2 border-premium-gold'
-                          : 'text-premium-black dark:text-white hover:text-premium-gold border-b-2 border-transparent hover:border-premium-gold'
+                          ? 'text-premium-red border-b-2 border-premium-red'
+                          : 'text-premium-steel-light hover:text-premium-red border-b-2 border-transparent hover:border-premium-red'
                       }`}
                     >
                       {item.name}
@@ -75,11 +74,10 @@ const Navbar = () => {
               </div>
 
               <div className="flex items-center space-x-2 sm:space-x-4">
-                <ThemeToggle />
                 <LanguageSwitcher />
                 
                 {/* Mobile menu button */}
-                <Disclosure.Button className="md:hidden inline-flex items-center justify-center rounded-md p-3 text-premium-black dark:text-white hover:bg-gray-100 dark:hover:bg-premium-black/50 hover:text-premium-gold dark:hover:text-premium-gold focus:outline-none focus:ring-2 focus:ring-inset focus:ring-premium-gold">
+                <Disclosure.Button className="md:hidden inline-flex items-center justify-center rounded-md p-3 text-premium-steel-light hover:bg-premium-black/50 hover:text-premium-red focus:outline-none focus:ring-2 focus:ring-inset focus:ring-premium-red">
                   <span className="sr-only">Open main menu</span>
                   {open ? (
                     <XMarkIcon className="block h-7 w-7" aria-hidden="true" />
@@ -98,7 +96,7 @@ const Navbar = () => {
               animate={{ opacity: 1, y: 0 }}
               exit={{ opacity: 0, y: -10 }}
               transition={{ duration: 0.2 }}
-              className="space-y-1 px-2 pb-3 pt-2 bg-white dark:bg-premium-black shadow-lg"
+              className="space-y-1 px-2 pb-3 pt-2 bg-premium-black-deep shadow-lg"
             >
               {navigation.map((item) => (
                 <Disclosure.Button
@@ -107,8 +105,8 @@ const Navbar = () => {
                   to={item.href}
                   className={`${
                     location.pathname === item.href
-                      ? 'bg-premium-gold text-white'
-                      : 'text-premium-black dark:text-white hover:bg-premium-gold/10 hover:text-premium-gold'
+                      ? 'bg-premium-red text-white'
+                      : 'text-premium-steel-light hover:bg-premium-red/10 hover:text-premium-red'
                   } block rounded-md px-4 py-3 text-base font-medium w-full text-left`}
                 >
                   {item.name}

@@ -96,7 +96,7 @@ const LanguageSwitcher: React.FC = () => {
     <div className="relative inline-block text-left" ref={dropdownRef}>
       <button
         type="button"
-        className="flex items-center space-x-1 px-3 py-2 text-sm font-medium text-premium-black dark:text-white hover:text-premium-gold dark:hover:text-premium-gold transition-colors rounded-full hover:bg-gray-200 dark:hover:bg-premium-black/50"
+        className="flex items-center space-x-1 px-3 py-2 text-sm font-medium text-premium-steel-light hover:text-premium-red transition-colors rounded-full hover:bg-premium-black/50"
         onClick={() => setIsOpen(!isOpen)}
         onKeyDown={handleKeyDown}
         aria-expanded={isOpen}
@@ -119,20 +119,20 @@ const LanguageSwitcher: React.FC = () => {
             animate={{ opacity: 1, y: 0 }}
             exit={{ opacity: 0, y: -10 }}
             transition={{ duration: 0.2 }}
-            className="absolute right-0 mt-2 w-48 origin-top-right rounded-md shadow-lg ring-1 ring-black/5 dark:ring-white/10 focus:outline-none z-50 bg-white dark:bg-premium-black"
+            className="absolute right-0 mt-2 w-48 origin-top-right rounded-md shadow-lg ring-1 ring-white/10 focus:outline-none z-50 bg-premium-black"
             role="menu"
             aria-orientation="vertical"
             aria-labelledby="language-menu-button"
           >
-            <div className="py-1 divide-y divide-gray-100 dark:divide-gray-800">
+            <div className="py-1 divide-y divide-gray-800">
               {languages.map((language) => (
                 <button
                   key={language.code}
                   onClick={() => changeLanguage(language.code)}
                   className={`group flex w-full items-center px-4 py-2 text-sm transition-colors ${
                     currentLanguage.code === language.code 
-                      ? 'bg-premium-gold/10 text-premium-gold font-medium' 
-                      : 'text-premium-black dark:text-white hover:bg-premium-gold/5 hover:text-premium-gold dark:hover:text-premium-gold'
+                      ? 'bg-premium-red/10 text-premium-red font-medium' 
+                      : 'text-premium-steel-light hover:bg-premium-red/5 hover:text-premium-red'
                   }`}
                   role="menuitem"
                   lang={language.code}

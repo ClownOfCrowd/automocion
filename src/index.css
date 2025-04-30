@@ -7,7 +7,7 @@
     font-family: 'Montserrat', system-ui, sans-serif;
     height: 100%;
     width: 100%;
-    background-color: #1A1A1A;
+    background-color: #0B0B0B;
   }
 
   body {
@@ -16,14 +16,14 @@
     width: 100%;
     position: relative;
     overflow-x: hidden;
-    @apply bg-gray-50 dark:bg-premium-black text-gray-800 dark:text-white transition-colors duration-300;
+    @apply bg-premium-black text-premium-steel-light transition-colors duration-300;
   }
 
   /* Фикс для iOS Safari */
   @supports (-webkit-touch-callout: none) {
     body {
       /* iOS Safari specific styles */
-      background-color: #1A1A1A;
+      background-color: #0B0B0B;
     }
   }
 
@@ -36,56 +36,56 @@
   
   /* Улучшенные стили для ссылок */
   a {
-    @apply text-gray-800 dark:text-white hover:text-premium-gold dark:hover:text-premium-gold transition-colors duration-200;
+    @apply text-premium-steel-light hover:text-premium-red transition-colors duration-200;
   }
 }
 
 /* Улучшенные стили для интерактивных элементов */
 @layer components {
   .btn-primary {
-    @apply inline-flex items-center justify-center px-6 py-3 border border-transparent text-base font-medium rounded-md text-white bg-premium-gold hover:bg-premium-gold/90 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-premium-gold transition-all duration-200;
+    @apply inline-flex items-center justify-center px-6 py-3 border border-transparent text-base font-medium rounded-md text-white bg-premium-red hover:bg-premium-red-dark focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-premium-red transition-all duration-200;
   }
 
   .btn-secondary {
-    @apply inline-flex items-center justify-center px-4 py-2 border border-gray-400 dark:border-gray-600 text-base font-medium rounded-md text-gray-800 dark:text-white bg-white dark:bg-premium-black hover:bg-gray-100 dark:hover:bg-premium-black-charcoal focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-premium-gold transition-all duration-200;
+    @apply inline-flex items-center justify-center px-4 py-2 border border-premium-steel-dark/30 text-base font-medium rounded-md text-premium-steel-light bg-premium-black hover:bg-premium-black-charcoal focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-premium-red transition-all duration-200;
   }
 
   .input-primary {
-    @apply block w-full rounded-md border-gray-400 dark:border-gray-600 shadow-sm focus:border-premium-gold focus:ring-premium-gold dark:bg-premium-black/80 dark:text-white bg-white text-gray-800 sm:text-sm transition-all duration-200;
+    @apply block w-full rounded-md border-premium-steel-dark/30 shadow-sm focus:border-premium-red focus:ring-premium-red bg-premium-black/80 text-premium-steel-light sm:text-sm transition-all duration-200;
   }
 
   /* Карточки и контейнеры */
   .card {
-    @apply bg-silver-gradient-1 dark:bg-premium-gradient-1 rounded-lg shadow-md dark:shadow-lg transition-colors duration-300;
+    @apply bg-premium-gradient-1 rounded-lg shadow-lg transition-colors duration-300;
   }
 
   .container-light {
-    @apply bg-premium-silver-light dark:bg-premium-black-elegant transition-colors duration-300;
+    @apply bg-premium-black-elegant transition-colors duration-300;
   }
   
   /* Премиальные контейнеры с градиентами */
   .premium-container-1 {
-    @apply bg-silver-gradient-1 dark:bg-premium-gradient-1 rounded-lg shadow-md;
+    @apply bg-premium-gradient-1 rounded-lg shadow-md;
   }
   
   .premium-container-2 {
-    @apply bg-silver-gradient-2 dark:bg-premium-gradient-2 rounded-lg shadow-md;
+    @apply bg-premium-gradient-2 rounded-lg shadow-md;
   }
   
   .premium-container-3 {
-    @apply bg-silver-gradient-3 dark:bg-premium-gradient-3 rounded-lg shadow-md;
+    @apply bg-premium-gradient-3 rounded-lg shadow-md;
   }
   
   .premium-container-4 {
-    @apply bg-silver-gradient-4 dark:bg-premium-gradient-4 rounded-lg shadow-md;
+    @apply bg-premium-gradient-4 rounded-lg shadow-md;
   }
   
-  .premium-container-gold {
-    @apply bg-silver-gradient-gold dark:bg-premium-gradient-gold rounded-lg shadow-md;
+  .premium-container-red {
+    @apply bg-premium-gradient-red rounded-lg shadow-md;
   }
   
   .premium-container-radial {
-    @apply bg-silver-radial dark:bg-premium-radial rounded-lg shadow-md;
+    @apply bg-premium-radial rounded-lg shadow-md;
   }
 }
 
@@ -97,20 +97,16 @@
   
   /* Премиальные эффекты */
   .premium-border {
-    @apply border border-gray-300 dark:border-premium-black-onyx;
+    @apply border border-premium-black-onyx;
   }
   
   .premium-shadow {
-    @apply shadow-md dark:shadow-[0_4px_20px_rgba(0,0,0,0.3)];
+    @apply shadow-[0_4px_20px_rgba(0,0,0,0.3)];
   }
 }
 
 /* Определение текстовых теней */
 .premium-text-shadow {
-  text-shadow: 0 1px 2px rgba(0,0,0,0.2);
-}
-
-.dark .premium-text-shadow {
   text-shadow: 0 2px 4px rgba(0,0,0,0.5);
 }
 
@@ -131,72 +127,55 @@
 
 /* Улучшенная типография */
 h1, h2, h3, h4, h5, h6 {
-  @apply font-bold tracking-tight text-gray-900 dark:text-white transition-colors duration-300;
+  @apply font-bold tracking-tight text-premium-steel transition-colors duration-300;
 }
 
 p {
-  @apply text-gray-700 dark:text-white/90 transition-colors duration-300;
+  @apply text-premium-steel-light/90 transition-colors duration-300;
 }
 
 /* Стили для скроллбара */
 @layer utilities {
-  /* Светлая тема для скроллбара */
+  /* Стили для скроллбара */
   ::-webkit-scrollbar {
     width: 12px;
   }
 
   ::-webkit-scrollbar-track {
-    @apply bg-gray-100;
-  }
-
-  ::-webkit-scrollbar-thumb {
-    @apply bg-gray-400 rounded-full border-2 border-gray-100;
-  }
-
-  ::-webkit-scrollbar-thumb:hover {
-    @apply bg-gray-500;
-  }
-
-  /* Темная тема для скроллбара */
-  .dark ::-webkit-scrollbar {
-    width: 12px;
-  }
-
-  .dark ::-webkit-scrollbar-track {
     @apply bg-premium-black-deep;
   }
 
-  .dark ::-webkit-scrollbar-thumb {
-    @apply bg-premium-black-onyx rounded-full border-2 border-premium-black-deep;
+  ::-webkit-scrollbar-thumb {
+    @apply bg-premium-steel-dark rounded-full border-2 border-premium-black-deep;
   }
 
-  .dark ::-webkit-scrollbar-thumb:hover {
-    @apply bg-premium-black-charcoal;
+  ::-webkit-scrollbar-thumb:hover {
+    @apply bg-premium-steel;
   }
 }
 
 /* Кастомные стили для календаря (react-datepicker) */
 .react-datepicker__current-month {
-  @apply text-gray-900 dark:text-premium-gold font-medium;
+  @apply text-premium-red font-medium;
 }
 
 .react-datepicker__month-select,
 .react-datepicker__year-select {
-  @apply text-gray-900 dark:text-premium-gold bg-white dark:bg-premium-black;
+  @apply text-premium-red bg-premium-black;
 }
 
 .react-datepicker__header {
-  @apply bg-white dark:bg-premium-black/90 border-gray-300 dark:border-gray-700;
+  @apply bg-premium-black/90 border-gray-700;
 }
 
 .react-datepicker__day-name {
-  @apply text-gray-700 dark:text-premium-silver;
+  @apply text-premium-steel;
 }
 
 .react-datepicker__day {
-  @apply text-gray-900 hover:bg-gray-200 dark:hover:bg-premium-black-charcoal;
+  @apply text-premium-steel-light hover:bg-premium-black-charcoal;
 }
 
 .react-datepicker__day--selected {
-  @apply bg-premium-gold text-white hover:bg-premium-gold/90;
+  @apply bg-premium-red text-white hover:bg-premium-red-dark;
 }

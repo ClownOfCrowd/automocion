@@ -27,10 +27,10 @@ const LoadingScreen = ({ isLoading }: LoadingScreenProps) => {
             animate={{ y: 0 }}
             transition={{ duration: 0.7, ease: "easeOut" }}
           >
-            {/* Каждая буква анимируется отдельно */}
-            {"Automoción".split('').map((letter, i) => (
+            {/* O.V. с анимацией */}
+            {"O.V.".split('').map((letter, i) => (
               <motion.span
-                key={i}
+                key={`ov-${i}`}
                 className="inline-block"
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
@@ -40,8 +40,29 @@ const LoadingScreen = ({ isLoading }: LoadingScreenProps) => {
                   ease: "easeOut"
                 }}
                 style={{
-                  color: i < 4 ? (theme === 'dark' ? '#ffffff' : '#555555') : (theme === 'dark' ? '#D4AF37' : '#D4AF37'),
-                  textShadow: theme === 'dark' ? '2px 2px 4px rgba(0,0,0,0.2)' : '1px 1px 3px rgba(0,0,0,0.1)'
+                  color: '#ffffff',
+                  textShadow: '2px 2px 4px rgba(0,0,0,0.2)'
+                }}
+              >
+                {letter}
+              </motion.span>
+            ))}
+            {" "}
+            {/* Automoción с анимацией */}
+            {"Automoción".split('').map((letter, i) => (
+              <motion.span
+                key={`auto-${i}`}
+                className="inline-block"
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{
+                  duration: 0.5,
+                  delay: (i + "O.V.".length + 1) * 0.05, // добавляем задержку после O.V.
+                  ease: "easeOut"
+                }}
+                style={{
+                  color: '#C41E3A', // красный цвет для Automoción
+                  textShadow: '2px 2px 4px rgba(0,0,0,0.2)'
                 }}
               >
                 {letter}
