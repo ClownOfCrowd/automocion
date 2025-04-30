@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:xhtml="http://www.w3.org/1999/xhtml">
+    <!-- Главная страница -->
+    <url>
+        <loc>https://www.ovautomocion.es/</loc>
+        <lastmod>2023-10-10T10:00:00+00:00</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>1.0</priority>
+        <xhtml:link rel="alternate" hreflang="es" href="https://www.ovautomocion.es/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://www.ovautomocion.es/en/"/>
+        <xhtml:link rel="alternate" hreflang="ru" href="https://www.ovautomocion.es/ru/"/>
+        <xhtml:link rel="alternate" hreflang="de" href="https://www.ovautomocion.es/de/"/>
+        <xhtml:link rel="alternate" hreflang="fr" href="https://www.ovautomocion.es/fr/"/>
+        <xhtml:link rel="alternate" hreflang="x-default" href="https://www.ovautomocion.es/"/>
+    </url>
+    
+    <!-- Каталог -->
+    <url>
+        <loc>https://www.ovautomocion.es/catalog</loc>
+        <lastmod>2023-10-10T10:00:00+00:00</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.9</priority>
+        <xhtml:link rel="alternate" hreflang="es" href="https://www.ovautomocion.es/catalog"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://www.ovautomocion.es/en/catalog"/>
+        <xhtml:link rel="alternate" hreflang="ru" href="https://www.ovautomocion.es/ru/catalog"/>
+        <xhtml:link rel="alternate" hreflang="de" href="https://www.ovautomocion.es/de/catalog"/>
+        <xhtml:link rel="alternate" hreflang="fr" href="https://www.ovautomocion.es/fr/catalog"/>
+        <xhtml:link rel="alternate" hreflang="x-default" href="https://www.ovautomocion.es/catalog"/>
+    </url>
+    
+    <!-- Блог -->
+    <url>
+        <loc>https://www.ovautomocion.es/blog</loc>
+        <lastmod>2023-10-10T10:00:00+00:00</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.8</priority>
+        <xhtml:link rel="alternate" hreflang="es" href="https://www.ovautomocion.es/blog"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://www.ovautomocion.es/en/blog"/>
+        <xhtml:link rel="alternate" hreflang="ru" href="https://www.ovautomocion.es/ru/blog"/>
+        <xhtml:link rel="alternate" hreflang="de" href="https://www.ovautomocion.es/de/blog"/>
+        <xhtml:link rel="alternate" hreflang="fr" href="https://www.ovautomocion.es/fr/blog"/>
+        <xhtml:link rel="alternate" hreflang="x-default" href="https://www.ovautomocion.es/blog"/>
+    </url>
+    
+    <!-- Новости -->
+    <url>
+        <loc>https://www.ovautomocion.es/news</loc>
+        <lastmod>2023-10-10T10:00:00+00:00</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.8</priority>
+        <xhtml:link rel="alternate" hreflang="es" href="https://www.ovautomocion.es/news"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://www.ovautomocion.es/en/news"/>
+        <xhtml:link rel="alternate" hreflang="ru" href="https://www.ovautomocion.es/ru/news"/>
+        <xhtml:link rel="alternate" hreflang="de" href="https://www.ovautomocion.es/de/news"/>
+        <xhtml:link rel="alternate" hreflang="fr" href="https://www.ovautomocion.es/fr/news"/>
+        <xhtml:link rel="alternate" hreflang="x-default" href="https://www.ovautomocion.es/news"/>
+    </url>
+    
+    <!-- Контакты -->
+    <url>
+        <loc>https://www.ovautomocion.es/contact</loc>
+        <lastmod>2023-10-10T10:00:00+00:00</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.7</priority>
+        <xhtml:link rel="alternate" hreflang="es" href="https://www.ovautomocion.es/contact"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://www.ovautomocion.es/en/contact"/>
+        <xhtml:link rel="alternate" hreflang="ru" href="https://www.ovautomocion.es/ru/contact"/>
+        <xhtml:link rel="alternate" hreflang="de" href="https://www.ovautomocion.es/de/contact"/>
+        <xhtml:link rel="alternate" hreflang="fr" href="https://www.ovautomocion.es/fr/contact"/>
+        <xhtml:link rel="alternate" hreflang="x-default" href="https://www.ovautomocion.es/contact"/>
+    </url>
+    
+    <!-- Условия аренды -->
+    <url>
+        <loc>https://www.ovautomocion.es/terms</loc>
+        <lastmod>2023-10-10T10:00:00+00:00</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.6</priority>
+        <xhtml:link rel="alternate" hreflang="es" href="https://www.ovautomocion.es/terms"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://www.ovautomocion.es/en/terms"/>
+        <xhtml:link rel="alternate" hreflang="ru" href="https://www.ovautomocion.es/ru/terms"/>
+        <xhtml:link rel="alternate" hreflang="de" href="https://www.ovautomocion.es/de/terms"/>
+        <xhtml:link rel="alternate" hreflang="fr" href="https://www.ovautomocion.es/fr/terms"/>
+        <xhtml:link rel="alternate" hreflang="x-default" href="https://www.ovautomocion.es/terms"/>
+    </url>
+    
+    <!-- Политика конфиденциальности -->
+    <url>
+        <loc>https://www.ovautomocion.es/privacy</loc>
+        <lastmod>2023-10-10T10:00:00+00:00</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.6</priority>
+        <xhtml:link rel="alternate" hreflang="es" href="https://www.ovautomocion.es/privacy"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://www.ovautomocion.es/en/privacy"/>
+        <xhtml:link rel="alternate" hreflang="ru" href="https://www.ovautomocion.es/ru/privacy"/>
+        <xhtml:link rel="alternate" hreflang="de" href="https://www.ovautomocion.es/de/privacy"/>
+        <xhtml:link rel="alternate" hreflang="fr" href="https://www.ovautomocion.es/fr/privacy"/>
+        <xhtml:link rel="alternate" hreflang="x-default" href="https://www.ovautomocion.es/privacy"/>
+    </url>
+</urlset> 

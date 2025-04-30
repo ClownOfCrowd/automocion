@@ -1,54 +1,125 @@
-import { useState } from 'react'
+import React, { useState, useRef, useEffect } from 'react'
 import { useTranslation } from 'react-i18next'
-import { Menu } from '@headlessui/react'
+import { useNavigate, useLocation } from 'react-router-dom'
 import { ChevronDownIcon } from '@heroicons/react/24/outline'
+import { AnimatePresence, motion } from 'framer-motion'
 
-const languages = [
-  { code: 'es', name: 'Español' },
-  { code: 'en', name: 'English' },
-  { code: 'fr', name: 'Français' },
-  { code: 'de', name: 'Deutsch' },
-  { code: 'ru', name: 'Русский' },
-]
-
-const LanguageSwitcher = () => {
+const LanguageSwitcher: React.FC = () => {
   const { i18n } = useTranslation()
-  const [currentLang, setCurrentLang] = useState(i18n.language || 'es')
-
-  const handleLanguageChange = (lang: string) => {
-    setCurrentLang(lang)
-    i18n.changeLanguage(lang)
+  const navigate = useNavigate()
+  const location = useLocation()
+  const [isOpen, setIsOpen] = useState(false)
+  const dropdownRef = useRef<HTMLDivElement>(null)
+  
+  // Список поддерживаемых языков
+  const languages = [
+    { code: 'es', name: 'Español', flag: '🇪🇸' },
+    { code: 'en', name: 'English', flag: '🇬🇧' },
+    { code: 'fr', name: 'Français', flag: '🇫🇷' },
+    { code: 'de', name: 'Deutsch', flag: '🇩🇪' },
+    { code: 'ru', name: 'Русский', flag: '🇷🇺' }
+  ]
+  
+  // Находим текущий язык
+  const currentLanguage = languages.find(lang => lang.code === i18n.language) || languages[0]
+  
+  // Закрыть выпадающий список при клике вне него
+  useEffect(() => {
+    const handleClickOutside = (event: MouseEvent) => {
+      if (dropdownRef.current && !dropdownRef.current.contains(event.target as Node)) {
+        setIsOpen(false)
+      }
+    }
+    
+    document.addEventListener('mousedown', handleClickOutside)
+    return () => {
+      document.removeEventListener('mousedown', handleClickOutside)
+    }
+  }, [])
+  
+  // Меняем язык и перенаправляем на соответствующий URL
+  const changeLanguage = (languageCode: string) => {
+    // Получаем путь без языкового префикса
+    const pathWithoutLanguage = getCurrentPathWithoutLanguage()
+    
+    // Формируем новый путь с выбранным языком
+    const newPath = languageCode === 'es' 
+      ? pathWithoutLanguage 
+      : `/${languageCode}${pathWithoutLanguage}`
+    
+    // Меняем язык в i18n
+    i18n.changeLanguage(languageCode)
+    
+    // Перенаправляем на новый URL
+    navigate(newPath)
+    
+    // Закрываем выпадающий список
+    setIsOpen(false)
   }
-
+  
+  // Получаем текущий путь без языкового префикса
+  const getCurrentPathWithoutLanguage = (): string => {
+    const { pathname } = location
+    const supportedLanguages = ['en', 'ru', 'de', 'fr']
+    
+    for (const lang of supportedLanguages) {
+      if (pathname.startsWith(`/${lang}/`)) {
+        return pathname.substring(lang.length + 1)
+      }
+      if (pathname === `/${lang}`) {
+        return '/'
+      }
+    }
+    
+    return pathname
+  }
+  
   return (
-    <Menu as="div" className="relative">
-      <Menu.Button className="flex items-center space-x-1 px-3 py-2 text-sm font-medium text-premium-black dark:text-white hover:text-premium-gold dark:hover:text-premium-gold transition-colors">
-        <span>{languages.find(lang => lang.code === currentLang)?.name}</span>
-        <ChevronDownIcon className="h-4 w-4" />
-      </Menu.Button>
-      <Menu.Items className="absolute right-0 mt-2 w-48 origin-top-right rounded-md bg-white dark:bg-premium-black shadow-lg ring-1 ring-black/5 dark:ring-white/10 focus:outline-none z-50">
-        <div className="py-1">
-          {languages.map((lang) => (
-            <Menu.Item key={lang.code}>
-              {({ active }) => (
+    <div className="relative inline-block text-left" ref={dropdownRef}>
+      <button
+        type="button"
+        className="flex items-center space-x-1 px-3 py-2 text-sm font-medium text-premium-black dark:text-white hover:text-premium-gold dark:hover:text-premium-gold transition-colors rounded-full hover:bg-gray-200 dark:hover:bg-premium-black/50"
+        onClick={() => setIsOpen(!isOpen)}
+        aria-expanded={isOpen}
+        aria-haspopup="true"
+      >
+        <span className="mr-1">{currentLanguage.flag}</span>
+        <span className="hidden sm:inline">{currentLanguage.name}</span>
+        <ChevronDownIcon 
+          className={`h-4 w-4 transition-transform duration-200 ${isOpen ? 'rotate-180' : ''}`} 
+        />
+      </button>
+      
+      <AnimatePresence>
+        {isOpen && (
+          <motion.div
+            initial={{ opacity: 0, y: -10 }}
+            animate={{ opacity: 1, y: 0 }}
+            exit={{ opacity: 0, y: -10 }}
+            transition={{ duration: 0.2 }}
+            className="absolute right-0 mt-2 w-48 origin-top-right rounded-md shadow-lg ring-1 ring-black/5 dark:ring-white/10 focus:outline-none z-50 bg-white dark:bg-premium-black"
+          >
+            <div className="py-1 divide-y divide-gray-100 dark:divide-gray-800">
+              {languages.map((language) => (
                 <button
-                  onClick={() => handleLanguageChange(lang.code)}
-                  className={`${
-                    active
-                      ? 'bg-premium-gold/10 text-premium-gold'
-                      : 'text-premium-black dark:text-white'
-                  } ${
-                    currentLang === lang.code ? 'bg-premium-gold/5 font-medium' : ''
-                  } group flex w-full items-center px-4 py-2 text-sm transition-colors`}
+                  key={language.code}
+                  onClick={() => changeLanguage(language.code)}
+                  className={`group flex w-full items-center px-4 py-2 text-sm transition-colors ${
+                    currentLanguage.code === language.code 
+                      ? 'bg-premium-gold/10 text-premium-gold font-medium' 
+                      : 'text-premium-black dark:text-white hover:bg-premium-gold/5 hover:text-premium-gold dark:hover:text-premium-gold'
+                  }`}
+                  role="menuitem"
                 >
-                  {lang.name}
+                  <span className="mr-2">{language.flag}</span>
+                  {language.name}
                 </button>
-              )}
-            </Menu.Item>
-          ))}
-        </div>
-      </Menu.Items>
-    </Menu>
+              ))}
+            </div>
+          </motion.div>
+        )}
+      </AnimatePresence>
+    </div>
   )
 }
 

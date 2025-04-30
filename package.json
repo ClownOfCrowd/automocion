@@ -5,12 +5,13 @@
   "type": "module",
   "scripts": {
     "dev": "vite",
-    "build": "tsc && vite build",
+    "build": "tsc && vite build && npm run generate-sitemaps",
     "lint": "eslint . --ext ts,tsx --report-unused-disable-directives --max-warnings 0",
     "preview": "vite preview",
     "update-sitemap": "node scripts/update-sitemap.js",
     "optimize-images": "node scripts/optimize-images.js",
-    "copy-images": "node scripts/copy-images.js"
+    "copy-images": "node scripts/copy-images.js",
+    "generate-sitemaps": "node scripts/generate-sitemaps.js"
   },
   "dependencies": {
     "@headlessui/react": "^1.7.18",

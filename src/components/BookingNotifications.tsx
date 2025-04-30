@@ -323,7 +323,7 @@ const BookingNotifications = () => {
           animate={{ opacity: 1, x: 0, y: 0 }}
           exit={{ opacity: 0, x: 100, y: 0 }}
           transition={{ type: 'spring', stiffness: 300, damping: 25 }}
-          className="fixed bottom-24 right-6 z-40 max-w-sm rounded-lg p-4 border-2"
+          className="fixed bottom-24 right-6 z-40 max-w-xs rounded-lg p-3 border-2"
           style={{
             background: isDarkMode 
               ? 'linear-gradient(135deg, #2d2d2d 0%, #1a1a1a 100%)' 
@@ -333,20 +333,20 @@ const BookingNotifications = () => {
           }}
         >
           <div className="absolute top-2 right-2 w-2 h-2 rounded-full bg-green-500 animate-pulse"></div>
-          <div className="flex items-start space-x-4">
+          <div className="flex items-start space-x-3">
             <div className="flex-shrink-0">
               <img
                 src={car.image}
                 alt={car.name}
-                className="h-14 w-14 rounded-lg object-cover shadow-md"
+                className="h-10 w-10 rounded-lg object-cover shadow-md"
                 style={{ border: `1px solid ${isDarkMode ? '#b78628' : '#d4a74a'}` }}
               />
             </div>
             <div className="flex-1 min-w-0">
-              <p className="text-sm font-semibold mb-1" style={{ color: isDarkMode ? '#ffffff' : '#333333' }}>
+              <p className="text-xs font-semibold mb-0.5" style={{ color: isDarkMode ? '#ffffff' : '#333333' }}>
                 {notification.name}
               </p>
-              <p className="text-sm font-medium" style={{ color: isDarkMode ? '#e9be6c' : '#b78628' }}>
+              <p className="text-xs font-medium" style={{ color: isDarkMode ? '#e9be6c' : '#b78628' }}>
                 {i18n.language === 'fr' && (
                   <>
                     a réservé <span className="font-semibold">{car.name}</span> {timeFormatted.isHour ? (

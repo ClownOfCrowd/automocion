@@ -1,3 +1,10 @@
+# Разрешаем индексацию всего сайта всем поисковым роботам
 User-agent: *
 Allow: /
+
+# Запрещаем индексацию страницы успешного оформления заказа
+Disallow: /checkout/success
+Disallow: /*/checkout/success
+
+# Сообщаем поисковым роботам о местонахождении карт сайта
 Sitemap: https://www.ovautomocion.es/sitemap.xml 

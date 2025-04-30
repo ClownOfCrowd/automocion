@@ -1,6 +1,13 @@
 import { Helmet } from 'react-helmet-async';
 import { useTranslation } from 'react-i18next';
 
+// Удаляем циклический импорт
+// import { SEOHead as SEOHeadComponent, HreflangTags } from './SEO';
+
+// Удаляем реэкспорты, так как они создают циклическую зависимость
+// export const SEOHead = SEOHeadComponent;
+// export { HreflangTags };
+
 interface SEOProps {
   title: string;
   description: string;

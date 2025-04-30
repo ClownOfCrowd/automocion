@@ -1,0 +1,35 @@
+{
+  "defaultTitle": "O.V. Automoción - Premium Car Rental in Vila-seca",
+  "defaultDescription": "Premium vehicle rental service in Vila-seca, Tarragona. Easy booking, competitive prices, wide selection of SUVs, economy cars and premium vehicles.",
+  "defaultKeywords": "car rental Vila-seca, rent a car Tarragona, vehicle rental Catalonia, premium cars",
+  
+  "homePage": {
+    "title": "O.V. Automoción - Premium Car Rental in Vila-seca, Tarragona",
+    "description": "Luxury and premium car rental in Vila-seca, Tarragona. Wide selection of high-end and economy vehicles with personalized service."
+  },
+  
+  "catalogPage": {
+    "title": "Our Fleet - Premium Car Rental | O.V. Automoción",
+    "description": "Explore our extensive fleet of premium and economy vehicles available for rent. Range Rover, Mercedes, Mini Cooper and many more options."
+  },
+  
+  "contactPage": {
+    "title": "Contact Us - O.V. Automoción | Car Rental in Vila-seca",
+    "description": "Contact O.V. Automoción for premium car rental in Vila-seca, Tarragona. Get in touch for quotes, special requests or more information."
+  },
+  
+  "blogPage": {
+    "title": "Blog - Car Rental Tips & News | O.V. Automoción",
+    "description": "Read our blog for tips on car rental, driving in Spain, vehicle maintenance and the latest news from O.V. Automoción."
+  },
+  
+  "termsPage": {
+    "title": "Rental Terms & Conditions | O.V. Automoción",
+    "description": "Read our rental terms and conditions for all details regarding car rental with O.V. Automoción in Vila-seca, Tarragona."
+  },
+  
+  "privacyPage": {
+    "title": "Privacy Policy | O.V. Automoción",
+    "description": "Learn about how O.V. Automoción handles your personal data and privacy when using our car rental services."
+  }
+} 
