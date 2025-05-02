@@ -136,7 +136,7 @@ const HomePage = () => {
       <SEO 
         title={t('home.metaTitle', 'O.V. Automoción - Alquiler de Coches Premium en Vila-seca')}
         description={t('home.metaDescription', 'Alquiler de coches premium en Vila-seca, Tarragona. Gran selección de vehículos de lujo, SUV, económicos. Reserva fácil, precios competitivos, servicio personalizado.')}
-        keywords={t('home.metaKeywords', 'alquiler coches Vila-seca, rent a car Tarragona, alquiler vehiculos Cataluña, coches premium')}
+        keywords={t('home.metaKeywords', 'alquiler coches Vila-seca, rent a car Tarragona, alquiler vehiculos Tarragona, coches premium')}
         image="/hero-bg.jpg"
         schemaData={schemaData}
       />

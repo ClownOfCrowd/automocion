@@ -260,11 +260,11 @@
     "description": "Vous avez des questions sur nos services ou besoin d'aide pour votre réservation ? Notre équipe est prête à vous aider pour toute demande concernant nos véhicules, services ou processus de réservation. Contactez-nous et nous vous répondrons dans les plus brefs délais.",
     "info": {
       "title": "Informations de contact",
-      "schedule": "Heures d'ouverture: 9:00 - 20:00",
-      "workdays": "Nous travaillons tous les jours",
       "address": "Carrer del Mas de l'Abat 145F",
-      "location": "Vila-seca, Catalogne",
-      "postal": "43480"
+      "location": "Vila-seca, Tarragona",
+      "postal": "43480",
+      "schedule": "Horaire: 9:00 - 20:00",
+      "workdays": "Nous travaillons tous les jours"
     },
     "form": {
       "title": "Envoyez-nous un message",
